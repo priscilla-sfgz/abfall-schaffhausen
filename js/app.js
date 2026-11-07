@@ -212,7 +212,7 @@ function ergebnisAnzeigen(ergebnis) {
     }
     hinweise += liste("So bereitstellen", bereitstellen);
     if (art.bild) {
-      hinweise += `<img class="sack-foto" src="${art.bild}" alt="Offizielle Gebührensäcke der Stadt Schaffhausen" onerror="this.remove()">`;
+      hinweise += `<img class="sack-foto" src="${art.bild}" alt="${sicher(art.bildText || "")}" onerror="this.remove()">`;
     }
     hinweise += liste("Wird nicht mitgenommen", art.nichtMitgenommen);
   }

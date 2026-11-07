@@ -50,10 +50,11 @@ body {
   align-items: center;
   height: calc(var(--kopf-hoehe) + env(safe-area-inset-top));
   padding: env(safe-area-inset-top) 16px 0;
-  background: var(--petrol);
+  background: var(--weiss);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .12);   /* kleiner Schatten nach unten */
 }
-.logo { height: 30px; width: auto; display: block; }
-.logo-ersatz { color: var(--weiss); font-weight: 900; font-size: 17px; letter-spacing: .2px; }
+.logo { height: 34px; width: auto; display: block; }
+.logo-ersatz { color: var(--petrol); font-weight: 900; font-size: 17px; letter-spacing: .2px; }
 
 /* ---------- Inhalt ---------- */
 main {

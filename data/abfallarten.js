@@ -22,7 +22,8 @@
 //   nichtMitgenommen Liste «Wird nicht mitgenommen»
 //   wohin            Liste «Wohin damit?» (wenn nicht abgeholt)
 //   tipp             zusätzlicher Hinweis
-//   bild             Foto im Ergebnisfeld
+//   bild             Foto im Ergebnisfeld (unter «So bereitstellen»)
+//   bildText         kurze Beschreibung des Fotos (für Screenreader)
 //   altstadt         Abweichungen für die Altstadt (Hauskehricht Tour 6)
 // ---------------------------------------------------------
 
@@ -35,6 +36,7 @@ window.ABFALLARTEN = {
     regelmaessig: true,
     zeit: "bis 7 Uhr bereitstellen",
     bild: "img/boeckli.jpg",
+    bildText: "Offizielle Gebührensäcke (Böckli) mit 17, 35, 60 und 110 Litern",
     bereitstellen: [
       "Erst am Abfuhrtag bis 7.00 Uhr hinausstellen, nicht schon am Vorabend.",
       "Bei Hitze (über 30 Grad) bereits bis 6.00 Uhr.",
@@ -90,6 +92,8 @@ window.ABFALLARTEN = {
     tour: "gruenabfall",
     regelmaessig: true,
     zeit: "bis 7 Uhr bereitstellen",
+    bild: "img/gruenabfall.jpg",
+    bildText: "Erlaubt sind kompostierbare Säcke, verschnürte Bündel, Plastikgefässe mit Griffen sowie grüne Klein- und Grosscontainer",
     bereitstellen: [
       "Am Abfuhrtag bis 7.00 Uhr bereitstellen, bei Hitze (über 30 Grad) bis 6.00 Uhr.",
       "Gebündelt, im Compobag (100 % kompostierbar), im Norm-Kleincontainer oder in einem offenen Behälter mit umgreifbaren Griffen.",

@@ -21,7 +21,7 @@ PWA für Einwohnerinnen und Einwohner der Stadt Schaffhausen: Man gibt Strasse u
 ## Design
 
 - Corporate Design der Stadt Schaffhausen: Petrol `#005e74`, Schaffhauser Gelb `#ffdb1a`, Schrift Lato (von stadt-schaffhausen.ch übernommen).
-- Oben ein Balken mit dem Stadtlogo klein oben links.
+- Oben ein **weisser** Balken mit kleinem Schatten nach unten, das Stadtlogo (schwarz-gelb, Original) klein oben links.
 - Zwei abgerundete Eingabefelder «Strasse» und «Abfall», die Wörter grau im Feld (wie in der SBB-App).
 - Am Anfang steht unter den Feldern nichts. Erst beim Tippen erscheint eine Auswahlliste, das Ergebnis erst, wenn beides gewählt ist.
 - Unten eine Leiste mit drei Tabs, nur Icons: Abfall (Sack), Termine (Kalender), Infos (Info). Über dem aktiven Tab ein kleiner gelber Balken (wie in der 20-Minuten-App). Im Moment hat nur «Abfall» Inhalt.
@@ -32,7 +32,7 @@ PWA für Einwohnerinnen und Einwohner der Stadt Schaffhausen: Man gibt Strasse u
 1. **Hausnummern:** Strassen, die nach Hausnummer auf zwei Touren aufgeteilt sind, erscheinen als eigene Einträge in der Auswahlliste (z.B. «Alpenstrasse 1–115»). Es gibt kein eigenes Feld für die Hausnummer.
 2. **Uhrzeit:** Gross steht «bis 7 Uhr». Der Hinweis «bei Hitze über 30 Grad bis 6 Uhr» steht unter «So bereitstellen».
 3. **Papier** wird als seltene Abfuhr angezeigt: Datum plus Hinweis, wer sammelt (z.B. «Schulhaus Buchthalen»).
-4. **Böckli-Foto** (`img/boeckli.jpg`) im Ergebnisfeld beim Hauskehricht unter «So bereitstellen».
+4. **Fotos unter «So bereitstellen»:** Böckli-Foto (`img/boeckli.jpg`) beim Hauskehricht, Behälter-Bild (`img/gruenabfall.jpg`) beim Grünabfall. Eingestellt in `data/abfallarten.js` mit `bild` und `bildText`. Fotos vor dem Einbauen verkleinern (ca. 1200 Pixel breit).
 5. **Altstadt** (= Hauskehricht Tour 6, apid `906921982`): Hauskehricht, Sperrgut und Plastik werden **rot** angezeigt, mit Verweis auf die Unterflurcontainer. Karton in der Altstadt: jeden Donnerstag 6.00–9.30 Uhr an Sammelplätzen (grün).
    - *Offen:* Zu Tour 6 gehören auch Strassen wie die Bahnhofstrasse. Noch nicht geklärt, ob dort wirklich nichts abgeholt wird.
 6. **Plastik** ist grün (wird im Böckli mit dem Hauskehricht mitgenommen) und hat einen Recycling-Tipp (Sammelsack, RecyBag).
@@ -55,15 +55,15 @@ Start: https://m.stadt-schaffhausen.ch/index.php?apid=917954978
 - `data/abfallarten.js`: Abfallarten mit Hinweisen und das Verzeichnis Gegenstand → Abfallart (Quelle: Infoseiten der Stadt, darf von Hand ergänzt werden)
 - `data/touren.js`: Termine und Strassen, **automatisch erstellt** mit `python werkzeuge/daten_holen.py`
 - `manifest.webmanifest`, `sw.js`, `img/icons/`: Installierbarkeit (Service Worker lädt zuerst aus dem Netz, nur offline aus dem Speicher)
-- `img/logo.png` und `img/boeckli.jpg`: noch nicht vorhanden. Bis dahin steht im Balken Text, und das Foto wird ausgeblendet.
+- `img/logo.png`, `img/boeckli.jpg`, `img/gruenabfall.jpg`: Logo und Fotos. Fehlt ein Bild, steht im Balken Text bzw. das Foto wird ausgeblendet.
 - Lokal testen: `python -m http.server 8000`, dann http://localhost:8000
 
 ## Stand und nächste Schritte
 
-Erledigt (7.11.2026): Das Grundgerüst läuft mit einer Momentaufnahme der echten Daten. Im Browser in der Handy-Ansicht getestet. **Noch nicht committet.**
+Erledigt (7.11.2026): Das Grundgerüst läuft mit einer Momentaufnahme der echten Daten. Im Browser in der Handy-Ansicht getestet. Committet als «MVP».
 
 Als Nächstes:
-1. Logo und Böckli-Foto einbauen, sobald sie in `img/` liegen. App-Icons eventuell mit dem Logo neu machen (die jetzigen sind Platzhalter).
+1. ~~Logo und Böckli-Foto einbauen~~ (erledigt 7.11.2026). App-Icons eventuell mit dem Logo neu machen (die jetzigen sind Platzhalter).
 2. Live-Daten: Die Logik aus `werkzeuge/daten_holen.py` als Vercel-Funktion in `api/` anbieten (mit Zwischenspeicher). Die App lädt dann von dort und nimmt `data/touren.js` als Rückfall.
 3. Auf Vercel veröffentlichen, mit genauer Schritt-für-Schritt-Anleitung.
 
