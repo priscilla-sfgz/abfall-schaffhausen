@@ -65,8 +65,7 @@ Erledigt (7.11.2026): Das Grundgerüst läuft mit einer Momentaufnahme der echte
 Als Nächstes:
 1. ~~Logo und Böckli-Foto einbauen~~ (erledigt 7.11.2026). App-Icons eventuell mit dem Logo neu machen (die jetzigen sind Platzhalter).
 2. Live-Daten: Die Logik aus `werkzeuge/daten_holen.py` als Vercel-Funktion in `api/` anbieten (mit Zwischenspeicher). Die App lädt dann von dort und nimmt `data/touren.js` als Rückfall.
-3. Auf Vercel veröffentlichen, mit genauer Schritt-für-Schritt-Anleitung.
-
+3. ~~Auf Vercel veröffentlichen~~ (erledigt): https://abfall-schaffhausen.vercel.app
 ## Für später geplant (jetzt noch nicht einbauen)
 
 - Regelmässige Termine in der App anpinnen (Tab «Termine»).
