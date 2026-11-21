@@ -5,7 +5,7 @@
 // zuletzt gespeicherte Version verwendet.
 // =========================================================
 
-const CACHE_NAME = "abfall-sh-v6";
+const CACHE_NAME = "abfall-sh-v7";
 
 const DATEIEN = [
   "./",

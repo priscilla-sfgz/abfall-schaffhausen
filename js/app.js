@@ -731,7 +731,7 @@ aktualisieren();
 
 // Gelber Startbildschirm: 0.7 Sekunden stehen lassen, dann sanft ausblenden
 const startbild = document.getElementById("startbild");
-setTimeout(() => {
+if (startbild) setTimeout(() => {
   startbild.classList.add("weg");   // ab jetzt nicht mehr anklickbar
   const ausblenden = startbild.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 450, easing: "ease", fill: "forwards" });
   ausblenden.finished.then(() => startbild.remove());   // danach ganz entfernen

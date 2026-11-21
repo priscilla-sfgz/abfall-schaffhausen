@@ -8,7 +8,8 @@ Braucht: Google Chrome (zum Zeichnen der SVGs) und Pillow (pip install pillow).
   icon.svg          → icon-180.png (iPhone, gelbes Quadrat)
   startbild.svg     → icon-512.png, icon-192.png (rund, ohne gelbes Quadrat –
                       Android zeigt dieses Icon auf dem gelben Startbildschirm)
-  icon-maskable.svg → icon-512-maskable.png (Icon auf dem Android-Home-Bildschirm)
+  icon-maskable.svg → icon-512-maskable.png (Android-Home-Bildschirm und Android-Startbildschirm;
+                      weisser Hintergrund, weil Android das Icon in einen weissen Kreis legt)
   badge.svg         → badge-96.png (weisses Symbol in der Statusleiste bei Benachrichtigungen)
 """
 

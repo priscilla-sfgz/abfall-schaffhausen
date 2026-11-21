@@ -28,6 +28,13 @@
   <div id="startbild" class="startbild" aria-hidden="true">
     <img src="img/icons/startbild.svg" alt="" width="186" height="186">
   </div>
+  <script>
+    // In der installierten App auf Android zeigt das System schon einen eigenen
+    // Startbildschirm. Dann unseren weglassen, sonst springt das Icon.
+    if (/Android/i.test(navigator.userAgent) && matchMedia("(display-mode: standalone)").matches) {
+      document.getElementById("startbild").remove();
+    }
+  </script>
 
   <!-- ===== Oberer Balken mit Stadtlogo ===== -->
   <header class="kopf">

@@ -25,7 +25,7 @@ PWA für Einwohnerinnen und Einwohner der Stadt Schaffhausen: Man gibt Strasse u
 - Zwei abgerundete Eingabefelder «Strasse» und «Abfall», die Wörter grau im Feld (wie in der SBB-App).
 - Solange das Feld «Abfall» leer ist, stehen darunter **Schnellwahl-Knöpfe** mit den wichtigsten Abfallarten (Liste `SCHNELLWAHL` in `data/abfallarten.js`). Beim Tippen erscheint eine Auswahlliste, das Ergebnis erst, wenn beides gewählt ist.
 - Unten eine Leiste mit Tabs, nur Icons. Über dem aktiven Tab ein kleiner gelber Balken (wie in der 20-Minuten-App). **Geplant: 4 Tabs** Entsorgung (Sack), Kalender, Abfall-ABC, Karte (Sammelstellen). Im Moment hat nur «Entsorgung» Inhalt.
-- **Startbildschirm:** bei jedem Start kurz gelb (`#ffdb1a`) mit dem App-Icon.
+- **Startbildschirm:** bei jedem Start kurz gelb (`#ffdb1a`) mit dem App-Icon. In der **installierten App auf Android** wird unser Startbildschirm weggelassen (Android zeigt einen eigenen mit dem Home-Bildschirm-Icon in einem weissen Kreis; sonst springt das Icon). Deshalb hat das Android-Icon (`icon-maskable.svg`) einen **weissen** Hintergrund. Das Symbol in der Statusleiste kann nur einfarbig sein (Android ignoriert Farben).
 - **App-Icon** (erledigt 21.11.2026): gelber Hintergrund, weisser Kreis, darin der gelbe Böckli-Sack mit schwarzer Umrandung, schwarzen Schlaufen und schwarzem Steinbock. **Nur 3 Farben:** Schwarz `#000000`, Gelb `#ffdb1a`, Weiss. Keine Glanzlichter, Schatten oder Falten. Vorlagen in `img/vorlagen/`: `Steinbock.png` (Wappen, nur 120 px, darum als SVG nachzeichnen) und `Abfallsack.jpg` (Originalfoto). Die App benutzt diesen Ordner nicht.
 - Gut auf dem Handy bedienbar, merkt sich die Strasse, auf dem Startbildschirm installierbar.
 
