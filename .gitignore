@@ -1,2 +1,5 @@
 # Geheime Schlüssel – nie auf GitHub hochladen
 geheim/
+
+# Python-Zwischendateien
+__pycache__/

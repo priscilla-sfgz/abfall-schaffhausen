@@ -11,6 +11,7 @@ Nötige Umgebungsvariablen bei Vercel: SUPABASE_URL, SUPABASE_SECRET_KEY
 
 import json
 import os
+import urllib.error
 import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
@@ -19,6 +20,17 @@ from http.server import BaseHTTPRequestHandler
 SUPABASE_URL = os.environ.get("SUPABASE_URL", "").rstrip("/")
 SUPABASE_KEY = os.environ.get("SUPABASE_SECRET_KEY", "")
 MAX_GROESSE = 200_000   # Bytes – grössere Anfragen werden abgelehnt
+
+
+def fehler_beschreiben(fehler):
+    """Kurze Fehlerbeschreibung ohne Geheimnisse (hilft beim Einrichten)."""
+    if not SUPABASE_URL:
+        return "SUPABASE_URL fehlt bei Vercel"
+    if not SUPABASE_KEY:
+        return "SUPABASE_SECRET_KEY fehlt bei Vercel"
+    if isinstance(fehler, urllib.error.HTTPError):
+        return f"Supabase antwortet {fehler.code}: {fehler.read()[:300].decode('utf-8', 'replace')}"
+    return f"{type(fehler).__name__}: {fehler}"
 
 
 def supabase(methode, pfad, daten=None, extra_header=None):
@@ -78,8 +90,9 @@ class handler(BaseHTTPRequestHandler):
                 {"Prefer": "resolution=merge-duplicates"},
             )
         except Exception as fehler:   # z.B. Supabase nicht erreichbar
-            print("Supabase-Fehler:", fehler)
-            return self.antworten(502, {"fehler": "Speichern fehlgeschlagen"})
+            grund = fehler_beschreiben(fehler)
+            print("Supabase-Fehler:", grund)
+            return self.antworten(502, {"fehler": "Speichern fehlgeschlagen", "grund": grund})
         return self.antworten(200, {"gespeichert": len(lesezeichen)})
 
     def do_DELETE(self):
@@ -89,6 +102,7 @@ class handler(BaseHTTPRequestHandler):
         except (ValueError, KeyError, TypeError):
             return self.antworten(400, {"fehler": "Ungültige Anfrage"})
         except Exception as fehler:
-            print("Supabase-Fehler:", fehler)
-            return self.antworten(502, {"fehler": "Löschen fehlgeschlagen"})
+            grund = fehler_beschreiben(fehler)
+            print("Supabase-Fehler:", grund)
+            return self.antworten(502, {"fehler": "Löschen fehlgeschlagen", "grund": grund})
         return self.antworten(200, {"geloescht": True})
