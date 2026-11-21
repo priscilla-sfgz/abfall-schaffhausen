@@ -668,26 +668,6 @@ function schnellwahlEinrichten() {
 
 
 // ---------------------------------------------------------
-// Hinweis reparierBar: erscheint, bis man ihn einmal wegklickt
-// ---------------------------------------------------------
-
-function reparaturHinweisEinrichten() {
-  const hinweis = document.getElementById("reparatur-hinweis");
-  let weggeklickt = false;
-  try { weggeklickt = localStorage.getItem("reparaturHinweisWeg") === "ja"; } catch (fehler) { /* nicht schlimm */ }
-  if (weggeklickt) return;
-
-  hinweis.hidden = false;
-  document.body.classList.add("mit-hinweis");
-  hinweis.querySelector(".schliessen").addEventListener("click", () => {
-    hinweis.hidden = true;
-    document.body.classList.remove("mit-hinweis");
-    try { localStorage.setItem("reparaturHinweisWeg", "ja"); } catch (fehler) { /* nicht schlimm */ }
-  });
-}
-
-
-// ---------------------------------------------------------
 // Tabs unten
 // ---------------------------------------------------------
 
@@ -757,7 +737,6 @@ if (gemerkt) {
 
 schnellwahlEinrichten();
 sortenEinrichten();
-reparaturHinweisEinrichten();
 tabsEinrichten();
 kalenderEinrichten();
 erinnerungenEinrichten();
