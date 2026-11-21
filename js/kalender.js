@@ -91,6 +91,7 @@ function speichern(ergebnis, nurDatum) {
   lesezeichenSpeichern([...lesezeichenLaden().filter((l) => l.schluessel !== schluessel), neu]);
   aktualisieren();
   kalenderZeichnen();
+  erinnerungenStillAbgleichen();
   meldungZeigen("Im Kalender gespeichert", "Download für den eigenen Kalender", () => icsHerunterladen(neu));
 }
 
@@ -98,6 +99,7 @@ function entfernen(schluessel) {
   lesezeichenSpeichern(lesezeichenLaden().filter((l) => l.schluessel !== schluessel));
   aktualisieren();
   kalenderZeichnen();
+  erinnerungenStillAbgleichen();
   meldungZeigen("Aus dem Kalender entfernt");
 }
 
@@ -379,6 +381,7 @@ function uebersichtZeigen(schluessel, datum) {
       <p class="naechstes">${grossAnfang(wannText(datum))} · ${sicher(lesezeichen.strasseText)}</p>
       ${termin.notiz ? `<p class="notiz">${sicher(termin.notiz)}</p>` : ""}
       ${termin.ausnahme ? `<p class="warnung">${sicher(termin.ausnahme)}</p>` : ""}
+      ${erinnerungsAuswahl(lesezeichen)}
       <div class="blatt-knoepfe">
         <button type="button" class="knopf" data-aktion="entfernen">Aus dem Kalender entfernen</button>
         <button type="button" class="knopf haupt" data-aktion="ics">Download für den eigenen Kalender</button>
@@ -387,6 +390,12 @@ function uebersichtZeigen(schluessel, datum) {
   bereich.hidden = false;
 
   bereich.onclick = (e) => {
+    const erinnerung = e.target.closest("[data-erinnerung]");
+    if (erinnerung) {
+      erinnerungWaehlen(schluessel, erinnerung.dataset.erinnerung);
+      uebersichtZeigen(schluessel, datum);   // neu zeichnen
+      return;
+    }
     const aktion = e.target.closest("[data-aktion]")?.dataset.aktion;
     if (aktion === "ics") icsHerunterladen(lesezeichen);
     if (aktion === "entfernen") entfernen(schluessel);

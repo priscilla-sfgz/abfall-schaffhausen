@@ -5,13 +5,14 @@
 // zuletzt gespeicherte Version verwendet.
 // =========================================================
 
-const CACHE_NAME = "abfall-sh-v3";
+const CACHE_NAME = "abfall-sh-v4";
 
 const DATEIEN = [
   "./",
   "index.html",
   "css/style.css",
   "js/kalender.js",
+  "js/erinnerungen.js",
   "js/app.js",
   "data/touren.js",
   "data/abfallarten.js",
@@ -49,5 +50,33 @@ self.addEventListener("fetch", (event) => {
         return antwort;
       })
       .catch(() => caches.match(event.request))
+  );
+});
+
+// ---------------------------------------------------------
+// Push-Erinnerungen (verschickt von /api/senden)
+// ---------------------------------------------------------
+
+// Nachricht anzeigen
+self.addEventListener("push", (event) => {
+  let daten = { titel: "Abfall Schaffhausen", text: "" };
+  try { daten = event.data.json(); } catch (fehler) { /* Standardtext */ }
+  event.waitUntil(
+    self.registration.showNotification(daten.titel, {
+      body: daten.text,
+      icon: "img/icons/icon-192.png",
+      badge: "img/icons/icon-192.png",
+      tag: "abfall-erinnerung",
+    })
+  );
+});
+
+// Antippen der Nachricht öffnet die App
+self.addEventListener("notificationclick", (event) => {
+  event.notification.close();
+  event.waitUntil(
+    clients.matchAll({ type: "window", includeUncontrolled: true }).then((fenster) =>
+      fenster.length > 0 ? fenster[0].focus() : clients.openWindow("./")
+    )
   );
 });

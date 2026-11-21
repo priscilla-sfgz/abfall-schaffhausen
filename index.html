@@ -59,6 +59,15 @@
 
     <!-- ===== Tab «Termine» (kommt später) ===== -->
     <section id="tab-termine" class="tab-inhalt" hidden>
+      <!-- Push-Erinnerungen ein/aus -->
+      <div id="erinnerung-schalter" class="erinnerung-schalter">
+        <div>
+          <strong id="erinnerung-titel">Push-Erinnerungen</strong>
+          <span class="klein"></span>
+        </div>
+        <button type="button" class="schalter" role="switch" aria-checked="false" aria-labelledby="erinnerung-titel"><span></span></button>
+      </div>
+
       <!-- Umschalter: Liste, Woche, Monat, Jahr -->
       <div class="umschalter" role="group" aria-label="Ansicht">
         <button type="button" data-ansicht="liste">Liste</button>
@@ -118,6 +127,7 @@
   <script src="data/abfallarten.js"></script>
   <script src="data/sammelstellen.js"></script>
   <script src="js/kalender.js"></script>
+  <script src="js/erinnerungen.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

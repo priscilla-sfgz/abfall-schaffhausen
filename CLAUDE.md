@@ -61,6 +61,11 @@ Start: https://m.stadt-schaffhausen.ch/index.php?apid=917954978
 - `data/touren.js`: Termine und Strassen, **automatisch erstellt** mit `python werkzeuge/daten_holen.py`
 - `manifest.webmanifest`, `sw.js`, `img/icons/`: Installierbarkeit (Service Worker lädt zuerst aus dem Netz, nur offline aus dem Speicher)
 - `img/logo.png`, `img/boeckli.jpg`, `img/gruenabfall.jpg`: Logo und Fotos. Fehlt ein Bild, steht im Balken Text bzw. das Foto wird ausgeblendet.
+- `js/erinnerungen.js`: Push-Erinnerungen (Schalter im Kalender-Tab, Zeitpunkt pro Lesezeichen: Vorabend 19 Uhr / Morgen 6 Uhr / Keine). Schickt die Termine an `/api/erinnerung`.
+- `api/erinnerung.py` (speichert das Push-Abo + Termine in Supabase) und `api/senden.py` (verschickt fällige Nachrichten; wird jede Stunde von Supabase `pg_cron` aufgerufen, POST `{"test": true}` = Testnachricht). Python-Pakete in `requirements.txt`.
+- Vercel-Umgebungsvariablen: `SUPABASE_URL`, `SUPABASE_SECRET_KEY`, `VAPID_PRIVATE_KEY`, `CRON_SECRET`.
+- `werkzeuge/supabase.sql`: Tabelle `erinnerungen` + stündlicher Aufruf (ohne Geheimnis).
+- `geheim/` (in `.gitignore`, **nie committen**): Schlüssel und fertig ausgefüllte SQL-Dateien.
 - `notizen/recherche-entsorgung.md`: Recherche zu Sammelstellen, Kosten und Sorten (Plastik, Farben, Glas, Metall), mit Quellen. Grundlage für Schritt 2 und den Karten-Tab.
 - Lokal testen: `python -m http.server 8000`, dann http://localhost:8000
 

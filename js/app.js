@@ -726,6 +726,7 @@ sortenEinrichten();
 reparaturHinweisEinrichten();
 tabsEinrichten();
 kalenderEinrichten();
+erinnerungenEinrichten();
 aktualisieren();
 
 // Service Worker: macht die App installierbar und offline nutzbar

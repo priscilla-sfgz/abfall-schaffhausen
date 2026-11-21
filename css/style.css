@@ -393,6 +393,49 @@ main {
 }
 .meldung[hidden] { display: none; }
 
+/* ---------- Push-Erinnerungen ---------- */
+.erinnerung-schalter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+  padding: 12px 16px;
+  background: var(--weiss);
+  border-radius: var(--rundung);
+}
+.erinnerung-schalter .klein { display: block; font-size: 14px; color: var(--text-grau); }
+.schalter {
+  flex: none;
+  position: relative;
+  width: 52px;
+  height: 32px;
+  padding: 0;
+  background: #c9d1d5;
+  border: 0;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: background .2s;
+}
+.schalter span {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 26px;
+  height: 26px;
+  background: var(--weiss);
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .25);
+  transition: transform .2s;
+}
+.schalter[aria-checked="true"] { background: var(--petrol); }
+.schalter[aria-checked="true"] span { transform: translateX(20px); }
+.schalter:disabled { opacity: .45; cursor: default; }
+
+.auswahl-titel { margin: 18px 0 6px; font-weight: 700; }
+.klein-umschalter { margin-bottom: 0; }
+.klein-umschalter button { font-size: 14px; }
+
 /* ---------- Kalender-Tab ---------- */
 .umschalter {
   display: flex;
