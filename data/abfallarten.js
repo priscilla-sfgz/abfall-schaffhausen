@@ -292,6 +292,26 @@ window.ABFALLARTEN = {
 
 
 // ---------------------------------------------------------
+// SCHNELLWAHL: Knöpfe unter dem Feld «Abfall»
+// Format: ["Text auf dem Knopf", "abfallart"] – Reihenfolge = Anzeige
+// ---------------------------------------------------------
+
+window.SCHNELLWAHL = [
+  ["Hauskehricht", "hauskehricht"],
+  ["Grünabfall", "gruenabfall"],
+  ["Papier", "papier"],
+  ["Karton", "karton"],
+  ["Plastik", "plastik"],
+  ["Sperrgut", "sperrgut"],
+  ["Glas", "glas"],
+  ["Elektronik", "elektro"],
+  ["Kleider", "altkleider"],
+  ["Gift", "sonderabfall"],
+  ["Metall", "altmetall"],
+];
+
+
+// ---------------------------------------------------------
 // VERZEICHNIS: Gegenstand → Abfallart
 // Einfach neue Zeilen im Format ["Gegenstand", "abfallart"] ergänzen.
 // ---------------------------------------------------------

@@ -93,6 +93,8 @@ def strasse_zerlegen(eintrag):
     """
     teile = eintrag.split("Bereitstellen:", 1)
     links = teile[0].strip().rstrip(",").strip()
+    # Fehlendes Leerzeichen vor einer Zahl ergänzen ("Im Freien55" → "Im Freien 55")
+    links = re.sub(r"([a-zäöüé])(\d)", r"\1 \2", links)
     bereitstellen = teile[1].strip() if len(teile) > 1 else None
     bereich = re.match(r"^(.*?)\s+(\d+)\s*-\s*(\d+)\s*(.*)$", links)
     if bereich:
@@ -128,6 +130,9 @@ def strassenliste_bauen(alle_touren):
         for (von, bis), zusatz in sorted(abschnitte.items(), key=lambda x: x[0][0] or 0):
             eintrag = {
                 "name": name if von is None else f"{name} {von}–{bis}",
+                "strasse": name,   # nur der Strassenname, für die Suche mit Hausnummer
+                "von": von,        # erste Hausnummer des Abschnitts (oder None)
+                "bis": bis,        # letzte Hausnummer des Abschnitts (oder None)
                 "zusatz": zusatz,
                 "touren": {},
                 "bereitstellen": {},

@@ -1,26 +1,12 @@
 // Automatisch erstellt mit werkzeuge/daten_holen.py – nicht von Hand bearbeiten.
 // Quelle: Abfallkalender Stadt Schaffhausen
 window.TOUREN_DATEN = {
- "stand": "2026-11-07",
+ "stand": "2026-11-21",
  "touren": {
   "1517200631": {
    "kategorie": "hauskehricht",
    "name": "Hauskehricht Tour 1 Montag",
    "termine": [
-    {
-     "datum": "2026-11-09",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
-    {
-     "datum": "2026-11-16",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
     {
      "datum": "2026-11-23",
      "zeit": "07:00",
@@ -65,6 +51,384 @@ window.TOUREN_DATEN = {
     },
     {
      "datum": "2027-01-04",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-11",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-18",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-25",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-01",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-08",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-01",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-08",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-29",
+     "zeit": "07:00",
+     "ausnahme": "Aufgrund des Ostermontags findet die Hauskehricht Tour 1 Montag am 29.03.2027 nicht statt. Sie wird am Dienstag 30.03.2027 nachgeholt.",
+     "faelltAus": true,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-30",
+     "zeit": "07:00",
+     "ausnahme": "Nachholtour Hauskehricht Tour 1 Montag des Ostermontags wird am Dienstag 30.03.2027 nachgeholt.",
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-05",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-19",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-26",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-03",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-10",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-17",
+     "zeit": "07:00",
+     "ausnahme": "Aufgrund des Pfingstmontags findet die Hauskehricht Tour 1 Montag am 17.05.2027 nicht statt. Sie wird am Dienstag 18.05.2027 nachgeholt.",
+     "faelltAus": true,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-18",
+     "zeit": "07:00",
+     "ausnahme": "Nachholtour Hauskehricht Tour 1 Montag des Pfingstmontags wird am Dienstag 18.05.2027 nachgeholt.",
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-24",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-31",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-07",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-14",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-21",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-28",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-05",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-19",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-26",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-02",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-09",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-23",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-30",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-06",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-13",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-20",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-27",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-04",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-11",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-18",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-25",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-01",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-08",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-29",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-06",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-13",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-20",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-27",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2028-01-03",
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
@@ -77,20 +441,6 @@ window.TOUREN_DATEN = {
    "name": "Hauskehricht Tour 2 Montag",
    "termine": [
     {
-     "datum": "2026-11-09",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
-    {
-     "datum": "2026-11-16",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
-    {
      "datum": "2026-11-23",
      "zeit": "07:00",
      "ausnahme": null,
@@ -134,6 +484,384 @@ window.TOUREN_DATEN = {
     },
     {
      "datum": "2027-01-04",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-11",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-18",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-25",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-01",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-08",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-01",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-08",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-29",
+     "zeit": "07:00",
+     "ausnahme": "Aufgrund des Ostermontags findet die Hauskehricht Tour 2 Montag am 29.03.2027 nicht statt. Sie wird am Dienstag 30.03.2027 nachgeholt.",
+     "faelltAus": true,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-30",
+     "zeit": "07:00",
+     "ausnahme": "Nachholtour Hauskehricht Tour 2 Montag des Ostermontags wird am Dienstag 30.03.2027 nachgeholt.",
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-05",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-19",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-26",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-03",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-10",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-17",
+     "zeit": "07:00",
+     "ausnahme": "Aufgrund des Pfingstmontags findet die Hauskehricht Tour 2 Montag am 17.05.2027 nicht statt. Sie wird am Dienstag 18.05.2027 nachgeholt.",
+     "faelltAus": true,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-18",
+     "zeit": "07:00",
+     "ausnahme": "Nachholtour Hauskehricht Tour 2 Montag des Pfingstmontags wird am Dienstag 18.05.2027 nachgeholt.",
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-24",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-31",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-07",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-14",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-21",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-28",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-05",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-19",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-26",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-02",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-09",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-23",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-30",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-06",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-13",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-20",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-27",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-04",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-11",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-18",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-25",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-01",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-08",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-29",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-06",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-13",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-20",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-27",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2028-01-03",
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
@@ -146,20 +874,6 @@ window.TOUREN_DATEN = {
    "name": "Hauskehricht Tour 3 Montag",
    "termine": [
     {
-     "datum": "2026-11-09",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
-    {
-     "datum": "2026-11-16",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
-    {
      "datum": "2026-11-23",
      "zeit": "07:00",
      "ausnahme": null,
@@ -206,6 +920,384 @@ window.TOUREN_DATEN = {
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-11",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-18",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-25",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-01",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-08",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-01",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-08",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-29",
+     "zeit": "07:00",
+     "ausnahme": "Aufgrund des Ostermontags findet die Hauskehricht Tour 3 Montag am 29.03.2027 nicht statt. Sie wird am Dienstag 30.03.2027 nachgeholt.",
+     "faelltAus": true,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-30",
+     "zeit": "07:00",
+     "ausnahme": "Nachholtour Hauskehricht Tour 3 Montag des Ostermontags wird am Dienstag 30.03.2027 nachgeholt.",
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-05",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-19",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-26",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-03",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-10",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-17",
+     "zeit": "07:00",
+     "ausnahme": "Aufgrund des Pfingstmontags findet die Hauskehricht Tour 3 Montag am 17.05.2027 nicht statt. Sie wird am Dienstag 18.05.2027 nachgeholt.",
+     "faelltAus": true,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-18",
+     "zeit": "07:00",
+     "ausnahme": "Nachholtour Hauskehricht Tour 3 Montag des Pfingstmontags wird am Dienstag 18.05.2027 nachgeholt.",
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-24",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-31",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-07",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-14",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-21",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-28",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-05",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-19",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-26",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-02",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-09",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-23",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-30",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-06",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-13",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-20",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-27",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-04",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-11",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-18",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-25",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-01",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-08",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-29",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-06",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-13",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-20",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-27",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2028-01-03",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
      "notiz": "<div class='"
     }
    ]
@@ -214,20 +1306,6 @@ window.TOUREN_DATEN = {
    "kategorie": "hauskehricht",
    "name": "Hauskehricht Tour 4 Dienstag",
    "termine": [
-    {
-     "datum": "2026-11-10",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
-    {
-     "datum": "2026-11-17",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
     {
      "datum": "2026-11-24",
      "zeit": "07:00",
@@ -272,6 +1350,370 @@ window.TOUREN_DATEN = {
     },
     {
      "datum": "2027-01-05",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-19",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-26",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-02",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-09",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-23",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-02",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-09",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-23",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-30",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-06",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-13",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-20",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-27",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-04",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-11",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-18",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-25",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-01",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-08",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-29",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-06",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-13",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-20",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-27",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-03",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-10",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-17",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-24",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-31",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-07",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-14",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-21",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-28",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-05",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-19",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-26",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-02",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-09",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-23",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-30",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-07",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-14",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-21",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-28",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2028-01-04",
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
@@ -284,20 +1726,6 @@ window.TOUREN_DATEN = {
    "name": "Hauskehricht Tour 5 Dienstag",
    "termine": [
     {
-     "datum": "2026-11-10",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
-    {
-     "datum": "2026-11-17",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
-    {
      "datum": "2026-11-24",
      "zeit": "07:00",
      "ausnahme": null,
@@ -344,6 +1772,370 @@ window.TOUREN_DATEN = {
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-19",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-26",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-02",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-09",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-23",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-02",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-09",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-23",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-30",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-06",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-13",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-20",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-27",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-04",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-11",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-18",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-25",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-01",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-08",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-29",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-06",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-13",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-20",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-27",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-03",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-10",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-17",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-24",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-31",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-07",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-14",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-21",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-28",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-05",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-19",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-26",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-02",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-09",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-23",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-30",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-07",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-14",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-21",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-28",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2028-01-04",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
      "notiz": "<div class='"
     }
    ]
@@ -352,34 +2144,6 @@ window.TOUREN_DATEN = {
    "kategorie": "hauskehricht",
    "name": "Hauskehricht Tour 6 Dienstag + Freitag",
    "termine": [
-    {
-     "datum": "2026-11-10",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
-    {
-     "datum": "2026-11-13",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
-    {
-     "datum": "2026-11-17",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
-    {
-     "datum": "2026-11-20",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
     {
      "datum": "2026-11-24",
      "zeit": "07:00",
@@ -446,7 +2210,7 @@ window.TOUREN_DATEN = {
     {
      "datum": "2026-12-25",
      "zeit": "07:00",
-     "ausnahme": "Aufgrund von Weihnachten findet die Hauskehricht Tour 6 Dienstag + Freitag am 25.12.2026 nicht statt. Sie wird nicht nachgeholt. Die nächste Hauskehrichttour findet am Di. 29.12.2026 statt.",
+     "ausnahme": "Aufgrund von Weihnachten findet die Hauskehricht Tour 6 Dienstag + Freitag am 25.12.2026 nicht statt. Sie wird nicht nachgeholt. Die nächste Hauskehrichttour findet am Dienstag 29.12.2026 statt.",
      "faelltAus": true,
      "notiz": null
     },
@@ -469,6 +2233,734 @@ window.TOUREN_DATEN = {
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-19",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-26",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-29",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-02",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-05",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-09",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-19",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-23",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-26",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-02",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-05",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-09",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-19",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-23",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-26",
+     "zeit": "07:00",
+     "ausnahme": "Aufgrund des Karfreitags findet die Hauskehricht Tour 6 Dienstag + Freitag am 26.03.2027 nicht statt. Sie wird nicht nachgeholt.",
+     "faelltAus": true,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-30",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-02",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-06",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-09",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-13",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-20",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-23",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-27",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-30",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-04",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-07",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-11",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-14",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-18",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-21",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-25",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-28",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-01",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-04",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-08",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-11",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-18",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-25",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-29",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-02",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-06",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-09",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-13",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-20",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-23",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-27",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-30",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-03",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-06",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-10",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-13",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-17",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-20",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-24",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-27",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-31",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-03",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-07",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-10",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-14",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-17",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-21",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-24",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-28",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-01",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-05",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-08",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-19",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-26",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-29",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-02",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-05",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-09",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-19",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-23",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-26",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-30",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-03",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-07",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-10",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-14",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-17",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-21",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-24",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-28",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-31",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2028-01-04",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2028-01-07",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
      "notiz": "<div class='"
     }
    ]
@@ -477,20 +2969,6 @@ window.TOUREN_DATEN = {
    "kategorie": "hauskehricht",
    "name": "Hauskehricht Tour 7 Donnerstag",
    "termine": [
-    {
-     "datum": "2026-11-12",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
-    {
-     "datum": "2026-11-19",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
     {
      "datum": "2026-11-26",
      "zeit": "07:00",
@@ -535,6 +3013,377 @@ window.TOUREN_DATEN = {
     },
     {
      "datum": "2027-01-07",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-14",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-21",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-28",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-04",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-11",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-18",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-25",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-04",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-11",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-18",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-25",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-01",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-08",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-29",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-06",
+     "zeit": "07:00",
+     "ausnahme": "Aufgrund von Auffahrt findet die Hauskehricht Tour 7 Donnerstag am 06.05.2027 nicht statt. Sie wird am Samstag 08.05.2027 nachgeholt.",
+     "faelltAus": true,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-08",
+     "zeit": "07:00",
+     "ausnahme": "Nachholtour Hauskehricht Tour 7 Donnerstag von Auffahrt wird am Samstag 08.05.2027 nachgeholt.",
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-13",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-20",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-27",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-03",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-10",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-17",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-24",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-01",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-08",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-29",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-05",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-19",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-26",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-02",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-09",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-23",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-30",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-07",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-14",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-21",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-28",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-04",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-11",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-18",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-25",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-02",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-09",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-23",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-30",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2028-01-06",
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
@@ -547,20 +3396,6 @@ window.TOUREN_DATEN = {
    "name": "Hauskehricht Tour 8 Donnerstag",
    "termine": [
     {
-     "datum": "2026-11-12",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
-    {
-     "datum": "2026-11-19",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
-    {
      "datum": "2026-11-26",
      "zeit": "07:00",
      "ausnahme": null,
@@ -604,6 +3439,384 @@ window.TOUREN_DATEN = {
     },
     {
      "datum": "2027-01-07",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-14",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-21",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-28",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-04",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-11",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-18",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-25",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-04",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-11",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-18",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-25",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-01",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-08",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-29",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-06",
+     "zeit": "07:00",
+     "ausnahme": "Aufgrund von Auffahrt findet die Hauskehricht Tour 8 Donnerstag am 06.05.2027 nicht statt. Sie wird am Samstag 08.05.2027 nachgeholt.",
+     "faelltAus": true,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-08",
+     "zeit": "07:00",
+     "ausnahme": "Nachholtour Hauskehricht Tour 8 Donnerstag von Auffahrt wird am Samstag 08.05.2027 nachgeholt.",
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-13",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-20",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-27",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-03",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-10",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-17",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-24",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-01",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-08",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-29",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-05",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-19",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-26",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-02",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-09",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-23",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-30",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-07",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-14",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-21",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-28",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-04",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-11",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-18",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-25",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-02",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-09",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-23",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-30",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2028-01-06",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2028-01-13",
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
@@ -616,20 +3829,6 @@ window.TOUREN_DATEN = {
    "name": "Hauskehricht Tour 9 Donnerstag",
    "termine": [
     {
-     "datum": "2026-11-12",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
-    {
-     "datum": "2026-11-19",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
-    {
      "datum": "2026-11-26",
      "zeit": "07:00",
      "ausnahme": null,
@@ -676,6 +3875,377 @@ window.TOUREN_DATEN = {
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-14",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-21",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-28",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-04",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-11",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-18",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-25",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-04",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-11",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-18",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-25",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-01",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-08",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-29",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-06",
+     "zeit": "07:00",
+     "ausnahme": "Aufgrund von Auffahrt findet die Hauskehricht Tour 9 Donnerstag am 06.05.2027 nicht statt. Sie wird am Samstag 08.05.2027 nachgeholt.",
+     "faelltAus": true,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-08",
+     "zeit": "07:00",
+     "ausnahme": "Nachholtour Hauskehricht Tour 9 Donnerstag von Auffahrt wird am Samstag 08.05.2027 nachgeholt.",
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-13",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-20",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-27",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-03",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-10",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-17",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-24",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-01",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-08",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-29",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-05",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-19",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-26",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-02",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-09",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-23",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-30",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-07",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-14",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-21",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-28",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-04",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-11",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-18",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-25",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-02",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-09",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-23",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-30",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2028-01-06",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
      "notiz": "<div class='"
     }
    ]
@@ -684,20 +4254,6 @@ window.TOUREN_DATEN = {
    "kategorie": "hauskehricht",
    "name": "Hauskehricht Tour 10 Freitag",
    "termine": [
-    {
-     "datum": "2026-11-13",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
-    {
-     "datum": "2026-11-20",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
     {
      "datum": "2026-11-27",
      "zeit": "07:00",
@@ -729,7 +4285,7 @@ window.TOUREN_DATEN = {
     {
      "datum": "2026-12-25",
      "zeit": "07:00",
-     "ausnahme": "Aufgrund von Weihnachten findet die Hauskehricht Tour 10 Freitag am 25.12.2026 nicht statt. Sie wird am Montag 28. Dezember nachgeholt.",
+     "ausnahme": "Aufgrund von Weihnachten findet die Hauskehricht Tour 10 Freitag am 25.12.2026 nicht statt. Sie wird am Montag 28.12.2026 nachgeholt.",
      "faelltAus": true,
      "notiz": null
     },
@@ -737,6 +4293,398 @@ window.TOUREN_DATEN = {
      "datum": "2026-12-28",
      "zeit": "07:00",
      "ausnahme": "Nachholtour Hauskehricht Tour 10 Freitag von Weihnachten wird am Montag 28.12.2026 nachgeholt.",
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-01",
+     "zeit": "07:00",
+     "ausnahme": "Aufgrund von Neujahr findet die Hauskehricht Tour 10 Freitag am 01.01.2027 nicht statt. Sie wird am Montag 04.01.2027 nachgeholt.",
+     "faelltAus": true,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-04",
+     "zeit": "07:00",
+     "ausnahme": "Nachholtour Hauskehricht Tour 10 Freitag von Neujahr wird am Montag 04.01.2027 nachgeholt.",
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-08",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-29",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-05",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-19",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-26",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-05",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-19",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-26",
+     "zeit": "07:00",
+     "ausnahme": "Aufgrund des Karfreitags findet die Hauskehricht Tour 10 Freitag am 26.03.2027 nicht statt. Sie wird am Samstag 27.03.2027 nachgeholt.",
+     "faelltAus": true,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-27",
+     "zeit": "07:00",
+     "ausnahme": "Nachholtour Hauskehricht Tour 10 Freitag des Karfreitags wird am Samstag 27.03.2027 nachgeholt.",
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-02",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-09",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-23",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-30",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-07",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-14",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-21",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-28",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-04",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-11",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-18",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-25",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-02",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-09",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-23",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-30",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-06",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-13",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-20",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-27",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-03",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-10",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-17",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-24",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-01",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-08",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-29",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-05",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-19",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-26",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-03",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-10",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-17",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-24",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-31",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2028-01-07",
+     "zeit": "07:00",
+     "ausnahme": null,
      "faelltAus": false,
      "notiz": "<div class='"
     }
@@ -746,20 +4694,6 @@ window.TOUREN_DATEN = {
    "kategorie": "hauskehricht",
    "name": "Hauskehricht Tour 11 Freitag",
    "termine": [
-    {
-     "datum": "2026-11-13",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
-    {
-     "datum": "2026-11-20",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
     {
      "datum": "2026-11-27",
      "zeit": "07:00",
@@ -800,6 +4734,370 @@ window.TOUREN_DATEN = {
      "zeit": "07:00",
      "ausnahme": "Nachholtour Hauskehricht Tour 11 Freitag von Weihnachten wird am Montag 28.12.2026 nachgeholt.",
      "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-29",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-05",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-19",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-26",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-05",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-19",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-26",
+     "zeit": "07:00",
+     "ausnahme": "Aufgrund des Karfreitags findet die Hauskehricht Tour 11 Freitag am 26.03.2027 nicht statt. Sie wird am Samstag 27. März 2027 nachgeholt.",
+     "faelltAus": true,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-02",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-09",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-23",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-30",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-07",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-14",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-21",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-28",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-04",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-11",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-18",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-25",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-02",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-09",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-23",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-30",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-06",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-13",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-20",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-27",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-03",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-10",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-17",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-24",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-01",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-08",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-29",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-05",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-19",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-26",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-03",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-10",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-17",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-24",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-31",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2028-01-07",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
      "notiz": "<div class='"
     }
    ]
@@ -808,20 +5106,6 @@ window.TOUREN_DATEN = {
    "kategorie": "hauskehricht",
    "name": "Hauskehricht Tour 12 Freitag",
    "termine": [
-    {
-     "datum": "2026-11-13",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
-    {
-     "datum": "2026-11-20",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
     {
      "datum": "2026-11-27",
      "zeit": "07:00",
@@ -862,6 +5146,370 @@ window.TOUREN_DATEN = {
      "zeit": "07:00",
      "ausnahme": "Nachholtour Hauskehricht Tour 12 Freitag von Weihnachten wird am Montag 28.12.2026 nachgeholt.",
      "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-29",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-05",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-19",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-26",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-05",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-19",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-26",
+     "zeit": "07:00",
+     "ausnahme": "Aufgrund des Karfreitags findet die Hauskehricht Tour 12 Freitag am 26.03.2027 nicht statt. Sie wird am Samstag 27. März 2027 nachgeholt.",
+     "faelltAus": true,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-02",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-09",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-23",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-30",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-07",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-14",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-21",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-28",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-04",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-11",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-18",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-25",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-02",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-09",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-23",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-30",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-06",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-13",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-20",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-27",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-03",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-10",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-17",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-24",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-01",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-08",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-29",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-05",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-19",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-26",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-03",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-10",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-17",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-24",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-31",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2028-01-07",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
      "notiz": "<div class='"
     }
    ]
@@ -870,20 +5518,6 @@ window.TOUREN_DATEN = {
    "kategorie": "gruenabfall",
    "name": "Grünabfall Tour 1 Freitag",
    "termine": [
-    {
-     "datum": "2026-11-13",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
-    {
-     "datum": "2026-11-20",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
     {
      "datum": "2026-11-27",
      "zeit": "07:00",
@@ -915,19 +5549,397 @@ window.TOUREN_DATEN = {
     {
      "datum": "2026-12-25",
      "zeit": "07:00",
-     "ausnahme": "Aufgrund des 1. Weihnachtsfeiertages findet die Grünabfall Tour 1 Freitag am 25.12.2026 nicht statt. Sie wird nicht nachgeholt. Die nächste Grünabfalltour findet am Fr. 08.01.2027 statt.",
+     "ausnahme": "Aufgrund des 1. Weihnachtsfeiertages findet die Grünabfall Tour 1 Freitag am 25.12.2026 nicht statt. Die nächste Grünabfalltour findet am Dienstag 05.01.2027 statt.",
      "faelltAus": true,
      "notiz": null
     },
     {
      "datum": "2027-01-01",
      "zeit": "07:00",
-     "ausnahme": "Aufgrund Neujahr findet die Grünabfall Tour 1 Freitag am 01.01.2027 nicht statt. Sie wird nicht nachgeholt. Die nächste Grünabfalltour findet am Fr. 08.01.2027 statt.",
+     "ausnahme": "Aufgrund Neujahr findet die Grünabfall Tour 1 Freitag am 01.01.2027 nicht statt. Sie wird am Dienstag 05.01.2027 nachgeholt.",
      "faelltAus": true,
      "notiz": null
     },
     {
+     "datum": "2027-01-05",
+     "zeit": "07:00",
+     "ausnahme": "Nachholtour Grünabfall Tour 1 Freitag von Weihnachten und Neujahr wird am Dienstag 05.01.2027 nachgeholt.",
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
      "datum": "2027-01-08",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-29",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-05",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-19",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-26",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-05",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-19",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-26",
+     "zeit": "07:00",
+     "ausnahme": "Aufgrund des Karfreitags findet die Grünabfall Tour 1 Freitag am 26.03.2027 nicht statt. Sie wird am Samstag 27.03.2027 nachgeholt.",
+     "faelltAus": true,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-27",
+     "zeit": "07:00",
+     "ausnahme": "Nachholtour Grünabfall Tour 1 Freitag vom Karfreitag wird am Samstag 27.03.2027 nachgeholt.",
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-02",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-09",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-23",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-30",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-07",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-14",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-21",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-28",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-04",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-11",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-18",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-25",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-02",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-09",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-23",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-30",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-06",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-13",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-20",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-27",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-03",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-10",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-17",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-24",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-01",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-08",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-29",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-05",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-19",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-26",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-03",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-10",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-17",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-24",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-31",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2028-01-07",
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
@@ -940,20 +5952,6 @@ window.TOUREN_DATEN = {
    "name": "Grünabfall Tour 2 Freitag",
    "termine": [
     {
-     "datum": "2026-11-13",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
-    {
-     "datum": "2026-11-20",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
-    {
      "datum": "2026-11-27",
      "zeit": "07:00",
      "ausnahme": null,
@@ -984,19 +5982,397 @@ window.TOUREN_DATEN = {
     {
      "datum": "2026-12-25",
      "zeit": "07:00",
-     "ausnahme": "Aufgrund des 1. Weihnachtsfeiertages findet die Grünabfall Tour 2 Freitag am 25.12.2026 nicht statt. Sie wird nicht nachgeholt. Die nächste Grünabfalltour findet am Fr. 08.01.2027 statt.",
+     "ausnahme": "Aufgrund des 1. Weihnachtsfeiertages findet die Grünabfall Tour 2 Freitag am 25.12.2026 nicht statt. Die nächste Grünabfalltour findet am Dienstag 05.01.2027 statt.",
      "faelltAus": true,
      "notiz": null
     },
     {
      "datum": "2027-01-01",
      "zeit": "07:00",
-     "ausnahme": "Aufgrund Neujahr findet die Grünabfall Tour 2 Freitag am 01.01.2027 nicht statt. Sie wird nicht nachgeholt. Die nächste Grünabfalltour findet am Fr. 08.01.2027 statt.",
+     "ausnahme": "Aufgrund Neujahr findet die Grünabfall Tour 2 Freitag am 01.01.2027 nicht statt. Sie wird am Dienstag 05.01.2027 nachgeholt.",
      "faelltAus": true,
      "notiz": null
     },
     {
+     "datum": "2027-01-05",
+     "zeit": "07:00",
+     "ausnahme": "Nachholtour Grünabfall Tour 2 Freitag von Weihnachten und Neujahr wird am Dienstag 05.01.2027 nachgeholt.",
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
      "datum": "2027-01-08",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-29",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-05",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-19",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-26",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-05",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-19",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-26",
+     "zeit": "07:00",
+     "ausnahme": "Aufgrund des Karfreitags findet die Grünabfall Tour 2 Freitag am 26.03.2027 nicht statt. Sie wird am Samstag 27.03.2027 nachgeholt.",
+     "faelltAus": true,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-27",
+     "zeit": "07:00",
+     "ausnahme": "Nachholtour Grünabfall Tour 2 Freitag vom Karfreitag wird am Samstag 27.03.2027 nachgeholt.",
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-02",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-09",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-23",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-30",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-07",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-14",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-21",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-28",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-04",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-11",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-18",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-25",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-02",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-09",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-23",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-30",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-06",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-13",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-20",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-27",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-03",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-10",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-17",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-24",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-01",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-08",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-29",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-05",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-19",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-26",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-03",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-10",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-17",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-24",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-31",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2028-01-07",
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
@@ -1008,20 +6384,6 @@ window.TOUREN_DATEN = {
    "kategorie": "gruenabfall",
    "name": "Grünabfall Tour 3 Donnerstag",
    "termine": [
-    {
-     "datum": "2026-11-12",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
-    {
-     "datum": "2026-11-19",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
     {
      "datum": "2026-11-26",
      "zeit": "07:00",
@@ -1069,6 +6431,377 @@ window.TOUREN_DATEN = {
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-14",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-21",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-28",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-04",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-11",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-18",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-25",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-04",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-11",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-18",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-25",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-01",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-08",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-29",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-06",
+     "zeit": "07:00",
+     "ausnahme": "Aufgrund von Auffahrt findet die Grünabfall Tour 3 Donnerstag am 06.05.2027 nicht statt. Sie wird am Samstag 08.05.2027 nachgeholt.",
+     "faelltAus": true,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-08",
+     "zeit": "07:00",
+     "ausnahme": "Nachholtour Grünabfall Tour 3 Donnerstag von Auffahrt wird am Samstag 08.05.2027 nachgeholt.",
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-13",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-20",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-27",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-03",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-10",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-17",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-24",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-01",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-08",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-29",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-05",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-19",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-26",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-02",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-09",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-23",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-30",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-07",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-14",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-21",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-28",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-04",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-11",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-18",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-25",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-02",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-09",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-23",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-30",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2028-01-06",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
      "notiz": "<div class='"
     }
    ]
@@ -1077,20 +6810,6 @@ window.TOUREN_DATEN = {
    "kategorie": "gruenabfall",
    "name": "Grünabfall Tour 4 Mittwoch",
    "termine": [
-    {
-     "datum": "2026-11-11",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
-    {
-     "datum": "2026-11-18",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
     {
      "datum": "2026-11-25",
      "zeit": "07:00",
@@ -1135,6 +6854,370 @@ window.TOUREN_DATEN = {
     },
     {
      "datum": "2027-01-06",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-13",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-20",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-27",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-03",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-10",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-17",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-24",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-03",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-10",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-17",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-24",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-31",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-07",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-14",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-21",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-28",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-05",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-19",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-26",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-02",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-09",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-23",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-30",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-07",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-14",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-21",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-28",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-04",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-11",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-18",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-25",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-01",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-08",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-29",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-06",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-13",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-20",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-27",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-03",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-10",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-17",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-24",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-01",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-08",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-29",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2028-01-05",
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
@@ -1147,20 +7230,6 @@ window.TOUREN_DATEN = {
    "name": "Grünabfall Tour 5 Montag",
    "termine": [
     {
-     "datum": "2026-11-09",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
-    {
-     "datum": "2026-11-16",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
-    {
      "datum": "2026-11-23",
      "zeit": "07:00",
      "ausnahme": null,
@@ -1204,6 +7273,384 @@ window.TOUREN_DATEN = {
     },
     {
      "datum": "2027-01-04",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-11",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-18",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-25",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-01",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-08",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-01",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-08",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-29",
+     "zeit": "07:00",
+     "ausnahme": "Aufgrund des Ostermontags findet die Grünabfall Tour 5 Montag am 29.03.2027 nicht statt. Sie wird am Mittwoch 31.03.2027 nachgeholt.",
+     "faelltAus": true,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-31",
+     "zeit": "07:00",
+     "ausnahme": "Nachholtour Grünabfall Tour 5 Montag des Ostermontags wird am Mittwoch 31.03.2027 nachgeholt.",
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-05",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-19",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-26",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-03",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-10",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-17",
+     "zeit": "07:00",
+     "ausnahme": "Aufgrund des Pfingstmontags findet die Grünabfall Tour 5 Montag am 17.05.2027 nicht statt. Sie wird am Mittwoch 19.05.2027 nachgeholt.",
+     "faelltAus": true,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-19",
+     "zeit": "07:00",
+     "ausnahme": "Nachholtour Grünabfall Tour 5 Montag des Pfingstmontags wird am Mittwoch 19.05.2027 nachgeholt.",
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-24",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-31",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-07",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-14",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-21",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-28",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-05",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-19",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-26",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-02",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-09",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-23",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-30",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-06",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-13",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-20",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-27",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-04",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-11",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-18",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-25",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-01",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-08",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-29",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-06",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-13",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-20",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-27",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2028-01-03",
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
@@ -1216,20 +7663,6 @@ window.TOUREN_DATEN = {
    "name": "Grünabfall Tour 6 Mittwoch",
    "termine": [
     {
-     "datum": "2026-11-11",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
-    {
-     "datum": "2026-11-18",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
-    {
      "datum": "2026-11-25",
      "zeit": "07:00",
      "ausnahme": null,
@@ -1273,6 +7706,370 @@ window.TOUREN_DATEN = {
     },
     {
      "datum": "2027-01-06",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-13",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-20",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-27",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-03",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-10",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-17",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-24",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-03",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-10",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-17",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-24",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-31",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-07",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-14",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-21",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-28",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-05",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-19",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-26",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-02",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-09",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-23",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-30",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-07",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-14",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-21",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-28",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-04",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-11",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-18",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-25",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-01",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-08",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-29",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-06",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-13",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-20",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-27",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-03",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-10",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-17",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-24",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-01",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-08",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-29",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2028-01-05",
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
@@ -1285,20 +8082,6 @@ window.TOUREN_DATEN = {
    "name": "Grünabfall Tour 7 Dienstag",
    "termine": [
     {
-     "datum": "2026-11-10",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
-    {
-     "datum": "2026-11-17",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
-    {
      "datum": "2026-11-24",
      "zeit": "07:00",
      "ausnahme": null,
@@ -1342,6 +8125,377 @@ window.TOUREN_DATEN = {
     },
     {
      "datum": "2027-01-05",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-19",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-26",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-02",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-09",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-23",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-02",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-09",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-23",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-30",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-06",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-13",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-20",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-27",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-04",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-11",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-18",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-25",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-01",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-08",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-29",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-06",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-13",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-20",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-27",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-03",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-10",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-17",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-24",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-31",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-07",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-14",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-21",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-28",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-05",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-19",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-26",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-02",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-09",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-23",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-30",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-07",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-14",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-21",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-28",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2028-01-04",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2028-01-11",
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
@@ -1354,20 +8508,6 @@ window.TOUREN_DATEN = {
    "name": "Grünabfall Tour 8 Dienstag",
    "termine": [
     {
-     "datum": "2026-11-10",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
-    {
-     "datum": "2026-11-17",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
-    {
      "datum": "2026-11-24",
      "zeit": "07:00",
      "ausnahme": null,
@@ -1411,6 +8551,370 @@ window.TOUREN_DATEN = {
     },
     {
      "datum": "2027-01-05",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-19",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-26",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-02",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-09",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-23",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-02",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-09",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-23",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-30",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-06",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-13",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-20",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-27",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-04",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-11",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-18",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-25",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-01",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-08",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-29",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-06",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-13",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-20",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-27",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-03",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-10",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-17",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-24",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-31",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-07",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-14",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-21",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-28",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-05",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-19",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-26",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-02",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-09",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-23",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-30",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-07",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-14",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-21",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-28",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2028-01-04",
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
@@ -1423,20 +8927,6 @@ window.TOUREN_DATEN = {
    "name": "Grünabfall Tour 9 Dienstag",
    "termine": [
     {
-     "datum": "2026-11-10",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
-    {
-     "datum": "2026-11-17",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
-    {
      "datum": "2026-11-24",
      "zeit": "07:00",
      "ausnahme": null,
@@ -1483,6 +8973,370 @@ window.TOUREN_DATEN = {
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-19",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-26",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-02",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-09",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-23",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-02",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-09",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-23",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-30",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-06",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-13",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-20",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-27",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-04",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-11",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-18",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-25",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-01",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-08",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-29",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-06",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-13",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-20",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-27",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-03",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-10",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-17",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-24",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-31",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-07",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-14",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-21",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-28",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-05",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-19",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-26",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-02",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-09",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-23",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-30",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-07",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-14",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-21",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-28",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2028-01-04",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
      "notiz": "<div class='"
     }
    ]
@@ -1491,20 +9345,6 @@ window.TOUREN_DATEN = {
    "kategorie": "gruenabfall",
    "name": "Grünabfall Tour 10 Mittwoch",
    "termine": [
-    {
-     "datum": "2026-11-11",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
-    {
-     "datum": "2026-11-18",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
     {
      "datum": "2026-11-25",
      "zeit": "07:00",
@@ -1552,6 +9392,370 @@ window.TOUREN_DATEN = {
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-13",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-20",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-27",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-03",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-10",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-17",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-24",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-03",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-10",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-17",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-24",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-31",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-07",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-14",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-21",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-28",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-05",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-19",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-26",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-02",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-09",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-23",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-30",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-07",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-14",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-21",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-28",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-04",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-11",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-18",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-25",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-01",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-08",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-29",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-06",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-13",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-20",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-27",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-03",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-10",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-17",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-24",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-01",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-08",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-29",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2028-01-05",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
      "notiz": "<div class='"
     }
    ]
@@ -1560,20 +9764,6 @@ window.TOUREN_DATEN = {
    "kategorie": "gruenabfall",
    "name": "Grünabfall Tour 11 Montag",
    "termine": [
-    {
-     "datum": "2026-11-09",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
-    {
-     "datum": "2026-11-16",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
     {
      "datum": "2026-11-23",
      "zeit": "07:00",
@@ -1618,6 +9808,384 @@ window.TOUREN_DATEN = {
     },
     {
      "datum": "2027-01-04",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-11",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-18",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-25",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-01",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-08",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-01",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-08",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-29",
+     "zeit": "07:00",
+     "ausnahme": "Aufgrund des Ostermontags findet die Grünabfall Tour 11 Montag am 29.03.2027 nicht statt. Sie wird am Mittwoch 31.03.2027 nachgeholt.",
+     "faelltAus": true,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-31",
+     "zeit": "07:00",
+     "ausnahme": "Nachholtour Grünabfall Tour 11 Montag des Ostermontags wird am Mittwoch 31.03.2027 nachgeholt.",
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-05",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-19",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-26",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-03",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-10",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-17",
+     "zeit": "07:00",
+     "ausnahme": "Aufgrund des Pfingstmontags findet die Grünabfall Tour 11 Montag am 17.05.2027 nicht statt. Sie wird am Mittwoch 19.05.2027 nachgeholt.",
+     "faelltAus": true,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-19",
+     "zeit": "07:00",
+     "ausnahme": "Nachholtour Grünabfall Tour 11 Montag des Pfingstmontags wird am Mittwoch 19.05.2027 nachgeholt.",
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-24",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-31",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-07",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-14",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-21",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-28",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-05",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-19",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-26",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-02",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-09",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-23",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-30",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-06",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-13",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-20",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-27",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-04",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-11",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-18",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-25",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-01",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-08",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-29",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-06",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-13",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-20",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-27",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2028-01-03",
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
@@ -1630,20 +10198,6 @@ window.TOUREN_DATEN = {
    "name": "Grünabfall Tour 12 Montag",
    "termine": [
     {
-     "datum": "2026-11-09",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
-    {
-     "datum": "2026-11-16",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
-    {
      "datum": "2026-11-23",
      "zeit": "07:00",
      "ausnahme": null,
@@ -1690,6 +10244,384 @@ window.TOUREN_DATEN = {
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-11",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-18",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-25",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-01",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-08",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-02-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-01",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-08",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-29",
+     "zeit": "07:00",
+     "ausnahme": "Aufgrund des Ostermontags findet die Grünabfall Tour 12 Montag am 29.03.2027 nicht statt. Sie wird am Mittwoch 31.03.2027 nachgeholt.",
+     "faelltAus": true,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-31",
+     "zeit": "07:00",
+     "ausnahme": "Nachholtour Grünabfall Tour 12 Montag des Ostermontags wird am Mittwoch 31.03.2027 nachgeholt.",
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-05",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-19",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-04-26",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-03",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-10",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-17",
+     "zeit": "07:00",
+     "ausnahme": "Aufgrund des Pfingstmontags findet die Grünabfall Tour 12 Montag am 17.05.2027 nicht statt. Sie wird am Mittwoch 19.05.2027 nachgeholt.",
+     "faelltAus": true,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-19",
+     "zeit": "07:00",
+     "ausnahme": "Nachholtour Grünabfall Tour 12 Montag des Pfingstmontags wird am Mittwoch 19.05.2027 nachgeholt.",
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-24",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-31",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-07",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-14",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-21",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-28",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-05",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-19",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-26",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-02",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-09",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-23",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-08-30",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-06",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-13",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-20",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-27",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-04",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-11",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-18",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-25",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-01",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-08",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-29",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-06",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-13",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-20",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-12-27",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2028-01-03",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
      "notiz": "<div class='"
     }
    ]
@@ -1699,11 +10631,46 @@ window.TOUREN_DATEN = {
    "name": "Papier Tour 1 Montag oder Samstag",
    "termine": [
     {
-     "datum": "2026-11-16",
+     "datum": "2027-01-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": "Sammlung wird durchgeführt von der Knabenmusik Schaffhausen"
+    },
+    {
+     "datum": "2027-03-15",
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
      "notiz": "Sammlung wird durchgeführt vom Schulhaus Buchthalen"
+    },
+    {
+     "datum": "2027-05-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": "Sammlung wird durchgeführt von der Jubla Schaffhausen"
+    },
+    {
+     "datum": "2027-06-28",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": "Sammlung wird durchgeführt vom Schulhaus Buchthalen"
+    },
+    {
+     "datum": "2027-08-28",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": "Sammlung wird durchgeführt vom EHCS"
+    },
+    {
+     "datum": "2027-11-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": "Sammlung wird durchgeführt vom Schulhaus Buchthalen <div class='"
     }
    ]
   },
@@ -1712,11 +10679,46 @@ window.TOUREN_DATEN = {
    "name": "Papier Tour 2 Dienstag oder Samstag",
    "termine": [
     {
-     "datum": "2026-11-17",
+     "datum": "2027-01-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": "Sammlung wird durchgeführt von der Knabenmusik Schaffhausen"
+    },
+    {
+     "datum": "2027-03-16",
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
      "notiz": "Sammlung wird durchgeführt von der Entsorgung Stadt Schaffhausen"
+    },
+    {
+     "datum": "2027-05-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": "Sammlung wird durchgeführt von der Jubla Schaffhausen"
+    },
+    {
+     "datum": "2027-06-29",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": "Sammlung wird durchgeführt von der Entsorgung Stadt Schaffhausen"
+    },
+    {
+     "datum": "2027-08-28",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": "Sammlung wird durchgeführt vom EHCS"
+    },
+    {
+     "datum": "2027-11-23",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": "Sammlung wird durchgeführt von der Entsorgung Stadt Schaffhausen <div class='"
     }
    ]
   },
@@ -1725,7 +10727,21 @@ window.TOUREN_DATEN = {
    "name": "Papier Tour 3 Mittwoch",
    "termine": [
     {
-     "datum": "2026-11-18",
+     "datum": "2027-03-17",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": "Sammlung durch Schule Hemmental"
+    },
+    {
+     "datum": "2027-06-30",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": "Sammlung durch Schule Hemmental"
+    },
+    {
+     "datum": "2027-11-24",
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
@@ -1738,11 +10754,46 @@ window.TOUREN_DATEN = {
    "name": "Papier Tour 4 Donnerstag oder Samstag",
    "termine": [
     {
-     "datum": "2026-11-19",
+     "datum": "2027-01-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": "Sammlung wird durchgeführt von der Knabenmusik Schaffhausen"
+    },
+    {
+     "datum": "2027-03-18",
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
      "notiz": "Sammlung wird durchgeführt von der Entsorgung Stadt Schaffhausen"
+    },
+    {
+     "datum": "2027-05-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": "Sammlung wird durchgeführt von der Jubla Schaffhausen"
+    },
+    {
+     "datum": "2027-07-01",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": "Sammlung wird durchgeführt von der Entsorgung Stadt Schaffhausen"
+    },
+    {
+     "datum": "2027-08-28",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": "Sammlung wird durchgeführt vom EHCS"
+    },
+    {
+     "datum": "2027-11-25",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": "Sammlung wird durchgeführt von der Entsorgung Stadt Schaffhausen <div class='"
     }
    ]
   },
@@ -1751,68 +10802,431 @@ window.TOUREN_DATEN = {
    "name": "Papier Tour 5 Freitag oder Samstag",
    "termine": [
     {
-     "datum": "2026-11-20",
+     "datum": "2027-01-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": "Sammlung wird durchgeführt von der Knabenmusik Schaffhausen"
+    },
+    {
+     "datum": "2027-03-19",
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
      "notiz": "Sammlung wird durchgeführt von der Entsorgung Stadt Schaffhausen"
+    },
+    {
+     "datum": "2027-05-22",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": "Sammlung wird durchgeführt von der Jubla Schaffhausen"
+    },
+    {
+     "datum": "2027-07-02",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": "Sammlung wird durchgeführt von der Entsorgung Stadt Schaffhausen"
+    },
+    {
+     "datum": "2027-08-28",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": "Sammlung wird durchgeführt vom EHCS"
+    },
+    {
+     "datum": "2027-11-26",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": "Sammlung wird durchgeführt von der Entsorgung Stadt Schaffhausen <div class='"
     }
    ]
   },
   "26186716": {
    "kategorie": "karton",
    "name": "Karton Tour Montag",
-   "termine": []
+   "termine": [
+    {
+     "datum": "2027-01-11",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-08",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-10",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-05",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-13",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-08",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": "<div class='"
+    }
+   ]
   },
   "1372484032": {
    "kategorie": "karton",
    "name": "Karton Tour Dienstag",
-   "termine": []
+   "termine": [
+    {
+     "datum": "2027-01-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-09",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-11",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-06",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-14",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-09",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": "<div class='"
+    }
+   ]
   },
   "379892283": {
    "kategorie": "karton",
    "name": "Karton Tour Mittwoch",
-   "termine": []
+   "termine": [
+    {
+     "datum": "2027-01-13",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-10",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-07",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-10",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": "<div class='"
+    }
+   ]
   },
   "2070671416": {
    "kategorie": "karton",
    "name": "Karton Tour Donnerstag",
-   "termine": []
+   "termine": [
+    {
+     "datum": "2027-01-14",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-11",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-13",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-08",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-11",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": "<div class='"
+    }
+   ]
   },
   "1726681798": {
    "kategorie": "karton",
    "name": "Karton Tour Freitag",
-   "termine": []
+   "termine": [
+    {
+     "datum": "2027-01-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-05-14",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-07-09",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-09-17",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-11-12",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": "<div class='"
+    }
+   ]
   },
   "2007272713": {
    "kategorie": "altmetall",
    "name": "Altmetall Tour Montag",
-   "termine": []
+   "termine": [
+    {
+     "datum": "2027-02-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-14",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-25",
+     "zeit": "00:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    }
+   ]
   },
   "1011016680": {
    "kategorie": "altmetall",
    "name": "Altmetall Tour Dienstag",
-   "termine": []
+   "termine": [
+    {
+     "datum": "2027-02-16",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-15",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-26",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    }
+   ]
   },
   "203668360": {
    "kategorie": "altmetall",
    "name": "Altmetall Tour Mittwoch",
-   "termine": []
+   "termine": [
+    {
+     "datum": "2027-02-17",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-16",
+     "zeit": "00:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-27",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    }
+   ]
   },
   "1652874317": {
    "kategorie": "altmetall",
    "name": "Altmetall Tour Donnerstag",
-   "termine": []
+   "termine": [
+    {
+     "datum": "2027-02-18",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-17",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-28",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    }
+   ]
   },
   "1365360933": {
    "kategorie": "altmetall",
    "name": "Altmetall Tour Freitag",
-   "termine": []
+   "termine": [
+    {
+     "datum": "2027-02-19",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-06-18",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-10-29",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    }
+   ]
   }
  },
  "strassen": [
   {
    "name": "Abendstrasse",
+   "strasse": "Abendstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "802864307",
@@ -1825,6 +11239,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Ackergässchen",
+   "strasse": "Ackergässchen",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -1843,6 +11260,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Ackerstrasse",
+   "strasse": "Ackerstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1536757124",
@@ -1855,6 +11275,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Adlerstrasse",
+   "strasse": "Adlerstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -1873,6 +11296,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Ahornstieg",
+   "strasse": "Ahornstieg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "159617528",
@@ -1891,6 +11317,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Ahornstrasse",
+   "strasse": "Ahornstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "159617528",
@@ -1903,6 +11332,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Akazienstrasse",
+   "strasse": "Akazienstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "159617528",
@@ -1915,6 +11347,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Albisstrasse",
+   "strasse": "Albisstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1571641576",
@@ -1927,6 +11362,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Albulastrasse",
+   "strasse": "Albulastrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1536757124",
@@ -1939,6 +11377,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Alleeweg",
+   "strasse": "Alleeweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "159617528",
@@ -1957,6 +11398,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Alpenstrasse 1–115",
+   "strasse": "Alpenstrasse",
+   "von": 1,
+   "bis": 115,
    "zusatz": "Bürgerstrasse bis Kesselstrasse",
    "touren": {
     "hauskehricht": "15850755",
@@ -1969,6 +11413,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Alpenstrasse 117–182",
+   "strasse": "Alpenstrasse",
+   "von": 117,
+   "bis": 182,
    "zusatz": "Büsingerstrasse bis Kesselstrasse",
    "touren": {
     "hauskehricht": "1536757124",
@@ -1981,6 +11428,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Alte Gasse",
+   "strasse": "Alte Gasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "765509020",
@@ -1999,6 +11449,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Ampelngasse",
+   "strasse": "Ampelngasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -2017,6 +11470,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Amsler-Laffon-Strasse",
+   "strasse": "Amsler-Laffon-Strasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "159617528",
@@ -2035,6 +11491,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Artilleriestrasse",
+   "strasse": "Artilleriestrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "159617528",
@@ -2047,6 +11506,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Arvenweg",
+   "strasse": "Arvenweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "159617528",
@@ -2065,6 +11527,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Askaniastrasse",
+   "strasse": "Askaniastrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "802864307",
@@ -2077,6 +11542,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Auf der Platte",
+   "strasse": "Auf der Platte",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1114170010",
@@ -2095,6 +11563,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Bachstieg 1–8",
+   "strasse": "Bachstieg",
+   "von": 1,
+   "bis": 8,
    "zusatz": "Unten",
    "touren": {
     "hauskehricht": "906921982",
@@ -2113,6 +11584,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Bachstieg 9–15",
+   "strasse": "Bachstieg",
+   "von": 9,
+   "bis": 15,
    "zusatz": "Oben",
    "touren": {
     "hauskehricht": "15850755",
@@ -2131,6 +11605,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Bachstrasse",
+   "strasse": "Bachstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -2143,6 +11620,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Bachtelstrasse",
+   "strasse": "Bachtelstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1571641576",
@@ -2155,6 +11635,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Bahnhofstrasse",
+   "strasse": "Bahnhofstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -2167,6 +11650,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Ballistweg",
+   "strasse": "Ballistweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "765509020",
@@ -2185,6 +11671,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Baumgartenstrasse",
+   "strasse": "Baumgartenstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -2197,6 +11686,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Baumschulstrasse",
+   "strasse": "Baumschulstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "159617528",
@@ -2209,6 +11701,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Beckengässchen Sammelplatz",
+   "strasse": "Beckengässchen Sammelplatz",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "2042940125",
@@ -2221,6 +11716,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Beckenstube",
+   "strasse": "Beckenstube",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -2233,6 +11731,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Beckenwäldli",
+   "strasse": "Beckenwäldli",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "824283462",
@@ -2245,6 +11746,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Belairstrasse",
+   "strasse": "Belairstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "802864307",
@@ -2257,6 +11761,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Berghaldenweg",
+   "strasse": "Berghaldenweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "824283462",
@@ -2269,6 +11776,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Bergliweg",
+   "strasse": "Bergliweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1517200631",
@@ -2287,6 +11797,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Bergstrasse",
+   "strasse": "Bergstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "2042940125",
@@ -2299,6 +11812,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Birchweg",
+   "strasse": "Birchweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1114170010",
@@ -2311,6 +11827,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Birkenstrasse",
+   "strasse": "Birkenstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "159617528",
@@ -2323,6 +11842,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Blautraubenstrasse",
+   "strasse": "Blautraubenstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1536757124",
@@ -2335,6 +11857,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Blumenaustrasse",
+   "strasse": "Blumenaustrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "802864307",
@@ -2347,6 +11872,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Blumenweg",
+   "strasse": "Blumenweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "824283462",
@@ -2365,6 +11893,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Bläsihofstrasse",
+   "strasse": "Bläsihofstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1985948771",
@@ -2377,6 +11908,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Bocksrietstieg",
+   "strasse": "Bocksrietstieg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1985948771",
@@ -2395,6 +11929,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Bocksrietstrasse",
+   "strasse": "Bocksrietstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1985948771",
@@ -2407,6 +11944,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Bocksrietweg",
+   "strasse": "Bocksrietweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1985948771",
@@ -2419,6 +11959,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Bogenstrasse",
+   "strasse": "Bogenstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -2431,6 +11974,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Brauereistrasse",
+   "strasse": "Brauereistrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "824283462",
@@ -2443,6 +11989,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Breitenaustrasse",
+   "strasse": "Breitenaustrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1571641576",
@@ -2455,6 +12004,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Breitestieg",
+   "strasse": "Breitestieg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1114170010",
@@ -2467,6 +12019,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Bruderhöflistrasse",
+   "strasse": "Bruderhöflistrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "765509020",
@@ -2479,6 +12034,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Brunnackerstrasse",
+   "strasse": "Brunnackerstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "802864307",
@@ -2491,6 +12049,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Brunnengasse",
+   "strasse": "Brunnengasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -2509,6 +12070,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Brünigstrasse",
+   "strasse": "Brünigstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "15850755",
@@ -2527,6 +12091,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Buchenstrasse",
+   "strasse": "Buchenstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "159617528",
@@ -2539,6 +12106,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Buchthalerstrasse",
+   "strasse": "Buchthalerstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "765509020",
@@ -2551,6 +12121,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Burggütliweg",
+   "strasse": "Burggütliweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "802864307",
@@ -2569,6 +12142,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Bäumlistrasse",
+   "strasse": "Bäumlistrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "15850755",
@@ -2587,6 +12163,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Bühlstrasse",
+   "strasse": "Bühlstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1114170010",
@@ -2599,6 +12178,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Bürgerstrasse",
+   "strasse": "Bürgerstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "15850755",
@@ -2611,6 +12193,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Büsingerstrasse",
+   "strasse": "Büsingerstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1536757124",
@@ -2623,6 +12208,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Chileweg",
+   "strasse": "Chileweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1517200631",
@@ -2641,6 +12229,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Chrottenhalde",
+   "strasse": "Chrottenhalde",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1985948771",
@@ -2659,6 +12250,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Churfirstenweg",
+   "strasse": "Churfirstenweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "15850755",
@@ -2677,6 +12271,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Dachsenbühl",
+   "strasse": "Dachsenbühl",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1517200631",
@@ -2689,6 +12286,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Dahlienstrasse",
+   "strasse": "Dahlienstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1114170010",
@@ -2707,6 +12307,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Dorfstrasse",
+   "strasse": "Dorfstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "765509020",
@@ -2719,6 +12322,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Dorfweg",
+   "strasse": "Dorfweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "765509020",
@@ -2737,6 +12343,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Dreispitz",
+   "strasse": "Dreispitz",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "824283462",
@@ -2749,6 +12358,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Durachweg",
+   "strasse": "Durachweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "2042940125",
@@ -2761,6 +12373,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Dürstlinweg",
+   "strasse": "Dürstlinweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1536757124",
@@ -2773,6 +12388,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Dützebüelstrasse",
+   "strasse": "Dützebüelstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "824283462",
@@ -2785,6 +12403,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Ebnatfeld",
+   "strasse": "Ebnatfeld",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "159617528",
@@ -2797,6 +12418,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Ebnatring",
+   "strasse": "Ebnatring",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "159617528",
@@ -2815,6 +12439,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Ebnatstrasse",
+   "strasse": "Ebnatstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "159617528",
@@ -2827,6 +12454,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Ebnatweg",
+   "strasse": "Ebnatweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "159617528",
@@ -2839,6 +12469,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Eibenweg",
+   "strasse": "Eibenweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "159617528",
@@ -2857,6 +12490,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Eichenstrasse",
+   "strasse": "Eichenstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "159617528",
@@ -2869,6 +12505,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Eigerstrasse",
+   "strasse": "Eigerstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "159617528",
@@ -2887,6 +12526,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Einfangstrasse",
+   "strasse": "Einfangstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1536757124",
@@ -2905,6 +12547,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Emmersbergstrasse",
+   "strasse": "Emmersbergstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "159617528",
@@ -2917,6 +12562,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Engehaldenweg",
+   "strasse": "Engehaldenweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "802864307",
@@ -2929,6 +12577,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Engemattstrasse",
+   "strasse": "Engemattstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "802864307",
@@ -2941,6 +12592,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Erlenstrasse",
+   "strasse": "Erlenstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "15850755",
@@ -2953,6 +12607,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Eschengut",
+   "strasse": "Eschengut",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "159617528",
@@ -2965,6 +12622,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Eschenweg",
+   "strasse": "Eschenweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "159617528",
@@ -2977,6 +12637,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Etzelstrasse",
+   "strasse": "Etzelstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "802864307",
@@ -2989,6 +12652,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Falkenstrasse",
+   "strasse": "Falkenstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1985948771",
@@ -3001,6 +12667,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Feldstrasse",
+   "strasse": "Feldstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "15850755",
@@ -3013,6 +12682,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Felsenaustrasse",
+   "strasse": "Felsenaustrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1114170010",
@@ -3025,6 +12697,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Felsenstieg",
+   "strasse": "Felsenstieg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1114170010",
@@ -3037,6 +12712,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Felsgasse",
+   "strasse": "Felsgasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "765509020",
@@ -3049,6 +12727,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Felsgutstieg",
+   "strasse": "Felsgutstieg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "2042940125",
@@ -3067,6 +12748,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Fernsichtstrasse",
+   "strasse": "Fernsichtstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1571641576",
@@ -3079,6 +12763,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Fichtenstrasse",
+   "strasse": "Fichtenstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "159617528",
@@ -3091,6 +12778,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Finsterwaldstrasse",
+   "strasse": "Finsterwaldstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "2042940125",
@@ -3103,6 +12793,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Fischergässchen",
+   "strasse": "Fischergässchen",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -3121,6 +12814,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Fischerhäuserstrasse",
+   "strasse": "Fischerhäuserstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "765509020",
@@ -3133,6 +12829,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Fischerstubengässchen",
+   "strasse": "Fischerstubengässchen",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "765509020",
@@ -3151,6 +12850,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Fliederweg",
+   "strasse": "Fliederweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "159617528",
@@ -3163,6 +12865,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Floraweg 1–12",
+   "strasse": "Floraweg",
+   "von": 1,
+   "bis": 12,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1114170010",
@@ -3181,6 +12886,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Floraweg 13–43",
+   "strasse": "Floraweg",
+   "von": 13,
+   "bis": 43,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1114170010",
@@ -3193,6 +12901,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Forstweg",
+   "strasse": "Forstweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1985948771",
@@ -3205,6 +12916,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Frauengasse",
+   "strasse": "Frauengasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -3217,6 +12931,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Freier Platz",
+   "strasse": "Freier Platz",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -3229,6 +12946,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Freistrasse",
+   "strasse": "Freistrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1114170010",
@@ -3247,6 +12967,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Freudental",
+   "strasse": "Freudental",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1517200631",
@@ -3259,6 +12982,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Friedbergstrasse",
+   "strasse": "Friedbergstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1114170010",
@@ -3271,6 +12997,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Frohbergstieg",
+   "strasse": "Frohbergstieg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1536757124",
@@ -3289,6 +13018,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Frohbergstrasse",
+   "strasse": "Frohbergstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1536757124",
@@ -3301,6 +13033,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Fronwagplatz",
+   "strasse": "Fronwagplatz",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -3313,6 +13048,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Fulacherhalde",
+   "strasse": "Fulacherhalde",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "159617528",
@@ -3331,6 +13069,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Fulachstrasse 4–82",
+   "strasse": "Fulachstrasse",
+   "von": 4,
+   "bis": 82,
    "zusatz": "ab Emmersbergstrasse bis Ebnatweg",
    "touren": {
     "hauskehricht": "159617528",
@@ -3343,6 +13084,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Fulachstrasse 150–281",
+   "strasse": "Fulachstrasse",
+   "von": 150,
+   "bis": 281,
    "zusatz": "ab Brauereistrasse bis Herblingerstrasse",
    "touren": {
     "hauskehricht": "824283462",
@@ -3355,6 +13099,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Furkastieg",
+   "strasse": "Furkastieg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "765509020",
@@ -3373,6 +13120,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Furkastrasse",
+   "strasse": "Furkastrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "765509020",
@@ -3385,6 +13135,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Fäsenstaubstrasse",
+   "strasse": "Fäsenstaubstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "2042940125",
@@ -3397,6 +13150,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Föhrenstieg",
+   "strasse": "Föhrenstieg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "159617528",
@@ -3415,6 +13171,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Föhrenstrasse",
+   "strasse": "Föhrenstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "159617528",
@@ -3427,6 +13186,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Gartenstrasse",
+   "strasse": "Gartenstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1114170010",
@@ -3439,6 +13201,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Geissbergstieg",
+   "strasse": "Geissbergstieg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1985948771",
@@ -3451,6 +13216,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Geissbergstrasse",
+   "strasse": "Geissbergstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1985948771",
@@ -3463,6 +13231,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Geisshaldenweg",
+   "strasse": "Geisshaldenweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "2042940125",
@@ -3475,6 +13246,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Geisshofstieg",
+   "strasse": "Geisshofstieg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "2042940125",
@@ -3493,6 +13267,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Geisshofweg",
+   "strasse": "Geisshofweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1985948771",
@@ -3505,6 +13282,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Geissmattstrasse",
+   "strasse": "Geissmattstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1985948771",
@@ -3517,6 +13297,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Gemsgasse",
+   "strasse": "Gemsgasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1985948771",
@@ -3529,6 +13312,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Gemshalde",
+   "strasse": "Gemshalde",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1985948771",
@@ -3541,6 +13327,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Gemsstieg",
+   "strasse": "Gemsstieg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1985948771",
@@ -3559,6 +13348,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Gennersbrunnerstrasse",
+   "strasse": "Gennersbrunnerstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "824283462",
@@ -3571,6 +13363,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Glockengut",
+   "strasse": "Glockengut",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "824283462",
@@ -3583,6 +13378,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Glärnischstrasse",
+   "strasse": "Glärnischstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "15850755",
@@ -3595,6 +13393,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Goldschmiedstrasse",
+   "strasse": "Goldschmiedstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "159617528",
@@ -3607,6 +13408,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Goldsteinstrasse",
+   "strasse": "Goldsteinstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -3625,6 +13429,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Grabenstrasse",
+   "strasse": "Grabenstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "2042940125",
@@ -3637,6 +13444,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Grafenbuckhalde",
+   "strasse": "Grafenbuckhalde",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1985948771",
@@ -3649,6 +13459,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Grafenbuckstieg",
+   "strasse": "Grafenbuckstieg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1985948771",
@@ -3667,6 +13480,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Grafenbuckstrasse",
+   "strasse": "Grafenbuckstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1985948771",
@@ -3679,6 +13495,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Grenzstrasse",
+   "strasse": "Grenzstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "15850755",
@@ -3691,6 +13510,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Grimselweg",
+   "strasse": "Grimselweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1536757124",
@@ -3709,6 +13531,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Grubenstieg 1–18",
+   "strasse": "Grubenstieg",
+   "von": 1,
+   "bis": 18,
    "zusatz": null,
    "touren": {
     "hauskehricht": "159617528",
@@ -3721,6 +13546,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Grubenstieg 19–24",
+   "strasse": "Grubenstieg",
+   "von": 19,
+   "bis": 24,
    "zusatz": null,
    "touren": {
     "hauskehricht": "159617528",
@@ -3739,6 +13567,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Grubenstrasse",
+   "strasse": "Grubenstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1536757124",
@@ -3751,6 +13582,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Grünaustieg 1–18",
+   "strasse": "Grünaustieg",
+   "von": 1,
+   "bis": 18,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1985948771",
@@ -3769,6 +13603,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Grünaustieg 19–30",
+   "strasse": "Grünaustieg",
+   "von": 19,
+   "bis": 30,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1985948771",
@@ -3781,6 +13618,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Gugerhalden",
+   "strasse": "Gugerhalden",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "824283462",
@@ -3793,6 +13633,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Güterhofgässchen",
+   "strasse": "Güterhofgässchen",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "765509020",
@@ -3811,6 +13654,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Gütliweg",
+   "strasse": "Gütliweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "2042940125",
@@ -3829,6 +13675,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Haldenstrasse",
+   "strasse": "Haldenstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1114170010",
@@ -3841,6 +13690,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Haldenwiesli",
+   "strasse": "Haldenwiesli",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "824283462",
@@ -3853,6 +13705,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Hanfpünt",
+   "strasse": "Hanfpünt",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1517200631",
@@ -3865,6 +13720,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Haselweg",
+   "strasse": "Haselweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "802864307",
@@ -3877,6 +13735,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Hauentalstrasse",
+   "strasse": "Hauentalstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1571641576",
@@ -3889,6 +13750,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Heerenweg",
+   "strasse": "Heerenweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "765509020",
@@ -3907,6 +13771,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Hegaustrasse",
+   "strasse": "Hegaustrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "15850755",
@@ -3919,6 +13786,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Hemmental",
+   "strasse": "Hemmental",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1571641576",
@@ -3937,6 +13807,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Herblingerstrasse",
+   "strasse": "Herblingerstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "824283462",
@@ -3949,6 +13822,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Hermann Rorschachstrasse",
+   "strasse": "Hermann Rorschachstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "802864307",
@@ -3961,6 +13837,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Herrenacker",
+   "strasse": "Herrenacker",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -3973,6 +13852,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Heuweg",
+   "strasse": "Heuweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "824283462",
@@ -3985,6 +13867,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Hintergasse",
+   "strasse": "Hintergasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "765509020",
@@ -3997,6 +13882,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Hintersteig",
+   "strasse": "Hintersteig",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "2042940125",
@@ -4009,6 +13897,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Hirschweg",
+   "strasse": "Hirschweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "15850755",
@@ -4027,6 +13918,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Hirschwiesenweg",
+   "strasse": "Hirschwiesenweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1985948771",
@@ -4039,6 +13933,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Hochstrasse 1–202",
+   "strasse": "Hochstrasse",
+   "von": 1,
+   "bis": 202,
    "zusatz": "ab Durachweg bis Gemsstübli",
    "touren": {
     "hauskehricht": "2042940125",
@@ -4051,6 +13948,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Hochstrasse 204–363",
+   "strasse": "Hochstrasse",
+   "von": 204,
+   "bis": 363,
    "zusatz": "ab Gemsstübli bis Falkeneck",
    "touren": {
     "hauskehricht": "1517200631",
@@ -4063,6 +13963,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Hofackerstrasse",
+   "strasse": "Hofackerstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1536757124",
@@ -4075,6 +13978,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Hohberg",
+   "strasse": "Hohberg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1517200631",
@@ -4087,6 +13993,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Hohbergstrasse",
+   "strasse": "Hohbergstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1517200631",
@@ -4099,6 +14008,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Hohbergweg",
+   "strasse": "Hohbergweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1517200631",
@@ -4117,6 +14029,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Hohenkrähenstrasse",
+   "strasse": "Hohenkrähenstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "15850755",
@@ -4129,6 +14044,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Hohenstoffelstrasse",
+   "strasse": "Hohenstoffelstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "159617528",
@@ -4141,6 +14059,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Hohentwielstrasse",
+   "strasse": "Hohentwielstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "15850755",
@@ -4153,6 +14074,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Hohlenbaumstieg",
+   "strasse": "Hohlenbaumstieg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1571641576",
@@ -4165,6 +14089,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Hohlenbaumstrasse 1–70",
+   "strasse": "Hohlenbaumstrasse",
+   "von": 1,
+   "bis": 70,
    "zusatz": "ab Randenstrasse bis Rietstrasse",
    "touren": {
     "hauskehricht": "802864307",
@@ -4177,6 +14104,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Hohlenbaumstrasse 71–210",
+   "strasse": "Hohlenbaumstrasse",
+   "von": 71,
+   "bis": 210,
    "zusatz": "ab Hauentalstrasse bis Randenstrasse",
    "touren": {
     "hauskehricht": "1571641576",
@@ -4189,6 +14119,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Holunderweg",
+   "strasse": "Holunderweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "159617528",
@@ -4201,6 +14134,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Holzbrunnenstrasse",
+   "strasse": "Holzbrunnenstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "802864307",
@@ -4213,6 +14149,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Holzwiesenweg",
+   "strasse": "Holzwiesenweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1571641576",
@@ -4231,6 +14170,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Hornbergstrasse",
+   "strasse": "Hornbergstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "2042940125",
@@ -4243,6 +14185,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Hurbigweg",
+   "strasse": "Hurbigweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1571641576",
@@ -4261,6 +14206,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Höhenweg",
+   "strasse": "Höhenweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "15850755",
@@ -4273,6 +14221,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Im Bergli",
+   "strasse": "Im Bergli",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "824283462",
@@ -4285,6 +14236,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Im Brand",
+   "strasse": "Im Brand",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1517200631",
@@ -4297,6 +14251,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Im Brüel",
+   "strasse": "Im Brüel",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "824283462",
@@ -4309,6 +14266,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Im Chloster",
+   "strasse": "Im Chloster",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "824283462",
@@ -4321,6 +14281,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Im Dreispitz",
+   "strasse": "Im Dreispitz",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "824283462",
@@ -4333,6 +14296,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Im Eschengut",
+   "strasse": "Im Eschengut",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "159617528",
@@ -4344,7 +14310,10 @@ window.TOUREN_DATEN = {
    "bereitstellen": {}
   },
   {
-   "name": "Im Freien55",
+   "name": "Im Freien 55",
+   "strasse": "Im Freien 55",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "765509020",
@@ -4357,6 +14326,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Im Glockengut",
+   "strasse": "Im Glockengut",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "824283462",
@@ -4369,6 +14341,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Im Gräfler",
+   "strasse": "Im Gräfler",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1517200631",
@@ -4381,6 +14356,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Im Hägli",
+   "strasse": "Im Hägli",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "824283462",
@@ -4393,6 +14371,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Im Höfli",
+   "strasse": "Im Höfli",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1517200631",
@@ -4405,6 +14386,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Im Lahn",
+   "strasse": "Im Lahn",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "802864307",
@@ -4423,6 +14407,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Im Laternenacker",
+   "strasse": "Im Laternenacker",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1536757124",
@@ -4441,6 +14428,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Im Radacker",
+   "strasse": "Im Radacker",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1114170010",
@@ -4453,6 +14443,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Im Riet",
+   "strasse": "Im Riet",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "802864307",
@@ -4465,6 +14458,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Im Schweizersbild",
+   "strasse": "Im Schweizersbild",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1517200631",
@@ -4477,6 +14473,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Im Stemmerli",
+   "strasse": "Im Stemmerli",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "765509020",
@@ -4489,6 +14488,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Im Storchen",
+   "strasse": "Im Storchen",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "2042940125",
@@ -4501,6 +14503,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Im Surbeck",
+   "strasse": "Im Surbeck",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1517200631",
@@ -4519,6 +14524,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Im Trenschen",
+   "strasse": "Im Trenschen",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "824283462",
@@ -4531,6 +14539,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Im Wiesli",
+   "strasse": "Im Wiesli",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "802864307",
@@ -4543,6 +14554,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Im Wolfbüel",
+   "strasse": "Im Wolfbüel",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1517200631",
@@ -4561,6 +14575,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "In Gruben",
+   "strasse": "In Gruben",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1536757124",
@@ -4579,6 +14596,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Irchelstrasse",
+   "strasse": "Irchelstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1571641576",
@@ -4591,6 +14611,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "J. C. Fischerstrasse",
+   "strasse": "J. C. Fischerstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "2042940125",
@@ -4603,6 +14626,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "J.J. Wepfer-Strasse",
+   "strasse": "J.J. Wepfer-Strasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1985948771",
@@ -4621,6 +14647,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Julierstrasse",
+   "strasse": "Julierstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1536757124",
@@ -4633,6 +14662,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Jägerstrasse",
+   "strasse": "Jägerstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1985948771",
@@ -4645,6 +14677,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Kamorstieg",
+   "strasse": "Kamorstieg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "15850755",
@@ -4663,6 +14698,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Kamorstrasse",
+   "strasse": "Kamorstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "15850755",
@@ -4675,6 +14713,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Karstgässchen",
+   "strasse": "Karstgässchen",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -4693,6 +14734,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Kasinogässchen",
+   "strasse": "Kasinogässchen",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "2042940125",
@@ -4711,6 +14755,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Kegelgässchen",
+   "strasse": "Kegelgässchen",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "765509020",
@@ -4729,6 +14776,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Kesselgutstieg",
+   "strasse": "Kesselgutstieg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1536757124",
@@ -4747,6 +14797,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Kesselgutstrasse",
+   "strasse": "Kesselgutstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1536757124",
@@ -4765,6 +14818,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Kesselstrasse",
+   "strasse": "Kesselstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1536757124",
@@ -4777,6 +14833,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Kiefernweg",
+   "strasse": "Kiefernweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "159617528",
@@ -4789,6 +14848,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Kirchbergstrasse",
+   "strasse": "Kirchbergstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "824283462",
@@ -4801,6 +14863,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Kirchgasse",
+   "strasse": "Kirchgasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "765509020",
@@ -4813,6 +14878,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Kirchhofplatz",
+   "strasse": "Kirchhofplatz",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -4825,6 +14893,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Kirschenweg",
+   "strasse": "Kirschenweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1536757124",
@@ -4837,6 +14908,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Klausweg",
+   "strasse": "Klausweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "159617528",
@@ -4849,6 +14923,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Klingenstrasse",
+   "strasse": "Klingenstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1985948771",
@@ -4867,6 +14944,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Klosterbogen",
+   "strasse": "Klosterbogen",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -4885,6 +14965,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Klosterstrasse",
+   "strasse": "Klosterstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -4897,6 +14980,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Klushau",
+   "strasse": "Klushau",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "802864307",
@@ -4915,6 +15001,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Kohlfirststrasse",
+   "strasse": "Kohlfirststrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "765509020",
@@ -4927,6 +15016,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Kometsträsschen",
+   "strasse": "Kometsträsschen",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1114170010",
@@ -4939,6 +15031,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Korallenstieg",
+   "strasse": "Korallenstieg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "15850755",
@@ -4957,6 +15052,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Korallenstrasse",
+   "strasse": "Korallenstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "15850755",
@@ -4969,6 +15067,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Krebsbachstrasse",
+   "strasse": "Krebsbachstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "824283462",
@@ -4981,6 +15082,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Krebsbachweg",
+   "strasse": "Krebsbachweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "824283462",
@@ -4999,6 +15103,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Kreuzgasse",
+   "strasse": "Kreuzgasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "2042940125",
@@ -5011,6 +15118,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Kreuzgutweg",
+   "strasse": "Kreuzgutweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1517200631",
@@ -5023,6 +15133,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Kronenacker",
+   "strasse": "Kronenacker",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "824283462",
@@ -5035,6 +15148,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Kronengässchen",
+   "strasse": "Kronengässchen",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -5053,6 +15169,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Kronenhalde",
+   "strasse": "Kronenhalde",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "159617528",
@@ -5065,6 +15184,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Krummacker",
+   "strasse": "Krummacker",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1517200631",
@@ -5077,6 +15199,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Krummgasse",
+   "strasse": "Krummgasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -5089,6 +15214,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Kurzweg",
+   "strasse": "Kurzweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1571641576",
@@ -5107,6 +15235,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Kyburgweg",
+   "strasse": "Kyburgweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "765509020",
@@ -5125,6 +15256,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Lahnbuck",
+   "strasse": "Lahnbuck",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "802864307",
@@ -5143,6 +15277,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Lahnhalde",
+   "strasse": "Lahnhalde",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "802864307",
@@ -5155,6 +15292,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Lahnstieg",
+   "strasse": "Lahnstieg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "802864307",
@@ -5167,6 +15307,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Lahnstrasse",
+   "strasse": "Lahnstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "802864307",
@@ -5179,6 +15322,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Langackerweg",
+   "strasse": "Langackerweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "824283462",
@@ -5197,6 +15343,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Langgrundstrasse",
+   "strasse": "Langgrundstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "824283462",
@@ -5215,6 +15364,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Langhansergässchen",
+   "strasse": "Langhansergässchen",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "802864307",
@@ -5227,6 +15379,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Lebernstrasse",
+   "strasse": "Lebernstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1517200631",
@@ -5239,6 +15394,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Lindenplatz",
+   "strasse": "Lindenplatz",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "765509020",
@@ -5257,6 +15415,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Lindenweg",
+   "strasse": "Lindenweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "159617528",
@@ -5269,6 +15430,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Lindliweg",
+   "strasse": "Lindliweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "765509020",
@@ -5287,6 +15451,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Lochstrasse",
+   "strasse": "Lochstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1114170010",
@@ -5299,6 +15466,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Lohnstrasse",
+   "strasse": "Lohnstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1536757124",
@@ -5317,6 +15487,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Lunastrasse",
+   "strasse": "Lunastrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "802864307",
@@ -5329,6 +15502,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Lägernstrasse",
+   "strasse": "Lägernstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1571641576",
@@ -5341,6 +15517,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Lärchenstrasse",
+   "strasse": "Lärchenstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "159617528",
@@ -5353,6 +15532,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Läufergässchen",
+   "strasse": "Läufergässchen",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -5371,6 +15553,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Löwengässchen",
+   "strasse": "Löwengässchen",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -5389,6 +15574,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Löwensteinstrasse Neuhausen",
+   "strasse": "Löwensteinstrasse Neuhausen",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "2042940125",
@@ -5401,6 +15589,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Maienweg",
+   "strasse": "Maienweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1114170010",
@@ -5413,6 +15604,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Mattenweg",
+   "strasse": "Mattenweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "2042940125",
@@ -5431,6 +15625,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Meisenweg",
+   "strasse": "Meisenweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "2042940125",
@@ -5443,6 +15640,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Morgenstrasse",
+   "strasse": "Morgenstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "15850755",
@@ -5455,6 +15655,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Moserstrasse",
+   "strasse": "Moserstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -5467,6 +15670,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Munothaldenweg",
+   "strasse": "Munothaldenweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -5485,6 +15691,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Munotstieg",
+   "strasse": "Munotstieg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -5503,6 +15712,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Munotstrasse",
+   "strasse": "Munotstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "15850755",
@@ -5515,6 +15727,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Muracker",
+   "strasse": "Muracker",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "824283462",
@@ -5527,6 +15742,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Mutzentäli",
+   "strasse": "Mutzentäli",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "824283462",
@@ -5539,6 +15757,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Mühlenstrasse",
+   "strasse": "Mühlenstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "2042940125",
@@ -5551,6 +15772,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Mühlentalstrasse 1–261",
+   "strasse": "Mühlentalstrasse",
+   "von": 1,
+   "bis": 261,
    "zusatz": "ab Spitalstrasse bis Birchweg",
    "touren": {
     "hauskehricht": "2042940125",
@@ -5563,6 +15787,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Mühlentalstrasse 262–380",
+   "strasse": "Mühlentalstrasse",
+   "von": 262,
+   "bis": 380,
    "zusatz": "ab Birchweg bis und mit Gewerbezone Merishausertal",
    "touren": {
     "hauskehricht": "1517200631",
@@ -5575,6 +15802,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Mühlentalsträsschen",
+   "strasse": "Mühlentalsträsschen",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "2042940125",
@@ -5587,6 +15817,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Münstergasse",
+   "strasse": "Münstergasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -5605,6 +15838,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Münsterplatz",
+   "strasse": "Münsterplatz",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -5617,6 +15853,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Neherstieg",
+   "strasse": "Neherstieg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "802864307",
@@ -5629,6 +15868,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Nelkenstrasse",
+   "strasse": "Nelkenstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1114170010",
@@ -5647,6 +15889,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Neustadt",
+   "strasse": "Neustadt",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -5659,6 +15904,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Neustrasse",
+   "strasse": "Neustrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1114170010",
@@ -5677,6 +15925,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Neutalstrasse",
+   "strasse": "Neutalstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "824283462",
@@ -5689,6 +15940,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Neutrottenstrasse",
+   "strasse": "Neutrottenstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1517200631",
@@ -5701,6 +15955,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Niklausenstieg",
+   "strasse": "Niklausenstieg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1536757124",
@@ -5719,6 +15976,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Nordstrasse 1–120",
+   "strasse": "Nordstrasse",
+   "von": 1,
+   "bis": 120,
    "zusatz": "ab Steigstrasse bis Lochstrasse",
    "touren": {
     "hauskehricht": "1114170010",
@@ -5731,6 +15991,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Nordstrasse 121–145",
+   "strasse": "Nordstrasse",
+   "von": 121,
+   "bis": 145,
    "zusatz": "ab Kurzweg bis Neubrunn",
    "touren": {
     "hauskehricht": "1571641576",
@@ -5743,6 +16006,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Nägelseestrasse",
+   "strasse": "Nägelseestrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1536757124",
@@ -5761,6 +16027,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Oberer Schulweg",
+   "strasse": "Oberer Schulweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1536757124",
@@ -5773,6 +16042,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Oberstadt",
+   "strasse": "Oberstadt",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -5785,6 +16057,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Oelberg",
+   "strasse": "Oelberg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1114170010",
@@ -5803,6 +16078,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Oelbergstieg",
+   "strasse": "Oelbergstieg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1114170010",
@@ -5821,6 +16099,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Oelbergstrasse",
+   "strasse": "Oelbergstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1114170010",
@@ -5839,6 +16120,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Oerlifall",
+   "strasse": "Oerlifall",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "802864307",
@@ -5857,6 +16141,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Oerlifallstieg",
+   "strasse": "Oerlifallstieg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "802864307",
@@ -5869,6 +16156,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Otteregass",
+   "strasse": "Otteregass",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1517200631",
@@ -5881,6 +16171,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Otterngutstrasse",
+   "strasse": "Otterngutstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "824283462",
@@ -5893,6 +16186,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Otterngutweg",
+   "strasse": "Otterngutweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "824283462",
@@ -5911,6 +16207,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Parkstrasse",
+   "strasse": "Parkstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "2042940125",
@@ -5923,6 +16222,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Pestalozzistrasse 2–14",
+   "strasse": "Pestalozzistrasse",
+   "von": 2,
+   "bis": 14,
    "zusatz": "Unten",
    "touren": {
     "hauskehricht": "15850755",
@@ -5935,6 +16237,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Pestalozzistrasse 20–52",
+   "strasse": "Pestalozzistrasse",
+   "von": 20,
+   "bis": 52,
    "zusatz": "Oben",
    "touren": {
     "hauskehricht": "15850755",
@@ -5947,6 +16252,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Pfarrhofgasse",
+   "strasse": "Pfarrhofgasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -5959,6 +16267,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Pfarrweg",
+   "strasse": "Pfarrweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -5977,6 +16288,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Pfrundhausgasse",
+   "strasse": "Pfrundhausgasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -5989,6 +16303,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Pilatusstrasse",
+   "strasse": "Pilatusstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1536757124",
@@ -6001,6 +16318,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Pilgerweg 1–13",
+   "strasse": "Pilgerweg",
+   "von": 1,
+   "bis": 13,
    "zusatz": "Unten",
    "touren": {
     "hauskehricht": "2042940125",
@@ -6019,6 +16339,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Pilgerweg 17–21",
+   "strasse": "Pilgerweg",
+   "von": 17,
+   "bis": 21,
    "zusatz": "Oben",
    "touren": {
     "hauskehricht": "1985948771",
@@ -6037,6 +16360,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Plattenhalde",
+   "strasse": "Plattenhalde",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1114170010",
@@ -6049,6 +16375,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Plattenweg",
+   "strasse": "Plattenweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1114170010",
@@ -6061,6 +16390,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Promenadenstrasse",
+   "strasse": "Promenadenstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "2042940125",
@@ -6073,6 +16405,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Quaistrasse",
+   "strasse": "Quaistrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -6091,6 +16426,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Quellenstrasse",
+   "strasse": "Quellenstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "802864307",
@@ -6103,6 +16441,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Querstrasse",
+   "strasse": "Querstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1571641576",
@@ -6115,6 +16456,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Radacker",
+   "strasse": "Radacker",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1114170010",
@@ -6127,6 +16471,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Rammersbühlstrasse",
+   "strasse": "Rammersbühlstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1114170010",
@@ -6145,6 +16492,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Randenstrasse",
+   "strasse": "Randenstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "802864307",
@@ -6157,6 +16507,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Rathausbogen",
+   "strasse": "Rathausbogen",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -6175,6 +16528,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Rebhangstrasse",
+   "strasse": "Rebhangstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "765509020",
@@ -6187,6 +16543,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Rebleutgang",
+   "strasse": "Rebleutgang",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -6205,6 +16564,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Rebweg",
+   "strasse": "Rebweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "765509020",
@@ -6217,6 +16579,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Rehgütlistieg",
+   "strasse": "Rehgütlistieg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "2042940125",
@@ -6235,6 +16600,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Rehgütliweg",
+   "strasse": "Rehgütliweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1114170010",
@@ -6247,6 +16615,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Reiatstrasse",
+   "strasse": "Reiatstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "15850755",
@@ -6259,6 +16630,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Reithallenweg",
+   "strasse": "Reithallenweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1985948771",
@@ -6277,6 +16651,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Repfergasse",
+   "strasse": "Repfergasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -6289,6 +16666,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Rheinbühlstrasse",
+   "strasse": "Rheinbühlstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "765509020",
@@ -6301,6 +16681,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Rheingoldstrasse",
+   "strasse": "Rheingoldstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1536757124",
@@ -6319,6 +16702,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Rheinhaldenstrasse",
+   "strasse": "Rheinhaldenstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "765509020",
@@ -6331,6 +16717,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Rheinhof",
+   "strasse": "Rheinhof",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -6349,6 +16738,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Rheinquai",
+   "strasse": "Rheinquai",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "765509020",
@@ -6367,6 +16759,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Rheinstrasse",
+   "strasse": "Rheinstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -6379,6 +16774,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Rheinuferstrasse",
+   "strasse": "Rheinuferstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -6397,6 +16795,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Riethaldenstieg",
+   "strasse": "Riethaldenstieg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "802864307",
@@ -6415,6 +16816,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Riethaldenweg",
+   "strasse": "Riethaldenweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "802864307",
@@ -6427,6 +16831,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Rietmattstrasse",
+   "strasse": "Rietmattstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "802864307",
@@ -6439,6 +16846,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Rietstrasse",
+   "strasse": "Rietstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "802864307",
@@ -6451,6 +16861,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Rigistrasse",
+   "strasse": "Rigistrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1536757124",
@@ -6463,6 +16876,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Ringkengässchen",
+   "strasse": "Ringkengässchen",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -6481,6 +16897,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Ringstrasse 1–10",
+   "strasse": "Ringstrasse",
+   "von": 1,
+   "bis": 10,
    "zusatz": null,
    "touren": {
     "hauskehricht": "15850755",
@@ -6493,6 +16912,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Ringstrasse 11–22",
+   "strasse": "Ringstrasse",
+   "von": 11,
+   "bis": 22,
    "zusatz": null,
    "touren": {
     "hauskehricht": "15850755",
@@ -6511,6 +16933,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Rittergutstieg",
+   "strasse": "Rittergutstieg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "2042940125",
@@ -6529,6 +16954,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Rittergutstrasse",
+   "strasse": "Rittergutstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "2042940125",
@@ -6541,6 +16969,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Rosenbergstrasse",
+   "strasse": "Rosenbergstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1536757124",
@@ -6553,6 +16984,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Rosengasse",
+   "strasse": "Rosengasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -6565,6 +16999,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Rosengässchen",
+   "strasse": "Rosengässchen",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -6583,6 +17020,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Rosentalgässchen",
+   "strasse": "Rosentalgässchen",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "765509020",
@@ -6595,6 +17035,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Rothüsliweg",
+   "strasse": "Rothüsliweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "2042940125",
@@ -6607,6 +17050,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Römerstieg",
+   "strasse": "Römerstieg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -6625,6 +17071,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Rütiweg",
+   "strasse": "Rütiweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1536757124",
@@ -6637,6 +17086,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Safrangasse",
+   "strasse": "Safrangasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -6655,6 +17107,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Sandackerstrasse",
+   "strasse": "Sandackerstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "802864307",
@@ -6667,6 +17122,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Sandlöchlistrasse",
+   "strasse": "Sandlöchlistrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1985948771",
@@ -6679,6 +17137,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Sandweg",
+   "strasse": "Sandweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "15850755",
@@ -6691,6 +17152,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Schalterweg",
+   "strasse": "Schalterweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "824283462",
@@ -6709,6 +17173,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Schildgutstrasse",
+   "strasse": "Schildgutstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "802864307",
@@ -6721,6 +17188,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Schildstrasse",
+   "strasse": "Schildstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "15850755",
@@ -6733,6 +17203,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Schlagbaumstrasse",
+   "strasse": "Schlagbaumstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -6745,6 +17218,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Schleipfgässchen",
+   "strasse": "Schleipfgässchen",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "2042940125",
@@ -6763,6 +17239,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Schlempengarten",
+   "strasse": "Schlempengarten",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1985948771",
@@ -6775,6 +17254,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Schlossstrasse",
+   "strasse": "Schlossstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1517200631",
@@ -6787,6 +17269,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Schlösslistieg",
+   "strasse": "Schlösslistieg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "159617528",
@@ -6805,6 +17290,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Schlössliweg",
+   "strasse": "Schlössliweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1536757124",
@@ -6817,6 +17305,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Schneckenackerstrasse",
+   "strasse": "Schneckenackerstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1985948771",
@@ -6829,6 +17320,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Schneidergang",
+   "strasse": "Schneidergang",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -6847,6 +17341,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Schwarzadlerstrasse",
+   "strasse": "Schwarzadlerstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1114170010",
@@ -6859,6 +17356,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Schweizersbildstrasse",
+   "strasse": "Schweizersbildstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1517200631",
@@ -6871,6 +17371,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Schwertstrasse",
+   "strasse": "Schwertstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -6883,6 +17386,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Schwesterngasse",
+   "strasse": "Schwesterngasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -6901,6 +17407,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Schönbühlstrasse",
+   "strasse": "Schönbühlstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "159617528",
@@ -6913,6 +17422,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Schönmaiengässchen",
+   "strasse": "Schönmaiengässchen",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -6931,6 +17443,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Schützengraben",
+   "strasse": "Schützengraben",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -6943,6 +17458,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Seewadelstrasse",
+   "strasse": "Seewadelstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1536757124",
@@ -6955,6 +17473,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Seilerweg",
+   "strasse": "Seilerweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "159617528",
@@ -6973,6 +17494,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Sennenwieshalde",
+   "strasse": "Sennenwieshalde",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "824283462",
@@ -6991,6 +17515,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Sennereistieg",
+   "strasse": "Sennereistieg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "824283462",
@@ -7003,6 +17530,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Sennereistrasse",
+   "strasse": "Sennereistrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "824283462",
@@ -7015,6 +17545,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Solenbergstrasse",
+   "strasse": "Solenbergstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "824283462",
@@ -7033,6 +17566,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Sommerau",
+   "strasse": "Sommerau",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1517200631",
@@ -7051,6 +17587,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Sommerhalde",
+   "strasse": "Sommerhalde",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1571641576",
@@ -7063,6 +17602,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Sommerwiesstrasse",
+   "strasse": "Sommerwiesstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1571641576",
@@ -7075,6 +17617,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Sonnenberg",
+   "strasse": "Sonnenberg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "824283462",
@@ -7087,6 +17632,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Sonnenburggutstrasse",
+   "strasse": "Sonnenburggutstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1114170010",
@@ -7099,6 +17647,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Sonnenstrasse",
+   "strasse": "Sonnenstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "802864307",
@@ -7111,6 +17662,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Sonnhaldenweg",
+   "strasse": "Sonnhaldenweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1536757124",
@@ -7129,6 +17683,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Sonnmattstrasse",
+   "strasse": "Sonnmattstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "15850755",
@@ -7141,6 +17698,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Speerstrasse",
+   "strasse": "Speerstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "15850755",
@@ -7153,6 +17713,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Spendtrottengutstrasse",
+   "strasse": "Spendtrottengutstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "765509020",
@@ -7165,6 +17728,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Spiegelguthalde",
+   "strasse": "Spiegelguthalde",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1985948771",
@@ -7177,6 +17743,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Spiegelgutstrasse",
+   "strasse": "Spiegelgutstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1985948771",
@@ -7189,6 +17758,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Spiegelweg",
+   "strasse": "Spiegelweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1985948771",
@@ -7207,6 +17779,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Spielweg",
+   "strasse": "Spielweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "802864307",
@@ -7219,6 +17794,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Spitalstrasse",
+   "strasse": "Spitalstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "2042940125",
@@ -7231,6 +17809,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Spitzwiesenweg",
+   "strasse": "Spitzwiesenweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "824283462",
@@ -7249,6 +17830,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Splügenstrasse",
+   "strasse": "Splügenstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1536757124",
@@ -7261,6 +17845,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Sporrengasse",
+   "strasse": "Sporrengasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -7279,6 +17866,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Sportweg",
+   "strasse": "Sportweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "15850755",
@@ -7291,6 +17881,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "St. Petersstrasse",
+   "strasse": "St. Petersstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1985948771",
@@ -7303,6 +17896,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Stadthausgasse",
+   "strasse": "Stadthausgasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -7315,6 +17911,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Stahlwerkstrasse",
+   "strasse": "Stahlwerkstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1114170010",
@@ -7327,6 +17926,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Stauffacherstrasse",
+   "strasse": "Stauffacherstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "15850755",
@@ -7339,6 +17941,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Steighalde",
+   "strasse": "Steighalde",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "2042940125",
@@ -7357,6 +17962,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Steigstrasse",
+   "strasse": "Steigstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "2042940125",
@@ -7369,6 +17977,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Steinbruchgässchen",
+   "strasse": "Steinbruchgässchen",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "2042940125",
@@ -7387,6 +17998,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Steinguthalde",
+   "strasse": "Steinguthalde",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1985948771",
@@ -7399,6 +18013,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Steingutstrasse",
+   "strasse": "Steingutstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1985948771",
@@ -7411,6 +18028,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Stettemerstrasse",
+   "strasse": "Stettemerstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1517200631",
@@ -7423,6 +18043,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Stimmerstrasse",
+   "strasse": "Stimmerstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "159617528",
@@ -7435,6 +18058,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Stokarbergstrasse",
+   "strasse": "Stokarbergstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1114170010",
@@ -7447,6 +18073,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Stokarstieg",
+   "strasse": "Stokarstieg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1114170010",
@@ -7465,6 +18094,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Stokarweg",
+   "strasse": "Stokarweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "2042940125",
@@ -7483,6 +18115,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Stuckengässchen",
+   "strasse": "Stuckengässchen",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "765509020",
@@ -7495,6 +18130,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Stüdliackerstrasse",
+   "strasse": "Stüdliackerstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "824283462",
@@ -7507,6 +18145,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Surbeckstieg",
+   "strasse": "Surbeckstieg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "824283462",
@@ -7525,6 +18166,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Sustenweg",
+   "strasse": "Sustenweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1536757124",
@@ -7543,6 +18187,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Säntisstrasse",
+   "strasse": "Säntisstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "15850755",
@@ -7555,6 +18202,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Talstrasse",
+   "strasse": "Talstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1536757124",
@@ -7567,6 +18217,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Tanne",
+   "strasse": "Tanne",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -7579,6 +18232,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Tannegg",
+   "strasse": "Tannegg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "159617528",
@@ -7597,6 +18253,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Tannenstrasse",
+   "strasse": "Tannenstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "159617528",
@@ -7609,6 +18268,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Tannerberg",
+   "strasse": "Tannerberg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "2042940125",
@@ -7627,6 +18289,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Tellstrasse",
+   "strasse": "Tellstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "159617528",
@@ -7639,6 +18304,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Thayngerstrasse",
+   "strasse": "Thayngerstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "824283462",
@@ -7651,6 +18319,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Tobelweg",
+   "strasse": "Tobelweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1536757124",
@@ -7663,6 +18334,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Trenschenstieg",
+   "strasse": "Trenschenstieg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "824283462",
@@ -7681,6 +18355,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Trubegüetliweg Neuhausen",
+   "strasse": "Trubegüetliweg Neuhausen",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "2042940125",
@@ -7693,6 +18370,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Trüllenbuck",
+   "strasse": "Trüllenbuck",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1517200631",
@@ -7705,6 +18385,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Trüllenbuckstieg",
+   "strasse": "Trüllenbuckstieg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "824283462",
@@ -7723,6 +18406,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Tulpenstrasse",
+   "strasse": "Tulpenstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1536757124",
@@ -7741,6 +18427,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Tunnelgässchen",
+   "strasse": "Tunnelgässchen",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -7759,6 +18448,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Tälistrasse",
+   "strasse": "Tälistrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1517200631",
@@ -7771,6 +18463,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Tödistrasse",
+   "strasse": "Tödistrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "15850755",
@@ -7783,6 +18478,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Ulmenstrasse",
+   "strasse": "Ulmenstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "159617528",
@@ -7795,6 +18493,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Ungarbühlstieg",
+   "strasse": "Ungarbühlstieg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1536757124",
@@ -7813,6 +18514,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Ungarbühlstrasse",
+   "strasse": "Ungarbühlstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1536757124",
@@ -7825,6 +18529,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Unterdorf",
+   "strasse": "Unterdorf",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1517200631",
@@ -7837,6 +18544,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Unterer Schulweg",
+   "strasse": "Unterer Schulweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1536757124",
@@ -7855,6 +18565,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Untergries",
+   "strasse": "Untergries",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -7873,6 +18586,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Unterstadt",
+   "strasse": "Unterstadt",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -7885,6 +18601,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Urwerf",
+   "strasse": "Urwerf",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "2042940125",
@@ -7897,6 +18616,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Urwerfhalde",
+   "strasse": "Urwerfhalde",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "2042940125",
@@ -7909,6 +18631,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Villenstrasse",
+   "strasse": "Villenstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1114170010",
@@ -7921,6 +18646,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Vorderenge",
+   "strasse": "Vorderenge",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1114170010",
@@ -7933,6 +18661,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Vordergasse",
+   "strasse": "Vordergasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -7945,6 +18676,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Vordersteig",
+   "strasse": "Vordersteig",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "2042940125",
@@ -7957,6 +18691,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Vorstadt",
+   "strasse": "Vorstadt",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -7969,6 +18706,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Vögelingässchen",
+   "strasse": "Vögelingässchen",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "765509020",
@@ -7981,6 +18721,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Wagenstrasse",
+   "strasse": "Wagenstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "159617528",
@@ -7993,6 +18736,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Waldstrasse",
+   "strasse": "Waldstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1985948771",
@@ -8005,6 +18751,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Walther-Bringolf-Platz",
+   "strasse": "Walther-Bringolf-Platz",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -8017,6 +18766,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Webergasse",
+   "strasse": "Webergasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "906921982",
@@ -8029,6 +18781,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Weiherweg",
+   "strasse": "Weiherweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "802864307",
@@ -8047,6 +18802,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Weinbergstrasse",
+   "strasse": "Weinbergstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "2042940125",
@@ -8059,6 +18817,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Weinsteig",
+   "strasse": "Weinsteig",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "2042940125",
@@ -8071,6 +18832,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Widlenstrasse",
+   "strasse": "Widlenstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1536757124",
@@ -8083,6 +18847,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Wiesenweg",
+   "strasse": "Wiesenweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "2042940125",
@@ -8095,6 +18862,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Wieslibachstrasse",
+   "strasse": "Wieslibachstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "802864307",
@@ -8107,6 +18877,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Wieslistrasse",
+   "strasse": "Wieslistrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "802864307",
@@ -8125,6 +18898,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Windegghof",
+   "strasse": "Windegghof",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "765509020",
@@ -8143,6 +18919,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Windeggstieg",
+   "strasse": "Windeggstieg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "765509020",
@@ -8155,6 +18934,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Windeggstrasse",
+   "strasse": "Windeggstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "765509020",
@@ -8167,6 +18949,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Winkelriedstrasse",
+   "strasse": "Winkelriedstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1536757124",
@@ -8179,6 +18964,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Wirbelwies",
+   "strasse": "Wirbelwies",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1571641576",
@@ -8191,6 +18979,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Zedernweg",
+   "strasse": "Zedernweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "159617528",
@@ -8209,6 +19000,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Zimmerweg",
+   "strasse": "Zimmerweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "2042940125",
@@ -8227,6 +19021,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Zollerweg",
+   "strasse": "Zollerweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1536757124",
@@ -8245,6 +19042,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Zur Stahlgiesserei Bei Unterflurcontainer Mühlentalstrasse",
+   "strasse": "Zur Stahlgiesserei Bei Unterflurcontainer Mühlentalstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "2042940125",
@@ -8257,6 +19057,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Zweigstrasse",
+   "strasse": "Zweigstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "159617528",
@@ -8269,6 +19072,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Zündelgutstrasse",
+   "strasse": "Zündelgutstrasse",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1536757124",
@@ -8281,6 +19087,9 @@ window.TOUREN_DATEN = {
   },
   {
    "name": "Zündelweg",
+   "strasse": "Zündelweg",
+   "von": null,
+   "bis": null,
    "zusatz": null,
    "touren": {
     "hauskehricht": "1536757124",

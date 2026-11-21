@@ -232,6 +232,9 @@ function ergebnisAnzeigen(ergebnis) {
 }
 
 function aktualisieren() {
+  // Schnellwahl-Knöpfe nur zeigen, solange das Feld «Abfall» leer ist
+  document.getElementById("schnellwahl").hidden = document.getElementById("eingabe-abfall").value !== "";
+
   if (auswahl.strasse && auswahl.abfallart) {
     ergebnisAnzeigen(ergebnisBerechnen(auswahl.strasse, auswahl.abfallart));
   } else {
@@ -244,18 +247,103 @@ function aktualisieren() {
 // Vorschläge beim Tippen
 // ---------------------------------------------------------
 
-// Sucht passende Einträge; Treffer am Wortanfang kommen zuerst
+// Zählt, wie viele Buchstaben man ändern, einfügen oder löschen muss,
+// damit aus Wort a das Wort b wird (z.B. "hauskericht" → "hauskehricht" = 1)
+function tippfehler(a, b) {
+  let vorherigeZeile = Array.from({ length: b.length + 1 }, (_, i) => i);
+  for (let i = 1; i <= a.length; i++) {
+    const zeile = [i];
+    for (let j = 1; j <= b.length; j++) {
+      const gleich = a[i - 1] === b[j - 1] ? 0 : 1;
+      zeile[j] = Math.min(vorherigeZeile[j] + 1, zeile[j - 1] + 1, vorherigeZeile[j - 1] + gleich);
+    }
+    vorherigeZeile = zeile;
+  }
+  return vorherigeZeile[b.length];
+}
+
+// Wie gut passt ein Text zur Suche?
+// 0 = beginnt damit, 1 = ein Wort beginnt damit, 2 = steht irgendwo drin,
+// 3 oder mehr = passt mit Tippfehlern, null = passt nicht
+function passung(text, suche) {
+  if (text.startsWith(suche)) return 0;
+  const woerter = text.split(/[\s\-\/(),]+/);
+  if (woerter.some((wort) => wort.startsWith(suche))) return 1;
+  if (text.includes(suche)) return 2;
+
+  // Tippfehler erlauben: 1 Fehler ab 4 Buchstaben, 2 Fehler ab 8 Buchstaben
+  const erlaubt = suche.length >= 8 ? 2 : suche.length >= 4 ? 1 : 0;
+  if (erlaubt === 0) return null;
+  let wenigsteFehler = Infinity;
+  for (const wort of [text, ...woerter]) {
+    // Mit dem Wortanfang vergleichen (gleich lang, einen Buchstaben kürzer oder länger)
+    for (let laenge = suche.length - 1; laenge <= suche.length + 1; laenge++) {
+      wenigsteFehler = Math.min(wenigsteFehler, tippfehler(suche, wort.slice(0, laenge)));
+    }
+  }
+  return wenigsteFehler <= erlaubt ? 2 + wenigsteFehler : null;
+}
+
+// Sucht passende Einträge, die besten Treffer zuerst
 function suchen(eintraege, eingabe, textVon) {
   const suche = normalisieren(eingabe.trim());
   if (!suche) return [];
-  const anfang = [];
-  const irgendwo = [];
+  const gefunden = [];
   for (const eintrag of eintraege) {
-    const text = normalisieren(textVon(eintrag));
-    if (text.startsWith(suche)) anfang.push(eintrag);
-    else if (text.includes(suche)) irgendwo.push(eintrag);
+    const wert = passung(normalisieren(textVon(eintrag)), suche);
+    if (wert !== null) gefunden.push({ eintrag, wert });
   }
-  return [...anfang, ...irgendwo].slice(0, MAX_VORSCHLAEGE);
+  gefunden.sort((a, b) => a.wert - b.wert);
+  // Treffer mit Tippfehlern (Wert 3 und mehr) nur zeigen, wenn es keine richtigen Treffer gibt
+  const richtige = gefunden.filter((g) => g.wert <= 2);
+  return (richtige.length ? richtige : gefunden).map((g) => g.eintrag);
+}
+
+// "Alpenstrasse 23" → { text: "Alpenstrasse", nummer: 23 }
+// "Alpenstrasse"    → { text: "Alpenstrasse", nummer: null }
+function hausnummerTrennen(eingabe) {
+  const teile = eingabe.trim().match(/^(.*\D)\s+(\d+)\s*[a-zA-Z]?$/);
+  if (!teile) return { text: eingabe, nummer: null };
+  return { text: teile[1], nummer: Number(teile[2]) };
+}
+
+// Gehört die Hausnummer zu diesem Abschnitt der Strasse?
+function nummerPasst(strasse, nummer) {
+  return strasse.von !== null && strasse.von <= nummer && nummer <= strasse.bis;
+}
+
+// Strassensuche, auch mit Hausnummer.
+// Gibt Einträge der Form { strasse, nummer } zurück.
+function strassenFinden(eingabe) {
+  const { text, nummer } = hausnummerTrennen(eingabe);
+  let treffer = suchen(STRASSEN, text, (s) => s.strasse || s.name);
+  if (nummer !== null) {
+    // Bei aufgeteilten Strassen nur den Abschnitt mit dieser Hausnummer zeigen.
+    // Passt kein Abschnitt, bleiben alle stehen.
+    treffer = treffer.filter((s) =>
+      s.von === null || nummerPasst(s, nummer)
+      || !treffer.some((andere) => andere.strasse === s.strasse && nummerPasst(andere, nummer)));
+  }
+  return treffer.slice(0, MAX_VORSCHLAEGE).map((s) => ({ strasse: s, nummer }));
+}
+
+// Text für das Strassenfeld, z.B. "Alpenstrasse 23" oder "Alpenstrasse 1–115"
+function strassenText({ strasse, nummer }) {
+  const hatSchonNummer = strasse.von === null && /\d/.test(strasse.name);   // z.B. "Im Freien 55"
+  if (nummer !== null && !hatSchonNummer && (strasse.von === null || nummerPasst(strasse, nummer))) {
+    return `${strasse.strasse || strasse.name} ${nummer}`;
+  }
+  return strasse.name;
+}
+
+// Kleiner grauer Text unter dem Vorschlag, z.B. "Nr. 1–115 · Bürgerstrasse bis Kesselstrasse"
+function strassenZusatz({ strasse, nummer }) {
+  const teile = [];
+  if (strasse.von !== null && nummer !== null && nummerPasst(strasse, nummer)) {
+    teile.push(`Nr. ${strasse.von}–${strasse.bis}`);
+  }
+  if (strasse.zusatz) teile.push(strasse.zusatz);
+  return teile.join(" · ");
 }
 
 // Alle Begriffe für das Feld «Abfall»: Abfallarten und Gegenstände
@@ -345,12 +433,41 @@ function suchfeldEinrichten({ eingabeId, listeId, finden, anzeigen, auswaehlen, 
 // Strasse merken (im Browser gespeichert)
 // ---------------------------------------------------------
 
-function strasseSpeichern(name) {
-  try { localStorage.setItem("strasse", name || ""); } catch (fehler) { /* nicht schlimm */ }
+// name = Eintrag in der Strassenliste, text = was im Feld steht (z.B. mit Hausnummer)
+function strasseSpeichern(name, text) {
+  try {
+    localStorage.setItem("strasse", name || "");
+    localStorage.setItem("strasseText", text || "");
+  } catch (fehler) { /* nicht schlimm */ }
 }
 
 function gespeicherteStrasse() {
-  try { return localStorage.getItem("strasse"); } catch (fehler) { return null; }
+  try {
+    return { name: localStorage.getItem("strasse"), text: localStorage.getItem("strasseText") };
+  } catch (fehler) {
+    return { name: null, text: null };
+  }
+}
+
+
+// ---------------------------------------------------------
+// Schnellwahl: Knöpfe mit den wichtigsten Abfallarten
+// (erscheinen, solange das Feld «Abfall» leer ist)
+// ---------------------------------------------------------
+
+function schnellwahlEinrichten() {
+  const bereich = document.getElementById("schnellwahl");
+  bereich.innerHTML = window.SCHNELLWAHL
+    .map(([text, id]) => `<button type="button" class="chip" data-id="${id}">${sicher(text)}</button>`)
+    .join("");
+  bereich.addEventListener("click", (e) => {
+    const knopf = e.target.closest(".chip");
+    if (!knopf) return;
+    auswahl.abfallart = knopf.dataset.id;
+    abfallFeld.eingabe.value = ABFALLARTEN[knopf.dataset.id].name;
+    abfallFeld.leeren.hidden = false;
+    aktualisieren();
+  });
 }
 
 
@@ -377,23 +494,26 @@ function tabsEinrichten() {
 const strassenFeld = suchfeldEinrichten({
   eingabeId: "eingabe-strasse",
   listeId: "liste-strasse",
-  finden: (text) => suchen(STRASSEN, text, (s) => s.name),
-  anzeigen: (s) => sicher(s.name) + (s.zusatz ? `<span class="klein">${sicher(s.zusatz)}</span>` : ""),
-  auswaehlen: (s, eingabe) => {
-    auswahl.strasse = s;
-    eingabe.value = s.name;
-    strasseSpeichern(s.name);
+  finden: strassenFinden,
+  anzeigen: (t) => {
+    const zusatz = strassenZusatz(t);
+    return sicher(strassenText(t)) + (zusatz ? `<span class="klein">${sicher(zusatz)}</span>` : "");
+  },
+  auswaehlen: (t, eingabe) => {
+    auswahl.strasse = t.strasse;
+    eingabe.value = strassenText(t);
+    strasseSpeichern(t.strasse.name, eingabe.value);
   },
   zuruecksetzen: () => {
     auswahl.strasse = null;
-    strasseSpeichern("");
+    strasseSpeichern("", "");
   },
 });
 
-suchfeldEinrichten({
+const abfallFeld = suchfeldEinrichten({
   eingabeId: "eingabe-abfall",
   listeId: "liste-abfall",
-  finden: (text) => suchen(ABFALL_BEGRIFFE, text, (b) => b.text),
+  finden: (text) => suchen(ABFALL_BEGRIFFE, text, (b) => b.text).slice(0, MAX_VORSCHLAEGE),
   anzeigen: (b) => `${sicher(b.text)}<span class="klein">${sicher(b.zusatz)}</span>`,
   auswaehlen: (b, eingabe) => {
     auswahl.abfallart = b.id;
@@ -403,14 +523,17 @@ suchfeldEinrichten({
 });
 
 // Gemerkte Strasse wieder eintragen
-const gemerkt = STRASSEN.find((s) => s.name === gespeicherteStrasse());
+const gespeichert = gespeicherteStrasse();
+const gemerkt = STRASSEN.find((s) => s.name === gespeichert.name);
 if (gemerkt) {
   auswahl.strasse = gemerkt;
-  strassenFeld.eingabe.value = gemerkt.name;
+  strassenFeld.eingabe.value = gespeichert.text || gemerkt.name;
   strassenFeld.leeren.hidden = false;
 }
 
+schnellwahlEinrichten();
 tabsEinrichten();
+aktualisieren();
 
 // Service Worker: macht die App installierbar und offline nutzbar
 if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {

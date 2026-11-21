@@ -130,6 +130,27 @@ main {
 }
 .vorschlaege .leer { color: var(--text-grau); cursor: default; }
 
+/* ---------- Schnellwahl-Knöpfe ---------- */
+.schnellwahl {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+.chip {
+  padding: 8px 14px;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--petrol);
+  background: var(--weiss);
+  border: 1.5px solid var(--linie);
+  border-radius: 20px;
+  cursor: pointer;
+}
+.chip:hover,
+.chip:focus-visible { border-color: var(--petrol); }
+
 /* ---------- Ergebnisfeld ---------- */
 .karte {
   margin-top: 18px;

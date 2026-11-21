@@ -14,7 +14,7 @@
 PWA für Einwohnerinnen und Einwohner der Stadt Schaffhausen: Man gibt Strasse und Abfall ein und erfährt, **ob und wann er abgeholt wird**, oder wohin man ihn sonst bringen muss.
 
 - **Grünes Feld «Wird abgeholt»** oder **rotes Feld «Wird nicht abgeholt»** (mit «Wohin damit?»).
-- **Regelmässige Abfuhr** (Hauskehricht, Grünabfall, Sperrgut, Plastik): gross «Jeden Dienstag und Freitag» und «bis 7 Uhr bereitstellen», klein «Nächstes Mal: in 3 Tagen (Di., 10. Nov.)». Keine weiteren Termine.
+- **Regelmässige Abfuhr** (Hauskehricht, Grünabfall, Sperrgut, Plastik): gross «Jeden Dienstag und Freitag» und «bis 7 Uhr bereitstellen», **kein** «Nächstes Mal» (Entscheid 21.11.2026). Keine weiteren Termine.
 - **Seltene Abfuhr** (Papier, Karton, Altmetall): gross «In 17 Tagen (Di., 17. Nov.)» mit Uhrzeit, darunter die weiteren Termine.
 - Unten im Feld: «So bereitstellen» und «Wird nicht mitgenommen».
 
@@ -23,13 +23,16 @@ PWA für Einwohnerinnen und Einwohner der Stadt Schaffhausen: Man gibt Strasse u
 - Corporate Design der Stadt Schaffhausen: Petrol `#005e74`, Schaffhauser Gelb `#ffdb1a`, Schrift Lato (von stadt-schaffhausen.ch übernommen).
 - Oben ein **weisser** Balken mit kleinem Schatten nach unten, das Stadtlogo (schwarz-gelb, Original) klein oben links.
 - Zwei abgerundete Eingabefelder «Strasse» und «Abfall», die Wörter grau im Feld (wie in der SBB-App).
-- Am Anfang steht unter den Feldern nichts. Erst beim Tippen erscheint eine Auswahlliste, das Ergebnis erst, wenn beides gewählt ist.
-- Unten eine Leiste mit drei Tabs, nur Icons: Abfall (Sack), Termine (Kalender), Infos (Info). Über dem aktiven Tab ein kleiner gelber Balken (wie in der 20-Minuten-App). Im Moment hat nur «Abfall» Inhalt.
+- Solange das Feld «Abfall» leer ist, stehen darunter **Schnellwahl-Knöpfe** mit den wichtigsten Abfallarten (Liste `SCHNELLWAHL` in `data/abfallarten.js`). Beim Tippen erscheint eine Auswahlliste, das Ergebnis erst, wenn beides gewählt ist.
+- Unten eine Leiste mit Tabs, nur Icons. Über dem aktiven Tab ein kleiner gelber Balken (wie in der 20-Minuten-App). **Geplant: 4 Tabs** Entsorgung (Sack), Kalender, Abfall-ABC, Karte (Sammelstellen). Im Moment hat nur «Entsorgung» Inhalt.
+- **Startbildschirm:** bei jedem Start kurz gelb (`#ffdb1a`) mit dem App-Icon.
+- **App-Icon:** gelber Hintergrund, darauf ein heller Kreis, darin der Böckli-Sack mit Steinbock (noch zu entwerfen, Vorlage kommt nach `img/vorlagen/`).
 - Gut auf dem Handy bedienbar, merkt sich die Strasse, auf dem Startbildschirm installierbar.
 
 ## Getroffene Entscheidungen
 
-1. **Hausnummern:** Strassen, die nach Hausnummer auf zwei Touren aufgeteilt sind, erscheinen als eigene Einträge in der Auswahlliste (z.B. «Alpenstrasse 1–115»). Es gibt kein eigenes Feld für die Hausnummer.
+1. **Hausnummern:** Strassen, die nach Hausnummer auf zwei Touren aufgeteilt sind, erscheinen als eigene Einträge (z.B. «Alpenstrasse 1–115»). Es gibt kein eigenes Feld für die Hausnummer, aber man kann sie mit eintippen («Alpenstrasse 23»): Dann wird der passende Abschnitt gewählt.
+   - **Suche** ist fehlertolerant (1 Tippfehler ab 4, 2 ab 8 Buchstaben). Tippfehler-Treffer erscheinen nur, wenn es keine richtigen Treffer gibt.
 2. **Uhrzeit:** Gross steht «bis 7 Uhr». Der Hinweis «bei Hitze über 30 Grad bis 6 Uhr» steht unter «So bereitstellen».
 3. **Papier** wird als seltene Abfuhr angezeigt: Datum plus Hinweis, wer sammelt (z.B. «Schulhaus Buchthalen»).
 4. **Fotos unter «So bereitstellen»:** Böckli-Foto (`img/boeckli.jpg`) beim Hauskehricht, Behälter-Bild (`img/gruenabfall.jpg`) beim Grünabfall. Eingestellt in `data/abfallarten.js` mit `bild` und `bildText`. Fotos vor dem Einbauen verkleinern (ca. 1200 Pixel breit).
@@ -47,7 +50,7 @@ Start: https://m.stadt-schaffhausen.ch/index.php?apid=917954978
 - Jede Tour hat auch einen iCal-Feed (`/appl/ical.php?apid=<tour>&calhome=917954978`). **Darin fehlen aber die Ausnahmen**, ausgefallene Termine stehen dort trotzdem drin. Deshalb lesen wir die HTML-Seite.
 - Die Stadt-Website sendet **keine CORS-Header**. Der Browser darf die Daten also nicht direkt abrufen, dafür braucht es einen Proxy (geplant: Python-Funktion auf Vercel im Ordner `api/`).
 - Ohne eigene Touren: Sperrgut (kommt mit dem Hauskehricht), Plastik, Karton Altstadt. Nicht abgeholt werden: Glas, Alu, PET, Batterien, Öl, Altkleider, Elektrogeräte, Sonderabfall, Steine.
-- Karton und Altmetall haben im Moment (November 2026) keine Termine mehr. Die App zeigt dann «Nächster Termin noch nicht bekannt» und den Rhythmus.
+- Hat eine Abfallart keine Termine (z.B. Altmetall Anfang November 2026), zeigt die App «Nächster Termin noch nicht bekannt» und den Rhythmus.
 
 ## Projektstruktur
 
@@ -65,11 +68,24 @@ Erledigt (7.11.2026): Das Grundgerüst läuft mit einer Momentaufnahme der echte
 Als Nächstes:
 1. ~~Logo und Böckli-Foto einbauen~~ (erledigt 7.11.2026). App-Icons eventuell mit dem Logo neu machen (die jetzigen sind Platzhalter).
 2. Live-Daten: Die Logik aus `werkzeuge/daten_holen.py` als Vercel-Funktion in `api/` anbieten (mit Zwischenspeicher). Die App lädt dann von dort und nimmt `data/touren.js` als Rückfall.
-3. ~~Auf Vercel veröffentlichen~~ (erledigt): https://abfall-schaffhausen.vercel.app
+3. ~~Auf Vercel veröffentlichen~~ (erledigt): https://abfall-schaffhausen.vercel.app – jeder Push auf `main` (GitHub Desktop: «Push origin») wird automatisch veröffentlicht.
+
+## Weiterentwicklung (Wünsche vom 21.11.2026)
+
+1. ~~Suche: Hausnummern, Tippfehler, Schnellwahl-Knöpfe~~ (erledigt 21.11.2026)
+2. **Ergebnisfeld neu ordnen**, von oben nach unten:
+   wird abgeholt / nicht abgeholt → **Abfallart** (nur «Hauskehricht», nicht «Knochen gehört zum …») → wann → bis wann bereitstellen bzw. Sammelstelle → aufklappbare Details (`<details>`): So bereitstellen, Wird nicht mitgenommen, Sammelstellen und Kosten.
+   - Regelmässige Abfuhr: **nur** «Jeden Donnerstag», kein «Nächstes Mal: in 3 Tagen». Seltene Abfuhr: «In 17 Tagen (…)».
+   - **PET** gehört unter **Plastik**. Bei Plastik (und evtl. Farben, Metall, Glas, Elektronik) eine **zweite Auswahl** der Sorte, jede Sorte mit eigenem Ergebnis.
+   - **Sammelstellen im ganzen Kanton** (privat und staatlich), mit Angebot und Kosten, **Gratis-Angebote zuerst**.
+3. **Kalender-Tab:** Stern im Ergebnis = Kombination Abfall + Strasse speichern. Stern antippen → Auswahl «Alle Termine» / «Nur diesen Termin». Wer daneben tippt, speichert alle Termine. Stern wegtippen → alle Termine dieser Kombination löschen. Ansicht Liste oder Kalender (Woche / **Monat** / Jahr). Erinnerung wählbar.
+4. **Abfall-ABC-Tab:** detaillierte Liste, welcher Gegenstand zu welcher Abfallart gehört (Das gehört in den Hauskehricht: …), mit Hinweis, wo man nachfragen kann, wenn es unklar ist.
+5. **Karten-Tab:** Sammelstellen auf einer Karte.
+6. **Icon und gelber Startbildschirm.**
+7. Live-Daten über Vercel (siehe oben).
+
 ## Für später geplant (jetzt noch nicht einbauen)
 
-- Regelmässige Termine in der App anpinnen (Tab «Termine»).
-- Termine als Kalendereintrag speichern.
-- Genauere Infos zu Sonderabfällen (z.B. Wasser mit Acrylfarbe ist Giftabfall und gehört nicht ins Becken).
+- Genauere Infos zu Sonderabfällen (z.B. Wasser mit Acrylfarbe ist Giftabfall und gehört nicht ins Becken) – kommt mit der zweiten Auswahl und dem Abfall-ABC.
 
 Dafür ist der Code schon vorbereitet: `ergebnisBerechnen()` in `js/app.js` gibt ein einfaches Objekt zurück, das sich auch zum Anpinnen oder für den Kalender-Export verwenden lässt.
