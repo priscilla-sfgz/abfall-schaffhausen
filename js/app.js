@@ -534,25 +534,33 @@ function suchfeldEinrichten({ eingabeId, listeId, finden, anzeigen, auswaehlen, 
   const leeren = document.querySelector(`.leeren[data-fuer="${eingabeId}"]`);
   let treffer = [];
   let markiert = 0;
+  const ebene = "liste-" + eingabeId;   // für «Zurück» (js/zurueck.js)
+
+  function listeVerstecken() {
+    liste.hidden = true;
+    ebeneGeschlossen(ebene);
+  }
 
   function listeZeigen() {
     treffer = finden(eingabe.value);
     markiert = 0;
     if (!eingabe.value.trim()) {
-      liste.hidden = true;
+      listeVerstecken();
       return;
     }
     liste.innerHTML = treffer.length
       ? treffer.map((t, i) => `<li data-nr="${i}" class="${i === 0 ? "markiert" : ""}">${anzeigen(t)}</li>`).join("")
       : `<li class="leer">Nichts gefunden</li>`;
     liste.hidden = false;
+    // «Zurück» schliesst die Liste und die Tastatur
+    ebeneOeffnen(ebene, () => { liste.hidden = true; eingabe.blur(); });
   }
 
   function waehlen(nr) {
     const eintrag = treffer[nr];
     if (!eintrag) return;
     auswaehlen(eintrag, eingabe);
-    liste.hidden = true;
+    listeVerstecken();
     eingabe.blur();
     aktualisieren();
   }
@@ -574,7 +582,7 @@ function suchfeldEinrichten({ eingabeId, listeId, finden, anzeigen, auswaehlen, 
       e.preventDefault();
       waehlen(markiert);
     } else if (e.key === "Escape") {
-      liste.hidden = true;
+      listeVerstecken();
     }
   });
 
@@ -588,13 +596,23 @@ function suchfeldEinrichten({ eingabeId, listeId, finden, anzeigen, auswaehlen, 
   });
 
   eingabe.addEventListener("blur", () => {
-    setTimeout(() => { liste.hidden = true; }, 150);
+    setTimeout(listeVerstecken, 150);
   });
+
+  // Android: Die Zurück-Geste klappt zuerst nur die Tastatur zu, das Feld bleibt aktiv.
+  // Wird der sichtbare Bereich plötzlich viel höher (Tastatur weg), Feld verlassen → Liste zu.
+  if (window.visualViewport) {
+    let hoehe = visualViewport.height;
+    visualViewport.addEventListener("resize", () => {
+      if (visualViewport.height > hoehe + 120 && document.activeElement === eingabe && !liste.hidden) eingabe.blur();
+      hoehe = visualViewport.height;
+    });
+  }
 
   leeren.addEventListener("click", () => {
     eingabe.value = "";
     leeren.hidden = true;
-    liste.hidden = true;
+    listeVerstecken();
     zuruecksetzen();
     aktualisieren();
     eingabe.focus();
@@ -677,6 +695,9 @@ function tabWechseln(name) {
     bereich.hidden = bereich.id !== "tab-" + name;
   });
   if (name === "karte") karteZeigen();
+  // «Zurück» führt von den anderen Tabs zum Tab Entsorgung
+  if (name === "abfall") ebeneGeschlossen("tab");
+  else ebeneOeffnen("tab", () => tabWechseln("abfall"));
 }
 
 function tabsEinrichten() {

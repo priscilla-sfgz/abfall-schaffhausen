@@ -388,6 +388,7 @@ function uebersichtZeigen(schluessel, datum) {
       </div>
     </div>`;
   bereich.hidden = false;
+  ebeneOeffnen("uebersicht", () => { bereich.hidden = true; });   // «Zurück» schliesst (js/zurueck.js)
 
   bereich.onclick = (e) => {
     const erinnerung = e.target.closest("[data-erinnerung]");
@@ -400,7 +401,10 @@ function uebersichtZeigen(schluessel, datum) {
     if (aktion === "ics") icsHerunterladen(lesezeichen);
     if (aktion === "entfernen") entfernen(schluessel);
     // Schliessen: ×, Hintergrund oder «entfernen»
-    if (e.target === bereich || e.target.closest(".schliessen") || aktion === "entfernen") bereich.hidden = true;
+    if (e.target === bereich || e.target.closest(".schliessen") || aktion === "entfernen") {
+      bereich.hidden = true;
+      ebeneGeschlossen("uebersicht");
+    }
   };
 }
 

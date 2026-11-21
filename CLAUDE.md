@@ -56,6 +56,7 @@ Start: https://m.stadt-schaffhausen.ch/index.php?apid=917954978
 
 - `index.html`, `css/style.css`, `js/app.js`: die App
 - `js/kalender.js`: Stern, Kalender-Tab (Liste/Woche/Monat/Jahr, Standard Monat), Übersicht und .ics-Download (Erinnerung am Vorabend 19 Uhr). Gespeichert im Browser (`localStorage` «lesezeichen»: Strasse + Abfallart, alle Termine oder nur einer). Wird vor `js/app.js` geladen.
+- `js/zurueck.js`: «Zurück» (Android-Geste/-Taste, iPhone Wischen vom linken Rand) schliesst zuerst die Vorschlagsliste samt Tastatur bzw. die Termin-Übersicht, dann geht es von anderen Tabs zum Tab Entsorgung. Technik: `ebeneOeffnen(name, schliessen)` / `ebeneGeschlossen(name)` mit Einträgen im Browser-Verlauf. Wird vor `js/kalender.js` geladen.
 - `js/abc.js`: Tab Abfall-ABC (umschaltbar «Nach Abfallart» / «A–Z», Suche, Antippen → Ergebnis im Tab Entsorgung). Inhalt = `GEGENSTAENDE` + Abfallarten. Wird vor `js/app.js` geladen.
 - `js/karte.js` + `data/karte.js`: Tab Karte (Leaflet 1.9.4 von cdnjs, wird erst beim Öffnen geladen; Kacheln von OpenStreetMap). Filter Sammelstellen (inkl. Unterflurcontainer) / Brockenhäuser / Reparieren. Orte in `data/karte.js` mit `typ` und `lage`, darf von Hand ergänzt werden.
 - `data/abfallarten.js`: Abfallarten mit Hinweisen und das Verzeichnis Gegenstand → Abfallart (Quelle: Infoseiten der Stadt, darf von Hand ergänzt werden)
