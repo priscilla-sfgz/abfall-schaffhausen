@@ -50,10 +50,10 @@ body {
   align-items: center;
   justify-content: center;
   background: var(--gelb);
-  transition: opacity .35s;
 }
-.startbild img { width: min(60vw, 280px); height: auto; }
-.startbild.weg { opacity: 0; pointer-events: none; }
+/* gleiche Grösse wie der Startbildschirm von Android (Kreis ca. 160 px) */
+.startbild img { width: 186px; height: 186px; }
+.startbild.weg { pointer-events: none; }
 
 /* ---------- Oberer Balken ---------- */
 .kopf {

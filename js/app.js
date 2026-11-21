@@ -729,12 +729,13 @@ kalenderEinrichten();
 erinnerungenEinrichten();
 aktualisieren();
 
-// Gelber Startbildschirm: mindestens 0.9 Sekunden zeigen, dann ausblenden
+// Gelber Startbildschirm: 0.7 Sekunden stehen lassen, dann sanft ausblenden
 const startbild = document.getElementById("startbild");
 setTimeout(() => {
-  startbild.classList.add("weg");
-  setTimeout(() => startbild.remove(), 400);
-}, Math.max(0, 900 - performance.now()));
+  startbild.classList.add("weg");   // ab jetzt nicht mehr anklickbar
+  const ausblenden = startbild.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 450, easing: "ease", fill: "forwards" });
+  ausblenden.finished.then(() => startbild.remove());   // danach ganz entfernen
+}, 700);
 
 // Service Worker: macht die App installierbar und offline nutzbar
 if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {

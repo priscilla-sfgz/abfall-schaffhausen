@@ -5,8 +5,10 @@ Aufruf (im Projektordner):  python werkzeuge/icons_erstellen.py
 
 Braucht: Google Chrome (zum Zeichnen der SVGs) und Pillow (pip install pillow).
 
-  icon.svg          → icon-512.png, icon-192.png, icon-180.png (iPhone)
-  icon-maskable.svg → icon-512-maskable.png (Android schneidet das Icon rund zu)
+  icon.svg          → icon-180.png (iPhone, gelbes Quadrat)
+  startbild.svg     → icon-512.png, icon-192.png (rund, ohne gelbes Quadrat –
+                      Android zeigt dieses Icon auf dem gelben Startbildschirm)
+  icon-maskable.svg → icon-512-maskable.png (Icon auf dem Android-Home-Bildschirm)
   badge.svg         → badge-96.png (weisses Symbol in der Statusleiste bei Benachrichtigungen)
 """
 
@@ -25,7 +27,8 @@ CHROME_ORTE = [
 GROESSE = 1024   # zuerst gross zeichnen, dann verkleinern (wird schärfer)
 
 AUFTRAEGE = [
-    ("icon.svg", [("icon-512.png", 512), ("icon-192.png", 192), ("icon-180.png", 180)]),
+    ("icon.svg", [("icon-180.png", 180)]),
+    ("startbild.svg", [("icon-512.png", 512), ("icon-192.png", 192)]),
     ("icon-maskable.svg", [("icon-512-maskable.png", 512)]),
     ("badge.svg", [("badge-96.png", 96)]),
 ]
@@ -64,8 +67,8 @@ def main():
             bild = Image.open(gross).convert("RGBA").crop((0, 0, GROESSE, GROESSE))
             for ziel_name, pixel in ziele:
                 klein = bild.resize((pixel, pixel), Image.LANCZOS)
-                if ziel_name != "badge-96.png":
-                    klein = klein.convert("RGB")   # App-Icons ohne Durchsichtigkeit
+                if ziel_name in ("icon-180.png", "icon-512-maskable.png"):
+                    klein = klein.convert("RGB")   # diese Icons ohne Durchsichtigkeit
                 klein.save(ORDNER / ziel_name, optimize=True)
                 print("erstellt:", ziel_name)
 
