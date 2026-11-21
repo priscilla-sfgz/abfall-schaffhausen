@@ -518,7 +518,7 @@ function strassenZusatz({ strasse, nummer }) {
 // Alle Begriffe für das Feld «Abfall»: Abfallarten und Gegenstände
 const ABFALL_BEGRIFFE = [
   ...Object.entries(ABFALLARTEN).map(([id, art]) => ({
-    text: art.name, id: id, zusatz: "Abfallart", istArt: true,
+    text: art.name, id: id, zusatz: "", istArt: true,   // kein grauer Zusatz: ist selbst die Abfallart
     suchtexte: [art.name, ...(art.suchwoerter || [])],
   })),
   ...GEGENSTAENDE
@@ -713,7 +713,7 @@ const abfallFeld = suchfeldEinrichten({
   eingabeId: "eingabe-abfall",
   listeId: "liste-abfall",
   finden: (text) => suchen(ABFALL_BEGRIFFE, text, (b) => b.suchtexte || b.text).slice(0, MAX_VORSCHLAEGE),
-  anzeigen: (b) => `${sicher(b.text)}<span class="klein">${sicher(b.zusatz)}</span>`,
+  anzeigen: (b) => sicher(b.text) + (b.zusatz ? `<span class="klein">${sicher(b.zusatz)}</span>` : ""),
   auswaehlen: (b, eingabe) => {
     // Bei einem bestimmten Gegenstand (z.B. «Joghurtbecher») braucht es keine Sorten-Auswahl
     abfallWaehlen(b.id, { hinweis: b.hinweis, sorteFertig: !b.istArt });

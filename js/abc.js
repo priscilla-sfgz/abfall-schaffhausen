@@ -19,7 +19,8 @@ function abcSortieren(eintraege) {
 
 function abcZeile(e) {
   return `<li><button type="button" class="abc-eintrag" data-nr="${e.nr}">${sicher(e.text)}`
-    + (abc.ansicht === "az" ? `<span class="klein">${sicher(ABFALLARTEN[e.id].name)}</span>` : "")
+    // In A–Z rechts die Abfallart – ausser der Eintrag ist selbst die Abfallart
+    + (abc.ansicht === "az" && !e.istArt ? `<span class="klein">${sicher(ABFALLARTEN[e.id].name)}</span>` : "")
     + `</button></li>`;
 }
 
@@ -31,7 +32,8 @@ function abcNachArten(eintraege, sucht) {
       // Passt die Abfallart selbst zur Suche (z.B. «Sperrgut»), alle ihre Gegenstände zeigen
       const artPasst = eintraege.some((e) => e.id === id && e.istArt);
       const quelle = artPasst ? alle : eintraege;
-      const liste = abcSortieren(quelle.filter((e) => e.id === id && !e.istArt));
+      // Gleiche Einträge wie in A–Z: die Abfallart selbst und alle ihre Gegenstände
+      const liste = abcSortieren(quelle.filter((e) => e.id === id));
       if (liste.length === 0) return "";
       return `<details${sucht ? " open" : ""}>
         <summary>${sicher(art.name)} <span class="anzahl">${liste.length}</span></summary>
