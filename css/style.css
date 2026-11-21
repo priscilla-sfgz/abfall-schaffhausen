@@ -414,9 +414,9 @@ main {
   justify-content: space-between;
   gap: 12px;
   margin-bottom: 12px;
-  padding: 12px 16px;
+  padding: 12px 12px 12px 22px;
   background: var(--weiss);
-  border-radius: var(--rundung);
+  border-radius: 26px;   /* gleich wie Eingabefelder und Umschalter */
 }
 .erinnerung-schalter .klein { display: block; font-size: 14px; color: var(--text-grau); }
 .schalter {
@@ -536,13 +536,13 @@ main {
   gap: 12px;
   width: 100%;
   margin-bottom: 6px;
-  padding: 12px 16px;
+  padding: 12px 22px;
   font: inherit;
   text-align: left;
   color: var(--text);
   background: var(--weiss);
   border: 0;
-  border-radius: 12px;
+  border-radius: 26px;   /* gleich wie Eingabefelder und Umschalter */
   cursor: pointer;
 }
 .eintrag .klein { display: block; font-size: 14px; color: var(--text-grau); }

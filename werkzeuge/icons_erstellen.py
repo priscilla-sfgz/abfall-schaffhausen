@@ -5,7 +5,7 @@ Aufruf (im Projektordner):  python werkzeuge/icons_erstellen.py
 
 Braucht: Google Chrome (zum Zeichnen der SVGs) und Pillow (pip install pillow).
 
-  icon.svg          → icon-180.png (iPhone, gelbes Quadrat)
+  icon.svg          → icon-180.png (iPhone, weisser Hintergrund)
   startbild.svg     → icon-512.png, icon-192.png (rund, ohne gelbes Quadrat –
                       Android zeigt dieses Icon auf dem gelben Startbildschirm)
   icon-maskable.svg → icon-512-maskable.png (Android-Home-Bildschirm und Android-Startbildschirm;
