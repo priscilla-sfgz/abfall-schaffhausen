@@ -5,7 +5,7 @@
 // zuletzt gespeicherte Version verwendet.
 // =========================================================
 
-const CACHE_NAME = "abfall-sh-v4";
+const CACHE_NAME = "abfall-sh-v5";
 
 const DATEIEN = [
   "./",
@@ -19,6 +19,8 @@ const DATEIEN = [
   "data/sammelstellen.js",
   "manifest.webmanifest",
   "img/icons/icon-192.png",
+  "img/icons/startbild.svg",
+  "img/icons/badge-96.png",
 ];
 
 // Beim Installieren die wichtigsten Dateien speichern
@@ -65,7 +67,7 @@ self.addEventListener("push", (event) => {
     self.registration.showNotification(daten.titel, {
       body: daten.text,
       icon: "img/icons/icon-192.png",
-      badge: "img/icons/icon-192.png",
+      badge: "img/icons/badge-96.png",   // weisses Symbol für die Statusleiste (Android)
       tag: "abfall-erinnerung",
     })
   );

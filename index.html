@@ -9,7 +9,8 @@
   <!-- Installierbar auf dem Startbildschirm -->
   <link rel="manifest" href="manifest.webmanifest">
   <meta name="theme-color" content="#ffffff">
-  <link rel="icon" href="img/icons/icon-192.png">
+  <link rel="icon" href="img/icons/icon.svg" type="image/svg+xml">
+  <link rel="icon" href="img/icons/icon-192.png" type="image/png">
   <link rel="apple-touch-icon" href="img/icons/icon-180.png">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="Abfall SH">
@@ -22,6 +23,11 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+  <!-- ===== Gelber Startbildschirm (verschwindet nach kurzer Zeit) ===== -->
+  <div id="startbild" class="startbild" aria-hidden="true">
+    <img src="img/icons/startbild.svg" alt="">
+  </div>
 
   <!-- ===== Oberer Balken mit Stadtlogo ===== -->
   <header class="kopf">

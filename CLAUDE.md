@@ -26,7 +26,7 @@ PWA für Einwohnerinnen und Einwohner der Stadt Schaffhausen: Man gibt Strasse u
 - Solange das Feld «Abfall» leer ist, stehen darunter **Schnellwahl-Knöpfe** mit den wichtigsten Abfallarten (Liste `SCHNELLWAHL` in `data/abfallarten.js`). Beim Tippen erscheint eine Auswahlliste, das Ergebnis erst, wenn beides gewählt ist.
 - Unten eine Leiste mit Tabs, nur Icons. Über dem aktiven Tab ein kleiner gelber Balken (wie in der 20-Minuten-App). **Geplant: 4 Tabs** Entsorgung (Sack), Kalender, Abfall-ABC, Karte (Sammelstellen). Im Moment hat nur «Entsorgung» Inhalt.
 - **Startbildschirm:** bei jedem Start kurz gelb (`#ffdb1a`) mit dem App-Icon.
-- **App-Icon:** gelber Hintergrund, darauf ein heller Kreis, darin der Böckli-Sack mit Steinbock (noch zu entwerfen). Vorlagen in `img/vorlagen/`: `Steinbock.png` (Wappen, nur 120 px, darum als SVG nachzeichnen) und `Abfallsack.jpg` (Originalfoto). Die App benutzt diesen Ordner nicht.
+- **App-Icon** (erledigt 21.11.2026): gelber Hintergrund, weisser Kreis, darin der gelbe Böckli-Sack mit schwarzer Umrandung, schwarzen Schlaufen und schwarzem Steinbock. **Nur 3 Farben:** Schwarz `#000000`, Gelb `#ffdb1a`, Weiss. Keine Glanzlichter, Schatten oder Falten. Vorlagen in `img/vorlagen/`: `Steinbock.png` (Wappen, nur 120 px, darum als SVG nachzeichnen) und `Abfallsack.jpg` (Originalfoto). Die App benutzt diesen Ordner nicht.
 - Gut auf dem Handy bedienbar, merkt sich die Strasse, auf dem Startbildschirm installierbar.
 
 ## Getroffene Entscheidungen
@@ -59,12 +59,13 @@ Start: https://m.stadt-schaffhausen.ch/index.php?apid=917954978
 - `data/abfallarten.js`: Abfallarten mit Hinweisen und das Verzeichnis Gegenstand → Abfallart (Quelle: Infoseiten der Stadt, darf von Hand ergänzt werden)
 - `data/sammelstellen.js`: Abgabestellen (Name, Ort, Zeiten, Kosten, welche Abfallarten). Gratis-Stellen erscheinen automatisch zuerst. Darf von Hand ergänzt werden.
 - `data/touren.js`: Termine und Strassen, **automatisch erstellt** mit `python werkzeuge/daten_holen.py`
+- `img/icons/*.svg` sind die Vorlagen (icon, icon-maskable, startbild, badge). Die PNGs daraus erstellt `python werkzeuge/icons_erstellen.py` (braucht Chrome + Pillow). Der Steinbock wurde aus `img/vorlagen/Steinbock.png` nachgezeichnet.
 - `manifest.webmanifest`, `sw.js`, `img/icons/`: Installierbarkeit (Service Worker lädt zuerst aus dem Netz, nur offline aus dem Speicher)
 - `img/logo.png`, `img/boeckli.jpg`, `img/gruenabfall.jpg`: Logo und Fotos. Fehlt ein Bild, steht im Balken Text bzw. das Foto wird ausgeblendet.
 - `js/erinnerungen.js`: Push-Erinnerungen (Schalter im Kalender-Tab, Zeitpunkt pro Lesezeichen: Vorabend 19 Uhr / Morgen 6 Uhr / Keine). Schickt die Termine an `/api/erinnerung`.
 - `api/erinnerung.py` (speichert das Push-Abo + Termine in Supabase) und `api/senden.py` (verschickt fällige Nachrichten; wird jede Stunde von Supabase `pg_cron` aufgerufen, POST `{"test": true}` = Testnachricht). Python-Pakete in `requirements.txt`.
 - Vercel-Umgebungsvariablen: `SUPABASE_URL`, `SUPABASE_SECRET_KEY`, `VAPID_PRIVATE_KEY`, `CRON_SECRET`.
-- `werkzeuge/supabase.sql`: Tabelle `erinnerungen` + stündlicher Aufruf (ohne Geheimnis).
+- `werkzeuge/supabase.sql`: Tabelle `erinnerungen` + stündlicher Aufruf (ohne Geheimnis). Wichtig: Neue Tabellen werden bei diesem Supabase-Projekt nicht automatisch freigegeben → `grant … to service_role` nötig. Test-Nachricht: POST `/api/senden` mit `{"test": true}` und `Authorization: Bearer <CRON_SECRET>` (oder `geheim/supabase-test.sql`).
 - `geheim/` (in `.gitignore`, **nie committen**): Schlüssel und fertig ausgefüllte SQL-Dateien.
 - `notizen/recherche-entsorgung.md`: Recherche zu Sammelstellen, Kosten und Sorten (Plastik, Farben, Glas, Metall), mit Quellen. Grundlage für Schritt 2 und den Karten-Tab.
 - Lokal testen: `python -m http.server 8000`, dann http://localhost:8000
@@ -74,7 +75,7 @@ Start: https://m.stadt-schaffhausen.ch/index.php?apid=917954978
 Erledigt (7.11.2026): Das Grundgerüst läuft mit einer Momentaufnahme der echten Daten. Im Browser in der Handy-Ansicht getestet. Committet als «MVP».
 
 Als Nächstes:
-1. ~~Logo und Böckli-Foto einbauen~~ (erledigt 7.11.2026). App-Icons eventuell mit dem Logo neu machen (die jetzigen sind Platzhalter).
+1. ~~Logo und Böckli-Foto einbauen~~ (erledigt 7.11.2026). App-Icons sind erstellt (siehe Design).
 2. Live-Daten: Die Logik aus `werkzeuge/daten_holen.py` als Vercel-Funktion in `api/` anbieten (mit Zwischenspeicher). Die App lädt dann von dort und nimmt `data/touren.js` als Rückfall.
 3. ~~Auf Vercel veröffentlichen~~ (erledigt): https://abfall-schaffhausen.vercel.app – jeder Push auf `main` (GitHub Desktop: «Push origin») wird automatisch veröffentlicht.
 
@@ -92,12 +93,12 @@ Als Nächstes:
    - Gegenstände, die in den Hauskehricht gehören: klar «Einfach in den Hauskehricht (Böcklisack)».
    - **Recycling zuerst:** Gibt es eine Recycling-Möglichkeit (z.B. RecyBag bei Plastik), steht sie zuoberst («Am besten recyceln»), die Abfuhr nur als «Oder …».
    - **reparierBar** ist keine Sammelstelle: kleiner Hinweis über den Tabs, lässt sich mit × für immer wegklicken. Text bewusst persönlich: «Lieber etwas reparieren lassen? reparierBar Schaffhausen».
-3. **Kalender-Tab** (3a erledigt 21.11.2026 in `js/kalender.js`; offen: 3b Push): Stern im Ergebnis = Kombination Abfall + Strasse speichern. Stern antippen → Auswahl «Alle Termine» / «Nur diesen Termin». Wer daneben tippt, speichert alle Termine. Stern wegtippen → alle Termine dieser Kombination löschen. Ansicht Liste oder Kalender (Woche / **Monat** / Jahr). Erinnerung wählbar.
+3. **Kalender-Tab** (erledigt 21.11.2026: 3a `js/kalender.js`, 3b Push mit Supabase – auf dem Handy getestet): Stern im Ergebnis = Kombination Abfall + Strasse speichern. Stern antippen → Auswahl «Alle Termine» / «Nur diesen Termin». Wer daneben tippt, speichert alle Termine. Stern wegtippen → alle Termine dieser Kombination löschen. Ansicht Liste oder Kalender (Woche / **Monat** / Jahr). Erinnerung wählbar.
    - **Push-Erinnerungen:** mit einem Knopf ein-/ausschalten (keine Abfrage beim Start). Technik: **Supabase** speichert die Anmeldungen und weckt jede Stunde (`pg_cron`), eine **Python-Funktion auf Vercel** (`api/`) schickt die Nachricht. Auf dem iPhone nur, wenn die App auf dem Startbildschirm installiert ist. Anleitung mit jedem Klick nötig.
    - **Download für den eigenen Kalender** (.ics mit Erinnerung): beim Speichern mit dem Stern **und** ganz unten in der Übersicht, wenn man im Kalender-Tab einen Eintrag antippt.
 4. **Abfall-ABC-Tab:** detaillierte Liste, welcher Gegenstand zu welcher Abfallart gehört (Das gehört in den Hauskehricht: …), mit Hinweis, wo man nachfragen kann, wenn es unklar ist.
 5. **Karten-Tab:** Sammelstellen auf einer Karte. Idee: Filter nach **Sammelstellen, Brockenhäusern und Reparaturbetrieben** (reparierBar usw.).
-6. **Icon und gelber Startbildschirm.**
+6. ~~Icon und gelber Startbildschirm~~ (erledigt 21.11.2026, inkl. weisses Sack-Symbol für Android-Benachrichtigungen).
 7. Live-Daten über Vercel (siehe oben).
 8. **Unbedingt nachholen:** https://www.abfall-sh.ch (KBA Hard) war am 21.11.2026 nicht erreichbar. Preise für Sperrgut, Inertstoffe usw. dort nachlesen und in `notizen/recherche-entsorgung.md` und die App übernehmen.
 

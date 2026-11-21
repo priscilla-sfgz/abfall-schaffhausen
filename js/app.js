@@ -729,6 +729,13 @@ kalenderEinrichten();
 erinnerungenEinrichten();
 aktualisieren();
 
+// Gelber Startbildschirm: mindestens 0.9 Sekunden zeigen, dann ausblenden
+const startbild = document.getElementById("startbild");
+setTimeout(() => {
+  startbild.classList.add("weg");
+  setTimeout(() => startbild.remove(), 400);
+}, Math.max(0, 900 - performance.now()));
+
 // Service Worker: macht die App installierbar und offline nutzbar
 if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
   navigator.serviceWorker.register("sw.js");
