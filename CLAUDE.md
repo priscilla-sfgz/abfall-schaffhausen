@@ -56,6 +56,7 @@ Start: https://m.stadt-schaffhausen.ch/index.php?apid=917954978
 
 - `index.html`, `css/style.css`, `js/app.js`: die App
 - `js/kalender.js`: Stern, Kalender-Tab (Liste/Woche/Monat/Jahr, Standard Monat), Übersicht und .ics-Download (Erinnerung am Vorabend 19 Uhr). Gespeichert im Browser (`localStorage` «lesezeichen»: Strasse + Abfallart, alle Termine oder nur einer). Wird vor `js/app.js` geladen.
+- `js/abc.js`: Tab Abfall-ABC (umschaltbar «Nach Abfallart» / «A–Z», Suche, Antippen → Ergebnis im Tab Entsorgung). Inhalt = `GEGENSTAENDE` + Abfallarten. Wird vor `js/app.js` geladen.
 - `data/abfallarten.js`: Abfallarten mit Hinweisen und das Verzeichnis Gegenstand → Abfallart (Quelle: Infoseiten der Stadt, darf von Hand ergänzt werden)
 - `data/sammelstellen.js`: Abgabestellen (Name, Ort, Zeiten, Kosten, welche Abfallarten). Gratis-Stellen erscheinen automatisch zuerst. Darf von Hand ergänzt werden.
 - **Live-Daten:** `api/touren.py` liest die Stadt-Website (Logik in `api/_abfallkalender.py`), Vercel speichert die Antwort 12 Stunden zwischen. Die App startet mit `data/touren.js` und tauscht im Hintergrund gegen die Live-Daten aus (`liveDatenLaden()` in `js/app.js`). Sehen die Daten kaputt aus (`pruefen()`), bleibt der Rückfall.
@@ -98,7 +99,7 @@ Als Nächstes:
 3. **Kalender-Tab** (erledigt 21.11.2026: 3a `js/kalender.js`, 3b Push mit Supabase – auf dem Handy getestet): Stern im Ergebnis = Kombination Abfall + Strasse speichern. Stern antippen → Auswahl «Alle Termine» / «Nur diesen Termin». Wer daneben tippt, speichert alle Termine. Stern wegtippen → alle Termine dieser Kombination löschen. Ansicht Liste oder Kalender (Woche / **Monat** / Jahr). Erinnerung wählbar.
    - **Push-Erinnerungen:** mit einem Knopf ein-/ausschalten (keine Abfrage beim Start). Technik: **Supabase** speichert die Anmeldungen und weckt jede Stunde (`pg_cron`), eine **Python-Funktion auf Vercel** (`api/`) schickt die Nachricht. Auf dem iPhone nur, wenn die App auf dem Startbildschirm installiert ist. Anleitung mit jedem Klick nötig.
    - **Download für den eigenen Kalender** (.ics mit Erinnerung): beim Speichern mit dem Stern **und** ganz unten in der Übersicht, wenn man im Kalender-Tab einen Eintrag antippt.
-4. **Abfall-ABC-Tab:** detaillierte Liste, welcher Gegenstand zu welcher Abfallart gehört (Das gehört in den Hauskehricht: …), mit Hinweis, wo man nachfragen kann, wenn es unklar ist.
+4. ~~**Abfall-ABC-Tab**~~ (erledigt 21.11.2026): detaillierte Liste, welcher Gegenstand zu welcher Abfallart gehört (Das gehört in den Hauskehricht: …), mit Hinweis, wo man nachfragen kann, wenn es unklar ist.
 5. **Karten-Tab:** Sammelstellen auf einer Karte. Idee: Filter nach **Sammelstellen, Brockenhäusern und Reparaturbetrieben** (reparierBar usw.).
 6. ~~Icon und gelber Startbildschirm~~ (erledigt 21.11.2026, inkl. weisses Sack-Symbol für Android-Benachrichtigungen).
 7. ~~Live-Daten über Vercel~~ (erledigt 21.11.2026).

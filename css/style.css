@@ -704,3 +704,69 @@ body.mit-hinweis main { padding-bottom: calc(var(--leiste-hoehe) + 90px + env(sa
   background: var(--gelb);
   border-radius: 0 0 3px 3px;
 }
+
+/* ---------- Tab «Abfall-ABC» ---------- */
+.abc-gruppen,
+.abc-liste {
+  background: var(--weiss);
+  border-radius: var(--rundung);
+  box-shadow: 0 2px 10px rgba(0, 33, 41, .08);
+  padding: 4px 20px;
+}
+.abc-gruppen details + details { border-top: 1px solid var(--linie); }
+.abc-gruppen summary {
+  padding: 14px 0;
+  font-weight: 900;
+  color: var(--petrol);
+  cursor: pointer;
+  list-style: none;
+}
+.abc-gruppen summary::-webkit-details-marker { display: none; }
+.abc-gruppen summary::after {
+  content: "›";
+  float: right;
+  font-size: 22px;
+  line-height: 1;
+  transition: transform .15s;
+}
+.abc-gruppen details[open] summary::after { transform: rotate(90deg); }
+.abc-gruppen .anzahl {
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--text-grau);
+}
+.abc-gruppen ul,
+.abc-liste {
+  margin: 0;
+  list-style: none;
+}
+.abc-gruppen ul { padding: 0 0 10px; }
+.abc-eintrag {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  padding: 10px 0;
+  font: inherit;
+  text-align: left;
+  color: var(--text);
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+.abc-eintrag .klein {
+  font-size: 14px;
+  color: var(--text-grau);
+  text-align: right;
+}
+.abc-liste .buchstabe {
+  padding: 14px 0 2px;
+  font-weight: 900;
+  color: var(--petrol);
+}
+.abc-fuss {
+  margin: 18px 0 8px;
+  text-align: center;
+  color: var(--text-grau);
+}
+.abc-fuss a { color: var(--petrol); font-weight: 700; }

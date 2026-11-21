@@ -670,14 +670,17 @@ function reparaturHinweisEinrichten() {
 // Tabs unten
 // ---------------------------------------------------------
 
+// Zeigt einen Tab an, z.B. tabWechseln("abc")
+function tabWechseln(name) {
+  document.querySelectorAll(".tab").forEach((k) => k.classList.toggle("aktiv", k.dataset.tab === name));
+  document.querySelectorAll(".tab-inhalt").forEach((bereich) => {
+    bereich.hidden = bereich.id !== "tab-" + name;
+  });
+}
+
 function tabsEinrichten() {
   document.querySelectorAll(".tab").forEach((knopf) => {
-    knopf.addEventListener("click", () => {
-      document.querySelectorAll(".tab").forEach((k) => k.classList.toggle("aktiv", k === knopf));
-      document.querySelectorAll(".tab-inhalt").forEach((bereich) => {
-        bereich.hidden = bereich.id !== "tab-" + knopf.dataset.tab;
-      });
-    });
+    knopf.addEventListener("click", () => tabWechseln(knopf.dataset.tab));
   });
 }
 
@@ -733,6 +736,7 @@ reparaturHinweisEinrichten();
 tabsEinrichten();
 kalenderEinrichten();
 erinnerungenEinrichten();
+abcEinrichten();
 aktualisieren();
 liveDatenLaden();
 
