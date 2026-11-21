@@ -586,13 +586,16 @@ function suchfeldEinrichten({ eingabeId, listeId, finden, anzeigen, auswaehlen, 
     }
   });
 
-  // pointerdown statt click, damit die Auswahl vor dem Verlassen des Feldes zählt
-  liste.addEventListener("pointerdown", (e) => {
+  // Beim Berühren der Liste das Feld nicht verlassen (sonst geht die Liste zu)
+  liste.addEventListener("pointerdown", (e) => e.preventDefault());
+
+  // Ausgewählt wird erst bei einem richtigen Tipp (Loslassen ohne Wischen).
+  // Ganz am Rand beginnt die Zurück-Geste: dort nie auswählen.
+  const RAND = 24;
+  liste.addEventListener("click", (e) => {
     const li = e.target.closest("li[data-nr]");
-    if (li) {
-      e.preventDefault();
-      waehlen(Number(li.dataset.nr));
-    }
+    if (!li || e.clientX < RAND || e.clientX > window.innerWidth - RAND) return;
+    waehlen(Number(li.dataset.nr));
   });
 
   eingabe.addEventListener("blur", () => {
