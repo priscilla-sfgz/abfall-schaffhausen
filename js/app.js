@@ -676,6 +676,7 @@ function tabWechseln(name) {
   document.querySelectorAll(".tab-inhalt").forEach((bereich) => {
     bereich.hidden = bereich.id !== "tab-" + name;
   });
+  if (name === "karte") karteZeigen();
 }
 
 function tabsEinrichten() {
@@ -737,6 +738,7 @@ tabsEinrichten();
 kalenderEinrichten();
 erinnerungenEinrichten();
 abcEinrichten();
+karteEinrichten();
 aktualisieren();
 liveDatenLaden();
 

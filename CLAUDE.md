@@ -24,7 +24,7 @@ PWA für Einwohnerinnen und Einwohner der Stadt Schaffhausen: Man gibt Strasse u
 - Oben ein **weisser** Balken mit kleinem Schatten nach unten, das Stadtlogo (schwarz-gelb, Original) klein oben links.
 - Zwei abgerundete Eingabefelder «Strasse» und «Abfall», die Wörter grau im Feld (wie in der SBB-App).
 - Solange das Feld «Abfall» leer ist, stehen darunter **Schnellwahl-Knöpfe** mit den wichtigsten Abfallarten (Liste `SCHNELLWAHL` in `data/abfallarten.js`). Beim Tippen erscheint eine Auswahlliste, das Ergebnis erst, wenn beides gewählt ist.
-- Unten eine Leiste mit Tabs, nur Icons. Über dem aktiven Tab ein kleiner gelber Balken (wie in der 20-Minuten-App). **Geplant: 4 Tabs** Entsorgung (Sack), Kalender, Abfall-ABC, Karte (Sammelstellen). Im Moment hat nur «Entsorgung» Inhalt.
+- Unten eine Leiste mit Tabs, nur Icons. Über dem aktiven Tab ein kleiner gelber Balken (wie in der 20-Minuten-App). **4 Tabs:** Entsorgung (Sack), Kalender, Abfall-ABC (Buch), Karte (Nadel).
 - **Startbildschirm:** bei jedem Start kurz gelb (`#ffdb1a`) mit dem App-Icon. In der **installierten App auf Android** wird unser Startbildschirm weggelassen (Android zeigt einen eigenen mit dem Home-Bildschirm-Icon in einem weissen Kreis; sonst springt das Icon). Deshalb hat das Android-Icon (`icon-maskable.svg`) einen **weissen** Hintergrund. Das Symbol in der Statusleiste kann nur einfarbig sein (Android ignoriert Farben).
 - **App-Icon** (erledigt 21.11.2026): gelber Hintergrund, weisser Kreis, darin der gelbe Böckli-Sack mit schwarzer Umrandung, schwarzen Schlaufen und schwarzem Steinbock. **Nur 3 Farben:** Schwarz `#000000`, Gelb `#ffdb1a`, Weiss. Keine Glanzlichter, Schatten oder Falten. Vorlagen in `img/vorlagen/`: `Steinbock.png` (Wappen, nur 120 px, darum als SVG nachzeichnen) und `Abfallsack.jpg` (Originalfoto). Die App benutzt diesen Ordner nicht.
 - Gut auf dem Handy bedienbar, merkt sich die Strasse, auf dem Startbildschirm installierbar.
@@ -57,6 +57,7 @@ Start: https://m.stadt-schaffhausen.ch/index.php?apid=917954978
 - `index.html`, `css/style.css`, `js/app.js`: die App
 - `js/kalender.js`: Stern, Kalender-Tab (Liste/Woche/Monat/Jahr, Standard Monat), Übersicht und .ics-Download (Erinnerung am Vorabend 19 Uhr). Gespeichert im Browser (`localStorage` «lesezeichen»: Strasse + Abfallart, alle Termine oder nur einer). Wird vor `js/app.js` geladen.
 - `js/abc.js`: Tab Abfall-ABC (umschaltbar «Nach Abfallart» / «A–Z», Suche, Antippen → Ergebnis im Tab Entsorgung). Inhalt = `GEGENSTAENDE` + Abfallarten. Wird vor `js/app.js` geladen.
+- `js/karte.js` + `data/karte.js`: Tab Karte (Leaflet 1.9.4 von cdnjs, wird erst beim Öffnen geladen; Kacheln von OpenStreetMap). Filter Sammelstellen (inkl. Unterflurcontainer) / Brockenhäuser / Reparieren. Orte in `data/karte.js` mit `typ` und `lage`, darf von Hand ergänzt werden.
 - `data/abfallarten.js`: Abfallarten mit Hinweisen und das Verzeichnis Gegenstand → Abfallart (Quelle: Infoseiten der Stadt, darf von Hand ergänzt werden)
 - `data/sammelstellen.js`: Abgabestellen (Name, Ort, Zeiten, Kosten, welche Abfallarten). Gratis-Stellen erscheinen automatisch zuerst. Darf von Hand ergänzt werden.
 - **Live-Daten:** `api/touren.py` liest die Stadt-Website (Logik in `api/_abfallkalender.py`), Vercel speichert die Antwort 12 Stunden zwischen. Die App startet mit `data/touren.js` und tauscht im Hintergrund gegen die Live-Daten aus (`liveDatenLaden()` in `js/app.js`). Sehen die Daten kaputt aus (`pruefen()`), bleibt der Rückfall.
@@ -100,7 +101,7 @@ Als Nächstes:
    - **Push-Erinnerungen:** mit einem Knopf ein-/ausschalten (keine Abfrage beim Start). Technik: **Supabase** speichert die Anmeldungen und weckt jede Stunde (`pg_cron`), eine **Python-Funktion auf Vercel** (`api/`) schickt die Nachricht. Auf dem iPhone nur, wenn die App auf dem Startbildschirm installiert ist. Anleitung mit jedem Klick nötig.
    - **Download für den eigenen Kalender** (.ics mit Erinnerung): beim Speichern mit dem Stern **und** ganz unten in der Übersicht, wenn man im Kalender-Tab einen Eintrag antippt.
 4. ~~**Abfall-ABC-Tab**~~ (erledigt 21.11.2026): detaillierte Liste, welcher Gegenstand zu welcher Abfallart gehört (Das gehört in den Hauskehricht: …), mit Hinweis, wo man nachfragen kann, wenn es unklar ist.
-5. **Karten-Tab:** Sammelstellen auf einer Karte. Idee: Filter nach **Sammelstellen, Brockenhäusern und Reparaturbetrieben** (reparierBar usw.).
+5. ~~**Karten-Tab**~~ (erledigt 21.11.2026; offen: geprüfte Reparaturbetriebe, Brockenstuben Stein am Rhein/Neunkirch, siehe `notizen/recherche-entsorgung.md`): Sammelstellen auf einer Karte. Idee: Filter nach **Sammelstellen, Brockenhäusern und Reparaturbetrieben** (reparierBar usw.).
 6. ~~Icon und gelber Startbildschirm~~ (erledigt 21.11.2026, inkl. weisses Sack-Symbol für Android-Benachrichtigungen).
 7. ~~Live-Daten über Vercel~~ (erledigt 21.11.2026).
 9. **Englisch** (später, nach Abfall-ABC und Karte): Texte in `data/texte.js` mit DE/EN, Daten der Stadt bleiben deutsch.

@@ -19,7 +19,7 @@ function abcSortieren(eintraege) {
 
 function abcZeile(e) {
   return `<li><button type="button" class="abc-eintrag" data-nr="${e.nr}">${sicher(e.text)}`
-    + (abc.ansicht === "az" ? `<span class="klein">${sicher(e.zusatz)}</span>` : "")
+    + (abc.ansicht === "az" ? `<span class="klein">${sicher(ABFALLARTEN[e.id].name)}</span>` : "")
     + `</button></li>`;
 }
 

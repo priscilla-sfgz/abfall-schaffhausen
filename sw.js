@@ -5,7 +5,7 @@
 // zuletzt gespeicherte Version verwendet.
 // =========================================================
 
-const CACHE_NAME = "abfall-sh-v8";
+const CACHE_NAME = "abfall-sh-v9";
 
 const DATEIEN = [
   "./",
@@ -14,6 +14,8 @@ const DATEIEN = [
   "js/kalender.js",
   "js/erinnerungen.js",
   "js/abc.js",
+  "js/karte.js",
+  "data/karte.js",
   "js/app.js",
   "data/touren.js",
   "data/abfallarten.js",

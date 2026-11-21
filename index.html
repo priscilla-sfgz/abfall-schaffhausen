@@ -107,6 +107,12 @@
 
       <p class="abc-fuss">Unklar? Abfalltelefon <a href="tel:+41526325329">052 632 53 29</a></p>
     </section>
+
+    <!-- ===== Tab «Karte»: Sammelstellen, Brockenhäuser, Reparieren (js/karte.js) ===== -->
+    <section id="tab-karte" class="tab-inhalt" hidden>
+      <div id="karten-filter" class="karten-filter" role="group" aria-label="Was anzeigen"></div>
+      <div id="karten-flaeche" class="karten-flaeche"></div>
+    </section>
   </main>
 
   <!-- ===== Übersicht eines Termins (Kalender) und kurze Meldungen ===== -->
@@ -145,6 +151,13 @@
         <path d="m9.5 14 2.5-7 2.5 7M10.4 11.6h3.2"/>
       </svg>
     </button>
+    <button class="tab" type="button" data-tab="karte" aria-label="Karte">
+      <!-- Standort-Nadel -->
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 21s-6.5-6.1-6.5-11a6.5 6.5 0 0 1 13 0c0 4.9-6.5 11-6.5 11z"/>
+        <circle cx="12" cy="10" r="2.4"/>
+      </svg>
+    </button>
   </nav>
 
   <!-- Daten zuerst laden, dann die App-Logik -->
@@ -154,6 +167,8 @@
   <script src="js/kalender.js"></script>
   <script src="js/erinnerungen.js"></script>
   <script src="js/abc.js"></script>
+  <script src="data/karte.js"></script>
+  <script src="js/karte.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

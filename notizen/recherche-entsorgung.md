@@ -96,3 +96,16 @@ Quelle: ✅ [Plastik-Seite Stadt](https://m.stadt-schaffhausen.ch/index.php?apid
 1. **Entschieden:** Stadt komplett + die grossen regionalen Stellen (KBA Hard, Arnold Schmid, TIT Imhof) + Geschäfte. Die übrigen Gemeinden des Kantons kommen später.
 2. Weitere Preise der KBA Hard (Sperrgut, Inertstoffe) und von Arnold Schmid: Die Website abfall-sh.ch war am 21.11.2026 nicht erreichbar → später nochmals versuchen.
 3. Ist die Giftsammlung gratis? (sehr wahrscheinlich, aber nicht bestätigt)
+
+## Karte: Brockenhäuser und Reparieren (21.11.2026)
+
+Koordinaten der Sammelstellen und Unterflurcontainer: direkt von der Stadt (`/appl/getpois.php?type=search&containerid=1493269045` bzw. `758656457`). Übrige Adressen: OpenStreetMap (Nominatim).
+
+| Ort | Adresse | Zeiten | Quelle |
+|---|---|---|---|
+| Heilsarmee brocki.ch | Ebnatstrasse 65, 8200 Schaffhausen, 052 625 23 72 | Mo–Fr 9–18.30, Sa 9–17 | [brocki.ch](https://www.brocki.ch/filialen/schaffhausen/), Abholung gut erhaltener Möbel gratis: [brocki.ch/de/abholung](https://www.brocki.ch/de/abholung/) |
+| galleria13 | Schützengraben 21, Schaffhausen (052 335 13 44) und Zollstrasse 92, Neuhausen (052 335 13 13) | Mo–Fr 10–18, Sa 9–16.30 bzw. Mo–Fr 11–17, Sa 10–16 (Zuordnung auf der Website unklar) | [galleria13.ch](https://www.galleria13.ch/adresse--anfahrt) |
+| reparierBar Schaffhausen | Raum NACHBAR, Stahlgiesserei 15B | letzter Samstag im Monat 10–16 Uhr, nicht Juli/Dezember | [reparierbarschaffhausen.ch](https://www.reparierbarschaffhausen.ch), [repair-cafe.ch](https://www.repair-cafe.ch/repaircafe/reparierbar-schaffhausen/) |
+
+**Nicht bestätigt (darum nicht auf der Karte):** Brockenstube Frauenverein Stein am Rhein (Chirchhofplatz 1?, Sa 9.30–12?), Brockenstube Neunkirch (Herrengasse 1?). Nur in Verzeichnissen gefunden.
+**Offen:** Reparaturbetriebe (Velo, Schuhe, Elektro, Nähen) – Verzeichnisse veraltet, noch keine geprüften Einträge. Laut repair-cafe.ch ist die reparierBar das einzige Repair Café im Kanton.
