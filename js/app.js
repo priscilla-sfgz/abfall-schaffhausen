@@ -674,6 +674,7 @@ function schnellwahlEinrichten() {
 // Zeigt einen Tab an, z.B. tabWechseln("abc")
 function tabWechseln(name) {
   document.querySelectorAll(".tab").forEach((k) => k.classList.toggle("aktiv", k.dataset.tab === name));
+  einbuchtungSetzen();
   document.querySelectorAll(".tab-inhalt").forEach((bereich) => {
     bereich.hidden = bereich.id !== "tab-" + name;
   });
@@ -683,7 +684,16 @@ function tabWechseln(name) {
   else ebeneOeffnen("tab", () => tabWechseln("abfall"));
 }
 
+// Schiebt die runde Einbuchtung der Leiste unter den ausgewählten Tab (css: --kreis-x)
+function einbuchtungSetzen() {
+  const aktiv = document.querySelector(".tab.aktiv");
+  if (!aktiv) return;
+  document.querySelector(".tableiste").style.setProperty("--kreis-x", (aktiv.offsetLeft + aktiv.offsetWidth / 2) + "px");
+}
+
 function tabsEinrichten() {
+  einbuchtungSetzen();
+  window.addEventListener("resize", einbuchtungSetzen);
   document.querySelectorAll(".tab").forEach((knopf) => {
     knopf.addEventListener("click", () => tabWechseln(knopf.dataset.tab));
   });
