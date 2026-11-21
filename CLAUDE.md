@@ -26,7 +26,7 @@ PWA für Einwohnerinnen und Einwohner der Stadt Schaffhausen: Man gibt Strasse u
 - Solange das Feld «Abfall» leer ist, stehen darunter **Schnellwahl-Knöpfe** mit den wichtigsten Abfallarten (Liste `SCHNELLWAHL` in `data/abfallarten.js`). Beim Tippen erscheint eine Auswahlliste, das Ergebnis erst, wenn beides gewählt ist.
 - Unten eine Leiste mit Tabs, nur Icons. Über dem aktiven Tab ein kleiner gelber Balken (wie in der 20-Minuten-App). **Geplant: 4 Tabs** Entsorgung (Sack), Kalender, Abfall-ABC, Karte (Sammelstellen). Im Moment hat nur «Entsorgung» Inhalt.
 - **Startbildschirm:** bei jedem Start kurz gelb (`#ffdb1a`) mit dem App-Icon.
-- **App-Icon:** gelber Hintergrund, darauf ein heller Kreis, darin der Böckli-Sack mit Steinbock (noch zu entwerfen, Vorlage kommt nach `img/vorlagen/`).
+- **App-Icon:** gelber Hintergrund, darauf ein heller Kreis, darin der Böckli-Sack mit Steinbock (noch zu entwerfen). Vorlagen in `img/vorlagen/`: `Steinbock.png` (Wappen, nur 120 px, darum als SVG nachzeichnen) und `Abfallsack.jpg` (Originalfoto). Die App benutzt diesen Ordner nicht.
 - Gut auf dem Handy bedienbar, merkt sich die Strasse, auf dem Startbildschirm installierbar.
 
 ## Getroffene Entscheidungen
@@ -56,9 +56,11 @@ Start: https://m.stadt-schaffhausen.ch/index.php?apid=917954978
 
 - `index.html`, `css/style.css`, `js/app.js`: die App
 - `data/abfallarten.js`: Abfallarten mit Hinweisen und das Verzeichnis Gegenstand → Abfallart (Quelle: Infoseiten der Stadt, darf von Hand ergänzt werden)
+- `data/sammelstellen.js`: Abgabestellen (Name, Ort, Zeiten, Kosten, welche Abfallarten). Gratis-Stellen erscheinen automatisch zuerst. Darf von Hand ergänzt werden.
 - `data/touren.js`: Termine und Strassen, **automatisch erstellt** mit `python werkzeuge/daten_holen.py`
 - `manifest.webmanifest`, `sw.js`, `img/icons/`: Installierbarkeit (Service Worker lädt zuerst aus dem Netz, nur offline aus dem Speicher)
 - `img/logo.png`, `img/boeckli.jpg`, `img/gruenabfall.jpg`: Logo und Fotos. Fehlt ein Bild, steht im Balken Text bzw. das Foto wird ausgeblendet.
+- `notizen/recherche-entsorgung.md`: Recherche zu Sammelstellen, Kosten und Sorten (Plastik, Farben, Glas, Metall), mit Quellen. Grundlage für Schritt 2 und den Karten-Tab.
 - Lokal testen: `python -m http.server 8000`, dann http://localhost:8000
 
 ## Stand und nächste Schritte
@@ -73,16 +75,19 @@ Als Nächstes:
 ## Weiterentwicklung (Wünsche vom 21.11.2026)
 
 1. ~~Suche: Hausnummern, Tippfehler, Schnellwahl-Knöpfe~~ (erledigt 21.11.2026)
-2. **Ergebnisfeld neu ordnen**, von oben nach unten:
+2. ~~Ergebnisfeld neu ordnen~~ (erledigt 21.11.2026; Sorten in `sorten`, Abgabestellen in `data/sammelstellen.js`), von oben nach unten:
    wird abgeholt / nicht abgeholt → **Abfallart** (nur «Hauskehricht», nicht «Knochen gehört zum …») → wann → bis wann bereitstellen bzw. Sammelstelle → aufklappbare Details (`<details>`): So bereitstellen, Wird nicht mitgenommen, Sammelstellen und Kosten.
    - Regelmässige Abfuhr: **nur** «Jeden Donnerstag», kein «Nächstes Mal: in 3 Tagen». Seltene Abfuhr: «In 17 Tagen (…)».
    - **PET** gehört unter **Plastik**. Bei Plastik (und evtl. Farben, Metall, Glas, Elektronik) eine **zweite Auswahl** der Sorte, jede Sorte mit eigenem Ergebnis.
    - **Sammelstellen im ganzen Kanton** (privat und staatlich), mit Angebot und Kosten, **Gratis-Angebote zuerst**.
 3. **Kalender-Tab:** Stern im Ergebnis = Kombination Abfall + Strasse speichern. Stern antippen → Auswahl «Alle Termine» / «Nur diesen Termin». Wer daneben tippt, speichert alle Termine. Stern wegtippen → alle Termine dieser Kombination löschen. Ansicht Liste oder Kalender (Woche / **Monat** / Jahr). Erinnerung wählbar.
+   - **Push-Erinnerungen:** mit einem Knopf ein-/ausschalten (keine Abfrage beim Start). Technik: **Supabase** speichert die Anmeldungen und weckt jede Stunde (`pg_cron`), eine **Python-Funktion auf Vercel** (`api/`) schickt die Nachricht. Auf dem iPhone nur, wenn die App auf dem Startbildschirm installiert ist. Anleitung mit jedem Klick nötig.
+   - **Download für den eigenen Kalender** (.ics mit Erinnerung): beim Speichern mit dem Stern **und** ganz unten in der Übersicht, wenn man im Kalender-Tab einen Eintrag antippt.
 4. **Abfall-ABC-Tab:** detaillierte Liste, welcher Gegenstand zu welcher Abfallart gehört (Das gehört in den Hauskehricht: …), mit Hinweis, wo man nachfragen kann, wenn es unklar ist.
 5. **Karten-Tab:** Sammelstellen auf einer Karte.
 6. **Icon und gelber Startbildschirm.**
 7. Live-Daten über Vercel (siehe oben).
+8. **Unbedingt nachholen:** https://www.abfall-sh.ch (KBA Hard) war am 21.11.2026 nicht erreichbar. Preise für Sperrgut, Inertstoffe usw. dort nachlesen und in `notizen/recherche-entsorgung.md` und die App übernehmen.
 
 ## Für später geplant (jetzt noch nicht einbauen)
 

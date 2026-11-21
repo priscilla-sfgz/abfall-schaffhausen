@@ -7,6 +7,7 @@ const TOUREN = window.TOUREN_DATEN.touren;
 const STRASSEN = window.TOUREN_DATEN.strassen;
 const ABFALLARTEN = window.ABFALLARTEN;
 const GEGENSTAENDE = window.GEGENSTAENDE;
+const SAMMELSTELLEN = window.SAMMELSTELLEN;
 
 // Hauskehricht Tour 6 = Altstadt
 const ALTSTADT_TOUR = "906921982";
@@ -16,8 +17,12 @@ const MAX_VORSCHLAEGE = 8;
 
 // Was gerade ausgewählt ist
 const auswahl = {
-  strasse: null,   // Eintrag aus STRASSEN
-  abfallart: null, // Kurzbezeichnung, z.B. "papier"
+  strasse: null,      // Eintrag aus STRASSEN
+  abfallart: null,    // Kurzbezeichnung, z.B. "papier"
+  hinweis: null,      // kurzer Hinweis, z.B. "Zuerst eintrocknen lassen."
+  sorteFertig: false, // true = keine Auswahl «Welche Sorte?» mehr zeigen
+  oberart: null,      // nach «Welche Sorte?»: die Abfallart mit der Auswahl, z.B. "plastik"
+  sorteText: null,    // nach «Welche Sorte?»: die gewählte Sorte als Text
 };
 
 
@@ -100,45 +105,75 @@ function naechsteWochentage(wochentage, anzahl) {
 
 
 // ---------------------------------------------------------
-// Ergebnis berechnen
-// Gibt ein einfaches Objekt zurück – so kann es später auch
-// für «Termin anpinnen» oder «In Kalender speichern» genutzt werden.
+// Abgabestellen (aus data/sammelstellen.js)
 // ---------------------------------------------------------
 
-function ergebnisBerechnen(strasse, abfallartId) {
+// Kosten einer Stelle für eine bestimmte Abfallart
+function kostenFuer(stelle, abfallartId) {
+  if (typeof stelle.kosten === "string") return stelle.kosten;
+  return stelle.kosten[abfallartId] ?? stelle.kosten.standard ?? "";
+}
+
+function istGratis(stelle) {
+  return stelle.kosten.startsWith("gratis");
+}
+
+// Alle Stellen, die diese Abfallart annehmen – gratis zuerst
+function abgabestellen(abfallartId) {
+  return SAMMELSTELLEN
+    .filter((stelle) => stelle.annahme.includes(abfallartId))
+    .map((stelle) => ({ ...stelle, kosten: kostenFuer(stelle, abfallartId) }))
+    .sort((a, b) => istGratis(b) - istGratis(a));
+}
+
+
+// ---------------------------------------------------------
+// Ergebnis berechnen
+// Gibt ein einfaches Objekt zurück – so kann es später auch
+// für «Termin speichern» oder «In Kalender laden» genutzt werden.
+// ---------------------------------------------------------
+
+function ergebnisBerechnen(strasse, abfallartId, hinweis) {
   let art = ABFALLARTEN[abfallartId];
   const istAltstadt = strasse.touren.hauskehricht === ALTSTADT_TOUR;
   if (istAltstadt && art.altstadt) {
     art = { ...art, ...art.altstadt };   // Altstadt-Abweichungen übernehmen
   }
 
+  const heuteText = datumAlsText(heute());
   const ergebnis = {
     strasse: strasse.name,
+    abfallartId: abfallartId,
     abfallart: art.name,
+    hinweis: hinweis || null,
     abgeholt: art.abgeholt,
     art: art,
+    stellen: abgabestellen(abfallartId),
+    termine: [],
+    ausfaelle: [],
   };
-  if (!art.abgeholt) return ergebnis;
+
+  if (!art.abgeholt) {
+    // Feste Daten zum Hinbringen (z.B. Giftsammlung)
+    ergebnis.termine = (art.sammeltermine || [])
+      .filter((t) => t.datum >= heuteText)
+      .map((t) => ({ datum: t.datum, zeit: t.zeit, notiz: t.ort }));
+    return ergebnis;
+  }
 
   const tour = art.tour ? TOUREN[strasse.touren[art.tour]] : null;
-  const heuteText = datumAlsText(heute());
-  let termine = [];
-  let ausfaelle = [];
-
   if (tour) {
     const kommende = tour.termine.filter((t) => t.datum >= heuteText);
-    termine = kommende.filter((t) => !t.faelltAus);
-    ausfaelle = kommende.filter((t) => t.faelltAus && tageBis(t.datum) <= 21);
+    ergebnis.termine = kommende.filter((t) => !t.faelltAus);
+    ergebnis.ausfaelle = kommende.filter((t) => t.faelltAus && tageBis(t.datum) <= 21);
   } else if (art.wochentage) {
-    termine = naechsteWochentage(art.wochentage, 3);
+    ergebnis.termine = naechsteWochentage(art.wochentage, 3);
   }
 
   ergebnis.tourId = tour ? strasse.touren[art.tour] : null;
   ergebnis.tourName = tour ? tour.name : null;
   ergebnis.regelmaessig = art.regelmaessig;
   ergebnis.rhythmus = art.gross || (tour ? rhythmusAusTourname(tour.name) : "");
-  ergebnis.termine = termine;
-  ergebnis.ausfaelle = ausfaelle;
   ergebnis.bereitstellenOrt = art.tour ? strasse.bereitstellen[art.tour] : null;
   return ergebnis;
 }
@@ -151,9 +186,37 @@ function ergebnisBerechnen(strasse, abfallartId) {
 const ICON_HAKEN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
 const ICON_KREUZ = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg>';
 
-function liste(titel, eintraege) {
+// Liste mit Punkten
+function punkte(eintraege) {
   if (!eintraege || eintraege.length === 0) return "";
-  return `<h3>${titel}</h3><ul>${eintraege.map((e) => `<li>${sicher(e)}</li>`).join("")}</ul>`;
+  return `<ul>${eintraege.map((e) => `<li>${sicher(e)}</li>`).join("")}</ul>`;
+}
+
+// Aufklappbarer Abschnitt (ohne Inhalt: gar nicht anzeigen)
+function aufklappen(titel, inhalt) {
+  if (!inhalt) return "";
+  return `<details><summary>${titel}</summary><div class="details-inhalt">${inhalt}</div></details>`;
+}
+
+// Liste der Abgabestellen
+function stellenListe(stellen) {
+  if (stellen.length === 0) return "";
+  return `<ul class="stellen">${stellen.map((s) => `
+    <li>
+      <strong>${sicher(s.name)}</strong>
+      ${s.kosten ? `<span class="kosten ${istGratis(s) ? "gratis" : ""}">${sicher(s.kosten)}</span>` : ""}
+      ${s.ort ? `<span class="klein">${sicher(s.ort)}</span>` : ""}
+      ${s.zeiten ? `<span class="klein">${sicher(s.zeiten)}</span>` : ""}
+      ${s.link ? `<a class="klein" href="${s.link}" target="_blank" rel="noopener">Webseite</a>` : ""}
+    </li>`).join("")}</ul>`;
+}
+
+// Weitere Termine als kleine Liste
+function weitereTermine(termine) {
+  if (termine.length === 0) return "";
+  return `<p class="naechstes">Weitere Termine:</p><ul class="weitere">`
+    + termine.map((t) => `<li>${datumKurz(t.datum)}${t.notiz ? ` · ${sicher(t.notiz)}` : ""}</li>`).join("")
+    + "</ul>";
 }
 
 function ergebnisAnzeigen(ergebnis) {
@@ -163,34 +226,43 @@ function ergebnisAnzeigen(ergebnis) {
     return;
   }
   const art = ergebnis.art;
+  const naechster = ergebnis.termine[0];
+
+  // ----- Oben: welche Sorte (falls gewählt), Abfallart und Hinweis -----
   let haupt = "";
+  if (auswahl.oberart) {
+    haupt += `<p class="sorte-zeile">${sicher(ABFALLARTEN[auswahl.oberart].name)} › ${sicher(auswahl.sorteText)}
+      <button type="button" class="andere-sorte">andere Sorte</button></p>`;
+  }
+  haupt += `<p class="abfallart">${sicher(art.name)}</p>`;
+  if (ergebnis.hinweis) haupt += `<p class="hinweis">${sicher(ergebnis.hinweis)}</p>`;
+
   let hinweise = "";
 
   if (!ergebnis.abgeholt) {
-    // ----- Rotes Feld: wird nicht abgeholt -----
-    haupt = `<p class="gross">${sicher(art.name)}</p>`;
-    hinweise = liste("Wohin damit?", art.wohin);
-  } else {
-    // ----- Grünes Feld: wird abgeholt -----
-    const naechster = ergebnis.termine[0];
+    // ----- Rotes Feld: wohin damit -----
+    haupt += `<p class="gross">${sicher(art.ziel || "Siehe unten")}</p>`;
+    if (art.zeit) haupt += `<p class="zeit">${sicher(art.zeit)}</p>`;
+    if (naechster) {
+      haupt += `<p class="naechstes">${sicher(art.sammeltermineName || "Nächster Termin")}: `
+        + `${wannText(naechster.datum)} (${datumKurz(naechster.datum)}), ${sicher(naechster.zeit)}, ${sicher(naechster.notiz)}</p>`;
+      haupt += weitereTermine(ergebnis.termine.slice(1));
+    }
 
+    hinweise += aufklappen("Wo abgeben – gratis zuerst", stellenListe(ergebnis.stellen));
+    hinweise += aufklappen("Gut zu wissen", punkte(art.wohin));
+  } else {
+    // ----- Grünes Feld: wann wird es abgeholt -----
     if (ergebnis.regelmaessig) {
-      // Regelmässig: gross der Rhythmus, klein das nächste Datum
+      // Regelmässig: nur der Rhythmus, z.B. «Jeden Dienstag und Freitag»
       haupt += `<p class="gross">${sicher(ergebnis.rhythmus)}</p>`;
       haupt += `<p class="zeit">${sicher(art.zeit)}</p>`;
-      if (naechster) {
-        haupt += `<p class="naechstes">Nächstes Mal: ${wannText(naechster.datum)} (${datumKurz(naechster.datum)})</p>`;
-      }
     } else if (naechster) {
-      // Selten: gross das nächste Datum, darunter weitere Termine
+      // Selten: das nächste Datum, darunter weitere Termine
       haupt += `<p class="gross">${grossAnfang(wannText(naechster.datum))} (${datumKurz(naechster.datum)})</p>`;
       haupt += `<p class="zeit">${sicher(art.zeit)}</p>`;
       if (naechster.notiz) haupt += `<p class="notiz">${sicher(naechster.notiz)}</p>`;
-      const weitere = ergebnis.termine.slice(1, 6);
-      if (weitere.length) {
-        haupt += `<p class="naechstes">Weitere Termine:</p><ul class="weitere">`
-          + weitere.map((t) => `<li>${datumKurz(t.datum)}</li>`).join("") + "</ul>";
-      }
+      haupt += weitereTermine(ergebnis.termine.slice(1, 6));
     } else {
       // Selten, aber zurzeit keine Termine veröffentlicht
       haupt += `<p class="gross">Nächster Termin noch nicht bekannt</p>`;
@@ -210,15 +282,16 @@ function ergebnisAnzeigen(ergebnis) {
     if (ergebnis.bereitstellenOrt) {
       bereitstellen.unshift(`An deiner Strasse bereitstellen bei: ${ergebnis.bereitstellenOrt}.`);
     }
-    hinweise += liste("So bereitstellen", bereitstellen);
+    let bereitstellenInhalt = punkte(bereitstellen);
     if (art.bild) {
-      hinweise += `<img class="sack-foto" src="${art.bild}" alt="${sicher(art.bildText || "")}" onerror="this.remove()">`;
+      bereitstellenInhalt += `<img class="sack-foto" src="${art.bild}" alt="${sicher(art.bildText || "")}" onerror="this.remove()">`;
     }
-    hinweise += liste("Wird nicht mitgenommen", art.nichtMitgenommen);
+    hinweise += aufklappen("So bereitstellen", bereitstellenInhalt);
+    hinweise += aufklappen("Wird nicht mitgenommen", punkte(art.nichtMitgenommen));
+    hinweise += aufklappen("Andere Abgabestellen", stellenListe(ergebnis.stellen));
   }
 
-  if (art.tipp) hinweise += `<h3>Tipp</h3><p>${sicher(art.tipp)}</p>`;
-  hinweise += `<p class="quelle">Quelle: <a href="${QUELLE_URL}" target="_blank" rel="noopener">Abfallkalender Stadt Schaffhausen</a>, Stand ${datumKurz(window.TOUREN_DATEN.stand)}</p>`;
+  if (art.tipp) hinweise += aufklappen("Tipp", `<p>${sicher(art.tipp)}</p>`);
 
   feld.innerHTML = `
     <article class="karte ${ergebnis.abgeholt ? "ja" : "nein"}">
@@ -227,18 +300,74 @@ function ergebnisAnzeigen(ergebnis) {
         ${ergebnis.abgeholt ? "Wird abgeholt" : "Wird nicht abgeholt"}
       </div>
       <div class="karte-haupt">${haupt}</div>
-      <div class="karte-hinweise">${hinweise}</div>
+      <div class="karte-hinweise">
+        ${hinweise}
+        <p class="quelle">Quelle: <a href="${QUELLE_URL}" target="_blank" rel="noopener">Abfallkalender Stadt Schaffhausen</a>, Stand ${datumKurz(window.TOUREN_DATEN.stand)} · Fragen: Abfalltelefon <a href="tel:+41526325329">052 632 53 29</a></p>
+      </div>
     </article>`;
+}
+
+
+// ---------------------------------------------------------
+// Zweite Auswahl «Welche Sorte?» (z.B. bei Plastik)
+// ---------------------------------------------------------
+
+function sortenAnzeigen(abfallartId) {
+  const art = ABFALLARTEN[abfallartId];
+  document.getElementById("ergebnis").innerHTML = `
+    <article class="karte frage">
+      <div class="karte-kopf">Welche Sorte?</div>
+      <div class="karte-haupt">
+        <p class="abfallart">${sicher(art.name)}</p>
+        <div class="sorten">
+          ${art.sorten.map(([text], nr) => `<button type="button" class="sorte" data-nr="${nr}">${sicher(text)}</button>`).join("")}
+        </div>
+      </div>
+    </article>`;
+}
+
+// Klicks im Ergebnisfeld: Sorte wählen oder «andere Sorte»
+function sortenEinrichten() {
+  document.getElementById("ergebnis").addEventListener("click", (e) => {
+    const sorte = e.target.closest(".sorte");
+    if (sorte) {
+      const oberart = auswahl.abfallart;
+      const [text, ziel, hinweis] = ABFALLARTEN[oberart].sorten[Number(sorte.dataset.nr)];
+      abfallWaehlen(ziel, { hinweis, sorteFertig: true });
+      auswahl.oberart = oberart;
+      auswahl.sorteText = text;
+      aktualisieren();
+    } else if (e.target.closest(".andere-sorte")) {
+      abfallWaehlen(auswahl.oberart);
+      aktualisieren();
+    }
+  });
+}
+
+// Abfallart merken.
+// hinweis:     kurzer Hinweis, z.B. "Zuerst eintrocknen lassen."
+// sorteFertig: true = keine Sorten-Auswahl zeigen (z.B. bei einem bestimmten Gegenstand)
+function abfallWaehlen(abfallartId, { hinweis = null, sorteFertig = false } = {}) {
+  auswahl.abfallart = abfallartId;
+  auswahl.hinweis = hinweis;
+  auswahl.sorteFertig = sorteFertig;
+  auswahl.oberart = null;
+  auswahl.sorteText = null;
 }
 
 function aktualisieren() {
   // Schnellwahl-Knöpfe nur zeigen, solange das Feld «Abfall» leer ist
   document.getElementById("schnellwahl").hidden = document.getElementById("eingabe-abfall").value !== "";
 
-  if (auswahl.strasse && auswahl.abfallart) {
-    ergebnisAnzeigen(ergebnisBerechnen(auswahl.strasse, auswahl.abfallart));
-  } else {
+  if (!auswahl.strasse || !auswahl.abfallart) {
     ergebnisAnzeigen(null);
+    return;
+  }
+  const art = ABFALLARTEN[auswahl.abfallart];
+  if (art.sorten && (art.nurAuswahl || !auswahl.sorteFertig)) {
+    sortenAnzeigen(auswahl.abfallart);
+  } else {
+    ergebnisAnzeigen(ergebnisBerechnen(auswahl.strasse, auswahl.abfallart, auswahl.hinweis));
   }
 }
 
@@ -348,8 +477,8 @@ function strassenZusatz({ strasse, nummer }) {
 
 // Alle Begriffe für das Feld «Abfall»: Abfallarten und Gegenstände
 const ABFALL_BEGRIFFE = [
-  ...Object.entries(ABFALLARTEN).map(([id, art]) => ({ text: art.name, id: id, zusatz: "Abfallart" })),
-  ...GEGENSTAENDE.map(([text, id]) => ({ text: text, id: id, zusatz: ABFALLARTEN[id].name })),
+  ...Object.entries(ABFALLARTEN).map(([id, art]) => ({ text: art.name, id: id, zusatz: "Abfallart", istArt: true })),
+  ...GEGENSTAENDE.map(([text, id, hinweis]) => ({ text: text, id: id, zusatz: ABFALLARTEN[id].name, hinweis: hinweis })),
 ];
 
 // Richtet ein Eingabefeld mit Auswahlliste ein
@@ -463,7 +592,7 @@ function schnellwahlEinrichten() {
   bereich.addEventListener("click", (e) => {
     const knopf = e.target.closest(".chip");
     if (!knopf) return;
-    auswahl.abfallart = knopf.dataset.id;
+    abfallWaehlen(knopf.dataset.id);
     abfallFeld.eingabe.value = ABFALLARTEN[knopf.dataset.id].name;
     abfallFeld.leeren.hidden = false;
     aktualisieren();
@@ -516,10 +645,11 @@ const abfallFeld = suchfeldEinrichten({
   finden: (text) => suchen(ABFALL_BEGRIFFE, text, (b) => b.text).slice(0, MAX_VORSCHLAEGE),
   anzeigen: (b) => `${sicher(b.text)}<span class="klein">${sicher(b.zusatz)}</span>`,
   auswaehlen: (b, eingabe) => {
-    auswahl.abfallart = b.id;
+    // Bei einem bestimmten Gegenstand (z.B. «Joghurtbecher») braucht es keine Sorten-Auswahl
+    abfallWaehlen(b.id, { hinweis: b.hinweis, sorteFertig: !b.istArt });
     eingabe.value = b.text;
   },
-  zuruecksetzen: () => { auswahl.abfallart = null; },
+  zuruecksetzen: () => { abfallWaehlen(null); },
 });
 
 // Gemerkte Strasse wieder eintragen
@@ -532,6 +662,7 @@ if (gemerkt) {
 }
 
 schnellwahlEinrichten();
+sortenEinrichten();
 tabsEinrichten();
 aktualisieren();
 

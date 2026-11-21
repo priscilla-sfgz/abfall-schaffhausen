@@ -432,7 +432,7 @@ window.TOUREN_DATEN = {
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
-     "notiz": "<div class='"
+     "notiz": null
     }
    ]
   },
@@ -865,7 +865,7 @@ window.TOUREN_DATEN = {
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
-     "notiz": "<div class='"
+     "notiz": null
     }
    ]
   },
@@ -1298,7 +1298,7 @@ window.TOUREN_DATEN = {
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
-     "notiz": "<div class='"
+     "notiz": null
     }
    ]
   },
@@ -1717,7 +1717,7 @@ window.TOUREN_DATEN = {
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
-     "notiz": "<div class='"
+     "notiz": null
     }
    ]
   },
@@ -2136,7 +2136,7 @@ window.TOUREN_DATEN = {
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
-     "notiz": "<div class='"
+     "notiz": null
     }
    ]
   },
@@ -2961,7 +2961,7 @@ window.TOUREN_DATEN = {
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
-     "notiz": "<div class='"
+     "notiz": null
     }
    ]
   },
@@ -3387,7 +3387,7 @@ window.TOUREN_DATEN = {
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
-     "notiz": "<div class='"
+     "notiz": null
     }
    ]
   },
@@ -3820,7 +3820,7 @@ window.TOUREN_DATEN = {
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
-     "notiz": "<div class='"
+     "notiz": null
     }
    ]
   },
@@ -4246,7 +4246,7 @@ window.TOUREN_DATEN = {
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
-     "notiz": "<div class='"
+     "notiz": null
     }
    ]
   },
@@ -4686,7 +4686,7 @@ window.TOUREN_DATEN = {
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
-     "notiz": "<div class='"
+     "notiz": null
     }
    ]
   },
@@ -5098,7 +5098,7 @@ window.TOUREN_DATEN = {
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
-     "notiz": "<div class='"
+     "notiz": null
     }
    ]
   },
@@ -5510,7 +5510,7 @@ window.TOUREN_DATEN = {
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
-     "notiz": "<div class='"
+     "notiz": null
     }
    ]
   },
@@ -5943,7 +5943,7 @@ window.TOUREN_DATEN = {
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
-     "notiz": "<div class='"
+     "notiz": null
     }
    ]
   },
@@ -6376,7 +6376,7 @@ window.TOUREN_DATEN = {
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
-     "notiz": "<div class='"
+     "notiz": null
     }
    ]
   },
@@ -6802,7 +6802,7 @@ window.TOUREN_DATEN = {
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
-     "notiz": "<div class='"
+     "notiz": null
     }
    ]
   },
@@ -7221,7 +7221,7 @@ window.TOUREN_DATEN = {
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
-     "notiz": "<div class='"
+     "notiz": null
     }
    ]
   },
@@ -7654,7 +7654,7 @@ window.TOUREN_DATEN = {
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
-     "notiz": "<div class='"
+     "notiz": null
     }
    ]
   },
@@ -8073,7 +8073,7 @@ window.TOUREN_DATEN = {
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
-     "notiz": "<div class='"
+     "notiz": null
     }
    ]
   },
@@ -8499,7 +8499,7 @@ window.TOUREN_DATEN = {
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
-     "notiz": "<div class='"
+     "notiz": null
     }
    ]
   },
@@ -8918,7 +8918,7 @@ window.TOUREN_DATEN = {
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
-     "notiz": "<div class='"
+     "notiz": null
     }
    ]
   },
@@ -9337,7 +9337,7 @@ window.TOUREN_DATEN = {
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
-     "notiz": "<div class='"
+     "notiz": null
     }
    ]
   },
@@ -9756,7 +9756,7 @@ window.TOUREN_DATEN = {
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
-     "notiz": "<div class='"
+     "notiz": null
     }
    ]
   },
@@ -10189,7 +10189,7 @@ window.TOUREN_DATEN = {
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
-     "notiz": "<div class='"
+     "notiz": null
     }
    ]
   },
@@ -10622,7 +10622,7 @@ window.TOUREN_DATEN = {
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
-     "notiz": "<div class='"
+     "notiz": null
     }
    ]
   },
@@ -10670,7 +10670,7 @@ window.TOUREN_DATEN = {
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
-     "notiz": "Sammlung wird durchgeführt vom Schulhaus Buchthalen <div class='"
+     "notiz": "Sammlung wird durchgeführt vom Schulhaus Buchthalen"
     }
    ]
   },
@@ -10718,7 +10718,7 @@ window.TOUREN_DATEN = {
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
-     "notiz": "Sammlung wird durchgeführt von der Entsorgung Stadt Schaffhausen <div class='"
+     "notiz": "Sammlung wird durchgeführt von der Entsorgung Stadt Schaffhausen"
     }
    ]
   },
@@ -10793,7 +10793,7 @@ window.TOUREN_DATEN = {
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
-     "notiz": "Sammlung wird durchgeführt von der Entsorgung Stadt Schaffhausen <div class='"
+     "notiz": "Sammlung wird durchgeführt von der Entsorgung Stadt Schaffhausen"
     }
    ]
   },
@@ -10841,7 +10841,7 @@ window.TOUREN_DATEN = {
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
-     "notiz": "Sammlung wird durchgeführt von der Entsorgung Stadt Schaffhausen <div class='"
+     "notiz": "Sammlung wird durchgeführt von der Entsorgung Stadt Schaffhausen"
     }
    ]
   },
@@ -10889,7 +10889,7 @@ window.TOUREN_DATEN = {
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
-     "notiz": "<div class='"
+     "notiz": null
     }
    ]
   },
@@ -10937,7 +10937,7 @@ window.TOUREN_DATEN = {
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
-     "notiz": "<div class='"
+     "notiz": null
     }
    ]
   },
@@ -10985,7 +10985,7 @@ window.TOUREN_DATEN = {
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
-     "notiz": "<div class='"
+     "notiz": null
     }
    ]
   },
@@ -11033,7 +11033,7 @@ window.TOUREN_DATEN = {
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
-     "notiz": "<div class='"
+     "notiz": null
     }
    ]
   },
@@ -11081,7 +11081,7 @@ window.TOUREN_DATEN = {
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
-     "notiz": "<div class='"
+     "notiz": null
     }
    ]
   },

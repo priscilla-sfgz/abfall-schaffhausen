@@ -41,6 +41,7 @@ def seite_laden(apid):
 def nur_text(html_text):
     """Entfernt HTML-Tags und ueberfluessige Leerzeichen."""
     ohne_tags = re.sub(r"<[^>]+>", " ", html_text)
+    ohne_tags = re.sub(r"<[^>]*$", " ", ohne_tags)   # abgeschnittenes Tag am Ende, z.B. "<div class='"
     return re.sub(r"\s+", " ", html.unescape(ohne_tags)).strip()
 
 

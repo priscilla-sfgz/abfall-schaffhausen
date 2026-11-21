@@ -213,17 +213,100 @@ main {
   border-radius: 6px;
 }
 
-.karte-hinweise { padding: 6px 20px 18px; }
-.karte-hinweise h3 {
-  margin: 16px 0 6px;
+/* Abfallart, Sorte und Hinweis oben im Feld */
+.abfallart {
+  margin: 0 0 6px;
   font-size: 15px;
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: .5px;
   color: var(--petrol);
 }
+.hinweis {
+  margin: -2px 0 10px;
+  font-weight: 700;
+}
+.sorte-zeile {
+  margin: 0 0 8px;
+  font-size: 14px;
+  color: var(--text-grau);
+}
+.andere-sorte {
+  padding: 0;
+  margin-left: 6px;
+  font: inherit;
+  color: var(--petrol);
+  text-decoration: underline;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+/* Feld «Welche Sorte?» */
+.karte.frage .karte-kopf { background: var(--petrol); }
+.sorten {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-bottom: 14px;
+}
+.sorte {
+  padding: 12px 16px;
+  font: inherit;
+  text-align: left;
+  color: var(--text);
+  background: var(--weiss);
+  border: 1.5px solid var(--linie);
+  border-radius: 12px;
+  cursor: pointer;
+}
+.sorte:hover,
+.sorte:focus-visible { border-color: var(--petrol); }
+
+/* Aufklappbare Abschnitte */
+.karte-hinweise { padding: 4px 20px 18px; }
+.karte-hinweise details { border-bottom: 1px solid var(--linie); }
+.karte-hinweise summary {
+  padding: 14px 0;
+  font-weight: 900;
+  color: var(--petrol);
+  cursor: pointer;
+  list-style: none;
+}
+.karte-hinweise summary::-webkit-details-marker { display: none; }
+.karte-hinweise summary::after {
+  content: "›";
+  float: right;
+  font-size: 22px;
+  line-height: 1;
+  transition: transform .15s;
+}
+.karte-hinweise details[open] summary::after { transform: rotate(90deg); }
+.details-inhalt { padding-bottom: 14px; }
+.details-inhalt p { margin: 0; }
 .karte-hinweise ul { margin: 0; padding-left: 20px; }
 .karte-hinweise li { margin: 4px 0; }
+
+/* Liste der Abgabestellen */
+.karte-hinweise .stellen { padding: 0; list-style: none; }
+.stellen li { margin: 0; padding: 10px 0; }
+.stellen li + li { border-top: 1px solid var(--linie); }
+.stellen .klein {
+  display: block;
+  font-size: 14px;
+  color: var(--text-grau);
+}
+.stellen a.klein { color: var(--petrol); }
+.kosten {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 1px 8px;
+  font-size: 13px;
+  font-weight: 700;
+  background: var(--hintergrund);
+  border-radius: 10px;
+}
+.kosten.gratis { color: var(--weiss); background: var(--gruen); }
 
 .sack-foto {
   display: block;
