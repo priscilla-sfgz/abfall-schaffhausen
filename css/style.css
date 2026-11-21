@@ -626,7 +626,11 @@ main {
 }
 .knopf.haupt { color: var(--weiss); background: var(--petrol); border-color: var(--petrol); }
 
-/* ---------- Untere Leiste mit Tabs ---------- */
+/* ---------- Untere Leiste mit Tabs (wie in der SBB-App) ----------
+   Ausgewählt: schwarzes Icon im gelben Kreis, der in einer runden
+   Einbuchtung der weissen Leiste sitzt. Sonst: schwarz auf Weiss.
+   Die Leiste selbst ist durchsichtig, jeder Tab hat seinen eigenen
+   weissen Hintergrund – beim ausgewählten mit einem runden «Loch». */
 .tableiste {
   position: fixed;
   left: 0;
@@ -634,41 +638,52 @@ main {
   bottom: 0;
   z-index: 10;
   display: flex;
-  height: calc(var(--leiste-hoehe) + env(safe-area-inset-bottom));
-  padding-bottom: env(safe-area-inset-bottom);
-  background: var(--weiss);
-  border-top: 1px solid var(--linie);
+  /* feine Linie und Schatten folgen auch der Einbuchtung */
+  filter: drop-shadow(0 -1px 0 rgba(0, 33, 41, .12)) drop-shadow(0 -2px 6px rgba(0, 33, 41, .06));
 }
 .tab {
+  --loch-mitte: 22px;   /* Mitte des Kreises, von oben gemessen */
   position: relative;
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: calc(var(--leiste-hoehe) + env(safe-area-inset-bottom));
+  padding: 0 0 env(safe-area-inset-bottom);
   border: 0;
-  background: transparent;
-  color: #4d5559;   /* nicht ausgewählt: dunkelgrau (gut lesbar auf Weiss) */
+  background: var(--weiss);
+  color: #000000;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 /* Icons aus img/icons/ (trash, calendar, manual, map), ausgefüllt */
 .tab svg {
+  position: relative;
+  z-index: 1;
   width: 26px;
   height: 26px;
   fill: currentColor;
 }
-.tab.aktiv { color: #000000; }   /* ausgewählt: schwarz */
 
-/* Kleiner gelber Balken über dem aktiven Icon */
+/* Ausgewählt: rundes Loch in der Leiste (Radius 31 px) … */
+.tab.aktiv {
+  background: radial-gradient(circle 31px at 50% var(--loch-mitte), transparent 30.5px, var(--weiss) 31px);
+}
+/* … darin der gelbe Kreis (Durchmesser 50 px) mit dem Icon */
 .tab.aktiv::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: calc(var(--loch-mitte) - 25px);
   left: 50%;
-  width: 32px;
-  height: 4px;
-  margin-left: -16px;
+  width: 50px;
+  height: 50px;
+  margin-left: -25px;
+  border-radius: 50%;
   background: var(--gelb);
-  border-radius: 0 0 3px 3px;
+}
+.tab.aktiv svg {
+  /* Icon in die Kreismitte schieben */
+  transform: translateY(calc(var(--loch-mitte) - var(--leiste-hoehe) / 2));
 }
 
 /* ---------- Tab «Abfall-ABC» ---------- */
