@@ -2,9 +2,10 @@
 // Abfall Schaffhausen – App-Logik
 // =========================================================
 
-// Die Daten kommen aus data/touren.js und data/abfallarten.js
-const TOUREN = window.TOUREN_DATEN.touren;
-const STRASSEN = window.TOUREN_DATEN.strassen;
+// Die Daten kommen aus data/touren.js und data/abfallarten.js.
+// TOUREN und STRASSEN werden beim Start durch die Live-Daten ersetzt (siehe liveDatenLaden).
+let TOUREN = window.TOUREN_DATEN.touren;
+let STRASSEN = window.TOUREN_DATEN.strassen;
 const ABFALLARTEN = window.ABFALLARTEN;
 const GEGENSTAENDE = window.GEGENSTAENDE;
 const SAMMELSTELLEN = window.SAMMELSTELLEN;
@@ -456,8 +457,10 @@ function suchen(eintraege, eingabe, textVon) {
   if (!suche) return [];
   const gefunden = [];
   for (const eintrag of eintraege) {
-    const wert = passung(normalisieren(textVon(eintrag)), suche);
-    if (wert !== null) gefunden.push({ eintrag, wert });
+    // textVon kann einen Text oder eine Liste von Texten liefern (z.B. Name + Suchwörter)
+    const texte = [].concat(textVon(eintrag));
+    const werte = texte.map((t) => passung(normalisieren(t), suche)).filter((w) => w !== null);
+    if (werte.length) gefunden.push({ eintrag, wert: Math.min(...werte) });
   }
   gefunden.sort((a, b) => a.wert - b.wert);
   // Treffer mit Tippfehlern (Wert 3 und mehr) nur zeigen, wenn es keine richtigen Treffer gibt
@@ -514,7 +517,10 @@ function strassenZusatz({ strasse, nummer }) {
 
 // Alle Begriffe für das Feld «Abfall»: Abfallarten und Gegenstände
 const ABFALL_BEGRIFFE = [
-  ...Object.entries(ABFALLARTEN).map(([id, art]) => ({ text: art.name, id: id, zusatz: "Abfallart", istArt: true })),
+  ...Object.entries(ABFALLARTEN).map(([id, art]) => ({
+    text: art.name, id: id, zusatz: "Abfallart", istArt: true,
+    suchtexte: [art.name, ...(art.suchwoerter || [])],
+  })),
   ...GEGENSTAENDE
     // Gegenstände, die gleich heissen wie eine Abfallart (z.B. «Batterien»), nicht doppelt zeigen
     .filter(([text]) => !Object.values(ABFALLARTEN).some((art) => art.name === text))
@@ -702,7 +708,7 @@ const strassenFeld = suchfeldEinrichten({
 const abfallFeld = suchfeldEinrichten({
   eingabeId: "eingabe-abfall",
   listeId: "liste-abfall",
-  finden: (text) => suchen(ABFALL_BEGRIFFE, text, (b) => b.text).slice(0, MAX_VORSCHLAEGE),
+  finden: (text) => suchen(ABFALL_BEGRIFFE, text, (b) => b.suchtexte || b.text).slice(0, MAX_VORSCHLAEGE),
   anzeigen: (b) => `${sicher(b.text)}<span class="klein">${sicher(b.zusatz)}</span>`,
   auswaehlen: (b, eingabe) => {
     // Bei einem bestimmten Gegenstand (z.B. «Joghurtbecher») braucht es keine Sorten-Auswahl
@@ -728,6 +734,41 @@ tabsEinrichten();
 kalenderEinrichten();
 erinnerungenEinrichten();
 aktualisieren();
+liveDatenLaden();
+
+// Holt die aktuellen Termine von /api/touren (im Hintergrund).
+// Klappt das nicht (offline, Fehler), bleiben einfach die Daten aus data/touren.js.
+async function liveDatenLaden() {
+  let neu;
+  try {
+    const antwort = await fetch("api/touren");
+    if (!antwort.ok) return;
+    neu = await antwort.json();
+    if (!neu.touren || !neu.strassen || neu.stand < window.TOUREN_DATEN.stand) return;
+  } catch (fehler) {
+    return;
+  }
+
+  const gleich = JSON.stringify([neu.touren, neu.strassen])
+    === JSON.stringify([window.TOUREN_DATEN.touren, window.TOUREN_DATEN.strassen]);
+  window.TOUREN_DATEN = neu;
+  TOUREN = neu.touren;
+  STRASSEN = neu.strassen;
+  if (gleich) return;   // Termine unverändert: nichts neu zeichnen
+
+  // Gewählte Strasse in den neuen Daten wiederfinden
+  if (auswahl.strasse) {
+    auswahl.strasse = STRASSEN.find((s) => s.name === auswahl.strasse.name) || null;
+    if (!auswahl.strasse) {   // Strasse gibt es nicht mehr: Feld leeren
+      strassenFeld.eingabe.value = "";
+      strassenFeld.leeren.hidden = true;
+      strasseSpeichern("", "");
+    }
+  }
+  aktualisieren();
+  kalenderZeichnen();
+  erinnerungenStillAbgleichen();   // neue Termine auch für die Push-Erinnerungen
+}
 
 // Gelber Startbildschirm: 0.7 Sekunden stehen lassen, dann sanft ausblenden
 const startbild = document.getElementById("startbild");

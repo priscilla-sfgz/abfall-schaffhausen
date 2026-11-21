@@ -12,6 +12,7 @@
 // Jede Abfallart hat eine Kurzbezeichnung (z.B. "papier").
 //
 //   name             Anzeigename
+//   suchwoerter      andere Wörter, bei denen diese Abfallart vorgeschlagen wird
 //   abgeholt         true = wird abgeholt (grün), false = nicht (rot)
 //   tour             nach welcher Tour sich die Abholung richtet
 //                    (hauskehricht, gruenabfall, papier, karton, altmetall)
@@ -40,6 +41,7 @@ window.ABFALLARTEN = {
 
   hauskehricht: {
     name: "Hauskehricht",
+    suchwoerter: ["Normal", "Standard", "Abfallsack", "Kehrichtsack", "Böcklisack"],
     abgeholt: true,
     tour: "hauskehricht",
     regelmaessig: true,

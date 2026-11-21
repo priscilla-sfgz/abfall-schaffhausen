@@ -58,7 +58,9 @@ Start: https://m.stadt-schaffhausen.ch/index.php?apid=917954978
 - `js/kalender.js`: Stern, Kalender-Tab (Liste/Woche/Monat/Jahr, Standard Monat), Übersicht und .ics-Download (Erinnerung am Vorabend 19 Uhr). Gespeichert im Browser (`localStorage` «lesezeichen»: Strasse + Abfallart, alle Termine oder nur einer). Wird vor `js/app.js` geladen.
 - `data/abfallarten.js`: Abfallarten mit Hinweisen und das Verzeichnis Gegenstand → Abfallart (Quelle: Infoseiten der Stadt, darf von Hand ergänzt werden)
 - `data/sammelstellen.js`: Abgabestellen (Name, Ort, Zeiten, Kosten, welche Abfallarten). Gratis-Stellen erscheinen automatisch zuerst. Darf von Hand ergänzt werden.
-- `data/touren.js`: Termine und Strassen, **automatisch erstellt** mit `python werkzeuge/daten_holen.py`
+- **Live-Daten:** `api/touren.py` liest die Stadt-Website (Logik in `api/_abfallkalender.py`), Vercel speichert die Antwort 12 Stunden zwischen. Die App startet mit `data/touren.js` und tauscht im Hintergrund gegen die Live-Daten aus (`liveDatenLaden()` in `js/app.js`). Sehen die Daten kaputt aus (`pruefen()`), bleibt der Rückfall.
+- `data/touren.js`: Rückfall-Daten (offline, Fehler), erstellt mit `python werkzeuge/daten_holen.py` (gleiche Logik wie live). Ab und zu neu erstellen.
+- Suchwörter (z.B. «Normal» → Hauskehricht): `suchwoerter` in `data/abfallarten.js`.
 - `img/icons/*.svg` sind die Vorlagen (icon, icon-maskable, startbild, badge). Die PNGs daraus erstellt `python werkzeuge/icons_erstellen.py` (braucht Chrome + Pillow). Der Steinbock wurde aus `img/vorlagen/Steinbock.png` nachgezeichnet.
 - `manifest.webmanifest`, `sw.js`, `img/icons/`: Installierbarkeit (Service Worker lädt zuerst aus dem Netz, nur offline aus dem Speicher)
 - `img/logo.png`, `img/boeckli.jpg`, `img/gruenabfall.jpg`: Logo und Fotos. Fehlt ein Bild, steht im Balken Text bzw. das Foto wird ausgeblendet.
@@ -76,7 +78,7 @@ Erledigt (7.11.2026): Das Grundgerüst läuft mit einer Momentaufnahme der echte
 
 Als Nächstes:
 1. ~~Logo und Böckli-Foto einbauen~~ (erledigt 7.11.2026). App-Icons sind erstellt (siehe Design).
-2. Live-Daten: Die Logik aus `werkzeuge/daten_holen.py` als Vercel-Funktion in `api/` anbieten (mit Zwischenspeicher). Die App lädt dann von dort und nimmt `data/touren.js` als Rückfall.
+2. ~~Live-Daten~~ (erledigt 21.11.2026, `api/touren.py`).
 3. ~~Auf Vercel veröffentlichen~~ (erledigt): https://abfall-schaffhausen.vercel.app – jeder Push auf `main` (GitHub Desktop: «Push origin») wird automatisch veröffentlicht.
 
 ## Weiterentwicklung (Wünsche vom 21.11.2026)
@@ -99,7 +101,8 @@ Als Nächstes:
 4. **Abfall-ABC-Tab:** detaillierte Liste, welcher Gegenstand zu welcher Abfallart gehört (Das gehört in den Hauskehricht: …), mit Hinweis, wo man nachfragen kann, wenn es unklar ist.
 5. **Karten-Tab:** Sammelstellen auf einer Karte. Idee: Filter nach **Sammelstellen, Brockenhäusern und Reparaturbetrieben** (reparierBar usw.).
 6. ~~Icon und gelber Startbildschirm~~ (erledigt 21.11.2026, inkl. weisses Sack-Symbol für Android-Benachrichtigungen).
-7. Live-Daten über Vercel (siehe oben).
+7. ~~Live-Daten über Vercel~~ (erledigt 21.11.2026).
+9. **Englisch** (später, nach Abfall-ABC und Karte): Texte in `data/texte.js` mit DE/EN, Daten der Stadt bleiben deutsch.
 8. **Unbedingt nachholen:** https://www.abfall-sh.ch (KBA Hard) war am 21.11.2026 nicht erreichbar. Preise für Sperrgut, Inertstoffe usw. dort nachlesen und in `notizen/recherche-entsorgung.md` und die App übernehmen.
 
 ## Für später geplant (jetzt noch nicht einbauen)
