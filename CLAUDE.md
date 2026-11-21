@@ -39,6 +39,7 @@ PWA für Einwohnerinnen und Einwohner der Stadt Schaffhausen: Man gibt Strasse u
 5. **Altstadt** (= Hauskehricht Tour 6, apid `906921982`): Hauskehricht, Sperrgut und Plastik werden **rot** angezeigt, mit Verweis auf die Unterflurcontainer. Karton in der Altstadt: jeden Donnerstag 6.00–9.30 Uhr an Sammelplätzen (grün).
    - *Offen:* Zu Tour 6 gehören auch Strassen wie die Bahnhofstrasse. Noch nicht geklärt, ob dort wirklich nichts abgeholt wird.
 6. **Plastik** ist grün (wird im Böckli mit dem Hauskehricht mitgenommen) und hat einen Recycling-Tipp (Sammelsack, RecyBag).
+7. **Ohne Strasse** gibt es trotzdem ein Ergebnis (Entscheid 21.11.2026): Bei «Wird abgeholt» steht gross «Termin je nach Strasse» mit Knopf «Strasse eingeben», alle Abschnitte erscheinen. Kein Stern ohne Strasse. Altstadt-Regeln gelten erst mit Strasse.
 
 ## Datenquelle: Abfallkalender der Stadt
 

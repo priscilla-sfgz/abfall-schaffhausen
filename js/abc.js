@@ -82,7 +82,6 @@ function abcGewaehlt(begriff) {
   abfallFeld.leeren.hidden = false;
   tabWechseln("abfall");
   aktualisieren();
-  if (!auswahl.strasse) strassenFeld.eingabe.focus();   // ohne Strasse gibt es kein Ergebnis
   window.scrollTo(0, 0);
 }
 

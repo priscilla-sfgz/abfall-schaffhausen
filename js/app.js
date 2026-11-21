@@ -134,16 +134,17 @@ function abgabestellen(abfallartId) {
 // für «Termin speichern» oder «In Kalender laden» genutzt werden.
 // ---------------------------------------------------------
 
+// strasse darf fehlen (null): Dann gibt es alles ausser den Abfuhrterminen.
 function ergebnisBerechnen(strasse, abfallartId, hinweis) {
   let art = ABFALLARTEN[abfallartId];
-  const istAltstadt = strasse.touren.hauskehricht === ALTSTADT_TOUR;
+  const istAltstadt = strasse && strasse.touren.hauskehricht === ALTSTADT_TOUR;
   if (istAltstadt && art.altstadt) {
     art = { ...art, ...art.altstadt };   // Altstadt-Abweichungen übernehmen
   }
 
   const heuteText = datumAlsText(heute());
   const ergebnis = {
-    strasse: strasse.name,
+    strasse: strasse ? strasse.name : null,
     abfallartId: abfallartId,
     abfallart: art.name,
     hinweis: hinweis || null,
@@ -162,6 +163,14 @@ function ergebnisBerechnen(strasse, abfallartId, hinweis) {
     return ergebnis;
   }
 
+  ergebnis.regelmaessig = art.regelmaessig;
+  if (!strasse) {
+    // Ohne Strasse: Termin unbekannt, Hinweise trotzdem zeigen
+    ergebnis.ohneStrasse = true;
+    ergebnis.rhythmus = "Termin je nach Strasse";
+    return ergebnis;
+  }
+
   const tour = art.tour ? TOUREN[strasse.touren[art.tour]] : null;
   if (tour) {
     const kommende = tour.termine.filter((t) => t.datum >= heuteText);
@@ -173,7 +182,6 @@ function ergebnisBerechnen(strasse, abfallartId, hinweis) {
 
   ergebnis.tourId = tour ? strasse.touren[art.tour] : null;
   ergebnis.tourName = tour ? tour.name : null;
-  ergebnis.regelmaessig = art.regelmaessig;
   ergebnis.rhythmus = art.gross || (tour ? rhythmusAusTourname(tour.name) : "");
   ergebnis.bereitstellenOrt = art.tour ? strasse.bereitstellen[art.tour] : null;
   return ergebnis;
@@ -227,7 +235,12 @@ function abfuhrZeilen(ergebnis) {
   const art = ergebnis.art;
   const naechster = ergebnis.termine[0];
   let html = "";
-  if (ergebnis.regelmaessig) {
+  if (ergebnis.ohneStrasse) {
+    // Ohne Strasse: Termin hängt von der Tour ab
+    html += `<p class="gross">Termin je nach Strasse</p>`;
+    html += `<p class="zeit">${sicher(art.zeit)}</p>`;
+    html += `<button type="button" class="knopf haupt strasse-eingeben">Strasse eingeben</button>`;
+  } else if (ergebnis.regelmaessig) {
     // Regelmässig: nur der Rhythmus, z.B. «Jeden Dienstag und Freitag»
     html += `<p class="gross">${sicher(ergebnis.rhythmus)}</p>`;
     html += `<p class="zeit">${sicher(art.zeit)}</p>`;
@@ -337,7 +350,7 @@ function ergebnisAnzeigen(ergebnis) {
 
   feld.innerHTML = `
     <article class="karte ${kopf.klasse}">
-      <div class="karte-kopf">${kopf.icon} ${kopf.text} ${sternKnopf(ergebnis)}</div>
+      <div class="karte-kopf">${kopf.icon} ${kopf.text} ${ergebnis.strasse ? sternKnopf(ergebnis) : ""}</div>
       <div class="karte-haupt">${haupt}</div>
       <div class="karte-hinweise">
         ${hinweise}
@@ -378,6 +391,9 @@ function sortenEinrichten() {
     } else if (e.target.closest(".andere-sorte")) {
       abfallWaehlen(auswahl.oberart);
       aktualisieren();
+    } else if (e.target.closest(".strasse-eingeben")) {
+      window.scrollTo(0, 0);
+      strassenFeld.eingabe.focus();
     }
   });
 }
@@ -397,7 +413,8 @@ function aktualisieren() {
   // Schnellwahl-Knöpfe nur zeigen, solange das Feld «Abfall» leer ist
   document.getElementById("schnellwahl").hidden = document.getElementById("eingabe-abfall").value !== "";
 
-  if (!auswahl.strasse || !auswahl.abfallart) {
+  // Ein Ergebnis gibt es auch ohne Strasse (dann ohne Abfuhrtermine)
+  if (!auswahl.abfallart) {
     ergebnisAnzeigen(null);
     return;
   }

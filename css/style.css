@@ -264,6 +264,9 @@ main {
   cursor: pointer;
 }
 
+/* Knopf «Strasse eingeben» (Ergebnis ohne Strasse) */
+.strasse-eingeben { display: block; margin: 14px 0 6px; padding: 11px 20px; }
+
 /* Feld «Welche Sorte?» */
 .karte.frage .karte-kopf { background: var(--petrol); }
 .sorten {
