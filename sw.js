@@ -5,12 +5,13 @@
 // zuletzt gespeicherte Version verwendet.
 // =========================================================
 
-const CACHE_NAME = "abfall-sh-v2";
+const CACHE_NAME = "abfall-sh-v3";
 
 const DATEIEN = [
   "./",
   "index.html",
   "css/style.css",
+  "js/kalender.js",
   "js/app.js",
   "data/touren.js",
   "data/abfallarten.js",

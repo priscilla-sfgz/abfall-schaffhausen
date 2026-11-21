@@ -59,7 +59,14 @@
 
     <!-- ===== Tab «Termine» (kommt später) ===== -->
     <section id="tab-termine" class="tab-inhalt" hidden>
-      <p class="platzhalter">Hier kommen später deine angepinnten Termine hin.</p>
+      <!-- Umschalter: Liste, Woche, Monat, Jahr -->
+      <div class="umschalter" role="group" aria-label="Ansicht">
+        <button type="button" data-ansicht="liste">Liste</button>
+        <button type="button" data-ansicht="woche">Woche</button>
+        <button type="button" data-ansicht="monat" class="aktiv">Monat</button>
+        <button type="button" data-ansicht="jahr">Jahr</button>
+      </div>
+      <div id="kalender-inhalt"></div>
     </section>
 
     <!-- ===== Tab «Infos» (kommt später) ===== -->
@@ -67,6 +74,17 @@
       <p class="platzhalter">Hier kommen später Infos zu Abfallarten und Sammelstellen hin.</p>
     </section>
   </main>
+
+  <!-- ===== Übersicht eines Termins (Kalender) und kurze Meldungen ===== -->
+  <div id="uebersicht" class="uebersicht" hidden></div>
+  <div id="meldung" class="meldung" role="status" hidden></div>
+
+  <!-- ===== Hinweis reparierBar (erscheint, bis man ihn wegklickt) ===== -->
+  <aside id="reparatur-hinweis" class="reparatur-hinweis" hidden>
+    <p>Lieber etwas reparieren lassen?
+      <a href="https://www.reparierbarschaffhausen.ch" target="_blank" rel="noopener">reparierBar Schaffhausen</a></p>
+    <button type="button" class="schliessen" aria-label="Hinweis schliessen">×</button>
+  </aside>
 
   <!-- ===== Untere Leiste mit drei Tabs (nur Icons) ===== -->
   <nav class="tableiste" aria-label="Navigation">
@@ -78,7 +96,7 @@
         <path d="M9.5 7.5h5"/>
       </svg>
     </button>
-    <button class="tab" type="button" data-tab="termine" aria-label="Termine">
+    <button class="tab" type="button" data-tab="termine" aria-label="Kalender">
       <!-- Kalender -->
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/>
@@ -99,6 +117,7 @@
   <script src="data/touren.js"></script>
   <script src="data/abfallarten.js"></script>
   <script src="data/sammelstellen.js"></script>
+  <script src="js/kalender.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

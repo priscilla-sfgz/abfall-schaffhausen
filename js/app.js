@@ -219,8 +219,48 @@ function weitereTermine(termine) {
     + "</ul>";
 }
 
+const ICON_RECYCLING = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 0 1-14.3 4.9"/><path d="M4 12a8 8 0 0 1 14.3-4.9"/><path d="M18.5 3v4.2h-4.2"/><path d="M5.5 21v-4.2h4.2"/></svg>';
+
+// Wann wird es abgeholt? Gibt die grossen Zeilen zurück.
+function abfuhrZeilen(ergebnis) {
+  const art = ergebnis.art;
+  const naechster = ergebnis.termine[0];
+  let html = "";
+  if (ergebnis.regelmaessig) {
+    // Regelmässig: nur der Rhythmus, z.B. «Jeden Dienstag und Freitag»
+    html += `<p class="gross">${sicher(ergebnis.rhythmus)}</p>`;
+    html += `<p class="zeit">${sicher(art.zeit)}</p>`;
+  } else if (naechster) {
+    // Selten: das nächste Datum, darunter weitere Termine
+    html += `<p class="gross">${grossAnfang(wannText(naechster.datum))} (${datumKurz(naechster.datum)})</p>`;
+    html += `<p class="zeit">${sicher(art.zeit)}</p>`;
+    if (naechster.notiz) html += `<p class="notiz">${sicher(naechster.notiz)}</p>`;
+    html += weitereTermine(ergebnis.termine.slice(1, 6));
+  } else {
+    // Selten, aber zurzeit keine Termine veröffentlicht
+    html += `<p class="gross">Nächster Termin noch nicht bekannt</p>`;
+    html += `<p class="naechstes">${sicher(art.rhythmus || "Die Stadt hat noch keine weiteren Termine veröffentlicht.")}</p>`;
+  }
+  return html;
+}
+
+// Wohin damit (wenn es nicht abgeholt wird)? Gibt die grossen Zeilen zurück.
+function hinbringenZeilen(ergebnis) {
+  const art = ergebnis.art;
+  const naechster = ergebnis.termine[0];
+  let html = `<p class="gross">${sicher(art.ziel || "An Sammelstelle entsorgen")}</p>`;
+  if (art.zeit) html += `<p class="zeit">${sicher(art.zeit)}</p>`;
+  if (naechster) {
+    html += `<p class="naechstes">${sicher(art.sammeltermineName || "Nächster Termin")}: `
+      + `${wannText(naechster.datum)} (${datumKurz(naechster.datum)}), ${sicher(naechster.zeit)}, ${sicher(naechster.notiz)}</p>`;
+    html += weitereTermine(ergebnis.termine.slice(1));
+  }
+  return html;
+}
+
 function ergebnisAnzeigen(ergebnis) {
   const feld = document.getElementById("ergebnis");
+  aktuellesErgebnis = ergebnis;   // für den Stern (js/kalender.js)
   if (!ergebnis) {
     feld.innerHTML = "";
     return;
@@ -228,85 +268,82 @@ function ergebnisAnzeigen(ergebnis) {
   const art = ergebnis.art;
   const naechster = ergebnis.termine[0];
 
-  // ----- Oben: welche Sorte (falls gewählt), Abfallart und Hinweis -----
+  // ----- Oben: welche Sorte (falls gewählt), Abfallart und Hinweise -----
   let haupt = "";
   if (auswahl.oberart) {
     haupt += `<p class="sorte-zeile">${sicher(ABFALLARTEN[auswahl.oberart].name)} › ${sicher(auswahl.sorteText)}
-      <button type="button" class="andere-sorte">andere Sorte</button></p>`;
+      <button type="button" class="andere-sorte">Sorte ändern</button></p>`;
   }
   haupt += `<p class="abfallart">${sicher(art.name)}</p>`;
+  // Ein Gegenstand, der in den Hauskehricht gehört: klar sagen, dass nichts Besonderes nötig ist
+  // (nicht, wenn der Hinweis den Hauskehricht schon nennt)
+  const nenntHauskehricht = (ergebnis.hinweis || "").includes("Hauskehricht");
+  if (ergebnis.abfallartId === "hauskehricht" && auswahl.sorteFertig && !nenntHauskehricht) {
+    haupt += `<p class="hinweis">Entsorgung im Hauskehricht (Böcklisack)</p>`;
+  }
   if (ergebnis.hinweis) haupt += `<p class="hinweis">${sicher(ergebnis.hinweis)}</p>`;
 
-  let hinweise = "";
-
-  if (!ergebnis.abgeholt) {
-    // ----- Rotes Feld: wohin damit -----
-    haupt += `<p class="gross">${sicher(art.ziel || "Siehe unten")}</p>`;
-    if (art.zeit) haupt += `<p class="zeit">${sicher(art.zeit)}</p>`;
-    if (naechster) {
-      haupt += `<p class="naechstes">${sicher(art.sammeltermineName || "Nächster Termin")}: `
-        + `${wannText(naechster.datum)} (${datumKurz(naechster.datum)}), ${sicher(naechster.zeit)}, ${sicher(naechster.notiz)}</p>`;
-      haupt += weitereTermine(ergebnis.termine.slice(1));
-    }
-
-    hinweise += aufklappen("Wo abgeben – gratis zuerst", stellenListe(ergebnis.stellen));
-    hinweise += aufklappen("Gut zu wissen", punkte(art.wohin));
+  // ----- Kopf und grosse Zeilen -----
+  let kopf;
+  if (art.recycling) {
+    // Recycling ist am wichtigsten, Abfuhr bzw. Container nur als zweite Möglichkeit
+    kopf = { klasse: "ja", icon: ICON_RECYCLING, text: "Recycling empfohlen" };
+    haupt += `<p class="gross">${sicher(art.recycling.ziel)}</p>`;
+    haupt += `<p class="zeit">${sicher(art.recycling.zeit)}</p>`;
+    const oder = ergebnis.abgeholt
+      ? `<strong>Alternativ mit dem ${sicher(ABFALLARTEN[art.tour].name)}:</strong> ${sicher(ergebnis.rhythmus)}, ${sicher(art.zeit)}`
+      : `<strong>Alternativ:</strong> ${sicher(art.ziel)}, ${sicher(art.zeit)}`;
+    haupt += `<p class="oder">${oder}</p>`;
+  } else if (ergebnis.abgeholt) {
+    kopf = { klasse: "ja", icon: ICON_HAKEN, text: "Wird abgeholt" };
+    haupt += abfuhrZeilen(ergebnis);
   } else {
-    // ----- Grünes Feld: wann wird es abgeholt -----
-    if (ergebnis.regelmaessig) {
-      // Regelmässig: nur der Rhythmus, z.B. «Jeden Dienstag und Freitag»
-      haupt += `<p class="gross">${sicher(ergebnis.rhythmus)}</p>`;
-      haupt += `<p class="zeit">${sicher(art.zeit)}</p>`;
-    } else if (naechster) {
-      // Selten: das nächste Datum, darunter weitere Termine
-      haupt += `<p class="gross">${grossAnfang(wannText(naechster.datum))} (${datumKurz(naechster.datum)})</p>`;
-      haupt += `<p class="zeit">${sicher(art.zeit)}</p>`;
-      if (naechster.notiz) haupt += `<p class="notiz">${sicher(naechster.notiz)}</p>`;
-      haupt += weitereTermine(ergebnis.termine.slice(1, 6));
-    } else {
-      // Selten, aber zurzeit keine Termine veröffentlicht
-      haupt += `<p class="gross">Nächster Termin noch nicht bekannt</p>`;
-      haupt += `<p class="naechstes">${sicher(art.rhythmus || "Die Stadt hat noch keine weiteren Termine veröffentlicht.")}</p>`;
-    }
-
-    // Warnung bei Ausfällen in den nächsten 3 Wochen
-    for (const ausfall of ergebnis.ausfaelle) {
-      haupt += `<p class="warnung"><strong>${datumKurz(ausfall.datum)}:</strong> ${sicher(ausfall.ausnahme)}</p>`;
-    }
-    // Hinweis bei verschobenen Terminen
-    if (naechster && naechster.ausnahme) {
-      haupt += `<p class="warnung">${sicher(naechster.ausnahme)}</p>`;
-    }
-
-    const bereitstellen = [...(art.bereitstellen || [])];
-    if (ergebnis.bereitstellenOrt) {
-      bereitstellen.unshift(`An deiner Strasse bereitstellen bei: ${ergebnis.bereitstellenOrt}.`);
-    }
-    let bereitstellenInhalt = punkte(bereitstellen);
-    if (art.bild) {
-      bereitstellenInhalt += `<img class="sack-foto" src="${art.bild}" alt="${sicher(art.bildText || "")}" onerror="this.remove()">`;
-    }
-    hinweise += aufklappen("So bereitstellen", bereitstellenInhalt);
-    hinweise += aufklappen("Wird nicht mitgenommen", punkte(art.nichtMitgenommen));
-    hinweise += aufklappen("Andere Abgabestellen", stellenListe(ergebnis.stellen));
+    kopf = { klasse: "nein", icon: ICON_KREUZ, text: "Wird nicht abgeholt" };
+    haupt += hinbringenZeilen(ergebnis);
   }
 
-  if (art.tipp) hinweise += aufklappen("Tipp", `<p>${sicher(art.tipp)}</p>`);
+  // Warnung bei Ausfällen in den nächsten 3 Wochen und bei verschobenen Terminen
+  for (const ausfall of ergebnis.ausfaelle) {
+    haupt += `<p class="warnung"><strong>${datumKurz(ausfall.datum)}:</strong> ${sicher(ausfall.ausnahme)}</p>`;
+  }
+  if (ergebnis.abgeholt && naechster && naechster.ausnahme) {
+    haupt += `<p class="warnung">${sicher(naechster.ausnahme)}</p>`;
+  }
+
+  // ----- Aufklappbare Abschnitte (immer die gleichen Titel) -----
+  let bereitstellen = "";
+  let nichtMitgenommen = "";
+  if (ergebnis.abgeholt) {
+    const punkteListe = [...(art.bereitstellen || [])];
+    if (ergebnis.bereitstellenOrt) {
+      punkteListe.unshift(`An deiner Strasse bereitstellen bei: ${ergebnis.bereitstellenOrt}.`);
+    }
+    bereitstellen = punkte(punkteListe);
+    if (art.bild) {
+      bereitstellen += `<img class="sack-foto" src="${art.bild}" alt="${sicher(art.bildText || "")}" onerror="this.remove()">`;
+    }
+    nichtMitgenommen = punkte(art.nichtMitgenommen);
+  }
+  const sammelstellen = stellenListe(ergebnis.stellen);
+  const gutZuWissen = punkte([...(art.wohin || []), ...(art.tipp ? [art.tipp] : [])]);
+
+  // Wird es abgeholt, kommt «So bereitstellen» zuerst, sonst die Sammelstellen
+  const abschnitte = (ergebnis.abgeholt && !art.recycling)
+    ? [["So bereitstellen", bereitstellen], ["Wird nicht mitgenommen", nichtMitgenommen], ["Sammelstellen", sammelstellen]]
+    : [["Sammelstellen", sammelstellen], ["So bereitstellen", bereitstellen], ["Wird nicht mitgenommen", nichtMitgenommen]];
+  abschnitte.push(["Gut zu wissen", gutZuWissen]);
+  const hinweise = abschnitte.map(([titel, inhalt]) => aufklappen(titel, inhalt)).join("");
 
   feld.innerHTML = `
-    <article class="karte ${ergebnis.abgeholt ? "ja" : "nein"}">
-      <div class="karte-kopf">
-        ${ergebnis.abgeholt ? ICON_HAKEN : ICON_KREUZ}
-        ${ergebnis.abgeholt ? "Wird abgeholt" : "Wird nicht abgeholt"}
-      </div>
+    <article class="karte ${kopf.klasse}">
+      <div class="karte-kopf">${kopf.icon} ${kopf.text} ${sternKnopf(ergebnis)}</div>
       <div class="karte-haupt">${haupt}</div>
       <div class="karte-hinweise">
         ${hinweise}
-        <p class="quelle">Quelle: <a href="${QUELLE_URL}" target="_blank" rel="noopener">Abfallkalender Stadt Schaffhausen</a>, Stand ${datumKurz(window.TOUREN_DATEN.stand)} · Fragen: Abfalltelefon <a href="tel:+41526325329">052 632 53 29</a></p>
+        <p class="quelle">Abfalltelefon <a href="tel:+41526325329">052 632 53 29</a> · Termine: <a href="${QUELLE_URL}" target="_blank" rel="noopener">Stadt Schaffhausen</a>, Stand ${datumKurz(window.TOUREN_DATEN.stand)}</p>
       </div>
     </article>`;
 }
-
 
 // ---------------------------------------------------------
 // Zweite Auswahl «Welche Sorte?» (z.B. bei Plastik)
@@ -316,7 +353,7 @@ function sortenAnzeigen(abfallartId) {
   const art = ABFALLARTEN[abfallartId];
   document.getElementById("ergebnis").innerHTML = `
     <article class="karte frage">
-      <div class="karte-kopf">Welche Sorte?</div>
+      <div class="karte-kopf">Sorte wählen</div>
       <div class="karte-haupt">
         <p class="abfallart">${sicher(art.name)}</p>
         <div class="sorten">
@@ -478,7 +515,10 @@ function strassenZusatz({ strasse, nummer }) {
 // Alle Begriffe für das Feld «Abfall»: Abfallarten und Gegenstände
 const ABFALL_BEGRIFFE = [
   ...Object.entries(ABFALLARTEN).map(([id, art]) => ({ text: art.name, id: id, zusatz: "Abfallart", istArt: true })),
-  ...GEGENSTAENDE.map(([text, id, hinweis]) => ({ text: text, id: id, zusatz: ABFALLARTEN[id].name, hinweis: hinweis })),
+  ...GEGENSTAENDE
+    // Gegenstände, die gleich heissen wie eine Abfallart (z.B. «Batterien»), nicht doppelt zeigen
+    .filter(([text]) => !Object.values(ABFALLARTEN).some((art) => art.name === text))
+    .map(([text, id, hinweis]) => ({ text: text, id: id, zusatz: ABFALLARTEN[id].name, hinweis: hinweis })),
 ];
 
 // Richtet ein Eingabefeld mit Auswahlliste ein
@@ -601,6 +641,26 @@ function schnellwahlEinrichten() {
 
 
 // ---------------------------------------------------------
+// Hinweis reparierBar: erscheint, bis man ihn einmal wegklickt
+// ---------------------------------------------------------
+
+function reparaturHinweisEinrichten() {
+  const hinweis = document.getElementById("reparatur-hinweis");
+  let weggeklickt = false;
+  try { weggeklickt = localStorage.getItem("reparaturHinweisWeg") === "ja"; } catch (fehler) { /* nicht schlimm */ }
+  if (weggeklickt) return;
+
+  hinweis.hidden = false;
+  document.body.classList.add("mit-hinweis");
+  hinweis.querySelector(".schliessen").addEventListener("click", () => {
+    hinweis.hidden = true;
+    document.body.classList.remove("mit-hinweis");
+    try { localStorage.setItem("reparaturHinweisWeg", "ja"); } catch (fehler) { /* nicht schlimm */ }
+  });
+}
+
+
+// ---------------------------------------------------------
 // Tabs unten
 // ---------------------------------------------------------
 
@@ -663,7 +723,9 @@ if (gemerkt) {
 
 schnellwahlEinrichten();
 sortenEinrichten();
+reparaturHinweisEinrichten();
 tabsEinrichten();
+kalenderEinrichten();
 aktualisieren();
 
 // Service Worker: macht die App installierbar und offline nutzbar

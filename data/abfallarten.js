@@ -19,6 +19,8 @@
 //                    false = selten (gross steht das nächste Datum)
 //   zeit             wird gross unter dem Termin bzw. Ziel angezeigt
 //   ziel             nur bei «nicht abgeholt»: gross, wohin damit
+//                    (fehlt es, steht «An Sammelstelle entsorgen»)
+//   recycling        besser als die Abfuhr: { ziel, zeit } – steht dann zuoberst
 //   sammeltermine    feste Daten zum Hinbringen (z.B. Giftsammlung)
 //   rhythmus         wie oft (für seltene Abfuhren)
 //   sorten           zweite Auswahl «Welche Sorte?»:
@@ -26,8 +28,7 @@
 //   nurAuswahl       true = zeigt nur die Sorten, kein eigenes Ergebnis
 //   bereitstellen    aufklappbar «So bereitstellen»
 //   nichtMitgenommen aufklappbar «Wird nicht mitgenommen»
-//   wohin            aufklappbar «Gut zu wissen» (bei «nicht abgeholt»)
-//   tipp             aufklappbar «Tipp»
+//   wohin, tipp      aufklappbar «Gut zu wissen»
 //   bild             Foto unter «So bereitstellen»
 //   bildText         kurze Beschreibung des Fotos (für Screenreader)
 //   altstadt         Abweichungen für die Altstadt (Hauskehricht Tour 6)
@@ -49,7 +50,7 @@ window.ABFALLARTEN = {
       "Erst am Abfuhrtag bis 7 Uhr hinausstellen, nicht am Vorabend.",
       "Bei Hitze (über 30 Grad) bis 6 Uhr.",
       "Nur im Böcklisack: 17 l Fr. 1.30, 35 l Fr. 2.35, 60 l Fr. 4.70, 110 l Fr. 6.40.",
-      "Einzeln oder im Sammelcontainer am Kehrichtstandplatz.",
+      "Einzeln oder im Sammelcontainer am Strassenrand.",
     ],
     nichtMitgenommen: [
       "Abfall in gewöhnlichen Plastiksäcken.",
@@ -88,7 +89,7 @@ window.ABFALLARTEN = {
     ],
     altstadt: {
       abgeholt: false,
-      ziel: "Zum Unterflurcontainer",
+      ziel: "Beim Unterflurcontainer",
       zeit: "mit Sperrgutmarken",
       wohin: ["In der Altstadt wird Sperrgut nicht am Strassenrand abgeholt."],
     },
@@ -123,7 +124,7 @@ window.ABFALLARTEN = {
     regelmaessig: false,
     zeit: "bis 7 Uhr bereitstellen",
     bereitstellen: [
-      "Gebündelt und verschnürt am Kehrichtstandplatz.",
+      "Gebündelt und verschnürt am Strassenrand, am Bereitstellungsort des Hauskehrichts.",
     ],
     nichtMitgenommen: [
       "Karton.",
@@ -139,7 +140,7 @@ window.ABFALLARTEN = {
     zeit: "bis 7 Uhr bereitstellen",
     rhythmus: "Sechsmal pro Jahr: Januar, März, Mai, Juli, September und November.",
     bereitstellen: [
-      "Gefaltet, gebündelt und verschnürt am Kehrichtstandplatz.",
+      "Gefaltet, gebündelt und verschnürt am Strassenrand, am Bereitstellungsort des Hauskehrichts.",
     ],
     nichtMitgenommen: [
       "Verschmutzter Karton.",
@@ -196,7 +197,7 @@ window.ABFALLARTEN = {
       ["Andere Flaschen (Shampoo, Putzmittel, Milch aus PE)", "plastik"],
       ["Becher, Schalen, Folien, Tüten, Tuben", "plastik"],
       ["Getränkekartons (Tetra Pak)", "plastik"],
-      ["Spielzeug, Styropor, PVC, Gartenschlauch", "hauskehricht", "Nicht in den Recycling-Sack."],
+      ["Spielzeug, Styropor, PVC, Gartenschlauch", "hauskehricht", "Nicht für Recycling-Säcke geeignet."],
     ],
     bereitstellen: [
       "Mit dem Hauskehricht im Böcklisack.",
@@ -204,7 +205,11 @@ window.ABFALLARTEN = {
     nichtMitgenommen: [
       "Plastik in gewöhnlichen Plastiksäcken.",
     ],
-    tipp: "Besser fürs Recycling: RecyBag oder Kunststoff-Sammelsack (siehe Abgabestellen). Nur leeren, nicht auswaschen.",
+    recycling: {
+      ziel: "RecyBag",
+      zeit: "Erhältlich bei Coop, Denner, Spar und Lidl, Rückgabe am selben Ort",
+    },
+    tipp: "Nur leeren, nicht auswaschen.",
     altstadt: {
       abgeholt: false,
       ziel: "In einen Unterflurcontainer",
@@ -218,9 +223,9 @@ window.ABFALLARTEN = {
     name: "Farben und Lacke",
     nurAuswahl: true,
     sorten: [
-      ["Wasserbasiert (z.B. Dispersion, Acryl)", "hauskehricht", "Zuerst eintrocknen lassen."],
+      ["Wasserbasiert (z.B. Dispersion, Acryl)", "hauskehricht", "Eingetrocknet im Hauskehricht entsorgen."],
       ["Mit Lösungsmittel (z.B. Lack, Ölfarbe)", "sonderabfall"],
-      ["Weiss nicht", "sonderabfall", "Im Zweifel Sonderabfall. Angaben auf der Verpackung beachten."],
+      ["Unbekannt", "sonderabfall", "Im Zweifel Sonderabfall. Angaben auf der Verpackung beachten."],
     ],
   },
 
@@ -230,15 +235,12 @@ window.ABFALLARTEN = {
     name: "PET-Flaschen",
     abgeholt: false,
     ziel: "Gratis zurück in den Laden",
-    zeit: "PET-Sammelbehälter",
     wohin: ["Nur Getränkeflaschen aus PET. Andere Plastikflaschen → Plastik."],
   },
 
   glas: {
     name: "Glas",
     abgeholt: false,
-    ziel: "An eine Quartier-Sammelstelle",
-    zeit: "Mo–Sa 7–20 Uhr",
     sorten: [
       ["Flaschen, Konfi- und Gurkengläser", "glas"],
       ["Trinkgläser, Glasschüsseln", "hauskehricht", "Nicht ins Altglas."],
@@ -247,15 +249,12 @@ window.ABFALLARTEN = {
     wohin: [
       "Nach Farbe trennen: weiss, grün, braun (andere Farben → grün).",
       "Deckel entfernen.",
-      "Nicht an Sonn- und Feiertagen.",
     ],
   },
 
   alu: {
     name: "Alu und Konservendosen",
     abgeholt: false,
-    ziel: "An eine Quartier-Sammelstelle",
-    zeit: "Mo–Sa 7–20 Uhr",
     wohin: [
       "Dosen ausspülen und flach drücken.",
       "Farb- und Spraydosen → Sonderabfall.",
@@ -266,7 +265,6 @@ window.ABFALLARTEN = {
     name: "Alu-Kaffeekapseln",
     abgeholt: false,
     ziel: "Gratis zurück in den Laden",
-    zeit: "Nespresso, Migros, einige Coop",
     wohin: ["Kapseln aus Plastik → Hauskehricht."],
   },
 
@@ -274,22 +272,17 @@ window.ABFALLARTEN = {
     name: "Batterien",
     abgeholt: false,
     ziel: "Gratis zurück in den Laden",
-    zeit: "oder an eine Quartier-Sammelstelle",
   },
 
   oel: {
     name: "Speiseöl und Altöl",
     abgeholt: false,
-    ziel: "An eine Quartier-Sammelstelle",
-    zeit: "Mo–Sa 7–20 Uhr",
     wohin: ["Nie in den Ausguss oder die Toilette."],
   },
 
   altkleider: {
     name: "Altkleider und Schuhe",
     abgeholt: false,
-    ziel: "In die Altkleidersammlung",
-    zeit: "z.B. koro, Oberstadt 13",
     wohin: [
       "Nur saubere, tragbare Kleider. Schuhe paarweise zusammenbinden.",
       "Kaputte Kleider → Hauskehricht.",
@@ -300,30 +293,26 @@ window.ABFALLARTEN = {
     name: "Elektrogeräte",
     abgeholt: false,
     ziel: "Gratis zurück in den Laden",
-    zeit: "wo solche Geräte verkauft werden",
   },
 
   leuchtmittel: {
     name: "Sparlampen und Leuchtröhren",
     abgeholt: false,
     ziel: "Gratis zurück in den Laden",
-    zeit: "wo Lampen verkauft werden",
     wohin: ["Nicht an die Giftsammlung."],
   },
 
   sonderabfall: {
     name: "Sonderabfall (Gift)",
     abgeholt: false,
-    ziel: "Apotheke, Drogerie oder Farbengeschäft",
-    zeit: "oder an die Giftsammlung",
+    ziel: "Gratis zurück in den Laden",
     sammeltermine: [
       { datum: "2027-03-31", zeit: "16–18 Uhr", ort: "Schulhaus Breite" },
       { datum: "2027-06-30", zeit: "16–18 Uhr", ort: "Schulhaus Sekundarstufe Buchthalen" },
       { datum: "2027-09-29", zeit: "16–18 Uhr", ort: "Schulhaus Kreuzgut Herblingen" },
     ],
-    sammeltermineName: "Giftsammlung",
+    sammeltermineName: "Giftsammlung (max. 30 kg pro Person)",
     wohin: [
-      "Höchstens 30 kg pro Person.",
       "In der Originalverpackung, nicht zusammengiessen.",
       "Nie in den Ausguss oder den Kehricht.",
       "Batterien, Öl und Sparlampen nicht an die Giftsammlung.",
@@ -333,9 +322,6 @@ window.ABFALLARTEN = {
   inert: {
     name: "Steine, Keramik und Bauschutt",
     abgeholt: false,
-    ziel: "Zur Sammelstelle Viehmarkt",
-    zeit: "Mo–Fr 10–11 und 16–17 Uhr, Sa 8.30–12 Uhr",
-    wohin: ["Nur Kleinmengen. Grössere Mengen → KBA Hard."],
   },
 };
 
@@ -396,7 +382,7 @@ window.GEGENSTAENDE = [
   ["Spielzeug (ohne Batterien)", "hauskehricht"],
   ["Zahnbürste", "hauskehricht"],
   ["Trinkglas", "hauskehricht", "Nicht ins Altglas."],
-  ["Wasserbasierte Farbe", "hauskehricht", "Zuerst eintrocknen lassen."],
+  ["Wasserbasierte Farbe", "hauskehricht", "Eingetrocknet im Hauskehricht entsorgen."],
   ["Kaputte Kleider", "hauskehricht"],
 
   // Plastik

@@ -55,6 +55,7 @@ Start: https://m.stadt-schaffhausen.ch/index.php?apid=917954978
 ## Projektstruktur
 
 - `index.html`, `css/style.css`, `js/app.js`: die App
+- `js/kalender.js`: Stern, Kalender-Tab (Liste/Woche/Monat/Jahr, Standard Monat), Übersicht und .ics-Download (Erinnerung am Vorabend 19 Uhr). Gespeichert im Browser (`localStorage` «lesezeichen»: Strasse + Abfallart, alle Termine oder nur einer). Wird vor `js/app.js` geladen.
 - `data/abfallarten.js`: Abfallarten mit Hinweisen und das Verzeichnis Gegenstand → Abfallart (Quelle: Infoseiten der Stadt, darf von Hand ergänzt werden)
 - `data/sammelstellen.js`: Abgabestellen (Name, Ort, Zeiten, Kosten, welche Abfallarten). Gratis-Stellen erscheinen automatisch zuerst. Darf von Hand ergänzt werden.
 - `data/touren.js`: Termine und Strassen, **automatisch erstellt** mit `python werkzeuge/daten_holen.py`
@@ -79,12 +80,18 @@ Als Nächstes:
    wird abgeholt / nicht abgeholt → **Abfallart** (nur «Hauskehricht», nicht «Knochen gehört zum …») → wann → bis wann bereitstellen bzw. Sammelstelle → aufklappbare Details (`<details>`): So bereitstellen, Wird nicht mitgenommen, Sammelstellen und Kosten.
    - Regelmässige Abfuhr: **nur** «Jeden Donnerstag», kein «Nächstes Mal: in 3 Tagen». Seltene Abfuhr: «In 17 Tagen (…)».
    - **PET** gehört unter **Plastik**. Bei Plastik (und evtl. Farben, Metall, Glas, Elektronik) eine **zweite Auswahl** der Sorte, jede Sorte mit eigenem Ergebnis.
-   - **Sammelstellen im ganzen Kanton** (privat und staatlich), mit Angebot und Kosten, **Gratis-Angebote zuerst**.
-3. **Kalender-Tab:** Stern im Ergebnis = Kombination Abfall + Strasse speichern. Stern antippen → Auswahl «Alle Termine» / «Nur diesen Termin». Wer daneben tippt, speichert alle Termine. Stern wegtippen → alle Termine dieser Kombination löschen. Ansicht Liste oder Kalender (Woche / **Monat** / Jahr). Erinnerung wählbar.
+   - **Sammelstellen im ganzen Kanton** (privat und staatlich), mit Angebot und Kosten, **Gratis-Angebote zuerst** (ohne das dem Benutzer zu sagen).
+   - **Texte:** Was den Benutzer nicht betrifft, nicht zeigen. Kurze Texte sachlich und «titelig», nicht salopp (z.B. «Recycling empfohlen», «Sorte wählen», «Gratis zurück in den Laden»). Gleiches immer gleich formulieren.
+   - Immer **die gleichen Abschnitt-Titel**: So bereitstellen · Wird nicht mitgenommen · Sammelstellen · Gut zu wissen. Leere Abschnitte weglassen, nichts doppelt.
+   - «Wird nicht abgeholt»: gross nur allgemein («An Sammelstelle entsorgen», «Gratis zurück in den Laden»), die einzelnen Stellen unten.
+   - Gegenstände, die in den Hauskehricht gehören: klar «Einfach in den Hauskehricht (Böcklisack)».
+   - **Recycling zuerst:** Gibt es eine Recycling-Möglichkeit (z.B. RecyBag bei Plastik), steht sie zuoberst («Am besten recyceln»), die Abfuhr nur als «Oder …».
+   - **reparierBar** ist keine Sammelstelle: kleiner Hinweis über den Tabs, lässt sich mit × für immer wegklicken. Text bewusst persönlich: «Lieber etwas reparieren lassen? reparierBar Schaffhausen».
+3. **Kalender-Tab** (3a erledigt 21.11.2026 in `js/kalender.js`; offen: 3b Push): Stern im Ergebnis = Kombination Abfall + Strasse speichern. Stern antippen → Auswahl «Alle Termine» / «Nur diesen Termin». Wer daneben tippt, speichert alle Termine. Stern wegtippen → alle Termine dieser Kombination löschen. Ansicht Liste oder Kalender (Woche / **Monat** / Jahr). Erinnerung wählbar.
    - **Push-Erinnerungen:** mit einem Knopf ein-/ausschalten (keine Abfrage beim Start). Technik: **Supabase** speichert die Anmeldungen und weckt jede Stunde (`pg_cron`), eine **Python-Funktion auf Vercel** (`api/`) schickt die Nachricht. Auf dem iPhone nur, wenn die App auf dem Startbildschirm installiert ist. Anleitung mit jedem Klick nötig.
    - **Download für den eigenen Kalender** (.ics mit Erinnerung): beim Speichern mit dem Stern **und** ganz unten in der Übersicht, wenn man im Kalender-Tab einen Eintrag antippt.
 4. **Abfall-ABC-Tab:** detaillierte Liste, welcher Gegenstand zu welcher Abfallart gehört (Das gehört in den Hauskehricht: …), mit Hinweis, wo man nachfragen kann, wenn es unklar ist.
-5. **Karten-Tab:** Sammelstellen auf einer Karte.
+5. **Karten-Tab:** Sammelstellen auf einer Karte. Idee: Filter nach **Sammelstellen, Brockenhäusern und Reparaturbetrieben** (reparierBar usw.).
 6. **Icon und gelber Startbildschirm.**
 7. Live-Daten über Vercel (siehe oben).
 8. **Unbedingt nachholen:** https://www.abfall-sh.ch (KBA Hard) war am 21.11.2026 nicht erreichbar. Preise für Sperrgut, Inertstoffe usw. dort nachlesen und in `notizen/recherche-entsorgung.md` und die App übernehmen.

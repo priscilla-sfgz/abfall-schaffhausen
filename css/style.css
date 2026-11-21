@@ -213,6 +213,14 @@ main {
   border-radius: 6px;
 }
 
+/* «Oder mit dem Hauskehricht: …» unter dem Recycling */
+.oder {
+  margin: 12px 0 14px;
+  padding-top: 10px;
+  font-size: 15px;
+  border-top: 1px solid rgba(0, 0, 0, .08);
+}
+
 /* Abfallart, Sorte und Hinweis oben im Feld */
 .abfallart {
   margin: 0 0 6px;
@@ -322,6 +330,274 @@ main {
   color: var(--text-grau);
 }
 .quelle a { color: var(--petrol); }
+
+/* ---------- Stern im Ergebnisfeld ---------- */
+.stern {
+  margin-left: auto;
+  width: 40px;
+  height: 40px;
+  margin-right: -8px;
+  padding: 6px;
+  color: var(--weiss);
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+.stern svg { width: 28px; height: 28px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linejoin: round; }
+.stern.an svg { fill: var(--gelb); stroke: var(--gelb); }
+.stern-menue {
+  display: flex;
+  flex-direction: column;
+  background: var(--weiss);
+  border-bottom: 1px solid var(--linie);
+}
+.stern-menue button {
+  padding: 14px 20px;
+  font: inherit;
+  font-weight: 700;
+  text-align: left;
+  color: var(--petrol);
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+.stern-menue button + button { border-top: 1px solid var(--linie); }
+
+/* ---------- Kurze Meldung unten ---------- */
+.meldung {
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: calc(var(--leiste-hoehe) + 16px + env(safe-area-inset-bottom));
+  z-index: 30;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  max-width: 528px;
+  margin: 0 auto;
+  padding: 12px 16px;
+  color: var(--weiss);
+  background: var(--petrol-dunkel);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, .25);
+}
+.meldung button {
+  padding: 0;
+  font: inherit;
+  font-weight: 700;
+  color: var(--gelb);
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+.meldung[hidden] { display: none; }
+
+/* ---------- Kalender-Tab ---------- */
+.umschalter {
+  display: flex;
+  padding: 4px;
+  margin-bottom: 16px;
+  background: var(--weiss);
+  border: 1.5px solid var(--linie);
+  border-radius: 26px;
+}
+.umschalter button {
+  flex: 1;
+  padding: 9px 0;
+  font: inherit;
+  font-weight: 700;
+  color: var(--text-grau);
+  background: none;
+  border: 0;
+  border-radius: 22px;
+  cursor: pointer;
+}
+.umschalter button.aktiv { color: var(--weiss); background: var(--petrol); }
+
+.kal-kopf {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.kal-kopf button {
+  width: 40px;
+  height: 40px;
+  font-size: 26px;
+  line-height: 1;
+  color: var(--petrol);
+  background: var(--weiss);
+  border: 1.5px solid var(--linie);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.monat-gitter {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  padding: 10px;
+  background: var(--weiss);
+  border-radius: var(--rundung);
+}
+.wochentag { padding: 4px 0; font-size: 12px; font-weight: 700; text-align: center; color: var(--text-grau); }
+.tag {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  min-height: 46px;
+  padding: 6px 0 4px;
+  font: inherit;
+  font-size: 15px;
+  color: var(--text);
+  background: none;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.tag.anderer-monat { color: #b8c0c4; }
+.tag.heute { font-weight: 900; color: var(--petrol); }
+.tag.gewaehlt { background: var(--hintergrund); box-shadow: inset 0 0 0 1.5px var(--petrol); }
+.punkte { display: flex; gap: 3px; min-height: 7px; }
+.punkte i { width: 7px; height: 7px; border-radius: 50%; }
+
+.tag-titel {
+  display: flex;
+  justify-content: space-between;
+  margin: 18px 0 6px;
+  font-size: 15px;
+  font-weight: 900;
+}
+.tag-titel span { font-weight: 400; color: var(--text-grau); }
+
+.eintrag {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  margin-bottom: 6px;
+  padding: 12px 16px;
+  font: inherit;
+  text-align: left;
+  color: var(--text);
+  background: var(--weiss);
+  border: 0;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.eintrag .klein { display: block; font-size: 14px; color: var(--text-grau); }
+.punkt { flex: none; width: 12px; height: 12px; border-radius: 50%; }
+.leer-text { margin: 4px 0 8px; color: var(--text-grau); font-size: 15px; }
+
+.woche-tag {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 8px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--linie);
+}
+.woche-datum { padding-top: 12px; font-weight: 700; }
+.woche-tag.heute .woche-datum { color: var(--petrol); }
+.woche-tag .eintrag { margin-bottom: 4px; }
+.woche-tag .leer-text { padding-top: 12px; }
+
+.jahr-gitter {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+.mini-monat {
+  padding: 8px;
+  font: inherit;
+  text-align: left;
+  color: var(--text);
+  background: var(--weiss);
+  border: 0;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.mini-monat strong { display: block; margin-bottom: 4px; font-size: 14px; }
+.mini-tage { display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; }
+.mini-tage i { aspect-ratio: 1; background: var(--hintergrund); border-radius: 2px; }
+.mini-tage i.leer { background: none; }
+
+/* ---------- Übersicht eines Termins ---------- */
+.uebersicht {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: rgba(0, 33, 41, .45);
+}
+.uebersicht[hidden] { display: none; }
+.blatt {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  padding: 24px 20px calc(20px + env(safe-area-inset-bottom));
+  background: var(--weiss);
+  border-radius: 20px 20px 0 0;
+}
+.blatt .schliessen {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  font-size: 26px;
+  color: var(--text-grau);
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+.blatt .warnung { margin-top: 12px; }
+.blatt-knoepfe { display: flex; flex-direction: column; gap: 8px; margin-top: 20px; }
+.knopf {
+  padding: 14px;
+  font: inherit;
+  font-weight: 700;
+  color: var(--petrol);
+  background: var(--weiss);
+  border: 1.5px solid var(--linie);
+  border-radius: 26px;
+  cursor: pointer;
+}
+.knopf.haupt { color: var(--weiss); background: var(--petrol); border-color: var(--petrol); }
+
+/* ---------- Hinweis reparierBar (über den Tabs) ---------- */
+.reparatur-hinweis {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: calc(var(--leiste-hoehe) + env(safe-area-inset-bottom));
+  z-index: 9;
+  padding: 10px 52px 10px 16px;
+  font-size: 14px;
+  background: #fff6c7;
+  border-top: 1px solid var(--gelb);
+}
+.reparatur-hinweis p { max-width: 560px; margin: 0 auto; }
+.reparatur-hinweis a { color: var(--petrol); font-weight: 700; }
+.reparatur-hinweis .schliessen {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  width: 36px;
+  height: 36px;
+  margin-top: -18px;
+  font-size: 22px;
+  color: var(--text-grau);
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+/* Platz schaffen, damit der Hinweis nichts verdeckt */
+body.mit-hinweis main { padding-bottom: calc(var(--leiste-hoehe) + 90px + env(safe-area-inset-bottom)); }
 
 /* ---------- Untere Leiste mit Tabs ---------- */
 .tableiste {
