@@ -7,6 +7,8 @@
   /* Stadtfarben */
   --petrol: #005e74;        /* Hauptfarbe der Stadt */
   --petrol-dunkel: #002129;
+  --schwarz: #000000;       /* Text auf Knöpfen (Schwarz-Gelb) */
+  --gelb-hell: #fff4b8;     /* helles Gelb, z.B. gewählter Tag */
   --gelb: #ffdb1a;          /* Schaffhauser Gelb */
 
   /* Ergebnisfarben */
@@ -103,7 +105,7 @@ main {
   appearance: none;
 }
 .suchfeld input::placeholder { color: #9aa4aa; }
-.suchfeld input:focus { border-color: var(--petrol); }
+.suchfeld input:focus { border-color: var(--schwarz); }
 
 .leeren {
   position: absolute;
@@ -156,14 +158,14 @@ main {
   font: inherit;
   font-size: 15px;
   font-weight: 700;
-  color: var(--petrol);
+  color: var(--schwarz);
   background: var(--weiss);
   border: 0;
   border-radius: 20px;
   box-shadow: 0 1px 3px rgba(0, 33, 41, .08);
   cursor: pointer;
 }
-.chip:focus-visible { outline: 2px solid var(--petrol); outline-offset: 2px; }
+.chip:focus-visible { outline: 2px solid var(--schwarz); outline-offset: 2px; }
 
 /* ---------- Ergebnisfeld ---------- */
 .karte {
@@ -257,7 +259,7 @@ main {
   padding: 0;
   margin-left: 6px;
   font: inherit;
-  color: var(--petrol);
+  color: var(--schwarz);
   text-decoration: underline;
   background: none;
   border: 0;
@@ -286,7 +288,7 @@ main {
   cursor: pointer;
 }
 .sorte:hover,
-.sorte:focus-visible { border-color: var(--petrol); }
+.sorte:focus-visible { border-color: var(--schwarz); }
 
 /* Aufklappbare Abschnitte */
 .karte-hinweise { padding: 4px 20px 18px; }
@@ -373,7 +375,7 @@ main {
   font: inherit;
   font-weight: 700;
   text-align: left;
-  color: var(--petrol);
+  color: var(--schwarz);
   background: none;
   border: 0;
   cursor: pointer;
@@ -445,7 +447,7 @@ main {
   box-shadow: 0 1px 3px rgba(0, 0, 0, .25);
   transition: transform .2s;
 }
-.schalter[aria-checked="true"] { background: var(--petrol); }
+.schalter[aria-checked="true"] { background: var(--gelb); }
 .schalter[aria-checked="true"] span { transform: translateX(20px); }
 .schalter:disabled { opacity: .45; cursor: default; }
 
@@ -459,9 +461,33 @@ main {
   padding: 4px;
   margin-bottom: 16px;
   background: var(--weiss);
-  border: 1.5px solid var(--linie);
+  border: 0;
   border-radius: 26px;
+  box-shadow: 0 1px 3px rgba(0, 33, 41, .08);
+  /* für die gelbe Fläche: welcher Knopf (--nr, ab 0) von wie vielen (--anzahl) */
+  position: relative;
+  --nr: 0;
+  --anzahl: 2;
 }
+.umschalter:has(> button:nth-child(3)) { --anzahl: 3; }
+.umschalter:has(> button:nth-child(4)) { --anzahl: 4; }
+.umschalter:has(> button:nth-child(2).aktiv) { --nr: 1; }
+.umschalter:has(> button:nth-child(3).aktiv) { --nr: 2; }
+.umschalter:has(> button:nth-child(4).aktiv) { --nr: 3; }
+/* Gelbe Fläche hinter dem gewählten Knopf, gleitet beim Umschalten */
+.umschalter::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: calc(4px + (100% - 8px) * var(--nr) / var(--anzahl));
+  width: calc((100% - 8px) / var(--anzahl));
+  border-radius: 22px;
+  background: var(--gelb);
+  transition: left .3s ease;
+}
+.umschalter:not(:has(> .aktiv))::before { display: none; }
+@media (prefers-reduced-motion: reduce) { .umschalter::before { transition: none; } }
 .umschalter button {
   flex: 1;
   padding: 9px 0;
@@ -472,8 +498,10 @@ main {
   border: 0;
   border-radius: 22px;
   cursor: pointer;
+  position: relative;   /* Text über der gelben Fläche */
+  transition: color .3s;
 }
-.umschalter button.aktiv { color: var(--weiss); background: var(--petrol); }
+.umschalter button.aktiv { color: var(--schwarz); }
 
 .kal-kopf {
   display: flex;
@@ -487,9 +515,10 @@ main {
   height: 40px;
   font-size: 26px;
   line-height: 1;
-  color: var(--petrol);
+  color: var(--schwarz);
   background: var(--weiss);
-  border: 1.5px solid var(--linie);
+  border: 0;
+  box-shadow: 0 1px 3px rgba(0, 33, 41, .1);
   border-radius: 50%;
   cursor: pointer;
 }
@@ -519,8 +548,8 @@ main {
   cursor: pointer;
 }
 .tag.anderer-monat { color: #b8c0c4; }
-.tag.heute { font-weight: 900; color: var(--petrol); }
-.tag.gewaehlt { background: var(--hintergrund); box-shadow: inset 0 0 0 1.5px var(--petrol); }
+.tag.heute { font-weight: 900; color: var(--schwarz); }
+.tag.gewaehlt { background: var(--gelb-hell); box-shadow: inset 0 0 0 2px var(--gelb); }
 .punkte { display: flex; gap: 3px; min-height: 7px; }
 .punkte i { width: 7px; height: 7px; border-radius: 50%; }
 
@@ -560,7 +589,7 @@ main {
   border-bottom: 1px solid var(--linie);
 }
 .woche-datum { padding-top: 12px; font-weight: 700; }
-.woche-tag.heute .woche-datum { color: var(--petrol); }
+.woche-tag.heute .woche-datum { color: var(--schwarz); }
 .woche-tag .eintrag { margin-bottom: 4px; }
 .woche-tag .leer-text { padding-top: 12px; }
 
@@ -621,13 +650,13 @@ main {
   padding: 14px;
   font: inherit;
   font-weight: 700;
-  color: var(--petrol);
-  background: var(--weiss);
-  border: 1.5px solid var(--linie);
+  color: var(--schwarz);
+  background: var(--hintergrund);
+  border: 0;
   border-radius: 26px;
   cursor: pointer;
 }
-.knopf.haupt { color: var(--weiss); background: var(--petrol); border-color: var(--petrol); }
+.knopf.haupt { background: var(--gelb); }
 
 /* ---------- Untere Leiste mit Tabs (wie in der SBB-App) ----------
    Ausgewählt: schwarzes Icon im gelben Kreis, der in einer runden
@@ -786,7 +815,7 @@ main {
 }
 /* ausgeschaltet: grau und ohne Hintergrund, eingeschaltet: wie die anderen Knöpfe */
 .karten-chip:not(.an) { background: transparent; box-shadow: none; }
-.karten-chip.an { color: var(--petrol); }
+.karten-chip.an { color: var(--schwarz); }
 .karten-chip.an .punkt { opacity: 1; }
 
 .karten-flaeche {
