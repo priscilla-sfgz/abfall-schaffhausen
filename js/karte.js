@@ -91,8 +91,8 @@ async function karteErstellen() {
         .filter((ort) => f.typen.includes(ort.typ))
         .map((ort) => L.circleMarker(ort.lage, {
           radius: ort.typ === "unterflur" ? 6 : 8,
-          color: "#000000",   // feiner schwarzer Rand, damit Gelb auf der Karte sichtbar ist
-          weight: 1.5,
+          color: "#ffffff",   // weisser Rand
+          weight: 2,
           fillColor: KARTEN_FARBEN[ort.typ],
           fillOpacity: 1,
         }).bindPopup(ortText(ort)))

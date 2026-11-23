@@ -9,8 +9,8 @@
      Petrol gibt es nur noch für die Brockenhäuser auf der Karte (js/karte.js). */
   --schwarz: #000000;
   --gelb: #ffdb1a;          /* Schaffhauser Gelb – das einzige Gelb */
-  --text-auf-gelb: #ffffff; /* Text auf gelbem Grund. Zum Ausprobieren weiss;
-                               besser lesbar wäre #000000 (schwarz) */
+  --gelb-hell: #fff1a3;     /* 40 % Gelb + 60 % Weiss: nicht ausgewählte Felder */
+  --text-auf-gelb: #000000; /* Text auf gelbem Grund (weiss war zu wenig Kontrast) */
 
   /* Ergebnisfarben */
   --gruen: #1f7a3d;
@@ -162,12 +162,12 @@ main {
   font-size: 15px;
   font-weight: 700;
   color: var(--schwarz);
-  background: var(--weiss);
+  background: var(--gelb-hell);   /* nicht ausgewählt: helles Gelb */
   border: 0;
   border-radius: 20px;
-  box-shadow: 0 1px 3px rgba(0, 33, 41, .08);
   cursor: pointer;
 }
+.chip:active { background: var(--gelb); }
 .chip:focus-visible { outline: 2px solid var(--schwarz); outline-offset: 2px; }
 
 /* ---------- Ergebnisfeld ---------- */
@@ -286,11 +286,12 @@ main {
   text-align: left;
   font-weight: 700;
   color: var(--text-auf-gelb);
-  background: var(--gelb);
+  background: var(--gelb-hell);
   border: 0;
   border-radius: 26px;
   cursor: pointer;
 }
+.sorte:active { background: var(--gelb); }
 .sorte:focus-visible { outline: 2px solid var(--schwarz); outline-offset: 2px; }
 
 /* Aufklappbare Abschnitte */
@@ -433,7 +434,7 @@ main {
   width: 52px;
   height: 32px;
   padding: 0;
-  background: #c9d1d5;
+  background: var(--gelb-hell);   /* aus: helles Gelb, an: Gelb */
   border: 0;
   border-radius: 16px;
   cursor: pointer;
@@ -463,10 +464,9 @@ main {
   display: flex;
   padding: 4px;
   margin-bottom: 16px;
-  background: var(--weiss);
+  background: var(--gelb-hell);   /* nicht ausgewählt: helles Gelb */
   border: 0;
   border-radius: 26px;
-  box-shadow: 0 1px 3px rgba(0, 33, 41, .08);
   /* für die gelbe Fläche: welcher Knopf (--nr, ab 0) von wie vielen (--anzahl) */
   position: relative;
   --nr: 0;
@@ -654,7 +654,7 @@ main {
   font: inherit;
   font-weight: 700;
   color: var(--schwarz);
-  background: var(--hintergrund);
+  background: var(--gelb-hell);
   border: 0;
   border-radius: 26px;
   cursor: pointer;
@@ -810,7 +810,7 @@ main {
   gap: 7px;
   color: var(--text-grau);
 }
-.karten-chip .punkt { box-shadow: inset 0 0 0 1.5px var(--schwarz); }
+.karten-chip .punkt { box-shadow: 0 0 0 2px var(--weiss); }
 .karten-chip .punkt {
   width: 12px;
   height: 12px;
@@ -818,7 +818,8 @@ main {
   opacity: .35;
 }
 /* ausgeschaltet: grau und ohne Hintergrund, eingeschaltet: wie die anderen Knöpfe */
-.karten-chip:not(.an) { background: transparent; box-shadow: none; }
+.karten-chip:not(.an) { background: var(--gelb-hell); }
+.karten-chip.an { background: var(--gelb); }
 .karten-chip.an { color: var(--schwarz); }
 .karten-chip.an .punkt { opacity: 1; }
 
