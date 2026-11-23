@@ -5,11 +5,12 @@
 
 :root {
   /* Stadtfarben */
-  --petrol: #005e74;        /* Hauptfarbe der Stadt */
-  --petrol-dunkel: #002129;
-  --schwarz: #000000;       /* Text auf Knöpfen (Schwarz-Gelb) */
-  --gelb-hell: #fff4b8;     /* helles Gelb, z.B. gewählter Tag */
-  --gelb: #ffdb1a;          /* Schaffhauser Gelb */
+  /* Schwarz-Gelb: Gelb immer genau #ffdb1a, Text schwarz.
+     Petrol gibt es nur noch für die Brockenhäuser auf der Karte (js/karte.js). */
+  --schwarz: #000000;
+  --gelb: #ffdb1a;          /* Schaffhauser Gelb – das einzige Gelb */
+  --text-auf-gelb: #ffffff; /* Text auf gelbem Grund. Zum Ausprobieren weiss;
+                               besser lesbar wäre #000000 (schwarz) */
 
   /* Ergebnisfarben */
   --gruen: #1f7a3d;
@@ -18,8 +19,8 @@
   --rot-hell: #fbe9ea;
 
   /* Grautöne */
-  --text: #1d2528;
-  --text-grau: #66727a;
+  --text: #000000;
+  --text-grau: #000000;     /* früher grau, jetzt auch schwarz */
   --linie: #dfe4e7;
   --hintergrund: #f2f4f5;
   --weiss: #ffffff;
@@ -70,7 +71,7 @@ body {
   box-shadow: 0 2px 8px rgba(0, 0, 0, .12);   /* kleiner Schatten nach unten */
 }
 .logo { height: 34px; width: auto; display: block; }
-.logo-ersatz { color: var(--petrol); font-weight: 900; font-size: 17px; letter-spacing: .2px; }
+.logo-ersatz { color: var(--schwarz); font-weight: 900; font-size: 17px; letter-spacing: .2px; }
 
 /* ---------- Inhalt ---------- */
 main {
@@ -105,7 +106,7 @@ main {
   appearance: none;
 }
 .suchfeld input::placeholder { color: #9aa4aa; }
-.suchfeld input:focus { border-color: var(--schwarz); }
+.suchfeld input:focus { border-color: var(--gelb); }
 
 .leeren {
   position: absolute;
@@ -138,7 +139,9 @@ main {
 }
 .vorschlaege li + li { border-top: 1px solid var(--linie); }
 .vorschlaege li:hover,
-.vorschlaege li.markiert { background: var(--hintergrund); }
+.vorschlaege li.markiert { background: var(--gelb); color: var(--text-auf-gelb); }
+.vorschlaege li:hover .klein,
+.vorschlaege li.markiert .klein { color: var(--text-auf-gelb); }
 .vorschlaege .klein {
   display: block;
   font-size: 13px;
@@ -224,7 +227,7 @@ main {
   margin: 0 0 14px;
   padding: 10px 12px;
   font-size: 15px;
-  background: #fff6c7;
+  background: var(--weiss);
   border-left: 4px solid var(--gelb);
   border-radius: 6px;
 }
@@ -244,7 +247,7 @@ main {
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: .5px;
-  color: var(--petrol);
+  color: var(--schwarz);
 }
 .hinweis {
   margin: -2px 0 10px;
@@ -270,7 +273,7 @@ main {
 .strasse-eingeben { display: block; margin: 14px 0 6px; padding: 11px 20px; }
 
 /* Feld «Welche Sorte?» */
-.karte.frage .karte-kopf { background: var(--petrol); }
+.karte.frage .karte-kopf { background: var(--gelb); color: var(--text-auf-gelb); }
 .sorten {
   display: flex;
   flex-direction: column;
@@ -281,14 +284,14 @@ main {
   padding: 12px 16px;
   font: inherit;
   text-align: left;
-  color: var(--text);
-  background: var(--weiss);
-  border: 1.5px solid var(--linie);
-  border-radius: 12px;
+  font-weight: 700;
+  color: var(--text-auf-gelb);
+  background: var(--gelb);
+  border: 0;
+  border-radius: 26px;
   cursor: pointer;
 }
-.sorte:hover,
-.sorte:focus-visible { border-color: var(--schwarz); }
+.sorte:focus-visible { outline: 2px solid var(--schwarz); outline-offset: 2px; }
 
 /* Aufklappbare Abschnitte */
 .karte-hinweise { padding: 4px 20px 18px; }
@@ -296,7 +299,7 @@ main {
 .karte-hinweise summary {
   padding: 14px 0;
   font-weight: 900;
-  color: var(--petrol);
+  color: var(--schwarz);
   cursor: pointer;
   list-style: none;
 }
@@ -323,7 +326,7 @@ main {
   font-size: 14px;
   color: var(--text-grau);
 }
-.stellen a.klein { color: var(--petrol); }
+.stellen a.klein { color: var(--schwarz); }
 .kosten {
   display: inline-block;
   margin-left: 6px;
@@ -348,7 +351,7 @@ main {
   font-size: 13px;
   color: var(--text-grau);
 }
-.quelle a { color: var(--petrol); }
+.quelle a { color: var(--schwarz); }
 
 /* ---------- Stern im Ergebnisfeld ---------- */
 .stern {
@@ -397,7 +400,7 @@ main {
   margin: 0 auto;
   padding: 12px 16px;
   color: var(--weiss);
-  background: var(--petrol-dunkel);
+  background: var(--schwarz);
   border-radius: 12px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, .25);
 }
@@ -501,7 +504,7 @@ main {
   position: relative;   /* Text über der gelben Fläche */
   transition: color .3s;
 }
-.umschalter button.aktiv { color: var(--schwarz); }
+.umschalter button.aktiv { color: var(--text-auf-gelb); }
 
 .kal-kopf {
   display: flex;
@@ -549,7 +552,7 @@ main {
 }
 .tag.anderer-monat { color: #b8c0c4; }
 .tag.heute { font-weight: 900; color: var(--schwarz); }
-.tag.gewaehlt { background: var(--gelb-hell); box-shadow: inset 0 0 0 2px var(--gelb); }
+.tag.gewaehlt { color: var(--text-auf-gelb); background: var(--gelb); }
 .punkte { display: flex; gap: 3px; min-height: 7px; }
 .punkte i { width: 7px; height: 7px; border-radius: 50%; }
 
@@ -656,7 +659,7 @@ main {
   border-radius: 26px;
   cursor: pointer;
 }
-.knopf.haupt { background: var(--gelb); }
+.knopf.haupt { color: var(--text-auf-gelb); background: var(--gelb); }
 
 /* ---------- Untere Leiste mit Tabs (wie in der SBB-App) ----------
    Ausgewählt: schwarzes Icon im gelben Kreis, der in einer runden
@@ -740,7 +743,7 @@ main {
 .abc-gruppen summary {
   padding: 14px 0;
   font-weight: 900;
-  color: var(--petrol);
+  color: var(--schwarz);
   cursor: pointer;
   list-style: none;
 }
@@ -785,14 +788,14 @@ main {
 .abc-liste .buchstabe {
   padding: 14px 0 2px;
   font-weight: 900;
-  color: var(--petrol);
+  color: var(--schwarz);
 }
 .abc-fuss {
   margin: 18px 0 8px;
   text-align: center;
   color: var(--text-grau);
 }
-.abc-fuss a { color: var(--petrol); font-weight: 700; }
+.abc-fuss a { color: var(--schwarz); font-weight: 700; }
 
 /* ---------- Tab «Karte» ---------- */
 .karten-filter {
@@ -807,6 +810,7 @@ main {
   gap: 7px;
   color: var(--text-grau);
 }
+.karten-chip .punkt { box-shadow: inset 0 0 0 1.5px var(--schwarz); }
 .karten-chip .punkt {
   width: 12px;
   height: 12px;
@@ -842,5 +846,6 @@ main {
   font-size: 14px;
   line-height: 1.45;
 }
-.karten-flaeche .leaflet-popup-content a { color: var(--petrol); font-weight: 700; }
+.karten-flaeche .leaflet-control-attribution a { color: var(--schwarz); }
+.karten-flaeche .leaflet-popup-content a { color: var(--schwarz); font-weight: 700; }
 .karten-zeiten { color: var(--text-grau); }

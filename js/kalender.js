@@ -228,7 +228,7 @@ function icsHerunterladen(lesezeichen) {
 // ---------------------------------------------------------
 
 function farbeVon(abfallartId) {
-  return KALENDER_FARBEN[abfallartId] || "#005e74";
+  return KALENDER_FARBEN[abfallartId] || "#000000";
 }
 
 // "2026-11-24" → "Dienstag, 24. November 2026"

@@ -16,10 +16,10 @@ const KARTEN_FILTER = [
 
 // Farbe der Punkte je nach Art
 const KARTEN_FARBEN = {
-  sammelstelle: "#005e74",   // Petrol
-  unterflur: "#5c8f9c",      // helles Petrol
-  brocki: "#c47f00",         // Ocker
-  reparatur: "#2e7d32",      // Grün
+  sammelstelle: "#ffdb1a",   // Schaffhauser Gelb
+  unterflur: "#ffdb1a",      // Gelb (kleinere Punkte)
+  brocki: "#005e74",         // Petrol
+  reparatur: "#7a8387",      // Grau
 };
 
 const karte = {
@@ -91,8 +91,8 @@ async function karteErstellen() {
         .filter((ort) => f.typen.includes(ort.typ))
         .map((ort) => L.circleMarker(ort.lage, {
           radius: ort.typ === "unterflur" ? 6 : 8,
-          color: "#ffffff",
-          weight: 2,
+          color: "#000000",   // feiner schwarzer Rand, damit Gelb auf der Karte sichtbar ist
+          weight: 1.5,
           fillColor: KARTEN_FARBEN[ort.typ],
           fillOpacity: 1,
         }).bindPopup(ortText(ort)))
