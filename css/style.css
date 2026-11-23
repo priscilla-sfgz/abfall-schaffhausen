@@ -632,15 +632,9 @@ main {
 /* ---------- Untere Leiste mit Tabs (wie in der SBB-App) ----------
    Ausgewählt: schwarzes Icon im gelben Kreis, der in einer runden
    Einbuchtung der weissen Leiste sitzt. Sonst: schwarz auf Weiss.
-
-   Aufbau: Der weisse Hintergrund ist eine eigene Ebene (::before).
-   Eine «Maske» schneidet daraus das runde Loch mit abgerundeten Ecken
-   (Form mit Python berechnet: Loch-Mitte 22 px von oben, Radius 31 px,
-   Ecken-Rundung 10 px). --kreis-x = Mitte des ausgewählten Tabs,
-   wird von tabWechseln() in js/app.js gesetzt. */
+   Die weisse Fläche mit dem Loch zeichnet js/leiste.js (SVG),
+   inklusive Animation beim Tab-Wechsel. */
 .tableiste {
-  --kreis-x: 12.5vw;
-  --loch-form: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%2060'%3E%3Cpath%20d='M0%200H10.80A10%2010%200%200%201%2020.36%2012.93A31%2031%200%201%200%2079.64%2012.93A10%2010%200%200%201%2089.20%200H100V60H0Z'/%3E%3C/svg%3E");
   position: fixed;
   left: 0;
   right: 0;
@@ -650,23 +644,13 @@ main {
   /* weicher Schatten nach oben, folgt auch der Einbuchtung */
   filter: drop-shadow(0 -1px 12px rgba(0, 33, 41, .16));
 }
-.tableiste::before {
-  content: "";
+.leiste-grund {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: var(--weiss);
-  /* links voll · Form mit Loch · rechts voll · unter der Form voll */
-  -webkit-mask:
-    linear-gradient(#000, #000) left top / calc(var(--kreis-x) - 49.5px) 100% no-repeat,
-    var(--loch-form) calc(var(--kreis-x) - 50px) top / 100px 60px no-repeat,
-    linear-gradient(#000, #000) right top / calc(100% - var(--kreis-x) - 49.5px) 100% no-repeat,
-    linear-gradient(#000, #000) calc(var(--kreis-x) - 50px) bottom / 100px calc(100% - 59.5px) no-repeat;
-  mask:
-    linear-gradient(#000, #000) left top / calc(var(--kreis-x) - 49.5px) 100% no-repeat,
-    var(--loch-form) calc(var(--kreis-x) - 50px) top / 100px 60px no-repeat,
-    linear-gradient(#000, #000) right top / calc(100% - var(--kreis-x) - 49.5px) 100% no-repeat,
-    linear-gradient(#000, #000) calc(var(--kreis-x) - 50px) bottom / 100px calc(100% - 59.5px) no-repeat;
+  width: 100%;
+  height: 100%;
+  fill: var(--weiss);
 }
 .tab {
   position: relative;
@@ -689,9 +673,11 @@ main {
   width: 26px;
   height: 26px;
   fill: currentColor;
+  transition: transform .32s ease;
 }
-/* Gelber Kreis (Durchmesser 50 px, Mitte 22 px von oben) */
-.tab.aktiv::before {
+/* Gelber Kreis (Durchmesser 50 px, Mitte 22 px von oben).
+   Nicht ausgewählt: auf 0 verkleinert, damit er beim Wechsel wachsen kann. */
+.tab::before {
   content: "";
   position: absolute;
   top: -3px;
@@ -701,10 +687,16 @@ main {
   margin-left: -25px;
   border-radius: 50%;
   background: var(--gelb);
+  transform: scale(0);
+  transition: transform .32s ease;
 }
+.tab.aktiv::before { transform: scale(1); }
 .tab.aktiv svg {
   /* Icon in die Kreismitte schieben */
   transform: translateY(calc(22px - var(--leiste-hoehe) / 2));
+}
+@media (prefers-reduced-motion: reduce) {
+  .tab svg, .tab::before { transition: none; }
 }
 
 /* ---------- Tab «Abfall-ABC» ---------- */
