@@ -383,8 +383,8 @@ function uebersichtZeigen(schluessel, datum) {
       ${termin.ausnahme ? `<p class="warnung">${sicher(termin.ausnahme)}</p>` : ""}
       ${erinnerungsAuswahl(lesezeichen)}
       <div class="blatt-knoepfe">
-        <button type="button" class="knopf" data-aktion="entfernen">Aus dem Kalender entfernen</button>
         <button type="button" class="knopf haupt" data-aktion="ics">Download für den eigenen Kalender</button>
+        <button type="button" class="text-knopf" data-aktion="entfernen">Aus dem Kalender entfernen</button>
       </div>
     </div>`;
   bereich.hidden = false;
