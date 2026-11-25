@@ -272,62 +272,58 @@ function hinbringenZeilen(ergebnis) {
   return html;
 }
 
-function ergebnisAnzeigen(ergebnis) {
-  const feld = document.getElementById("ergebnis");
-  aktuellesErgebnis = ergebnis;   // für den Stern (js/kalender.js)
-  if (!ergebnis) {
-    feld.innerHTML = "";
-    return;
-  }
+// Zeichnet eine Ergebnis-Karte.
+//   recycling: true = die Recycling-Möglichkeit (z.B. RecyBag), false = Abfuhr bzw. Sammelstelle
+//   bedingung: kleiner Text oben in der zweiten Karte, z.B. «Kaputte Kleider»
+//   oben:      Sorte und Hinweise zeigen (nur in der ersten Karte)
+//   stern:     Stern zum Speichern zeigen
+function karteHtml(ergebnis, { recycling = false, bedingung = null, oben = true, stern = false } = {}) {
   const art = ergebnis.art;
   const naechster = ergebnis.termine[0];
 
   // ----- Oben: welche Sorte (falls gewählt), Abfallart und Hinweise -----
   let haupt = "";
-  if (auswahl.oberart) {
+  if (oben && auswahl.oberart) {
     haupt += `<p class="sorte-zeile">${sicher(ABFALLARTEN[auswahl.oberart].name)} › ${sicher(auswahl.sorteText)}
       <button type="button" class="andere-sorte">Sorte ändern</button></p>`;
   }
   haupt += `<p class="abfallart">${sicher(art.name)}</p>`;
-  // Ein Gegenstand, der in den Hauskehricht gehört: klar sagen, dass nichts Besonderes nötig ist
-  // (nicht, wenn der Hinweis den Hauskehricht schon nennt)
-  const nenntHauskehricht = (ergebnis.hinweis || "").includes("Hauskehricht");
-  if (ergebnis.abfallartId === "hauskehricht" && auswahl.sorteFertig && !nenntHauskehricht) {
-    haupt += `<p class="hinweis">Entsorgung im Hauskehricht (Böcklisack)</p>`;
+  if (bedingung) haupt += `<p class="hinweis">${sicher(bedingung)}</p>`;
+  if (oben) {
+    // Ein Gegenstand, der in den Hauskehricht gehört: klar sagen, dass nichts Besonderes nötig ist
+    // (nicht, wenn der Hinweis den Hauskehricht schon nennt)
+    const nenntHauskehricht = (ergebnis.hinweis || "").includes("Hauskehricht");
+    if (ergebnis.abfallartId === "hauskehricht" && auswahl.sorteFertig && !nenntHauskehricht) {
+      haupt += `<p class="hinweis">Entsorgung im Hauskehricht (Böcklisack)</p>`;
+    }
+    if (ergebnis.hinweis) haupt += `<p class="hinweis">${sicher(ergebnis.hinweis)}</p>`;
   }
-  if (ergebnis.hinweis) haupt += `<p class="hinweis">${sicher(ergebnis.hinweis)}</p>`;
 
   // ----- Kopf und grosse Zeilen -----
   let kopf;
-  if (art.recycling) {
-    // Recycling ist am wichtigsten, Abfuhr bzw. Container nur als zweite Möglichkeit
+  if (recycling) {
     kopf = { klasse: "ja", icon: ICON_RECYCLING, text: "Recycling empfohlen" };
     haupt += `<p class="gross">${sicher(art.recycling.ziel)}</p>`;
     haupt += `<p class="zeit">${sicher(art.recycling.zeit)}</p>`;
-    const oder = ergebnis.abgeholt
-      ? `<strong>Alternativ mit dem ${sicher(ABFALLARTEN[art.tour].name)}:</strong> ${sicher(ergebnis.rhythmus)}, ${sicher(art.zeit)}`
-      : `<strong>Alternativ:</strong> ${sicher(art.ziel)}, ${sicher(art.zeit)}`;
-    haupt += `<p class="oder">${oder}</p>`;
   } else if (ergebnis.abgeholt) {
     kopf = { klasse: "ja", icon: ICON_HAKEN, text: "Wird abgeholt" };
     haupt += abfuhrZeilen(ergebnis);
+    // Warnung bei Ausfällen in den nächsten 3 Wochen und bei verschobenen Terminen
+    for (const ausfall of ergebnis.ausfaelle) {
+      haupt += `<p class="warnung"><strong>${datumKurz(ausfall.datum)}:</strong> ${sicher(ausfall.ausnahme)}</p>`;
+    }
+    if (naechster && naechster.ausnahme) haupt += `<p class="warnung">${sicher(naechster.ausnahme)}</p>`;
   } else {
     kopf = { klasse: "nein", icon: ICON_KREUZ, text: "Wird nicht abgeholt" };
     haupt += hinbringenZeilen(ergebnis);
   }
 
-  // Warnung bei Ausfällen in den nächsten 3 Wochen und bei verschobenen Terminen
-  for (const ausfall of ergebnis.ausfaelle) {
-    haupt += `<p class="warnung"><strong>${datumKurz(ausfall.datum)}:</strong> ${sicher(ausfall.ausnahme)}</p>`;
-  }
-  if (ergebnis.abgeholt && naechster && naechster.ausnahme) {
-    haupt += `<p class="warnung">${sicher(naechster.ausnahme)}</p>`;
-  }
-
   // ----- Aufklappbare Abschnitte (immer die gleichen Titel) -----
+  // Hat die Abfallart eine Recycling-Karte, stehen Sammelstellen und «Gut zu wissen» dort.
+  const mitInfos = recycling || !art.recycling;
   let bereitstellen = "";
   let nichtMitgenommen = "";
-  if (ergebnis.abgeholt) {
+  if (!recycling && ergebnis.abgeholt) {
     const punkteListe = [...(art.bereitstellen || [])];
     if (ergebnis.bereitstellenOrt) {
       punkteListe.unshift(`An deiner Strasse bereitstellen bei: ${ergebnis.bereitstellenOrt}.`);
@@ -338,25 +334,56 @@ function ergebnisAnzeigen(ergebnis) {
     }
     nichtMitgenommen = punkte(art.nichtMitgenommen);
   }
-  const sammelstellen = stellenListe(ergebnis.stellen);
-  const gutZuWissen = punkte([...(art.wohin || []), ...(art.tipp ? [art.tipp] : [])]);
+  const sammelstellen = mitInfos ? stellenListe(ergebnis.stellen) : "";
+  const gutZuWissen = mitInfos ? punkte([...(art.wohin || []), ...(art.tipp ? [art.tipp] : [])]) : "";
 
   // Wird es abgeholt, kommt «So bereitstellen» zuerst, sonst die Sammelstellen
-  const abschnitte = (ergebnis.abgeholt && !art.recycling)
+  const abschnitte = (ergebnis.abgeholt && !recycling)
     ? [["So bereitstellen", bereitstellen], ["Wird nicht mitgenommen", nichtMitgenommen], ["Sammelstellen", sammelstellen]]
     : [["Sammelstellen", sammelstellen], ["So bereitstellen", bereitstellen], ["Wird nicht mitgenommen", nichtMitgenommen]];
   abschnitte.push(["Gut zu wissen", gutZuWissen]);
   const hinweise = abschnitte.map(([titel, inhalt]) => aufklappen(titel, inhalt)).join("");
 
-  feld.innerHTML = `
+  return `
     <article class="karte ${kopf.klasse}">
-      <div class="karte-kopf">${kopf.icon} ${kopf.text} ${ergebnis.strasse ? sternKnopf(ergebnis) : ""}</div>
+      <div class="karte-kopf">${kopf.icon} ${kopf.text} ${stern ? sternKnopf(ergebnis) : ""}</div>
       <div class="karte-haupt">${haupt}</div>
-      <div class="karte-hinweise">
-        ${hinweise}
-        <p class="quelle">Abfalltelefon <a href="tel:+41526325329">052 632 53 29</a> · Termine: <a href="${QUELLE_URL}" target="_blank" rel="noopener">Stadt Schaffhausen</a>, Stand ${datumKurz(window.TOUREN_DATEN.stand)}</p>
-      </div>
+      ${hinweise ? `<div class="karte-hinweise">${hinweise}</div>` : ""}
     </article>`;
+}
+
+// Zeigt das Ergebnis: eine Karte, oder zwei mit «Oder» dazwischen
+//   - Recycling-Möglichkeit (art.recycling): zuerst Recycling, dann die Abfuhr
+//   - zweite Abfallart (art.alternative, z.B. kaputte Kleider → Hauskehricht)
+function ergebnisAnzeigen(ergebnis) {
+  const feld = document.getElementById("ergebnis");
+  aktuellesErgebnis = null;   // für den Stern (js/kalender.js): das Ergebnis mit Terminen
+  if (!ergebnis) {
+    feld.innerHTML = "";
+    return;
+  }
+  const art = ergebnis.art;
+  const karten = [];   // je [ergebnis, einstellungen]
+  if (art.recycling) {
+    karten.push([ergebnis, { recycling: true }]);
+    karten.push([ergebnis, { oben: false, bedingung: art.recycling.oder || null }]);
+  } else {
+    karten.push([ergebnis, {}]);
+    if (art.alternative) {
+      const zweites = ergebnisBerechnen(auswahl.strasse, art.alternative.id, null);
+      karten.push([zweites, { oben: false, bedingung: art.alternative.bedingung }]);
+    }
+  }
+
+  // Stern bei der ersten Karte mit Abfuhrterminen (nur mit Strasse)
+  const mitStern = karten.find(([e, k]) => !k.recycling && e.strasse && e.termine.length > 0);
+  if (mitStern) {
+    mitStern[1].stern = true;
+    aktuellesErgebnis = mitStern[0];
+  }
+
+  feld.innerHTML = karten.map(([e, k]) => karteHtml(e, k)).join(`<p class="oder-trenner">Oder</p>`)
+    + `<p class="quelle">Abfalltelefon <a href="tel:+41526325329">052 632 53 29</a> · Termine: <a href="${QUELLE_URL}" target="_blank" rel="noopener">Stadt Schaffhausen</a>, Stand ${datumKurz(window.TOUREN_DATEN.stand)}</p>`;
 }
 
 // ---------------------------------------------------------

@@ -40,6 +40,7 @@ PWA für Einwohnerinnen und Einwohner der Stadt Schaffhausen: Man gibt Strasse u
    - *Offen:* Zu Tour 6 gehören auch Strassen wie die Bahnhofstrasse. Noch nicht geklärt, ob dort wirklich nichts abgeholt wird.
 6. **Plastik** ist grün (wird im Böckli mit dem Hauskehricht mitgenommen) und hat einen Recycling-Tipp (Sammelsack, RecyBag).
 7. **Ohne Strasse** gibt es trotzdem ein Ergebnis (Entscheid 21.11.2026): Bei «Wird abgeholt» steht gross «Termin je nach Strasse» mit Knopf «Strasse eingeben», alle Abschnitte erscheinen. Kein Stern ohne Strasse. Altstadt-Regeln gelten erst mit Strasse.
+8. **Zwei Möglichkeiten = zwei Karten** (Entscheid 25.11.2026): Gibt es eine zweite Möglichkeit, erscheint sie als eigene Ergebnis-Karte unter dem Wort «Oder». Recycling (`recycling` in `data/abfallarten.js`, z.B. RecyBag) kommt zuerst, die Abfuhr danach. Eine andere Abfallart (`alternative: { id, bedingung }`, z.B. kaputte Kleider → Hauskehricht) steht als zweite Karte, die Bedingung klein oben drin. Stern nur bei der Karte mit Terminen. Abfalltelefon/Quelle einmal unter allen Karten.
 
 ## Datenquelle: Abfallkalender der Stadt
 

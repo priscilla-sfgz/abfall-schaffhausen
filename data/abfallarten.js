@@ -21,7 +21,10 @@
 //   zeit             wird gross unter dem Termin bzw. Ziel angezeigt
 //   ziel             nur bei «nicht abgeholt»: gross, wohin damit
 //                    (fehlt es, steht «An Sammelstelle entsorgen»)
-//   recycling        besser als die Abfuhr: { ziel, zeit } – steht dann zuoberst
+//   recycling        besser als die Abfuhr: { ziel, zeit, oder } – eigene Karte zuoberst,
+//                    darunter «Oder» und die Karte mit der Abfuhr (oder = kleiner Text dort)
+//   alternative      zweite Möglichkeit als eigene Karte unter «Oder»:
+//                    { id: "hauskehricht", bedingung: "Kaputte Kleider" }
 //   sammeltermine    feste Daten zum Hinbringen (z.B. Giftsammlung)
 //   rhythmus         wie oft (für seltene Abfuhren)
 //   sorten           zweite Auswahl «Welche Sorte?»:
@@ -210,6 +213,7 @@ window.ABFALLARTEN = {
     recycling: {
       ziel: "RecyBag",
       zeit: "Erhältlich bei Coop, Denner, Spar und Lidl, Rückgabe am selben Ort",
+      oder: "Mit dem Hauskehricht",   // kleiner Text in der zweiten Karte
     },
     tipp: "Nur leeren, nicht auswaschen.",
     altstadt: {
@@ -287,8 +291,8 @@ window.ABFALLARTEN = {
     abgeholt: false,
     wohin: [
       "Nur saubere, tragbare Kleider. Schuhe paarweise zusammenbinden.",
-      "Kaputte Kleider → Hauskehricht.",
     ],
+    alternative: { id: "hauskehricht", bedingung: "Kaputte Kleider" },
   },
 
   elektro: {

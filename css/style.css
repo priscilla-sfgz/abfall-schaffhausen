@@ -269,6 +269,17 @@ main {
   cursor: pointer;
 }
 
+/* «Oder» zwischen zwei Ergebnis-Karten */
+.oder-trenner {
+  margin: 14px 0 -4px;
+  text-align: center;
+  font-weight: 900;
+}
+/* Abfalltelefon und Quelle unter den Karten */
+#ergebnis > .quelle { margin: 12px 4px 0; }
+/* Karte ohne aufklappbare Abschnitte: unten etwas mehr Platz */
+.karte-haupt:last-child { padding-bottom: 18px; }
+
 /* Knopf «Strasse eingeben» (Ergebnis ohne Strasse) */
 .strasse-eingeben { display: block; margin: 14px 0 6px; padding: 11px 20px; }
 
