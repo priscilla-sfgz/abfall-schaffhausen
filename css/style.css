@@ -466,8 +466,10 @@ main {
 .schalter:disabled { opacity: .45; cursor: default; }
 
 .auswahl-titel { margin: 18px 0 6px; font-weight: 700; }
-.klein-umschalter { margin-bottom: 0; }
-.klein-umschalter button { font-size: 14px; }
+/* Erinnerung in der Termin-Übersicht: zwei Ein/Aus-Knöpfe (aus = weiss mit Schatten, an = gelb) */
+.erinnerungs-knoepfe { display: flex; gap: 8px; }
+.erinnerungs-knoepfe .chip { flex: 1; transition: background .2s; }
+.erinnerungs-knoepfe .chip.an { background: var(--gelb); box-shadow: none; }
 
 /* ---------- Kalender-Tab ---------- */
 .umschalter {

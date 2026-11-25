@@ -12,12 +12,26 @@
 // Schlüssel steht bei Vercel als VAPID_PRIVATE_KEY.
 const VAPID_OEFFENTLICH = "BFiNpxsdT-c6mzbf5j8cVu7zphGWdjPCSHit1fYi_IbVsF7JJZII2_7W7ZyZa6mQCQvHjPMiQmoDqaPudSdUrEw";
 
-// Wann erinnert wird (pro gespeicherter Kombination wählbar)
+// Wann erinnert wird (pro gespeicherter Kombination, beide einzeln ein-/ausschaltbar).
+// Gespeichert wird ein Wort: "vorabend", "morgen", "beides" oder "keine".
 const ERINNERUNG_ZEITPUNKTE = [
   ["vorabend", "Vorabend 19 Uhr"],
   ["morgen", "Morgen 6 Uhr"],
-  ["keine", "Keine"],
 ];
+
+// Welche Zeitpunkte sind bei diesem Lesezeichen an? z.B. ["vorabend", "morgen"]
+function erinnerungsZeitpunkte(lesezeichen) {
+  const wert = lesezeichen.erinnerung || "vorabend";   // ohne Angabe: Vorabend
+  if (wert === "beides") return ["vorabend", "morgen"];
+  if (wert === "keine") return [];
+  return [wert];
+}
+
+// ["vorabend", "morgen"] → "beides", [] → "keine"
+function erinnerungsWort(zeitpunkte) {
+  if (zeitpunkte.length === 2) return "beides";
+  return zeitpunkte[0] || "keine";
+}
 
 // Kann dieser Browser überhaupt Push-Nachrichten empfangen?
 // (Auf dem iPhone nur in der installierten App.)
@@ -44,14 +58,15 @@ async function aboHolen() {
 
 // Was der Server über die gespeicherten Termine wissen muss
 function erinnerungsDaten() {
+  // Für jeden eingeschalteten Zeitpunkt ein eigener Eintrag (bei «beides» also zwei)
   return lesezeichenLaden()
-    .filter((l) => (l.erinnerung || "vorabend") !== "keine")
-    .map((l) => {
+    .flatMap((l) => erinnerungsZeitpunkte(l).map((zeitpunkt) => [l, zeitpunkt]))
+    .map(([l, zeitpunkt]) => {
       const termine = termineVon(l);
       return {
         titel: ABFALLARTEN[l.abfallartId] ? ABFALLARTEN[l.abfallartId].name : "",
         ort: l.strasseText,
-        zeitpunkt: l.erinnerung || "vorabend",
+        zeitpunkt: zeitpunkt,
         daten: termine.slice(0, 120).map((t) => ({
           datum: t.datum,
           // Abfuhr: «bis 7 Uhr bereitstellen». Sammeltag (z.B. Giftsammlung): Zeit und Ort.
@@ -88,9 +103,14 @@ async function erinnerungenAbgleichen() {
   if (!antwort.ok) throw new Error("Server antwortet mit " + antwort.status);
 }
 
-// Im Hintergrund abgleichen, Fehler nur in der Konsole melden
+// Im Hintergrund abgleichen, Fehler nur in der Konsole melden.
+// Nie zwei Abgleiche gleichzeitig (sonst kann sich das Gerät doppelt anmelden):
+// Ein neuer Abgleich wartet, bis der laufende fertig ist.
+let laufenderAbgleich = Promise.resolve();
 function erinnerungenStillAbgleichen() {
-  erinnerungenAbgleichen().catch((fehler) => console.warn("Erinnerungen:", fehler));
+  laufenderAbgleich = laufenderAbgleich
+    .then(erinnerungenAbgleichen)
+    .catch((fehler) => console.warn("Erinnerungen:", fehler));
 }
 
 async function erinnerungenEinschalten() {
@@ -106,7 +126,10 @@ async function erinnerungenEinschalten() {
       applicationServerKey: schluesselAlsBytes(VAPID_OEFFENTLICH),
     });
     erinnerungenMerken(true);
-    await erinnerungenAbgleichen();
+    // in die Warteschlange (siehe erinnerungenStillAbgleichen), Fehler aber hier melden
+    const abgleich = laufenderAbgleich.then(erinnerungenAbgleichen);
+    laufenderAbgleich = abgleich.catch(() => {});
+    await abgleich;
     meldungZeigen("Push-Erinnerungen eingeschaltet");
   } catch (fehler) {
     console.warn("Erinnerungen:", fehler);
@@ -148,17 +171,30 @@ function erinnerungsSchalterZeigen() {
 // Auswahl «Vorabend / Morgen / Keine» für die Übersicht eines Termins
 function erinnerungsAuswahl(lesezeichen) {
   if (!PUSH_MOEGLICH || !erinnerungenAn()) return "";
-  const aktuell = lesezeichen.erinnerung || "vorabend";
+  // Zwei Ein/Aus-Knöpfe: gelb = an
+  const an = erinnerungsZeitpunkte(lesezeichen);
   return `<p class="auswahl-titel">Erinnerung</p>
-    <div class="umschalter klein-umschalter" role="group" aria-label="Erinnerung">
+    <div class="erinnerungs-knoepfe" role="group" aria-label="Erinnerung">
       ${ERINNERUNG_ZEITPUNKTE.map(([wert, text]) =>
-        `<button type="button" data-erinnerung="${wert}" class="${wert === aktuell ? "aktiv" : ""}">${text}</button>`).join("")}
+        `<button type="button" class="chip ${an.includes(wert) ? "an" : ""}" data-erinnerung="${wert}"
+          aria-pressed="${an.includes(wert)}">${text}</button>`).join("")}
     </div>`;
 }
 
-function erinnerungWaehlen(schluessel, wert) {
-  lesezeichenSpeichern(lesezeichenLaden().map((l) => (l.schluessel === schluessel ? { ...l, erinnerung: wert } : l)));
+// Einen Zeitpunkt ein- oder ausschalten. Gibt zurück, ob er jetzt an ist.
+function erinnerungUmschalten(schluessel, zeitpunkt) {
+  let jetztAn = false;
+  lesezeichenSpeichern(lesezeichenLaden().map((l) => {
+    if (l.schluessel !== schluessel) return l;
+    const an = erinnerungsZeitpunkte(l);
+    jetztAn = !an.includes(zeitpunkt);
+    const neu = jetztAn ? [...an, zeitpunkt] : an.filter((z) => z !== zeitpunkt);
+    // Reihenfolge wie in ERINNERUNG_ZEITPUNKTE
+    const sortiert = ERINNERUNG_ZEITPUNKTE.map(([wert]) => wert).filter((wert) => neu.includes(wert));
+    return { ...l, erinnerung: erinnerungsWort(sortiert) };
+  }));
   erinnerungenStillAbgleichen();
+  return jetztAn;
 }
 
 // Einrichten (wird am Ende von app.js aufgerufen)

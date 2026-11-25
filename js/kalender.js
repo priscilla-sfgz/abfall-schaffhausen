@@ -393,9 +393,10 @@ function uebersichtZeigen(schluessel, datum) {
   bereich.onclick = (e) => {
     const erinnerung = e.target.closest("[data-erinnerung]");
     if (erinnerung) {
-      erinnerungWaehlen(schluessel, erinnerung.dataset.erinnerung);
-      // Nur die Auswahl umstellen (nicht alles neu zeichnen), damit die gelbe Fläche gleitet
-      bereich.querySelectorAll("[data-erinnerung]").forEach((k) => k.classList.toggle("aktiv", k === erinnerung));
+      // Vorabend bzw. Morgen ein- oder ausschalten (beide können an sein)
+      const an = erinnerungUmschalten(schluessel, erinnerung.dataset.erinnerung);
+      erinnerung.classList.toggle("an", an);
+      erinnerung.setAttribute("aria-pressed", String(an));
       return;
     }
     const aktion = e.target.closest("[data-aktion]")?.dataset.aktion;
