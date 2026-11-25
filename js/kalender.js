@@ -394,7 +394,8 @@ function uebersichtZeigen(schluessel, datum) {
     const erinnerung = e.target.closest("[data-erinnerung]");
     if (erinnerung) {
       erinnerungWaehlen(schluessel, erinnerung.dataset.erinnerung);
-      uebersichtZeigen(schluessel, datum);   // neu zeichnen
+      // Nur die Auswahl umstellen (nicht alles neu zeichnen), damit die gelbe Fläche gleitet
+      bereich.querySelectorAll("[data-erinnerung]").forEach((k) => k.classList.toggle("aktiv", k === erinnerung));
       return;
     }
     const aktion = e.target.closest("[data-aktion]")?.dataset.aktion;

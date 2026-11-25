@@ -24,7 +24,8 @@
 //   recycling        besser als die Abfuhr: { ziel, zeit, oder } – eigene Karte zuoberst,
 //                    darunter «Oder» und die Karte mit der Abfuhr (oder = kleiner Text dort)
 //   alternative      zweite Möglichkeit als eigene Karte unter «Oder»:
-//                    { id: "hauskehricht", bedingung: "Kaputte Kleider" }
+//                    { id: "hauskehricht", was: "Kaputte Kleider", wohin: "Im Hauskehricht" }
+//                    → Zeile «Kaputte Kleider · Im Hauskehricht» (immer «Was · Wohin»)
 //   sammeltermine    feste Daten zum Hinbringen (z.B. Giftsammlung)
 //   rhythmus         wie oft (für seltene Abfuhren)
 //   sorten           zweite Auswahl «Welche Sorte?»:
@@ -213,7 +214,7 @@ window.ABFALLARTEN = {
     recycling: {
       ziel: "RecyBag",
       zeit: "Erhältlich bei Coop, Denner, Spar und Lidl, Rückgabe am selben Ort",
-      oder: "Mit dem Hauskehricht",   // kleiner Text in der zweiten Karte
+      oder: "Im Hauskehricht",   // zweite Karte: «Plastik / Kunststoff · Im Hauskehricht»
     },
     tipp: "Nur leeren, nicht auswaschen.",
     altstadt: {
@@ -292,7 +293,7 @@ window.ABFALLARTEN = {
     wohin: [
       "Nur saubere, tragbare Kleider. Schuhe paarweise zusammenbinden.",
     ],
-    alternative: { id: "hauskehricht", bedingung: "Kaputte Kleider" },
+    alternative: { id: "hauskehricht", was: "Kaputte Kleider", wohin: "Im Hauskehricht" },
   },
 
   elektro: {

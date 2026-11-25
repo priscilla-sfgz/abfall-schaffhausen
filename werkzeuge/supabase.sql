@@ -31,7 +31,8 @@ select cron.schedule(
       'Content-Type', 'application/json',
       'Authorization', 'Bearer <CRON_SECRET – steht in geheim/schluessel.txt>'
     ),
-    body := '{}'::jsonb
+    body := '{}'::jsonb,
+    timeout_milliseconds := 30000   -- bis 30 Sekunden warten (Standard wäre nur 5)
   );
   $$
 );

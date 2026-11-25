@@ -20,7 +20,8 @@ from datetime import datetime, timedelta
 from http.server import BaseHTTPRequestHandler
 from zoneinfo import ZoneInfo
 
-from pywebpush import WebPushException, webpush
+# pywebpush wird erst in senden() geladen: Das Laden dauert einige Sekunden,
+# und die meisten stündlichen Aufrufe müssen gar nichts senden.
 
 SUPABASE_URL = os.environ.get("SUPABASE_URL", "").rstrip("/")
 SUPABASE_KEY = os.environ.get("SUPABASE_SECRET_KEY", "")
@@ -59,6 +60,7 @@ def nachricht_bauen(lesezeichen, zeitpunkt, datum, vorsilbe):
 
 def senden(abo, nachricht):
     """Schickt eine Push-Nachricht. Gibt False zurück, wenn das Gerät nicht mehr existiert."""
+    from pywebpush import WebPushException, webpush
     try:
         webpush(
             subscription_info=abo,

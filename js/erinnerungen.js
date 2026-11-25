@@ -65,8 +65,21 @@ function erinnerungsDaten() {
 // Schickt die aktuellen Termine an den Server (nur wenn Erinnerungen an sind)
 async function erinnerungenAbgleichen() {
   if (!PUSH_MOEGLICH || !erinnerungenAn()) return;
-  const abo = await aboHolen();
-  if (!abo) return;
+  // Erlaubnis entzogen (z.B. nach Neu-Installieren): Schalter ehrlich auf «aus» stellen
+  if (Notification.permission !== "granted") {
+    erinnerungenMerken(false);
+    erinnerungsSchalterZeigen();
+    return;
+  }
+  let abo = await aboHolen();
+  if (!abo) {
+    // Anmeldung beim Push-Dienst fehlt (z.B. nach Neu-Installieren): still neu anmelden
+    const registrierung = await navigator.serviceWorker.ready;
+    abo = await registrierung.pushManager.subscribe({
+      userVisibleOnly: true,
+      applicationServerKey: schluesselAlsBytes(VAPID_OEFFENTLICH),
+    });
+  }
   const antwort = await fetch("api/erinnerung", {
     method: "POST",
     headers: { "Content-Type": "application/json" },

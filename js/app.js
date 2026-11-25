@@ -274,10 +274,11 @@ function hinbringenZeilen(ergebnis) {
 
 // Zeichnet eine Ergebnis-Karte.
 //   recycling: true = die Recycling-Möglichkeit (z.B. RecyBag), false = Abfuhr bzw. Sammelstelle
-//   bedingung: kleiner Text oben in der zweiten Karte, z.B. «Kaputte Kleider»
+//   titel:     Zeile über dem Ergebnis in der zweiten Karte, immer «Was · Wohin»,
+//              z.B. «Kaputte Kleider · Im Hauskehricht» (sonst steht dort die Abfallart)
 //   oben:      Sorte und Hinweise zeigen (nur in der ersten Karte)
 //   stern:     Stern zum Speichern zeigen
-function karteHtml(ergebnis, { recycling = false, bedingung = null, oben = true, stern = false } = {}) {
+function karteHtml(ergebnis, { recycling = false, titel = null, oben = true, stern = false } = {}) {
   const art = ergebnis.art;
   const naechster = ergebnis.termine[0];
 
@@ -287,8 +288,7 @@ function karteHtml(ergebnis, { recycling = false, bedingung = null, oben = true,
     haupt += `<p class="sorte-zeile">${sicher(ABFALLARTEN[auswahl.oberart].name)} › ${sicher(auswahl.sorteText)}
       <button type="button" class="andere-sorte">Sorte ändern</button></p>`;
   }
-  haupt += `<p class="abfallart">${sicher(art.name)}</p>`;
-  if (bedingung) haupt += `<p class="hinweis">${sicher(bedingung)}</p>`;
+  haupt += `<p class="abfallart">${sicher(titel || art.name)}</p>`;
   if (oben) {
     // Ein Gegenstand, der in den Hauskehricht gehört: klar sagen, dass nichts Besonderes nötig ist
     // (nicht, wenn der Hinweis den Hauskehricht schon nennt)
@@ -366,12 +366,14 @@ function ergebnisAnzeigen(ergebnis) {
   const karten = [];   // je [ergebnis, einstellungen]
   if (art.recycling) {
     karten.push([ergebnis, { recycling: true }]);
-    karten.push([ergebnis, { oben: false, bedingung: art.recycling.oder || null }]);
+    // z.B. «Plastik / Kunststoff · Im Hauskehricht»
+    karten.push([ergebnis, { oben: false, titel: `${art.name} · ${art.recycling.oder}` }]);
   } else {
     karten.push([ergebnis, {}]);
     if (art.alternative) {
       const zweites = ergebnisBerechnen(auswahl.strasse, art.alternative.id, null);
-      karten.push([zweites, { oben: false, bedingung: art.alternative.bedingung }]);
+      // z.B. «Kaputte Kleider · Im Hauskehricht»
+      karten.push([zweites, { oben: false, titel: `${art.alternative.was} · ${art.alternative.wohin}` }]);
     }
   }
 
