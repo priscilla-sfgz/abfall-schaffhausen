@@ -285,7 +285,7 @@ main {
 .speichern-balken {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;   /* linksbündig wie die Abschnitt-Titel */
   gap: 8px;
   width: 100%;
   padding: 14px 20px;
@@ -304,7 +304,7 @@ main {
   top: 0;
   left: 20px;
   right: 20px;
-  height: 1.5px;
+  height: 1px;   /* gleich dick wie die Linien zwischen den Abschnitten */
   background: var(--schwarz);
 }
 /* Keine doppelte Linie und kein doppelter Abstand über dem Balken: der schwarze Strich ersetzt die graue Linie */
