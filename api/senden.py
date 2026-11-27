@@ -44,15 +44,21 @@ def supabase(methode, pfad):
 def nachricht_bauen(lesezeichen, zeitpunkt, datum, vorsilbe):
     """Sucht die fälligen Termine eines Geräts und baut daraus eine Nachricht (oder None)."""
     zeilen = []
+    ziel = None
     for eintrag in lesezeichen:
         if eintrag.get("zeitpunkt") != zeitpunkt:
             continue
         for termin in eintrag.get("daten", []):
             if termin.get("datum") == datum:
                 zeilen.append((eintrag.get("titel", ""), termin.get("text", ""), eintrag.get("ort", "")))
+                if ziel is None and eintrag.get("strasse"):
+                    # Antippen der Nachricht öffnet dieses Ergebnis in der App
+                    ziel = {"strasse": eintrag["strasse"], "strasseText": eintrag.get("ort", ""),
+                            "abfall": eintrag.get("abfallartId", "")}
     if not zeilen:
         return None
     return {
+        "ziel": ziel,
         "titel": f"{vorsilbe}: " + ", ".join(titel for titel, _, _ in zeilen),
         "text": "\n".join(f"{titel}: {text}".rstrip(": ") + (f" ({ort})" if ort else "") for titel, text, ort in zeilen),
     }

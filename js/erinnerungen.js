@@ -66,6 +66,9 @@ function erinnerungsDaten() {
       return {
         titel: ABFALLARTEN[l.abfallartId] ? ABFALLARTEN[l.abfallartId].name : "",
         ort: l.strasseText,
+        // damit das Antippen der Nachricht das passende Ergebnis öffnet
+        strasse: l.strasse,
+        abfallartId: l.abfallartId,
         zeitpunkt: zeitpunkt,
         daten: termine.slice(0, 120).map((t) => ({
           datum: t.datum,

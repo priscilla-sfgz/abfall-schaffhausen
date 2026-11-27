@@ -608,6 +608,8 @@ main {
 .woche-tag.heute .woche-datum { color: var(--schwarz); }
 .woche-tag .eintrag { margin-bottom: 4px; }
 .woche-tag .leer-text { padding-top: 12px; }
+/* Ende der Kalender-Liste: hier werden weitere Termine nachgeladen */
+.liste-mehr { margin: 16px 0 8px; text-align: center; cursor: pointer; }
 
 .jahr-gitter {
   display: grid;

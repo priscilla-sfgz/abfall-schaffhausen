@@ -783,6 +783,40 @@ if (gemerkt) {
   strassenFeld.leeren.hidden = false;
 }
 
+// Zeigt im Tab Entsorgung das Ergebnis für eine Strasse und Abfallart
+// (z.B. nach dem Antippen einer Push-Erinnerung)
+function terminErgebnisZeigen({ strasse, strasseText, abfall }) {
+  const gefunden = STRASSEN.find((s) => s.name === strasse);
+  if (!gefunden || !ABFALLARTEN[abfall]) return;
+  auswahl.strasse = gefunden;
+  strassenFeld.eingabe.value = strasseText || gefunden.name;
+  strassenFeld.leeren.hidden = false;
+  strasseSpeichern(gefunden.name, strassenFeld.eingabe.value);
+  abfallWaehlen(abfall, { sorteFertig: true });
+  abfallFeld.eingabe.value = ABFALLARTEN[abfall].name;
+  abfallFeld.leeren.hidden = false;
+  document.getElementById("uebersicht").hidden = true;
+  tabWechseln("abfall");
+  aktualisieren();
+  window.scrollTo(0, 0);
+}
+
+// App wurde über eine Push-Erinnerung geöffnet: ?strasse=…&text=…&abfall=…
+const startAdresse = new URLSearchParams(location.search);
+if (startAdresse.get("strasse") && startAdresse.get("abfall")) {
+  // nach dem Einrichten zeigen (siehe unten), Adresse wieder aufräumen
+  setTimeout(() => terminErgebnisZeigen({
+    strasse: startAdresse.get("strasse"), strasseText: startAdresse.get("text"), abfall: startAdresse.get("abfall"),
+  }));
+  history.replaceState(history.state, "", location.pathname);
+}
+// App war schon offen: Nachricht vom Service Worker (sw.js)
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.addEventListener("message", (e) => {
+    if (e.data && e.data.typ === "ergebnisZeigen") terminErgebnisZeigen(e.data.ziel);
+  });
+}
+
 schnellwahlEinrichten();
 sortenEinrichten();
 tabsEinrichten();

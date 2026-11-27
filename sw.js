@@ -5,7 +5,7 @@
 // zuletzt gespeicherte Version verwendet.
 // =========================================================
 
-const CACHE_NAME = "abfall-sh-v13";
+const CACHE_NAME = "abfall-sh-v14";
 
 const DATEIEN = [
   "./",
@@ -74,16 +74,26 @@ self.addEventListener("push", (event) => {
       icon: "img/icons/icon-192.png",
       badge: "img/icons/badge-96.png",   // weisses Symbol für die Statusleiste (Android)
       tag: "abfall-erinnerung",
+      data: daten.ziel || null,   // Strasse und Abfallart für das Antippen
     })
   );
 });
 
-// Antippen der Nachricht öffnet die App
+// Antippen der Nachricht öffnet die App mit dem passenden Ergebnis (Tab Entsorgung)
 self.addEventListener("notificationclick", (event) => {
   event.notification.close();
+  const ziel = event.notification.data;
+  const adresse = ziel
+    ? "./?" + new URLSearchParams({ strasse: ziel.strasse, text: ziel.strasseText || "", abfall: ziel.abfall })
+    : "./";
   event.waitUntil(
-    clients.matchAll({ type: "window", includeUncontrolled: true }).then((fenster) =>
-      fenster.length > 0 ? fenster[0].focus() : clients.openWindow("./")
-    )
+    clients.matchAll({ type: "window", includeUncontrolled: true }).then((fenster) => {
+      if (fenster.length > 0) {
+        // App ist schon offen: Ergebnis dort zeigen (js/app.js hört auf diese Nachricht)
+        if (ziel) fenster[0].postMessage({ typ: "ergebnisZeigen", ziel });
+        return fenster[0].focus();
+      }
+      return clients.openWindow(adresse);
+    })
   );
 });
