@@ -278,10 +278,26 @@ main {
 /* Abfalltelefon und Quelle unter den Karten */
 #ergebnis > .quelle { margin: 12px 4px 0; }
 /* Karte ohne aufklappbare Abschnitte: unten etwas mehr Platz */
-.karte-haupt:last-child { padding-bottom: 18px; }
+.karte-haupt:last-child,
+.karte-haupt:has(+ .speichern-balken) { padding-bottom: 18px; }
 
-/* Knopf «Strasse eingeben» (Ergebnis ohne Strasse) */
-.strasse-eingeben { display: block; margin: 14px 0 6px; padding: 11px 20px; }
+/* Grauer Balken «Termin speichern» unten an der Ergebnis-Karte (js/kalender.js) */
+.speichern-balken {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 14px 20px;
+  font: inherit;
+  font-weight: 700;
+  color: var(--schwarz);
+  background: #e9edef;
+  border: 0;
+  cursor: pointer;
+}
+.speichern-balken svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linejoin: round; }
+.speichern-balken.an svg { fill: var(--gelb); }   /* gespeichert: gelber Stern */
 
 /* Feld «Welche Sorte?» */
 .karte.frage .karte-kopf { background: var(--gelb); color: var(--text-auf-gelb); }
@@ -365,19 +381,6 @@ main {
 .quelle a { color: var(--schwarz); }
 
 /* ---------- Stern im Ergebnisfeld ---------- */
-.stern {
-  margin-left: auto;
-  width: 40px;
-  height: 40px;
-  margin-right: -8px;
-  padding: 6px;
-  color: var(--weiss);
-  background: none;
-  border: 0;
-  cursor: pointer;
-}
-.stern svg { width: 28px; height: 28px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linejoin: round; }
-.stern.an svg { fill: var(--gelb); stroke: var(--gelb); }
 .stern-menue {
   display: flex;
   flex-direction: column;

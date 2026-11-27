@@ -239,7 +239,6 @@ function abfuhrZeilen(ergebnis) {
     // Ohne Strasse: Termin hängt von der Tour ab
     html += `<p class="gross">Termin je nach Strasse</p>`;
     html += `<p class="zeit">${sicher(art.zeit)}</p>`;
-    html += `<button type="button" class="knopf haupt strasse-eingeben">Strasse eingeben</button>`;
   } else if (ergebnis.regelmaessig) {
     // Regelmässig: nur der Rhythmus, z.B. «Jeden Dienstag und Freitag»
     html += `<p class="gross">${sicher(ergebnis.rhythmus)}</p>`;
@@ -277,8 +276,8 @@ function hinbringenZeilen(ergebnis) {
 //   titel:     Zeile über dem Ergebnis in der zweiten Karte, immer «Was · Wohin»,
 //              z.B. «Kaputte Kleider · Im Hauskehricht» (sonst steht dort die Abfallart)
 //   oben:      Sorte und Hinweise zeigen (nur in der ersten Karte)
-//   stern:     Stern zum Speichern zeigen
-function karteHtml(ergebnis, { recycling = false, titel = null, oben = true, stern = false } = {}) {
+//   speichern: grauen Balken «Termin speichern» unten anhängen
+function karteHtml(ergebnis, { recycling = false, titel = null, oben = true, speichern = false } = {}) {
   const art = ergebnis.art;
   const naechster = ergebnis.termine[0];
 
@@ -346,9 +345,10 @@ function karteHtml(ergebnis, { recycling = false, titel = null, oben = true, ste
 
   return `
     <article class="karte ${kopf.klasse}">
-      <div class="karte-kopf">${kopf.icon} ${kopf.text} ${stern ? sternKnopf(ergebnis) : ""}</div>
+      <div class="karte-kopf">${kopf.icon} ${kopf.text}</div>
       <div class="karte-haupt">${haupt}</div>
       ${hinweise ? `<div class="karte-hinweise">${hinweise}</div>` : ""}
+      ${speichern ? speichernBalken(ergebnis) : ""}
     </article>`;
 }
 
@@ -377,11 +377,12 @@ function ergebnisAnzeigen(ergebnis) {
     }
   }
 
-  // Stern bei der ersten Karte mit Abfuhrterminen (nur mit Strasse)
-  const mitStern = karten.find(([e, k]) => !k.recycling && e.strasse && e.termine.length > 0);
-  if (mitStern) {
-    mitStern[1].stern = true;
-    aktuellesErgebnis = mitStern[0];
+  // Balken «Termin speichern» bei der ersten Karte mit Terminen.
+  // Ohne Strasse bei der Karte mit der Abfuhr («Zum Speichern Strasse wählen»).
+  const mitBalken = karten.find(([e, k]) => !k.recycling && (e.termine.length > 0 || (!e.strasse && e.abgeholt)));
+  if (mitBalken) {
+    mitBalken[1].speichern = true;
+    aktuellesErgebnis = mitBalken[0];
   }
 
   feld.innerHTML = karten.map(([e, k]) => karteHtml(e, k)).join(`<p class="oder-trenner">Oder</p>`)
@@ -420,9 +421,6 @@ function sortenEinrichten() {
     } else if (e.target.closest(".andere-sorte")) {
       abfallWaehlen(auswahl.oberart);
       aktualisieren();
-    } else if (e.target.closest(".strasse-eingeben")) {
-      window.scrollTo(0, 0);
-      strassenFeld.eingabe.focus();
     }
   });
 }

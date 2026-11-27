@@ -107,15 +107,19 @@ function entfernen(schluessel) {
 
 
 // ---------------------------------------------------------
-// Stern im Ergebnisfeld
+// Grauer Balken «Termin speichern» unten an der Ergebnis-Karte
 // ---------------------------------------------------------
 
-// Wird von app.js in den Kopf des Ergebnisfelds eingesetzt
-function sternKnopf(ergebnis) {
+// Wird von app.js unten in die Karte mit den Terminen eingesetzt
+function speichernBalken(ergebnis) {
+  if (!ergebnis.strasse) {
+    // Ohne Strasse gibt es keine Termine: Hinweis, Antippen springt ins Strassenfeld
+    return `<button type="button" class="speichern-balken ohne-strasse">Zum Speichern Strasse wählen</button>`;
+  }
   if (ergebnis.termine.length === 0) return "";   // ohne Termine nichts zu speichern
   const an = istGespeichert(ergebnis);
-  return `<button type="button" class="stern ${an ? "an" : ""}" aria-pressed="${an}"
-    aria-label="${an ? "Aus dem Kalender entfernen" : "Im Kalender speichern"}">${ICON_STERN}</button>`;
+  return `<button type="button" class="speichern-balken ${an ? "an" : ""}" aria-pressed="${an}">
+    ${ICON_STERN} ${an ? "Termin gespeichert" : "Termin speichern"}</button>`;
 }
 
 // Auswahl «Alle Termine» / «Nur nächster Termin».
@@ -127,7 +131,7 @@ function sternMenueZeigen(ergebnis) {
   menue.innerHTML = `
     <button type="button" data-wahl="alle">Alle Termine speichern</button>
     <button type="button" data-wahl="einer">Nur nächsten Termin speichern (${datumKurz(naechster.datum)})</button>`;
-  document.querySelector("#ergebnis .karte-kopf").after(menue);
+  document.querySelector("#ergebnis .speichern-balken").before(menue);
 
   function schliessen(wahl) {
     document.removeEventListener("pointerdown", daneben, true);
@@ -135,7 +139,7 @@ function sternMenueZeigen(ergebnis) {
     speichern(ergebnis, wahl === "einer" ? naechster.datum : null);
   }
   function daneben(e) {
-    if (!menue.contains(e.target) && !e.target.closest(".stern")) schliessen("alle");
+    if (!menue.contains(e.target) && !e.target.closest(".speichern-balken")) schliessen("alle");
   }
   menue.addEventListener("click", (e) => {
     const knopf = e.target.closest("button");
@@ -435,7 +439,13 @@ function uebersichtZeigen(schluessel, datum) {
 function kalenderEinrichten() {
   // Stern im Ergebnisfeld
   document.getElementById("ergebnis").addEventListener("click", (e) => {
-    if (e.target.closest(".stern")) sternGeklickt();
+    const balken = e.target.closest(".speichern-balken");
+    if (balken && balken.classList.contains("ohne-strasse")) {
+      window.scrollTo(0, 0);
+      strassenFeld.eingabe.focus();
+    } else if (balken) {
+      sternGeklickt();
+    }
   });
 
   // Klicks im Kalender-Tab
