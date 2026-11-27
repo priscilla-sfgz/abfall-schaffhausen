@@ -292,12 +292,12 @@ main {
   font: inherit;
   font-weight: 700;
   color: var(--schwarz);
-  background: #e9edef;
+  background: #dae0e3;   /* deutlich grauer als der Seitenhintergrund */
   border: 0;
   cursor: pointer;
 }
 .speichern-balken svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linejoin: round; }
-.speichern-balken.an svg { fill: var(--gelb); }   /* gespeichert: gelber Stern */
+.speichern-balken.an svg { fill: var(--gelb); stroke: var(--gelb); }   /* gespeichert: gelber Stern ohne Kontur */
 
 /* Feld «Welche Sorte?» */
 .karte.frage .karte-kopf { background: var(--gelb); color: var(--text-auf-gelb); }
@@ -384,8 +384,7 @@ main {
 .stern-menue {
   display: flex;
   flex-direction: column;
-  background: var(--weiss);
-  border-bottom: 1px solid var(--linie);
+  background: var(--weiss);   /* erscheint unter dem Balken «Termin speichern» */
 }
 .stern-menue button {
   padding: 14px 20px;

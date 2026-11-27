@@ -131,7 +131,7 @@ function sternMenueZeigen(ergebnis) {
   menue.innerHTML = `
     <button type="button" data-wahl="alle">Alle Termine speichern</button>
     <button type="button" data-wahl="einer">Nur nächsten Termin speichern (${datumKurz(naechster.datum)})</button>`;
-  document.querySelector("#ergebnis .speichern-balken").before(menue);
+  document.querySelector("#ergebnis .speichern-balken").after(menue);   // unter dem Balken
 
   function schliessen(wahl) {
     document.removeEventListener("pointerdown", daneben, true);
