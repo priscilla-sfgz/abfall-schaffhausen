@@ -62,7 +62,7 @@ window.KARTE_ORTE = [
   { typ: "unterflur", name: "Unterflurcontainer Gerberplatz", zeiten: "rund um die Uhr", info: "Hauskehricht im Böcklisack", lage: [47.69578, 8.6382] },
 
   // ----- Weitere Sammelstellen -----
-  { typ: "sammelstelle", name: "KBA Hard", ort: "Hardweg 340, 8222 Beringen", zeiten: "Mo–Fr 7.15–11.45 und 13–17 Uhr, Sa 9–12 Uhr", info: "Fast alle Abfallarten, Sonderabfall gratis bis 30 kg, sonst teils mit Gebühr", link: "https://www.abfall-sh.ch", lage: [47.69018, 8.59698] },
+  { typ: "sammelstelle", name: "KBA Hard", ort: "Hardweg 340, 8222 Beringen", zeiten: "Mo–Fr 7.15–11.45 und 13–17 Uhr, Sa 9–12 Uhr", info: "Gratis: Papier, Karton, Glas, PET, Altkleider, Altmetall, Elektrogeräte, Batterien, Sonderabfall bis 30 kg. Mit Gebühr: Kehricht und Sperrgut Fr. 26.90 / 100 kg, Grünabfall Fr. 16.16 / 100 kg (mind. Fr. 10.–)", link: "https://www.abfall-sh.ch/kba/content/preisliste/", lage: [47.69018, 8.59698] },
   { typ: "sammelstelle", name: "Arnold Schmid Recycling AG", ort: "Hardmorgenweg 15, 8222 Beringen", zeiten: "Mo–Fr 7.10–11.50 und 13–16.50 Uhr, Sa 8.30–12 Uhr", info: "Recycling aller Art, teils mit Gebühr", lage: [47.69451, 8.58154] },
   { typ: "sammelstelle", name: "TIT Imhof AG", ort: "Kaltenbacherstrasse 40, 8260 Stein am Rhein", zeiten: "Öffnungszeiten telefonisch erfragen", info: "Sonderabfall gratis bis 30 kg pro Person", lage: [47.65256, 8.85237] },
   { typ: "sammelstelle", name: "SRK / koro Second Hand", ort: "Oberstadt 13, Schaffhausen", zeiten: "Di–Fr 10–18 Uhr, Sa 10–12 und 12.30–16 Uhr", info: "Saubere, tragbare Kleider, Schuhe, Bettwäsche, Toner und Druckerpatronen", lage: [47.69648, 8.63251] },

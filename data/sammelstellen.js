@@ -104,17 +104,19 @@ window.SAMMELSTELLEN = [
     name: "KBA Hard",
     ort: "Hardweg 340, 8222 Beringen · 052 687 21 00",
     zeiten: "Mo–Fr 7.15–11.45 und 13–17 Uhr, Sa 9–12 Uhr",
+    // Preise inkl. MWSt., Quelle: abfall-sh.ch/kba/content/preisliste (gelesen 27.11.2026)
     kosten: {
-      standard: "teils mit Gebühr",
-      sonderabfall: "gratis bis 30 kg pro Person",
+      standard: "gratis",
+      sonderabfall: "gratis bis 30 kg",
       hauskehricht: "Fr. 26.90 pro 100 kg, mind. Fr. 10.–",
-      plastik: "Sammelsack: 10 Stück Fr. 23.–",
-      sperrgut: "mit Gebühr",
-      gruenabfall: "mit Gebühr",
-      inert: "mit Gebühr, auch grössere Mengen",
+      sperrgut: "Fr. 26.90 pro 100 kg, mind. Fr. 10.–",
+      gruenabfall: "Fr. 16.16 pro 100 kg, mind. Fr. 10.–",
+      plastik: "Sammelsack 10 × 60 l Fr. 23.–, volle Säcke gratis zurück",
+      // laut Abfallmerkblatt Beringen 2026 angenommen, aber nicht auf der Preisliste der KBA
+      inert: "Preis beim Waaghaus erfragen: 052 687 21 00",
     },
-    annahme: ["sonderabfall", "hauskehricht", "plastik", "sperrgut", "gruenabfall", "inert",
-              "altmetall", "karton", "glas", "alu", "pet", "elektro", "batterien", "leuchtmittel", "altkleider"],
+    annahme: ["papier", "karton", "glas", "pet", "altkleider", "altmetall", "elektro", "leuchtmittel",
+              "batterien", "sonderabfall", "hauskehricht", "sperrgut", "gruenabfall", "plastik", "inert"],
     link: "https://www.abfall-sh.ch/kba/content/preisliste/",
   },
   {

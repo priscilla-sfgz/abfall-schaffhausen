@@ -33,7 +33,7 @@ Bei Unklarheiten verweist die App auf das **Abfalltelefon der Stadt: 052 632 53 
 | Stelle | Was | Kosten | Quelle |
 |---|---|---|---|
 | **Inerte Stoffe Viehmarkt**, Hochstrasse 15 | Steine, Keramik, Bauschutt (Kleinmengen) | ⚠️ nicht genannt | ✅ Sammelstellen-Seite (Zeiten wie Karton-Presse) |
-| **KBA Hard** Beringen | Sperrgut, Grüngut, inerte Stoffe, Altmetall, Karton, Glas, PET, Elektro, Textilien, Haushaltkunststoff (in Spezialsäcken) | «mit Gebühr» bei Sperrgut, Grüngut, Inertstoffen; Preise ⚠️ nicht gefunden (Website abfall-sh.ch war nicht erreichbar) | ✅ Merkblatt Beringen 2026 |
+| **KBA Hard** Beringen | Sperrgut, Grüngut, inerte Stoffe, Altmetall, Karton, Glas, PET, Elektro, Textilien, Haushaltkunststoff (in Spezialsäcken) | Preise siehe unten «Preisliste KBA Hard». Inertstoffe: laut Merkblatt angenommen, aber nicht auf der Preisliste ⚠️ → Waaghaus 052 687 21 00 | ✅ Merkblatt Beringen 2026 |
 | **Arnold Schmid Recycling AG**, Hardmorgenweg 15, 8222 Beringen, 052 644 07 77 | ähnlich wie KBA Hard, ausserdem Altöl und Chemikalien (mit Gebühr) | Mo–Fr 7.10–11.50 + 13–16.50 Uhr, Sa 8.30–12 Uhr; Preise ⚠️ | ✅ Merkblatt Beringen 2026 |
 | **Kunststoff-Sammelsack** (Rolle à 10) bei Recyclingbetrieben | Haushaltkunststoff | Preis ⚠️ | ✅ Plastik-Seite Stadt |
 | **RecyBag** – Coop, Denner, Spar, Lidl in der Stadt; voll zurück in die Sammelbox im Laden | Haushaltkunststoff, Getränkekartons | 17 l Fr. 1.00 · 35 l Fr. 1.60 · 60 l Fr. 2.40 · 110 l Fr. 4.00 (Preisempfehlung) | ✅ Plastik-Seite Stadt, ✅ [recybag.ch](https://www.recybag.ch/de/home) |
@@ -94,7 +94,7 @@ Quelle: ✅ [Plastik-Seite Stadt](https://m.stadt-schaffhausen.ch/index.php?apid
 ## Noch offen
 
 1. **Entschieden:** Stadt komplett + die grossen regionalen Stellen (KBA Hard, Arnold Schmid, TIT Imhof) + Geschäfte. Die übrigen Gemeinden des Kantons kommen später.
-2. Weitere Preise der KBA Hard (Sperrgut, Inertstoffe) und von Arnold Schmid: Die Website abfall-sh.ch war am 21.11.2026 nicht erreichbar → später nochmals versuchen.
+2. ~~Weitere Preise der KBA Hard~~ (erledigt 27.11.2026, siehe «Preisliste KBA Hard»). Offen: Preise von Arnold Schmid, Inertstoffe bei der KBA.
 3. Ist die Giftsammlung gratis? (sehr wahrscheinlich, aber nicht bestätigt)
 
 ## Karte: Brockenhäuser und Reparieren (21.11.2026)
@@ -109,3 +109,27 @@ Koordinaten der Sammelstellen und Unterflurcontainer: direkt von der Stadt (`/ap
 
 **Nicht bestätigt (darum nicht auf der Karte):** Brockenstube Frauenverein Stein am Rhein (Chirchhofplatz 1?, Sa 9.30–12?), Brockenstube Neunkirch (Herrengasse 1?). Nur in Verzeichnissen gefunden.
 **Offen:** Reparaturbetriebe (Velo, Schuhe, Elektro, Nähen) – Verzeichnisse veraltet, noch keine geprüften Einträge. Laut repair-cafe.ch ist die reparierBar das einzige Repair Café im Kanton.
+
+## Preisliste KBA Hard (gelesen 27.11.2026)
+
+Quelle: [abfall-sh.ch/kba/content/preisliste](https://www.abfall-sh.ch/kba/content/preisliste/), Öffnungszeiten: [abfall-sh.ch/kba/content/oeffnungszeiten](https://www.abfall-sh.ch/kba/content/oeffnungszeiten/). Preise inkl. MWSt.
+
+| Abfall | Preis |
+|---|---|
+| Hauskehricht und hauskehrichtähnliche Abfälle | Fr. 26.90 pro 100 kg |
+| Sperrgut (Kantenlänge > 1.5 m) | Fr. 26.90 pro 100 kg |
+| Aktenordner (mit Vernichtungsgarantie) | Fr. 32.30 pro 100 kg |
+| Altholz A1–A3 (keine Fenster, kein imprägniertes Holz) | Fr. 14.– pro 100 kg |
+| Grünabfall | Fr. 16.16 pro 100 kg |
+| Tierkadaver | bis 10 kg gratis, sonst Fr. 9.70 pro 10 kg, über 200 kg nicht angenommen |
+| Altreifen PW/Motorrad | Fr. 5.39 pro Stück, mit Felge Fr. 8.62 |
+| Kunststoff-Sammelsack 60 l | Rolle à 10 Stück Fr. 23.–, volle Säcke gratis zurück |
+| **Mindestgebühr** | Fr. 10.– (ca. 40 kg) |
+
+**Gratis:** Papier und Karton, Glas (farbgetrennt), PET-Flaschen, Altkleider, Altmetall (ohne Problemstoffe), Elektronik und Haushaltgeräte, Leuchtstoffröhren und Energiesparlampen, Farben und Haushaltchemikalien bis 30 kg (Gewerbe: Remondis, Mühlentalstrasse 371), Batterien.
+
+**Öffnungszeiten:** Mo–Fr 7.15–11.45 und 13–17 Uhr, Sa 9–12 Uhr. Feiertage 2026/27: 24. und 31.12. 7.15–14 Uhr durchgehend; 25./26.12. und 1./2.1. geschlossen.
+**Waaghaus** (Fragen zur Entsorgung): 052 687 21 00, waage@abfall-sh.ch
+
+Nicht auf der Preisliste: Inertstoffe, Alu-Dosen, Speiseöl. Alu und Speiseöl darum bei der KBA in der App weggelassen (Quartier-Sammelstellen nehmen beides gratis).
+

@@ -111,7 +111,7 @@ Als Nächstes:
 6. ~~Icon und gelber Startbildschirm~~ (erledigt 21.11.2026, inkl. weisses Sack-Symbol für Android-Benachrichtigungen).
 7. ~~Live-Daten über Vercel~~ (erledigt 21.11.2026).
 9. **Englisch** (später, nach Abfall-ABC und Karte): Texte in `data/texte.js` mit DE/EN, Daten der Stadt bleiben deutsch.
-8. **Unbedingt nachholen:** https://www.abfall-sh.ch (KBA Hard) war am 21.11.2026 nicht erreichbar. Preise für Sperrgut, Inertstoffe usw. dort nachlesen und in `notizen/recherche-entsorgung.md` und die App übernehmen.
+8. ~~Preise KBA Hard von abfall-sh.ch~~ (erledigt 27.11.2026, in `data/sammelstellen.js`, `data/karte.js` und `notizen/recherche-entsorgung.md`). Offen: Inertstoffe bei der KBA (laut Merkblatt Beringen ja, nicht auf der Preisliste), Preise Arnold Schmid.
 
 ## Für später geplant (jetzt noch nicht einbauen)
 
