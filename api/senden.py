@@ -74,6 +74,9 @@ def senden(abo, nachricht):
             vapid_private_key=VAPID_PRIVATE_KEY,
             vapid_claims=dict(ABSENDER),
             ttl=6 * 3600,
+            # «dringend»: sonst hält Android die Nachricht im Akku-Sparmodus zurück,
+            # bis man das Handy wieder benutzt
+            headers={"Urgency": "high"},
         )
     except WebPushException as fehler:
         status = fehler.response.status_code if fehler.response is not None else None
