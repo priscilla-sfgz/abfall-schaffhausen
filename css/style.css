@@ -281,37 +281,30 @@ main {
 .karte-haupt:last-child,
 .karte-haupt:has(+ .speichern-balken) { padding-bottom: 18px; }
 
-/* Grauer Balken «Termin speichern» unten an der Ergebnis-Karte (js/kalender.js) */
+/* Balken «Termin speichern» unten an der Ergebnis-Karte (js/kalender.js).
+   Der schwarze Strich oben ist ein Rand (border) wie bei den Linien zwischen
+   den Abschnitten – so ist er auf jedem Bildschirm gleich dick. */
 .speichern-balken {
   display: flex;
   align-items: center;
   justify-content: flex-start;   /* linksbündig wie die Abschnitt-Titel */
   gap: 8px;
-  width: 100%;
-  padding: 14px 20px;
+  width: calc(100% - 40px);      /* links und rechts 20 px wie die Abschnitte */
+  margin: 0 20px;
+  padding: 14px 0;
   font: inherit;
   font-weight: 700;
   color: var(--schwarz);
   background: var(--weiss);
   border: 0;
+  border-top: 1px solid var(--schwarz);
   cursor: pointer;
-  position: relative;
 }
-/* Schwarzer Strich oben, eingerückt wie die Linien zwischen den Abschnitten */
-.speichern-balken::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 20px;
-  right: 20px;
-  height: 1px;   /* gleich dick wie die Linien zwischen den Abschnitten */
-  background: var(--schwarz);
-}
+.speichern-balken svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linejoin: round; }
+.speichern-balken.an svg { fill: var(--gelb); stroke: var(--gelb); }   /* gespeichert: gelber Stern ohne Kontur */
 /* Keine doppelte Linie und kein doppelter Abstand über dem Balken: der schwarze Strich ersetzt die graue Linie */
 .karte-hinweise:has(+ .speichern-balken) { padding-bottom: 0; }
 .karte-hinweise:has(+ .speichern-balken) details:last-of-type { border-bottom: 0; }
-.speichern-balken svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linejoin: round; }
-.speichern-balken.an svg { fill: var(--gelb); stroke: var(--gelb); }   /* gespeichert: gelber Stern ohne Kontur */
 
 /* Feld «Welche Sorte?» */
 .karte.frage .karte-kopf { background: var(--gelb); color: var(--text-auf-gelb); }
