@@ -48,6 +48,7 @@ Start: https://m.stadt-schaffhausen.ch/index.php?apid=917954978
 
 - Aufbau: **Abfallart → Touren → Tour-Seite** (`index.php?apid=<tour>`).
 - Abfallarten mit Touren (apid): Hauskehricht `173769616`, Grünabfall `1133998044`, Papier `2140428229`, Karton Quartiere `425274297`, Altmetall `1780443521`.
+- **Datum** steht seit Ende Nov. 2026 nur noch als Text («30. Nov 2026 ganztägig», `datum_lesen()` in `api/_abfallkalender.py`); der frühere Link `from=…` fiel weg → Live-Daten lieferten am 27.11.2026 einen Fehler (die Sicherheitsprüfung hat richtig angeschlagen). Die Stadt veröffentlicht Termine etwa 13 Monate im Voraus.
 - Die Tour-Seite enthält **alle Termine** (auch versteckte Zeilen), **Ausnahmen** (`exceptionNoteText`, z.B. Ausfall am 25.12.) und die **Strassenliste** (mit Hausnummernbereichen und «Bereitstellen: …»).
 - Jede Tour hat auch einen iCal-Feed (`/appl/ical.php?apid=<tour>&calhome=917954978`). **Darin fehlen aber die Ausnahmen**, ausgefallene Termine stehen dort trotzdem drin. Deshalb lesen wir die HTML-Seite.
 - Die Stadt-Website sendet **keine CORS-Header**. Der Browser darf die Daten also nicht direkt abrufen, dafür braucht es einen Proxy (geplant: Python-Funktion auf Vercel im Ordner `api/`).

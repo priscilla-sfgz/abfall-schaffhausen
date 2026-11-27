@@ -31,6 +31,27 @@ KATEGORIEN = {
 
 GLEICHZEITIG = 6   # so viele Seiten werden gleichzeitig geladen
 
+# Monatsnamen, wie sie auf der Tour-Seite stehen («30. Nov 2026 ganztägig»)
+MONATE = {"Jan": 1, "Feb": 2, "Mär": 3, "Apr": 4, "Mai": 5, "Jun": 6,
+          "Jul": 7, "Aug": 8, "Sep": 9, "Okt": 10, "Nov": 11, "Dez": 12}
+
+
+def datum_lesen(zeile):
+    """
+    Liest Datum und Uhrzeit eines Termins. Gibt ("2026-11-30", "07:00") zurück oder None.
+    Früher stand das Datum in einem Link (from=2026-11-30%2007%3A00). Seit Ende
+    November 2026 steht es nur noch als Text: «30. Nov 2026 ganztägig».
+    """
+    alt = re.search(r"from=(\d{4}-\d\d-\d\d)%20(\d\d)%3A(\d\d)", zeile)
+    if alt:
+        return alt.group(1), f"{alt.group(2)}:{alt.group(3)}"
+    text = re.search(r"theDate'>\s*(\d{1,2})\.\s*(\w{3})\w*\.?\s+(\d{4})\s*(\d\d:\d\d)?", zeile)
+    if text and text.group(2) in MONATE:
+        tag, monat, jahr, zeit = text.groups()
+        # «ganztägig»: wie früher 07:00 (die App zeigt bei Abfuhren «bis 7 Uhr bereitstellen»)
+        return f"{jahr}-{MONATE[monat]:02d}-{int(tag):02d}", zeit or "07:00"
+    return None
+
 
 def seite_laden(apid):
     """Lädt eine Seite des Abfallkalenders und gibt den HTML-Text zurück."""
@@ -63,7 +84,7 @@ def termine_lesen(tour_html):
     # Jeder Termin beginnt mit <a name='termin...'>
     for zeile in re.split(r"<a name='termin\d+'", tour_html)[1:]:
         zeile = re.split(r"<h3|elementListShowMore", zeile)[0]
-        datum = re.search(r"from=(\d{4}-\d\d-\d\d)%20(\d\d)%3A(\d\d)", zeile)
+        datum = datum_lesen(zeile)
         if not datum:
             continue
         ausnahme = re.search(r"exceptionNoteText'>(.*?)</div>", zeile, re.S)
@@ -72,8 +93,8 @@ def termine_lesen(tour_html):
         rest = nur_text(re.sub(r"exceptionNoteText'>.*?</div>", "'>", zeile, flags=re.S))
         notiz = rest.split("ganztägig", 1)[-1].replace("Ausnahme", "").strip() if "ganztägig" in rest else ""
         termine.append({
-            "datum": datum.group(1),
-            "zeit": f"{datum.group(2)}:{datum.group(3)}",
+            "datum": datum[0],
+            "zeit": datum[1],
             "ausnahme": ausnahme_text or None,
             "faelltAus": bool(re.search(r"nicht statt|entfällt|fällt aus", ausnahme_text)),
             "notiz": notiz or None,

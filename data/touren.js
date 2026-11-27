@@ -1,19 +1,12 @@
 // Automatisch erstellt mit werkzeuge/daten_holen.py – nicht von Hand bearbeiten.
 // Quelle: Abfallkalender Stadt Schaffhausen
 window.TOUREN_DATEN = {
- "stand": "2026-11-21",
+ "stand": "2026-11-27",
  "touren": {
   "1517200631": {
    "kategorie": "hauskehricht",
    "name": "Hauskehricht Tour 1 Montag",
    "termine": [
-    {
-     "datum": "2026-11-23",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
     {
      "datum": "2026-11-30",
      "zeit": "07:00",
@@ -441,13 +434,6 @@ window.TOUREN_DATEN = {
    "name": "Hauskehricht Tour 2 Montag",
    "termine": [
     {
-     "datum": "2026-11-23",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
-    {
      "datum": "2026-11-30",
      "zeit": "07:00",
      "ausnahme": null,
@@ -873,13 +859,6 @@ window.TOUREN_DATEN = {
    "kategorie": "hauskehricht",
    "name": "Hauskehricht Tour 3 Montag",
    "termine": [
-    {
-     "datum": "2026-11-23",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
     {
      "datum": "2026-11-30",
      "zeit": "07:00",
@@ -1307,13 +1286,6 @@ window.TOUREN_DATEN = {
    "name": "Hauskehricht Tour 4 Dienstag",
    "termine": [
     {
-     "datum": "2026-11-24",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
-    {
      "datum": "2026-12-01",
      "zeit": "07:00",
      "ausnahme": null,
@@ -1725,13 +1697,6 @@ window.TOUREN_DATEN = {
    "kategorie": "hauskehricht",
    "name": "Hauskehricht Tour 5 Dienstag",
    "termine": [
-    {
-     "datum": "2026-11-24",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
     {
      "datum": "2026-12-01",
      "zeit": "07:00",
@@ -2145,13 +2110,6 @@ window.TOUREN_DATEN = {
    "name": "Hauskehricht Tour 6 Dienstag + Freitag",
    "termine": [
     {
-     "datum": "2026-11-24",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
-    {
      "datum": "2026-11-27",
      "zeit": "07:00",
      "ausnahme": null,
@@ -2219,6 +2177,13 @@ window.TOUREN_DATEN = {
      "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-01",
+     "zeit": "07:00",
+     "ausnahme": "Aufgrund von Neujahr findet die Hauskehricht Tour 6 Dienstag + Freitag am 01.01.2027 nicht statt. Sie wird nicht nachgeholt. Die nächste Hauskehrichttour findet am Dienstag, 05.01.2027 statt.",
+     "faelltAus": true,
      "notiz": null
     },
     {
@@ -2970,13 +2935,6 @@ window.TOUREN_DATEN = {
    "name": "Hauskehricht Tour 7 Donnerstag",
    "termine": [
     {
-     "datum": "2026-11-26",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
-    {
      "datum": "2026-12-03",
      "zeit": "07:00",
      "ausnahme": null,
@@ -3395,13 +3353,6 @@ window.TOUREN_DATEN = {
    "kategorie": "hauskehricht",
    "name": "Hauskehricht Tour 8 Donnerstag",
    "termine": [
-    {
-     "datum": "2026-11-26",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
     {
      "datum": "2026-12-03",
      "zeit": "07:00",
@@ -3828,13 +3779,6 @@ window.TOUREN_DATEN = {
    "kategorie": "hauskehricht",
    "name": "Hauskehricht Tour 9 Donnerstag",
    "termine": [
-    {
-     "datum": "2026-11-26",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
     {
      "datum": "2026-12-03",
      "zeit": "07:00",
@@ -4737,6 +4681,27 @@ window.TOUREN_DATEN = {
      "notiz": null
     },
     {
+     "datum": "2027-01-01",
+     "zeit": "07:00",
+     "ausnahme": "Aufgrund von Neujahr findet die Hauskehricht Tour 11 Freitag am 01.01.2027 nicht statt. Sie wird am Montag 04.01.2027 nachgeholt.",
+     "faelltAus": true,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-04",
+     "zeit": "07:00",
+     "ausnahme": "Nachholtour Hauskehricht Tour 11 Freitag von Neujahr wird am Montag 04.01.2027 nachgeholt.",
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-08",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
      "datum": "2027-01-15",
      "zeit": "07:00",
      "ausnahme": null,
@@ -4809,7 +4774,14 @@ window.TOUREN_DATEN = {
     {
      "datum": "2027-03-26",
      "zeit": "07:00",
-     "ausnahme": "Aufgrund des Karfreitags findet die Hauskehricht Tour 11 Freitag am 26.03.2027 nicht statt. Sie wird am Samstag 27. März 2027 nachgeholt.",
+     "ausnahme": "Aufgrund des Karfreitags findet die Hauskehricht Tour 11 Freitag am 26.03.2027 nicht statt. Sie wird am Samstag 27.03.2027 nachgeholt.",
+     "faelltAus": true,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-27",
+     "zeit": "07:00",
+     "ausnahme": "Aufgrund des Karfreitags findet die Hauskehricht Tour 11 Freitag am 27.03.2027 nicht statt. Sie wird am Samstag 27.03.2027 nachgeholt.",
      "faelltAus": true,
      "notiz": null
     },
@@ -5149,6 +5121,27 @@ window.TOUREN_DATEN = {
      "notiz": null
     },
     {
+     "datum": "2027-01-01",
+     "zeit": "07:00",
+     "ausnahme": "Aufgrund von Neujahr findet die Hauskehricht Tour 12 Freitag am 01.01.2027 nicht statt. Sie wird am Montag 04.01.2027 nachgeholt.",
+     "faelltAus": true,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-04",
+     "zeit": "07:00",
+     "ausnahme": "Nachholtour Hauskehricht Tour 12 Freitag von Neujahr wird am Montag 04.01.2027 nachgeholt.",
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
+     "datum": "2027-01-08",
+     "zeit": "07:00",
+     "ausnahme": null,
+     "faelltAus": false,
+     "notiz": null
+    },
+    {
      "datum": "2027-01-15",
      "zeit": "07:00",
      "ausnahme": null,
@@ -5221,7 +5214,14 @@ window.TOUREN_DATEN = {
     {
      "datum": "2027-03-26",
      "zeit": "07:00",
-     "ausnahme": "Aufgrund des Karfreitags findet die Hauskehricht Tour 12 Freitag am 26.03.2027 nicht statt. Sie wird am Samstag 27. März 2027 nachgeholt.",
+     "ausnahme": "Aufgrund des Karfreitags findet die Hauskehricht Tour 12 Freitag am 26.03.2027 nicht statt. Sie wird am Samstag 27.03.2027 nachgeholt.",
+     "faelltAus": true,
+     "notiz": null
+    },
+    {
+     "datum": "2027-03-27",
+     "zeit": "07:00",
+     "ausnahme": "Aufgrund des Karfreitags findet die Hauskehricht Tour 12 Freitag am 27.03.2027 nicht statt. Sie wird am Samstag 27.03.2027 nachgeholt.",
      "faelltAus": true,
      "notiz": null
     },
@@ -6385,13 +6385,6 @@ window.TOUREN_DATEN = {
    "name": "Grünabfall Tour 3 Donnerstag",
    "termine": [
     {
-     "datum": "2026-11-26",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
-    {
      "datum": "2026-12-03",
      "zeit": "07:00",
      "ausnahme": null,
@@ -6811,13 +6804,6 @@ window.TOUREN_DATEN = {
    "name": "Grünabfall Tour 4 Mittwoch",
    "termine": [
     {
-     "datum": "2026-11-25",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
-    {
      "datum": "2026-12-02",
      "zeit": "07:00",
      "ausnahme": null,
@@ -7229,13 +7215,6 @@ window.TOUREN_DATEN = {
    "kategorie": "gruenabfall",
    "name": "Grünabfall Tour 5 Montag",
    "termine": [
-    {
-     "datum": "2026-11-23",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
     {
      "datum": "2026-11-30",
      "zeit": "07:00",
@@ -7663,13 +7642,6 @@ window.TOUREN_DATEN = {
    "name": "Grünabfall Tour 6 Mittwoch",
    "termine": [
     {
-     "datum": "2026-11-25",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
-    {
      "datum": "2026-12-02",
      "zeit": "07:00",
      "ausnahme": null,
@@ -8081,13 +8053,6 @@ window.TOUREN_DATEN = {
    "kategorie": "gruenabfall",
    "name": "Grünabfall Tour 7 Dienstag",
    "termine": [
-    {
-     "datum": "2026-11-24",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
     {
      "datum": "2026-12-01",
      "zeit": "07:00",
@@ -8508,13 +8473,6 @@ window.TOUREN_DATEN = {
    "name": "Grünabfall Tour 8 Dienstag",
    "termine": [
     {
-     "datum": "2026-11-24",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
-    {
      "datum": "2026-12-01",
      "zeit": "07:00",
      "ausnahme": null,
@@ -8926,13 +8884,6 @@ window.TOUREN_DATEN = {
    "kategorie": "gruenabfall",
    "name": "Grünabfall Tour 9 Dienstag",
    "termine": [
-    {
-     "datum": "2026-11-24",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
     {
      "datum": "2026-12-01",
      "zeit": "07:00",
@@ -9346,13 +9297,6 @@ window.TOUREN_DATEN = {
    "name": "Grünabfall Tour 10 Mittwoch",
    "termine": [
     {
-     "datum": "2026-11-25",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
-    {
      "datum": "2026-12-02",
      "zeit": "07:00",
      "ausnahme": null,
@@ -9764,13 +9708,6 @@ window.TOUREN_DATEN = {
    "kategorie": "gruenabfall",
    "name": "Grünabfall Tour 11 Montag",
    "termine": [
-    {
-     "datum": "2026-11-23",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
     {
      "datum": "2026-11-30",
      "zeit": "07:00",
@@ -10197,13 +10134,6 @@ window.TOUREN_DATEN = {
    "kategorie": "gruenabfall",
    "name": "Grünabfall Tour 12 Montag",
    "termine": [
-    {
-     "datum": "2026-11-23",
-     "zeit": "07:00",
-     "ausnahme": null,
-     "faelltAus": false,
-     "notiz": null
-    },
     {
      "datum": "2026-11-30",
      "zeit": "07:00",
@@ -11105,7 +11035,7 @@ window.TOUREN_DATEN = {
     },
     {
      "datum": "2027-10-25",
-     "zeit": "00:00",
+     "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
      "notiz": null
@@ -11152,7 +11082,7 @@ window.TOUREN_DATEN = {
     },
     {
      "datum": "2027-06-16",
-     "zeit": "00:00",
+     "zeit": "07:00",
      "ausnahme": null,
      "faelltAus": false,
      "notiz": null
