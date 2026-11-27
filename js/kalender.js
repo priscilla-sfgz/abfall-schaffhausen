@@ -272,10 +272,16 @@ function kopfMitPfeilen(titel) {
 function listeAnsicht(proTag) {
   const alle = Object.keys(proTag);
   const tage = alle.slice(0, kalender.listeTage);
-  // Titel mit Jahr, z.B. «Di., 1. Dez. 2026»
-  return tage.map((datum) => `
-      <h3 class="tag-titel">${datumKurz(datum)} ${datum.slice(0, 4)} <span>${grossAnfang(wannText(datum))}</span></h3>
-      ${tagesEintraege(proTag[datum])}`).join("")
+  // Titel mit Jahr, z.B. «Di., 1. Dez. 2026».
+  // Beginnt ein neues Jahr, kommt davor ein Zwischentitel mit der Jahreszahl.
+  let jahr = tage.length ? tage[0].slice(0, 4) : "";
+  return tage.map((datum) => {
+    const neuesJahr = datum.slice(0, 4) !== jahr;
+    jahr = datum.slice(0, 4);
+    return (neuesJahr ? `<h2 class="jahr-titel">${jahr}</h2>` : "") + `
+      <h3 class="tag-titel">${datumKurz(datum)} ${jahr} <span>${grossAnfang(wannText(datum))}</span></h3>
+      ${tagesEintraege(proTag[datum])}`;
+  }).join("")
     // Gibt es noch mehr? Dann unten ein Knopf zum Nachladen
     + (alle.length > tage.length ? `<button type="button" class="liste-mehr" id="liste-mehr">Weitere laden</button>` : "");
 }

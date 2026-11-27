@@ -608,6 +608,14 @@ main {
 .woche-tag.heute .woche-datum { color: var(--schwarz); }
 .woche-tag .eintrag { margin-bottom: 4px; }
 .woche-tag .leer-text { padding-top: 12px; }
+/* Zwischentitel in der Kalender-Liste, wenn ein neues Jahr beginnt */
+.jahr-titel {
+  margin: 28px 0 4px;
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--schwarz);
+}
+
 /* Knopf «Weitere laden» am Ende der Kalender-Liste (weisse Fläche mit Schatten) */
 .liste-mehr {
   display: block;
