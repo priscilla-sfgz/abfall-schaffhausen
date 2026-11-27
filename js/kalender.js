@@ -31,7 +31,7 @@ const kalender = {
   ansicht: "monat",   // "liste", "woche", "monat" oder "jahr"
   bezug: null,        // Datum, um das sich die Ansicht dreht
   gewaehlt: null,     // angetippter Tag in der Monatsansicht ("2026-11-24")
-  listeTage: 25,      // so viele Tage zeigt die Liste; beim Scrollen ans Ende kommen weitere dazu
+  listeTage: 25,      // so viele Tage zeigt die Liste; «Weitere laden» nimmt weitere dazu
 };
 const LISTE_SCHRITT = 25;   // so viele Tage werden jeweils nachgeladen
 
@@ -272,24 +272,14 @@ function kopfMitPfeilen(titel) {
 function listeAnsicht(proTag) {
   const alle = Object.keys(proTag);
   const tage = alle.slice(0, kalender.listeTage);
+  // Titel mit Jahr, z.B. «Di., 1. Dez. 2026»
   return tage.map((datum) => `
-      <h3 class="tag-titel">${datumKurz(datum)} <span>${grossAnfang(wannText(datum))}</span></h3>
+      <h3 class="tag-titel">${datumKurz(datum)} ${datum.slice(0, 4)} <span>${grossAnfang(wannText(datum))}</span></h3>
       ${tagesEintraege(proTag[datum])}`).join("")
-    // Gibt es noch mehr? Dann unten eine Markierung: Wird sie sichtbar, laden wir nach.
-    + (alle.length > tage.length ? `<p class="liste-mehr" id="liste-mehr">Weitere Termine laden …</p>` : "");
+    // Gibt es noch mehr? Dann unten ein Knopf zum Nachladen
+    + (alle.length > tage.length ? `<button type="button" class="liste-mehr" id="liste-mehr">Weitere laden</button>` : "");
 }
 
-// Ist das Ende der Liste (fast) sichtbar? Dann die nächsten Tage dazunehmen.
-// Wird beim Scrollen und nach jedem Zeichnen aufgerufen.
-function listeNachladenPruefen() {
-  const mehr = document.getElementById("liste-mehr");
-  if (!mehr || mehr.offsetParent === null) return;   // keine Markierung oder Tab versteckt
-  if (mehr.getBoundingClientRect().top < window.innerHeight + 200) {
-    kalender.listeTage += LISTE_SCHRITT;
-    kalenderZeichnen();
-  }
-}
-window.addEventListener("scroll", listeNachladenPruefen, { passive: true });
 
 function wocheAnsicht(proTag) {
   const montag = montagVon(kalender.bezug);
@@ -375,10 +365,9 @@ function kalenderZeichnen() {
   const ansichten = { liste: listeAnsicht, woche: wocheAnsicht, monat: monatAnsicht, jahr: jahrAnsicht };
   bereich.innerHTML = ansichten[kalender.ansicht](proTag);
 
-  // Liste: Antippen der Markierung lädt auch nach; ist der Bildschirm noch nicht voll, gleich nachladen
+  // Liste: Knopf «Weitere laden» zeigt die nächsten Tage
   const mehr = document.getElementById("liste-mehr");
   if (mehr) mehr.onclick = () => { kalender.listeTage += LISTE_SCHRITT; kalenderZeichnen(); };
-  listeNachladenPruefen();
 }
 
 

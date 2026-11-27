@@ -608,8 +608,20 @@ main {
 .woche-tag.heute .woche-datum { color: var(--schwarz); }
 .woche-tag .eintrag { margin-bottom: 4px; }
 .woche-tag .leer-text { padding-top: 12px; }
-/* Ende der Kalender-Liste: hier werden weitere Termine nachgeladen */
-.liste-mehr { margin: 16px 0 8px; text-align: center; cursor: pointer; }
+/* Knopf «Weitere laden» am Ende der Kalender-Liste (weisse Fläche mit Schatten) */
+.liste-mehr {
+  display: block;
+  margin: 16px auto 8px;
+  padding: 11px 24px;
+  font: inherit;
+  font-weight: 700;
+  color: var(--schwarz);
+  background: var(--weiss);
+  border: 0;
+  border-radius: 26px;
+  box-shadow: 0 1px 3px rgba(0, 33, 41, .08);
+  cursor: pointer;
+}
 
 .jahr-gitter {
   display: grid;
