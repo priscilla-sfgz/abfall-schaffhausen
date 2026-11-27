@@ -124,6 +124,11 @@ class handler(BaseHTTPRequestHandler):
         for geraet in geraete:
             if test:
                 nachricht = {"titel": "Abfall Schaffhausen", "text": "Test: Push-Erinnerungen funktionieren."}
+                # Antippen öffnet (wie bei echten Erinnerungen) das erste gespeicherte Ergebnis
+                erstes = next((e for e in (geraet["lesezeichen"] or []) if e.get("strasse")), None)
+                if erstes:
+                    nachricht["ziel"] = {"strasse": erstes["strasse"], "strasseText": erstes.get("ort", ""),
+                                         "abfall": erstes.get("abfallartId", "")}
             else:
                 nachricht = nachricht_bauen(geraet["lesezeichen"] or [], zeitpunkt, datum, vorsilbe)
             if not nachricht:
