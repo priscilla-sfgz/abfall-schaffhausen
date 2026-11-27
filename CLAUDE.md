@@ -69,6 +69,7 @@ Start: https://m.stadt-schaffhausen.ch/index.php?apid=917954978
 - `data/touren.js`: Rückfall-Daten (offline, Fehler), erstellt mit `python werkzeuge/daten_holen.py` (gleiche Logik wie live). Ab und zu neu erstellen.
 - Suchwörter (z.B. «Normal» → Hauskehricht): `suchwoerter` in `data/abfallarten.js`.
 - `img/icons/*.svg` sind die Vorlagen (icon, icon-maskable, startbild, badge). Die PNGs daraus erstellt `python werkzeuge/icons_erstellen.py` (braucht Chrome + Pillow). Der Steinbock wurde aus `img/vorlagen/Steinbock.png` nachgezeichnet.
+- **Fehler:** Unerwartete Fehler in eigenen Dateien (Programmfehler, Datei lädt nicht) zeigen oben den Hinweis «Fehler in der App» mit «Neu laden» (Skript ganz oben in `index.html`). Fehler fremder Dateien (Karte von cdnjs) und ausgefallene Live-Daten zeigen ihn bewusst nicht: Dort gibt es eine eigene Meldung bzw. den Rückfall.
 - `manifest.webmanifest`, `sw.js`, `img/icons/`: Installierbarkeit (Service Worker lädt zuerst aus dem Netz, nur offline aus dem Speicher)
 - `img/logo.png`, `img/boeckli.jpg`, `img/gruenabfall.jpg`: Logo und Fotos. Fehlt ein Bild, steht im Balken Text bzw. das Foto wird ausgeblendet.
 - `js/erinnerungen.js`: Push-Erinnerungen (Schalter im Kalender-Tab, pro Lesezeichen zwei Ein/Aus-Knöpfe «Vorabend 19 Uhr» und «Morgen 6 Uhr», beide gleichzeitig möglich; gespeichert als `erinnerung`: vorabend / morgen / beides / keine, bei «beides» schickt die App zwei Einträge an den Server). Schickt die Termine an `/api/erinnerung`.

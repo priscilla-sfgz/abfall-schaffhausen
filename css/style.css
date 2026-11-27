@@ -893,3 +893,32 @@ main {
 .karten-flaeche .leaflet-control-attribution a { color: var(--schwarz); }
 .karten-flaeche .leaflet-popup-content a { color: var(--schwarz); font-weight: 700; }
 .karten-zeiten { color: var(--text-grau); }
+
+/* ---------- Notfall-Hinweis (nur bei einem Fehler in der App) ---------- */
+.notfall {
+  position: fixed;
+  top: calc(8px + env(safe-area-inset-top));
+  left: 16px;
+  right: 16px;
+  z-index: 200;   /* über allem, auch über dem Startbildschirm */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  max-width: 528px;
+  margin: 0 auto;
+  padding: 12px 12px 12px 20px;
+  background: var(--weiss);
+  border-radius: 26px;
+  box-shadow: 0 4px 16px rgba(0, 33, 41, .18);
+}
+.notfall button {
+  padding: 9px 18px;
+  font: inherit;
+  font-weight: 700;
+  color: var(--schwarz);
+  background: var(--gelb);
+  border: 0;
+  border-radius: 22px;
+  cursor: pointer;
+}

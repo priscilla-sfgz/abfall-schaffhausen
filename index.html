@@ -24,6 +24,27 @@
 </head>
 <body>
 
+  <!-- ===== Notfall-Hinweis: erscheint nur, wenn in der App ein Fehler passiert ===== -->
+  <div id="notfall" class="notfall" role="alert" hidden>
+    <strong>Fehler in der App</strong>
+    <button type="button" onclick="location.reload()">Neu laden</button>
+  </div>
+  <script>
+    // Fängt Fehler in unseren eigenen Dateien ab (Programmfehler oder Datei lädt nicht)
+    // und zeigt dann den Notfall-Hinweis. Fehler fremder Dateien (z.B. Karte) zählen nicht,
+    // die behandelt die App selbst.
+    window.addEventListener("error", (e) => {
+      const ziel = e.target;
+      const dateiFehlt = ziel && (ziel.tagName === "SCRIPT" || ziel.tagName === "LINK");
+      const adresse = dateiFehlt ? (ziel.src || ziel.href) : e.filename;
+      if (!adresse || !adresse.startsWith(location.origin)) return;
+      console.error("Fehler in der App:", e.message || adresse);
+      document.getElementById("notfall").hidden = false;
+      const startbild = document.getElementById("startbild");
+      if (startbild) startbild.remove();
+    }, true);   // true: auch «Datei lädt nicht» erkennen
+  </script>
+
   <!-- ===== Gelber Startbildschirm (verschwindet nach kurzer Zeit) ===== -->
   <div id="startbild" class="startbild" aria-hidden="true">
     <img src="img/icons/startbild.svg" alt="" width="186" height="186">
