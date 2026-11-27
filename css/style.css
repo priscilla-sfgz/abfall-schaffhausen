@@ -292,10 +292,24 @@ main {
   font: inherit;
   font-weight: 700;
   color: var(--schwarz);
-  background: #dae0e3;   /* deutlich grauer als der Seitenhintergrund */
+  background: var(--weiss);
   border: 0;
   cursor: pointer;
+  position: relative;
 }
+/* Schwarzer Strich oben, eingerückt wie die Linien zwischen den Abschnitten */
+.speichern-balken::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 20px;
+  right: 20px;
+  height: 1.5px;
+  background: var(--schwarz);
+}
+/* Keine doppelte Linie und kein doppelter Abstand über dem Balken: der schwarze Strich ersetzt die graue Linie */
+.karte-hinweise:has(+ .speichern-balken) { padding-bottom: 0; }
+.karte-hinweise:has(+ .speichern-balken) details:last-of-type { border-bottom: 0; }
 .speichern-balken svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linejoin: round; }
 .speichern-balken.an svg { fill: var(--gelb); stroke: var(--gelb); }   /* gespeichert: gelber Stern ohne Kontur */
 
@@ -384,10 +398,12 @@ main {
 .stern-menue {
   display: flex;
   flex-direction: column;
+  margin: 0 20px;
   background: var(--weiss);   /* erscheint unter dem Balken «Termin speichern» */
+  border-top: 1px solid var(--linie);
 }
 .stern-menue button {
-  padding: 14px 20px;
+  padding: 14px 0;
   font: inherit;
   font-weight: 700;
   text-align: left;
